@@ -11,9 +11,35 @@ import Foundation
 public enum BitmapError : Error {
     case outOfMemory
 }
+
+/**
+ * Bitmap describes a two-dimensional raster pixel array. Bitmap is built on
+ * ImageInfo, containing integer width and height, ColorType and AlphaType
+ * describing the pixel format, and ColorSpace describing the range of colors.
+ * Bitmap points to PixelRef, which describes the physical array of pixels.
+ * ImageInfo bounds may be located anywhere fully inside PixelRef bounds.
+ *
+ * Bitmap can be drawn using Canvas. Bitmap can be a drawing destination for Canvas
+ * draw member functions. Bitmap flexibility as a pixel container limits some
+ * optimizations available to the target platform.
+ *
+ * If pixel array is primarily read-only, use Image for better performance.
+ * If pixel array is primarily written to, use Surface for better performance.
+ *
+ * Bitmap is not thread safe. Each thread must have its own copy of Bitmap fields,
+ * although threads may share the underlying pixel array.
+ */
 public class Bitmap {
     var handle : OpaquePointer
-    
+  
+    /**
+     * Creates an empty Bitmap without pixels, with `colorType` set to `.unkonwn`
+     * `alphaType` set to `.unknown`, and with a width and height of zero. PixelRef origin is
+     * set to (0, 0). Bitmap is not volatile.
+     *
+     * - Returns:  empty Bitmap
+     * example: https://fiddle.skia.org/c/@Bitmap_empty_constructor
+     */
     public init ()
     {
         handle = sk_bitmap_new()
@@ -38,12 +64,35 @@ public class Bitmap {
         sk_bitmap_destructor(handle)
     }
     
+    /**
+     * Returns row bytes, the interval from one pixel row to the next. Row bytes
+     * is at least as large as: `width`* `imageInfo.bytesPerPixel`.
+     * Returns zero if colorType is `.unknown`, or if row bytes supplied to
+     * setInfo() is not large enough to hold a row of pixels.
+     *
+     * - Returns:  byte length of pixel row
+     */
     public var rowBytes : Int {
         get {
             return Int (sk_bitmap_get_row_bytes(handle))
         }
     }
     
+    /**
+     * Sets `ImageInfo` to info following and allocates pixel
+     * memory.  `rowBytes` must equal or exceed `info.width` times `info.bytesPerPixel`,
+     * or equal zero. Pass in zero for `rowBytes` to compute the minimum valid value.
+     * Returns `false` and calls `reset()` if `ImageInfo` could not be set, or memory could
+     * not be allocated.
+     *
+     * On most platforms, allocating pixel memory may succeed even though there is
+     * not sufficient memory to hold pixels; allocation does not take place
+     * until the pixels are written to. The actual behavior depends on the platform
+     * implementation of malloc().
+     * - Parameter info: contains width, height, `AlphaType`, `ColorType`, `ColorSpace`
+     * - Parameter rowBytes: size of pixel row or larger; may be zero
+     * - Returns: true if pixel storage is allocated
+     */
     public func tryAllocPixels (info: sk_imageinfo_t, rowBytes: Int? = nil) -> Bool
     {
         withUnsafePointer(to: info) { ptr in
@@ -51,16 +100,42 @@ public class Bitmap {
         }
     }
     
+    /**
+     * Resets to its initial state; all fields are set to zero, as if `Bitmap` had
+     * been initialized by `Bitmap`().
+     *
+     * Sets `width`, `height`, `row bytes` to zero; pixel address to `nil`; `ColorType` to
+     * `.unknown`; and `AlphaType` to `.unknown`.
+     *
+     * If `PixelRef` is allocated, its reference count is decreased by one, releasing
+     * its memory if `Bitmap` is the sole owner.
+     */
     public func reset ()
     {
         sk_bitmap_reset(handle)
     }
     
+    /**
+     * Sets internal flag to mark `Bitmap` as immutable. Once set, pixels can not change.
+     * Any other bitmap sharing the same `PixelRef` are also marked as immutable.
+     * Once `PixelRef` is marked immutable, the setting cannot be cleared.
+     * Writing to immutable `Bitmap` pixels triggers an assert on debug builds.
+     * example: https://fiddle.skia.org/c/@Bitmap_setImmutable
+     */
     public func setImmutable ()
     {
         sk_bitmap_set_immutable(handle)
     }
     
+    /**
+     * Replaces pixel values with c. All pixels contained by the bounds are affected.
+     * If the `colorType` is `.gray9` or `.krgb565`, then alpha
+     * is ignored;  RGB is treated as opaque.  If colorType is `.alpha8`
+     * then RGB is ignored.
+     *
+     * - Parameter c: unpremultiplied color
+     * example: https://fiddle.skia.org/c/@Bitmap_eraseColor
+     */
     public func erase (_ color: Color)
     {
         sk_bitmap_erase(handle, color.color)
