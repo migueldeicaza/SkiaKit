@@ -10,14 +10,24 @@ import Foundation
 
 public class Canvas {
     var handle: OpaquePointer
+    var owns: Bool
     
     public init (_ bitmap : Bitmap)
     {
         handle = sk_canvas_new_from_bitmap(bitmap.handle)
+        owns = true
+    }
+    
+    init (handle: OpaquePointer, owns: Bool)
+    {
+        self.handle = handle
+        self.owns = owns
     }
     
     deinit {
-        sk_canvas_destroy(handle)
+        if owns {
+            sk_canvas_destroy(handle)
+        }
     }
     
     public func drawText (text: String, x: Float, y: Float, paint: Paint)

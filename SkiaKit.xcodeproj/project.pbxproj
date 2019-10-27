@@ -202,6 +202,21 @@
 		49E9751E2365237200042FE7 /* libSkiaSharp.framework in Copy libSkiaSharp */ = {isa = PBXBuildFile; fileRef = 49E975182365229D00042FE7 /* libSkiaSharp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49E9751F2365237F00042FE7 /* libSkiaSharp.framework in Copy libSkiaSharp.framework */ = {isa = PBXBuildFile; fileRef = 49E9751A236522AD00042FE7 /* libSkiaSharp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49E975202365238A00042FE7 /* libSkiaSharp.dylib in Copy libSkiaSharp.dylib */ = {isa = PBXBuildFile; fileRef = 49DA8F4E2363E9CE0026FC2B /* libSkiaSharp.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		49E9752A2365360D00042FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975292365360D00042FE7 /* AppDelegate.swift */; };
+		49E9752E2365360D00042FE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9752D2365360D00042FE7 /* ContentView.swift */; };
+		49E975302365361000042FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E9752F2365361000042FE7 /* Assets.xcassets */; };
+		49E975332365361000042FE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E975322365361000042FE7 /* Preview Assets.xcassets */; };
+		49E975362365361000042FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E975342365361000042FE7 /* LaunchScreen.storyboard */; };
+		49E975452365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975442365394D00042FE7 /* SkiaCanvasLayer.swift */; };
+		49E975462365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975442365394D00042FE7 /* SkiaCanvasLayer.swift */; };
+		49E975472365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975442365394D00042FE7 /* SkiaCanvasLayer.swift */; };
+		49E975482365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975442365394D00042FE7 /* SkiaCanvasLayer.swift */; };
+		49E9754A23653BAE00042FE7 /* Surface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9754923653BAE00042FE7 /* Surface.swift */; };
+		49E9754B23653BAE00042FE7 /* Surface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9754923653BAE00042FE7 /* Surface.swift */; };
+		49E9754C23653BAE00042FE7 /* Surface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9754923653BAE00042FE7 /* Surface.swift */; };
+		49E9756723654A3D00042FE7 /* SkiaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9756623654A3D00042FE7 /* SkiaView.swift */; };
+		49E9756823654A3D00042FE7 /* SkiaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9756623654A3D00042FE7 /* SkiaView.swift */; };
+		49E9756923654A3D00042FE7 /* SkiaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9756623654A3D00042FE7 /* SkiaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +240,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 49DA8EA52363E9070026FC2B;
 			remoteInfo = "SkiaKit tvOS";
+		};
+		49E9753B236536EC00042FE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49DA8E7B2363E8AB0026FC2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49DA8E852363E8C00026FC2B;
+			remoteInfo = "SkiaKit iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -347,6 +369,16 @@
 		49DA8FCF2363F2F50026FC2B /* SKCanvasTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCanvasTest.swift; sourceTree = "<group>"; };
 		49E975182365229D00042FE7 /* libSkiaSharp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libSkiaSharp.framework; sourceTree = "<group>"; };
 		49E9751A236522AD00042FE7 /* libSkiaSharp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libSkiaSharp.framework; sourceTree = "<group>"; };
+		49E975272365360D00042FE7 /* SkiaSamplesiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiaSamplesiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49E975292365360D00042FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49E9752D2365360D00042FE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		49E9752F2365361000042FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49E975322365361000042FE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		49E975352365361000042FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49E975372365361000042FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49E975442365394D00042FE7 /* SkiaCanvasLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiaCanvasLayer.swift; sourceTree = "<group>"; };
+		49E9754923653BAE00042FE7 /* Surface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surface.swift; sourceTree = "<group>"; };
+		49E9756623654A3D00042FE7 /* SkiaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,12 +430,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49E975242365360D00042FE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		49DA8E7A2363E8AB0026FC2B = {
 			isa = PBXGroup;
 			children = (
+				49E97522236535D200042FE7 /* Samples */,
 				49E97521236523E700042FE7 /* Tests */,
 				49E975172365215B00042FE7 /* SkiaKit */,
 				49DA8E9E2363E8DA0026FC2B /* Shared */,
@@ -421,6 +461,7 @@
 				49DA8EAE2363E9070026FC2B /* SkiaKit tvOSTests.xctest */,
 				49DA8EC22363E9250026FC2B /* SkiaKit.framework */,
 				49DA8ECA2363E9250026FC2B /* SkiaKit macOSTests.xctest */,
+				49E975272365360D00042FE7 /* SkiaSamplesiOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -523,6 +564,7 @@
 				49DA8F2D2363E98A0026FC2B /* SKString.swift */,
 				49DA8F242363E98A0026FC2B /* TextBlob.swift */,
 				49DA8F302363E98A0026FC2B /* Typeface.swift */,
+				49E9754923653BAE00042FE7 /* Surface.swift */,
 			);
 			path = SkiaKit;
 			sourceTree = "<group>";
@@ -584,6 +626,7 @@
 		49E975172365215B00042FE7 /* SkiaKit */ = {
 			isa = PBXGroup;
 			children = (
+				49E97543236538C500042FE7 /* Apple */,
 				49DA8EC32363E9250026FC2B /* macOS */,
 				49DA8EA72363E9070026FC2B /* tvOS */,
 				49DA8E882363E8C00026FC2B /* iOS */,
@@ -599,6 +642,44 @@
 				49DA8E932363E8C10026FC2B /* iOS */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		49E97522236535D200042FE7 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				49E975282365360D00042FE7 /* SkiaSamplesiOS */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		49E975282365360D00042FE7 /* SkiaSamplesiOS */ = {
+			isa = PBXGroup;
+			children = (
+				49E975292365360D00042FE7 /* AppDelegate.swift */,
+				49E9752D2365360D00042FE7 /* ContentView.swift */,
+				49E9752F2365361000042FE7 /* Assets.xcassets */,
+				49E975342365361000042FE7 /* LaunchScreen.storyboard */,
+				49E975372365361000042FE7 /* Info.plist */,
+				49E975312365361000042FE7 /* Preview Content */,
+			);
+			path = SkiaSamplesiOS;
+			sourceTree = "<group>";
+		};
+		49E975312365361000042FE7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				49E975322365361000042FE7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		49E97543236538C500042FE7 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				49E975442365394D00042FE7 /* SkiaCanvasLayer.swift */,
+				49E9756623654A3D00042FE7 /* SkiaView.swift */,
+			);
+			path = Apple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -844,6 +925,24 @@
 			productReference = 49DA8ECA2363E9250026FC2B /* SkiaKit macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		49E975262365360D00042FE7 /* SkiaSamplesiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49E975382365361000042FE7 /* Build configuration list for PBXNativeTarget "SkiaSamplesiOS" */;
+			buildPhases = (
+				49E975232365360D00042FE7 /* Sources */,
+				49E975242365360D00042FE7 /* Frameworks */,
+				49E975252365360D00042FE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49E9753C236536EC00042FE7 /* PBXTargetDependency */,
+			);
+			name = SkiaSamplesiOS;
+			productName = SkiaSamplesiOS;
+			productReference = 49E975272365360D00042FE7 /* SkiaSamplesiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -872,6 +971,9 @@
 					49DA8EC92363E9250026FC2B = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					49E975262365360D00042FE7 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 				};
 			};
 			buildConfigurationList = 49DA8E7E2363E8AB0026FC2B /* Build configuration list for PBXProject "SkiaKit" */;
@@ -893,6 +995,7 @@
 				49DA8EAD2363E9070026FC2B /* SkiaKit tvOSTests */,
 				49DA8EC12363E9250026FC2B /* SkiaKit macOS */,
 				49DA8EC92363E9250026FC2B /* SkiaKit macOSTests */,
+				49E975262365360D00042FE7 /* SkiaSamplesiOS */,
 			);
 		};
 /* End PBXProject section */
@@ -940,6 +1043,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49E975252365360D00042FE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E975362365361000042FE7 /* LaunchScreen.storyboard in Resources */,
+				49E975332365361000042FE7 /* Preview Assets.xcassets in Resources */,
+				49E975302365361000042FE7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -954,6 +1067,8 @@
 				49DA8F4C2363E98A0026FC2B /* MaskFilter.swift in Sources */,
 				49DA8F3C2363E98A0026FC2B /* Image.swift in Sources */,
 				49DA8F4A2363E98A0026FC2B /* Paint.swift in Sources */,
+				49E9754A23653BAE00042FE7 /* Surface.swift in Sources */,
+				49E9756723654A3D00042FE7 /* SkiaView.swift in Sources */,
 				49DA8F3E2363E98A0026FC2B /* Color.swift in Sources */,
 				49DA8F3B2363E98A0026FC2B /* ImageInfo.swift in Sources */,
 				49DA8F392363E98A0026FC2B /* Data.swift in Sources */,
@@ -966,6 +1081,7 @@
 				49DA8F3A2363E98A0026FC2B /* Bitmap.swift in Sources */,
 				49DA8F452363E98A0026FC2B /* ColorFilter.swift in Sources */,
 				49DA8F3F2363E98A0026FC2B /* ImageFilter.swift in Sources */,
+				49E975452365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */,
 				49DA8F412363E98A0026FC2B /* Region.swift in Sources */,
 				49DA8F382363E98A0026FC2B /* SKObject.swift in Sources */,
 				49DA8F472363E98A0026FC2B /* Matrix.swift in Sources */,
@@ -995,6 +1111,8 @@
 				49DA8FA02363EB880026FC2B /* ImageFilter.swift in Sources */,
 				49DA8FAE2363EB880026FC2B /* TextBlob.swift in Sources */,
 				49DA8F9F2363EB880026FC2B /* Image.swift in Sources */,
+				49E9754B23653BAE00042FE7 /* Surface.swift in Sources */,
+				49E9756823654A3D00042FE7 /* SkiaView.swift in Sources */,
 				49DA8F9D2363EB880026FC2B /* Data.swift in Sources */,
 				49DA8FAD2363EB880026FC2B /* SKString.swift in Sources */,
 				49DA8F972363EB880026FC2B /* Bitmap.swift in Sources */,
@@ -1007,6 +1125,7 @@
 				49DA8F9A2363EB880026FC2B /* ColorFilter.swift in Sources */,
 				49DA8FAA2363EB880026FC2B /* Shader.swift in Sources */,
 				49DA8FA72363EB880026FC2B /* PathEffect.swift in Sources */,
+				49E975462365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */,
 				49DA8FA52363EB880026FC2B /* Paint.swift in Sources */,
 				49DA8F982363EB880026FC2B /* Canvas.swift in Sources */,
 				49DA8F9C2363EB880026FC2B /* ColorSpace.swift in Sources */,
@@ -1036,6 +1155,8 @@
 				49DA8FB92363EB890026FC2B /* ImageFilter.swift in Sources */,
 				49DA8FC72363EB890026FC2B /* TextBlob.swift in Sources */,
 				49DA8FB82363EB890026FC2B /* Image.swift in Sources */,
+				49E9754C23653BAE00042FE7 /* Surface.swift in Sources */,
+				49E9756923654A3D00042FE7 /* SkiaView.swift in Sources */,
 				49DA8FB62363EB890026FC2B /* Data.swift in Sources */,
 				49DA8FC62363EB890026FC2B /* SKString.swift in Sources */,
 				49DA8FB02363EB890026FC2B /* Bitmap.swift in Sources */,
@@ -1048,6 +1169,7 @@
 				49DA8FB32363EB890026FC2B /* ColorFilter.swift in Sources */,
 				49DA8FC32363EB890026FC2B /* Shader.swift in Sources */,
 				49DA8FC02363EB890026FC2B /* PathEffect.swift in Sources */,
+				49E975472365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */,
 				49DA8FBE2363EB890026FC2B /* Paint.swift in Sources */,
 				49DA8FB12363EB890026FC2B /* Canvas.swift in Sources */,
 				49DA8FB52363EB890026FC2B /* ColorSpace.swift in Sources */,
@@ -1063,6 +1185,16 @@
 			files = (
 				49DA8ED02363E9250026FC2B /* SkiaKit_macOSTests.swift in Sources */,
 				49DA8FD22363F2F50026FC2B /* SKCanvasTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49E975232365360D00042FE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E9752A2365360D00042FE7 /* AppDelegate.swift in Sources */,
+				49E975482365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */,
+				49E9752E2365360D00042FE7 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1084,7 +1216,23 @@
 			target = 49DA8EA52363E9070026FC2B /* SkiaKit tvOS */;
 			targetProxy = 49DA8FDB2363F7620026FC2B /* PBXContainerItemProxy */;
 		};
+		49E9753C236536EC00042FE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49DA8E852363E8C00026FC2B /* SkiaKit iOS */;
+			targetProxy = 49E9753B236536EC00042FE7 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49E975342365361000042FE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49E975352365361000042FE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		49DA8E7F2363E8AB0026FC2B /* Debug */ = {
@@ -2011,6 +2159,148 @@
 			};
 			name = Release;
 		};
+		49E975392365361000042FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"Samples/SkiaSamplesiOS/Preview Content\"";
+				DEVELOPMENT_TEAM = PJQC57N853;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Samples/SkiaSamplesiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.tirania.SkiaSamplesiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49E9753A2365361000042FE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"Samples/SkiaSamplesiOS/Preview Content\"";
+				DEVELOPMENT_TEAM = PJQC57N853;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Samples/SkiaSamplesiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.tirania.SkiaSamplesiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2073,6 +2363,15 @@
 			buildConfigurations = (
 				49DA8ED72363E9250026FC2B /* Debug */,
 				49DA8ED82363E9250026FC2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49E975382365361000042FE7 /* Build configuration list for PBXNativeTarget "SkiaSamplesiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49E975392365361000042FE7 /* Debug */,
+				49E9753A2365361000042FE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
