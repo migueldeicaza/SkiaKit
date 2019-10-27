@@ -9,11 +9,11 @@
 import Foundation
 
 public struct ImageInfo {
-    var width : Int32
-    var height: Int32
-    var colorType : ColorType
-    var alphaType : AlphaType
-    var colorSpace : ColorSpace?
+    public var width : Int32
+    public var height: Int32
+    public var colorType : ColorType
+    public var alphaType : AlphaType
+    public var colorSpace : ColorSpace?
     
     public init (width: Int32, height: Int32, colorType: ColorType, alphaType: AlphaType)
     {

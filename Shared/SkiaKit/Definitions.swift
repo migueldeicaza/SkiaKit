@@ -84,8 +84,8 @@ public enum PaintStyle : UInt32 {
 
 public enum StrokeCap : UInt32 {
     case butt = 0
-    case Round = 1
-    case Square = 2
+    case round = 1
+    case square = 2
     
     internal func toNative () -> sk_stroke_cap_t
     {
@@ -279,6 +279,20 @@ public enum PathSegmentMask : UInt32 {
     case cubic = 8
 }
 
+/**
+ * `PathDirection` describes whether contour is clockwise or counterclockwise.
+ * When `Path` contains multiple overlapping contours, `PathDirection` together with
+ * `FillType` determines whether overlaps are filled or form holes.
+ *
+ * `PathDirection` also determines how contour is measured. For instance, dashing
+ * measures along `Path` to determine where to start and stop stroke; `PathDirection`
+ * will change dashed results as it steps clockwise or counterclockwise.
+ *
+ * Closed contours like `Rect`, `RRect`, circle, and oval added with
+ * `.clockwise` travel clockwise; the same added with `.counterclockwise`
+ * travel counterclockwise.
+
+ */
 public enum PathDirection : UInt32 {
     case clockwise = 0
     case counterClockwise = 1

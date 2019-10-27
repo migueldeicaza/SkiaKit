@@ -8,6 +8,21 @@
 
 import Foundation
 
+/**
+ * `Path` contain geometry. `Path` may be empty, or contain one or more verbs that
+ * outline a figure. `Path` always starts with a move verb to a Cartesian coordinate,
+ * and may be followed by additional verbs that add lines or curves.
+ * Adding a close verb makes the geometry into a continuous loop, a closed contour.
+ * `Path` may contain any number of contours, each beginning with a move verb.
+ *
+ * `Path` contours may contain only a move verb, or may also contain lines,
+ * quadratic beziers, conics, and cubic beziers. `Path` contours may be open or
+ * closed.
+ *
+ * When used to draw a filled area, `Path` describes whether the fill is inside or
+ * outside the geometry. `Path` also describes the winding rule used to fill
+ * overlapping contours.
+ */
 public class Path {
     var handle : OpaquePointer
     init (handle: OpaquePointer)
@@ -15,6 +30,10 @@ public class Path {
         self.handle = handle
     }
     
+    /**
+     * Constructs an empty `Path`. By default, `Path` has no verbs, no points, and no weights.
+     * the `fillType` is set to `.winding`
+     */
     public init ()
     {
         handle = sk_path_new()
@@ -168,8 +187,16 @@ public class Path {
         sk_path_contains(handle, point.x, point.y)
     }
     
-    // TODO: offset
-    
+    public func offset (_ pt: Point)
+    {
+        transform (matrix: Matrix.makeTranslation(sx: pt.x, sy: pt.y))   
+    }
+
+    public func offset (x: Float, y: Float)
+    {
+        transform (matrix: Matrix.makeTranslation(sx: x, sy: y))
+    }
+
     public func move (to: Point)
     {
         sk_path_move_to(handle, to.x, to.y)

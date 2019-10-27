@@ -61,7 +61,7 @@ public class Matrix {
     /**
      * The identity matrix
      */
-    public var identity : Matrix { Matrix (scaleX: 1, skewX: 0, transX: 0, scaleY: 1, skewY: 0, transY: 0, persp0: 0, persp1: 0, persp2: 1, mask: .rectStaysRect)}
+    public static var identity : Matrix { Matrix (scaleX: 1, skewX: 0, transX: 0, scaleY: 1, skewY: 0, transY: 0, persp0: 0, persp1: 0, persp2: 1, mask: .rectStaysRect)}
     
     public var values : [Float] {
         get {
@@ -69,7 +69,7 @@ public class Matrix {
         }
     }
     
-    public func makeTranslation (sx: Float, sy: Float) -> Matrix
+    public static func makeTranslation (sx: Float, sy: Float) -> Matrix
     {
         if sx == 1 && sy == 1 {
             return identity
