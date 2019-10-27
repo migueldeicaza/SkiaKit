@@ -6,6 +6,30 @@
 //
 
 import SwiftUI
+import SkiaKit
+
+struct MySkia : UIViewRepresentable {
+    func updateUIView(_ uiView: SkiaView, context: UIViewRepresentableContext<MySkia>) {
+        uiView.setNeedsDisplay ()
+    }
+    
+    func makeUIView (context: Context) -> SkiaView
+    {
+        let sv = SkiaView ()
+        sv.drawingCallback = myDraw
+
+        return sv
+    }
+    
+    func myDraw (surface: Surface, imageInfo: ImageInfo)
+    {
+        let c = surface.canvas
+        
+        c.clear (color: Colors.aqua ())
+        let paint = Paint()
+        c.drawText (text: "text", x: 150, y: 175, paint: paint)
+    }
+}
 
 struct ContentView: View {
     @State private var selection = 0
@@ -13,7 +37,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selection){
             
-            Text("First View")
+            MySkia ()
                 .font(.title)
                 .tabItem {
                     VStack {

@@ -210,7 +210,6 @@
 		49E975452365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975442365394D00042FE7 /* SkiaCanvasLayer.swift */; };
 		49E975462365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975442365394D00042FE7 /* SkiaCanvasLayer.swift */; };
 		49E975472365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975442365394D00042FE7 /* SkiaCanvasLayer.swift */; };
-		49E975482365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975442365394D00042FE7 /* SkiaCanvasLayer.swift */; };
 		49E9754A23653BAE00042FE7 /* Surface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9754923653BAE00042FE7 /* Surface.swift */; };
 		49E9754B23653BAE00042FE7 /* Surface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9754923653BAE00042FE7 /* Surface.swift */; };
 		49E9754C23653BAE00042FE7 /* Surface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9754923653BAE00042FE7 /* Surface.swift */; };
@@ -1193,7 +1192,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E9752A2365360D00042FE7 /* AppDelegate.swift in Sources */,
-				49E975482365394D00042FE7 /* SkiaCanvasLayer.swift in Sources */,
 				49E9752E2365360D00042FE7 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
