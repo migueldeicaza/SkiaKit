@@ -9,22 +9,6 @@ import Foundation
 import CoreGraphics
 import QuartzCore
 
-class SkiaCGSurfaceFactory {
-    var bitmapData: UnsafeMutableRawPointer! = nil
-    
-    init ()
-    {
-    }
-    
-    func createSurface (bounds: CGRect, scale: CGFloat) -> (surface: Surface, info: ImageInfo)
-    {
-        let info = ImageInfo(width: Int32 (bounds.width * scale), height: Int32 (bounds.height * scale), colorType: .rgba8888, alphaType: .premul)
-
-        bitmapData = malloc(info.bytesSize)
-        return (Surface.make (info: info, pixels: bitmapData, rowBytes: info.rowBytes), info)
-    }
-}
-
 public class SkiaLayer : CALayer {
     public var drawingCallback: (_ surface: Surface, _ imageInfo: ImageInfo) -> ()
     
@@ -60,7 +44,7 @@ public class SkiaLayer : CALayer {
         
         // Create the Skia Context
         let scale = ignorePixelScaling ? 1 : contentsScale
-        let info = ImageInfo(width: Int32 (bounds.width * scale), height: Int32 (bounds.height * scale), colorType: .rgba8888, alphaType: .premul)
+        let info = ImageInfo(width: Int32 (bounds.width * scale), height: Int32 (bounds.height * scale), colorType: .bgra8888, alphaType: .premul)
         if info.width == 0 || info.height == 0 {
             return
         }

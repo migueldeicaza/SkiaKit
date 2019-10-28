@@ -18,7 +18,7 @@ public struct Color : Equatable {
     
     public init (r: UInt8, g: UInt8, b: UInt8, a: UInt8 = 0xff)
     {
-        color = (UInt32)((a << 24) | (r << 16) | (g << 8) | b)
+        color = ((UInt32(a) << 24) | (UInt32(r) << 16) | (UInt32(g) << 8) | UInt32 (b))
     }
     
     public init (hue: Float, saturation: Float, lightness: Float, alpha: UInt8 = 0xff)

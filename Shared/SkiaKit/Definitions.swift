@@ -8,17 +8,32 @@
 
 import Foundation
 
+/**
+ * Describes how pixel bits encode color. A pixel may be an alpha mask, a grayscale, Red Green and Blue (RGB), or
+ * Alpha, Red, Green and Blue (ARGB)
+ */
 public enum ColorType : UInt32 {
+    /// If set, encoding format and size is unknown.
     case unknown = 0
+    /// Stores 8-bit byte pixel encoding that represents transparency. Value of zero is completely transparent; a value of 255 is completely opaque.
     case alpha8
+    /// Stores 16-bit word pixel encoding that contains five bits of blue, six bits of green, and five bits of red.
     case rgb565
+    /// Stores 16-bit word pixel encoding that contains four bits of alpha, four bits of blue, four bits of green, and four bits of red.
     case argb4444
+    /// Stores 32-bit word pixel encoding that contains eight bits of red, eight bits of green, eight bits of blue, and eight bits of alpha.
     case rgba8888
+    /// Stores 32-bit word pixel encoding that contains eight bits of red, eight bits of green, eight bits of blue, and eight unused bits.
     case rgb888x
+    /// Stores 32-bit word pixel encoding that contains eight bits of blue, eight bits of green, eight bits of red, and eight bits of alpha.
     case bgra8888
+    /// Stores 32-bit word pixel encoding that contains ten bits of red, ten bits of green, ten bits of blue, and two bits of alpha.
     case rgba1010102
+    ///     Stores 32-bit word pixel encoding that contains ten bits of red, ten bits of green, ten bits of blue, and two unused bits.
     case rgb101010x
+    /// Stores 8-bit byte pixel encoding that equivalent to equal values for red, blue, and green, representing colors from black to white.
     case gray8
+    /// Stores 64-bit word pixel encoding that contains 16 bits of blue, 16 bits of green, 16 bits of red, and 16 bits of alpha. Each component is encoded as a half float.
     case rgbaF16
     
     internal func toNative () -> sk_colortype_t
@@ -291,7 +306,6 @@ public enum PathSegmentMask : UInt32 {
  * Closed contours like `Rect`, `RRect`, circle, and oval added with
  * `.clockwise` travel clockwise; the same added with `.counterclockwise`
  * travel counterclockwise.
-
  */
 public enum PathDirection : UInt32 {
     case clockwise = 0

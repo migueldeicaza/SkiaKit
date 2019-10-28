@@ -201,22 +201,42 @@ public class Path {
     {
         sk_path_move_to(handle, to.x, to.y)
     }
-    
+
+    public func moveTo (_ x: Float, _ y: Float)
+    {
+        sk_path_move_to(handle, x, y)
+    }
+
     public func rmove (to: Point)
     {
         sk_path_rmove_to(handle, to.x, to.y)
     }
-    
+
+    public func rmoveTo (_ x: Float, _ y: Float)
+    {
+        sk_path_rmove_to(handle, x, y)
+    }
+
     public func line (to: Point)
     {
         sk_path_line_to(handle, to.x, to.y)
+    }
+    
+    public func lineTo (_ x: Float, _ y: Float)
+    {
+        sk_path_line_to(handle, x, y)
     }
     
     public func rline (to: Point)
     {
         sk_path_rline_to(handle, to.x, to.y)
     }
-    
+
+    public func rlineTo (_ x: Float, _ y: Float)
+    {
+        sk_path_rline_to(handle, x, y)
+    }
+
     public func addQuadCurve (to: Point, controlPoint: Point)
     {
         sk_path_quad_to(handle, to.x, to.y, controlPoint.x, controlPoint.y)
@@ -241,12 +261,22 @@ public class Path {
     {
         sk_path_cubic_to(handle, to.x, to.y, controlPoint1.x, controlPoint1.y, controlPoint2.x, controlPoint2.y)
     }
-    
+
+    public func cubicTo (_ x0: Float, _ y0: Float, _ x1: Float, _ y1: Float, _ x2: Float, _ y2: Float)
+    {
+        sk_path_cubic_to(handle, x0, y0, x1, y1, x2, y2)
+    }
+
     public func rcubic (to: Point, controlPoint1: Point, controlPoint2: Point)
     {
         sk_path_rcubic_to(handle, to.x, to.y, controlPoint1.x, controlPoint1.y, controlPoint2.x, controlPoint2.y)
     }
-    
+
+    public func rcubicTo (_ x0: Float, _ y0: Float, _ x1: Float, _ y1: Float, _ x2: Float, _ y2: Float)
+    {
+        sk_path_rcubic_to(handle, x0, y0, x1, y1, x2, y2)
+    }
+
     // TODO: ArcTo
     // TODO: RArcTo
     

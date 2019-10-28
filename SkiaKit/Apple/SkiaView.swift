@@ -8,6 +8,15 @@
 import Foundation
 import UIKit
 
+/**
+ * `SkiaView` is a UIView that you can add to your programs that can render some Skia content for you.
+ * To do this, create an instance of this class, and then set the `drawingCallback` property to point
+ * to a function that takes a `Surface` and an `ImageInfo` as parameter, and this will be called when
+ * the view needs to render itself.
+ *
+ * You can set the `ignorePixelScaling` to ignore the built-in scaling that uses the `UIView`'s
+ * `contentScaleFactor`
+ */
 public class SkiaView: UIView {
     public var drawingCallback: (_ surface: Surface, _ imageInfo: ImageInfo) -> () = emptyCallback(surface:imageInfo:)
     
@@ -37,7 +46,7 @@ public class SkiaView: UIView {
         
         // Create the Skia Context
         let scale = ignorePixelScaling ? 1 : contentScaleFactor
-        let info = ImageInfo(width: Int32 (bounds.width * scale), height: Int32 (bounds.height * scale), colorType: .rgba8888, alphaType: .premul)
+        let info = ImageInfo(width: Int32 (bounds.width * scale), height: Int32 (bounds.height * scale), colorType: .bgra8888, alphaType: .premul)
         if info.width == 0 || info.height == 0 {
             return
         }
