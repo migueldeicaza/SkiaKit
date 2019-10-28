@@ -15,4 +15,13 @@ public class ColorSpace {
     {
         handle = OpaquePointer(bitPattern: 0)!
     }
+    
+    init (handle: OpaquePointer)
+    {
+        self.handle = handle
+    }
+    
+    deinit {
+        sk_colorspace_unref(handle)
+    }
 }

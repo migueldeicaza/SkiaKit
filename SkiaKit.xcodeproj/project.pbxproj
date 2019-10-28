@@ -220,6 +220,9 @@
 		49E9756E2366436600042FE7 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9756D2366436600042FE7 /* Sample.swift */; };
 		49E975702366821800042FE7 /* TextSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9756F2366821800042FE7 /* TextSample.swift */; };
 		49E97572236683E900042FE7 /* XamagonSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E97571236683E900042FE7 /* XamagonSample.swift */; };
+		49E975A72367ACAD00042FE7 /* Pixmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975A62367ACAD00042FE7 /* Pixmap.swift */; };
+		49E975A82367ACAD00042FE7 /* Pixmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975A62367ACAD00042FE7 /* Pixmap.swift */; };
+		49E975A92367ACAD00042FE7 /* Pixmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975A62367ACAD00042FE7 /* Pixmap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -386,6 +389,7 @@
 		49E9756D2366436600042FE7 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		49E9756F2366821800042FE7 /* TextSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSample.swift; sourceTree = "<group>"; };
 		49E97571236683E900042FE7 /* XamagonSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XamagonSample.swift; sourceTree = "<group>"; };
+		49E975A62367ACAD00042FE7 /* Pixmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixmap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -572,6 +576,7 @@
 				49DA8F242363E98A0026FC2B /* TextBlob.swift */,
 				49DA8F302363E98A0026FC2B /* Typeface.swift */,
 				49E9754923653BAE00042FE7 /* Surface.swift */,
+				49E975A62367ACAD00042FE7 /* Pixmap.swift */,
 			);
 			path = SkiaKit;
 			sourceTree = "<group>";
@@ -1107,6 +1112,7 @@
 				49DA8F3D2363E98A0026FC2B /* TextBlob.swift in Sources */,
 				49DA8F422363E98A0026FC2B /* Shader.swift in Sources */,
 				49DA8F442363E98A0026FC2B /* SKStream.swift in Sources */,
+				49E975A72367ACAD00042FE7 /* Pixmap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1151,6 +1157,7 @@
 				49DA8FAF2363EB880026FC2B /* Typeface.swift in Sources */,
 				49DA8F992363EB880026FC2B /* Color.swift in Sources */,
 				49DA8FAC2363EB880026FC2B /* SKStream.swift in Sources */,
+				49E975A82367ACAD00042FE7 /* Pixmap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1195,6 +1202,7 @@
 				49DA8FC82363EB890026FC2B /* Typeface.swift in Sources */,
 				49DA8FB22363EB890026FC2B /* Color.swift in Sources */,
 				49DA8FC52363EB890026FC2B /* SKStream.swift in Sources */,
+				49E975A92367ACAD00042FE7 /* Pixmap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

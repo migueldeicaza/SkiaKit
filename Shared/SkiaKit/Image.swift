@@ -21,6 +21,7 @@ public class Image {
         handle = sk_image_new_from_bitmap(bitmap.handle)
     }
     
+    
     deinit {
         sk_image_unref(handle)
     }

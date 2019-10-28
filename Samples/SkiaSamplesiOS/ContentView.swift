@@ -8,8 +8,8 @@
 import SwiftUI
 import SkiaKit
 
-struct testSample : Sample {
-    var title = "Test"
+struct sampleTest : Sample {
+    static var title = "Simple Path Test"
     
     func draw (canvas: Canvas, width: Int32, height: Int32)
     {
@@ -52,27 +52,50 @@ struct testSample : Sample {
         
     }
 }
+
+struct Display<T> : View where T: Sample {
+    var body: some View {
+        NavigationLink(destination: SampleRender (T())){
+            Text (T.title)
+        }
+    }
+}
+
+struct SampleChooserView : View {
+
+    var body: some View {
+        NavigationView {
+            List {
+                Display<sampleTest> ()
+                Display<sampleDraw> ()
+                Display<samplePathBounds>()
+                Display<sampleText>()
+                Display<sampleXamagon>()
+            }
+        }
+    }
+}
+
 struct ContentView: View {
     @State private var selection = 0
  
     var body: some View {
         TabView(selection: $selection){
-            
-            SampleRender (testSample ())
+            SampleChooserView ()
                 .font(.title)
                 .tabItem {
                     VStack {
                         Image("first")
-                        Text("First")
+                        Text("Gallery")
                     }
                 }
                 .tag(0)
-            SampleRender (samplePathBounds())
+            SampleRender (sampleTest())
                 .font(.title)
                 .tabItem {
                     VStack {
                         Image("second")
-                        Text("Second")
+                        Text("Default")
                     }
                 }
                 .tag(1)

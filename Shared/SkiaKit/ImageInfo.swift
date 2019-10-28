@@ -15,12 +15,13 @@ public struct ImageInfo {
     public var alphaType : AlphaType
     public var colorSpace : ColorSpace?
     
-    public init (width: Int32, height: Int32, colorType: ColorType, alphaType: AlphaType)
+    public init (width: Int32, height: Int32, colorType: ColorType, alphaType: AlphaType, colorSpace: ColorSpace? = nil)
     {
         self.width = width
         self.height = height
         self.colorType = colorType
         self.alphaType = alphaType
+        self.colorSpace = colorSpace
     }
     
     public init (_ width: Int32, _ height: Int32)
@@ -45,6 +46,11 @@ public struct ImageInfo {
                    height: height,
                 colorType: colorType.toNative(),
                 alphaType: alphaType.toNative())
+    }
+    
+    static func fromNative (_ x: sk_imageinfo_t) -> ImageInfo
+    {
+        ImageInfo(width: x.width, height: x.height, colorType: ColorType.fromNative (x.colorType), alphaType: AlphaType.fromNative(x.alphaType), colorSpace: x.colorspace == nil ? nil : ColorSpace (x.colorspace))
     }
     
     public var bytesPerPixel : Int32 {
@@ -93,6 +99,4 @@ public struct ImageInfo {
             alphaType == .opaque
         }
     }
-    
-    
 }
