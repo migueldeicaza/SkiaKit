@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ * `TextBlob` combines multiple text runs into an immutable container. Each text
+ * run consists of glyphs, `Paint`, and position. Only parts of `Paint` related to
+ * fonts and text rendering are used by run.
+ */
 public class TextBlob {
     var handle: OpaquePointer
     
