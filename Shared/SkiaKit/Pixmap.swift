@@ -76,9 +76,9 @@ public class Pixmap {
         }
     }
     
-    public var pixels : UnsafeRawPointer {
+    public var pixels : UnsafeMutableRawPointer {
         get {
-            sk_pixmap_get_pixels(handle)
+            UnsafeMutableRawPointer (mutating: sk_pixmap_get_pixels(handle))
         }
     }
     
@@ -175,5 +175,21 @@ public class Pixmap {
     {
         var r = rect.toNative()
         sk_pixmap_erase_color(handle, color.color, &r)
+    }
+    
+    
+    public func makeWith (colorType: ColorType) -> ImageInfo
+    {
+        return Pixmap (info: info.makeWith(colorType: colorType), addr: pixels, rowBytes: rowBytes)
+    }
+
+    public func makeWith (colorSpace: ColorSpace ) -> ImageInfo
+    {
+        return Pixmap (info: info.makeWith(colorSpace: colorSpace), addr: pixels, rowBytes: rowBytes)
+    }
+
+    public func makeWith (alphaType: AlphaType) -> ImageInfo
+    {
+        return Pixmap (info: info.makeWith(alphaType: alphaType), addr: pixels, rowBytes: rowBytes)
     }
 }

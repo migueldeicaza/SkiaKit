@@ -99,4 +99,34 @@ public struct ImageInfo {
             alphaType == .opaque
         }
     }
+    
+    public func makeWith (width: Int32, height: Int32) -> ImageInfo
+    {
+            var copy = self
+            copy.width = width
+            copy.height = height
+            return copy
+    }
+
+    public func makeWith (colorType: ColorType) -> ImageInfo
+    {
+            var copy = self
+            copy.colorType = colorType
+            return copy
+    }
+
+    public func makeWith (colorSpace: ColorSpace ) -> ImageInfo
+    {
+            var copy = self
+            copy.colorSpace = colorSpace
+            return copy
+    }
+
+    public func makeWith (alphaType: AlphaType) -> ImageInfo
+    {
+            var copy = self
+            copy.alphaType = alphaType
+            return copy
+    }
+
 }

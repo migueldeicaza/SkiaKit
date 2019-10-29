@@ -212,7 +212,48 @@ public class Bitmap {
         return true
     }
     
-    // TODO: CopyTo
+//    public func copy (to: Bitmap, colorType: ColorType) -> Bool
+//    {
+//        if !canCopy(to: colorType) {
+//            return false
+//        }
+//        guard var srcPM = peekPixels() else {
+//            return false
+//        }
+//        let dstInfo = srcPM.info.makeWith(colorType: colorType)
+//        var srcInfo = srcPM.info
+//        switch (colorType){
+//        case .rgb565:
+//            // copyTo() is not strict on alpha type. Here we set the src to opaque to allow
+//            // the call to ReadPixels() to succeed and preserve this lenient behavior.
+//            
+//            if srcInfo.alphaType != .opaque {
+//                srcPM = srcPM.makeWith (alphaType: .opaque)
+//            }
+//            dstInfo.alphaType = .opaque
+//        case .unknown:
+//            <#code#>
+//        case .alpha8:
+//            <#code#>
+//        case .argb4444:
+//            <#code#>
+//        case .rgba8888:
+//            <#code#>
+//        case .rgb888x:
+//            <#code#>
+//        case .bgra8888:
+//            <#code#>
+//        case .rgba1010102:
+//            <#code#>
+//        case .rgb101010x:
+//            <#code#>
+//        case .gray8:
+//            <#code#>
+//        case .rgbaF16:
+//            <#code#>
+//        }
+//        return true
+//    }
     
 //    public func extractSubset (to destination: Bitmap, subset: IRect) -> Bool
 //    {
