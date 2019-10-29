@@ -50,7 +50,7 @@ public struct ImageInfo {
     
     static func fromNative (_ x: sk_imageinfo_t) -> ImageInfo
     {
-        ImageInfo(width: x.width, height: x.height, colorType: ColorType.fromNative (x.colorType), alphaType: AlphaType.fromNative(x.alphaType), colorSpace: x.colorspace == nil ? nil : ColorSpace (x.colorspace))
+        ImageInfo(width: x.width, height: x.height, colorType: ColorType.fromNative (x.colorType), alphaType: AlphaType.fromNative(x.alphaType), colorSpace: x.colorspace == nil ? nil : ColorSpace (handle: x.colorspace))
     }
     
     public var bytesPerPixel : Int32 {

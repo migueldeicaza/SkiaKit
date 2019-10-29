@@ -79,16 +79,42 @@ public class Canvas {
         sk_canvas_save(handle)
     }
     
+    /**
+     * Fills clip with color color.
+     * mode determines how ARGB is combined with destination.
+     * - Parameter color: unpremultiplied ARGB
+     * - Parameter blendMode: `BlendMode` used to combine source color and destination
+     */
     public func drawColor (_ color: Color, blendMode: BlendMode = .src)
     {
         sk_canvas_draw_color(handle, color.color, blendMode.toNative())
     }
     
+    /**
+     * Draws line segment from p0 to p1 using clip, `Matrix`, and `Paint` paint.
+     * In paint: `Paint` stroke width describes the line thickness;
+     * `Paint.cap` draws the end rounded or square;
+     * `Paint.style` is ignored, as if were set to `.stroke`
+     * - Parameter p0: start of line segment
+     * - Parameter p1: end of line segment
+     * - Parameter paint: stroke, blend, color, and so on, used to draw
+     */
     public func drawLine (_ p0: Point, _ p1: Point, paint: Paint)
     {
         sk_canvas_draw_line(handle, p0.x, p0.y, p1.x, p1.y, paint.handle)
     }
 
+    /**
+     * Draws line segment from (x0, y0) to (x1, y1) using clip, `Matrix`, and `Paint` paint.
+     * In paint: `Paint` stroke width describes the line thickness;
+     * `Paint.cap` draws the end rounded or square;
+     * `Paint.style` is ignored, as if were set to `.stroke`
+     * - Parameter x0: start of line segment on x-axis
+     * - Parameter y0: start of line segment on y-axis
+     * - Parameter x1: end of line segment on x-axis
+     * - Parameter y1: end of line segment on y-axis
+     * - Parameter paint: stroke, blend, color, and so on, used to draw
+     */
     public func drawLine (x0: Float, y0: Float, x1: Float, y1: Float, paint: Paint)
     {
         sk_canvas_draw_line(handle, x0, y0, x1, y1, paint.handle)
@@ -121,34 +147,83 @@ public class Canvas {
         sk_canvas_restore(handle)
     }
     
+    /**
+     * Restores state to `Matrix` and clip values when `save()`, `saveLayer()`,
+     * `saveLayerPreserveLCDTextRequests()`, or `saveLayerAlpha()` returned `count`.
+     * Does nothing if `count` is greater than state stack count.
+     * Restores state to initial values if `count` is less than or equal to one.
+     * - Parameter count: depth of state stack to restore
+     */
     public func restoreToCount (count: Int32)
     {
         sk_canvas_restore_to_count(handle, count)
     }
     
+    /**
+     * Translates `Matrix` by dx along the x-axis and dy along the y-axis.
+     * Mathematically, replaces `Matrix` with a translation matrix
+     * premultiplied with `Matrix`.
+     * This has the effect of moving the drawing by (dx, dy) before transforming
+     * the result with `Matrix`.
+     * - Parameter dx: distance to translate on x-axis
+     * - Parameter dy: distance to translate on y-axis
+     */
     public func translate (dx: Float, dy: Float)
     {
         sk_canvas_translate(handle, dx, dy)
     }
 
+    /**
+     * Translates `Matrix` by dx along the x-axis and dy along the y-axis.
+     * Mathematically, replaces `Matrix` with a translation matrix
+     * premultiplied with `Matrix`.
+     * This has the effect of moving the drawing by `pt` before transforming
+     * the result with `Matrix`.
+     * - Parameter pt: distance to translate on x-axis and y-axis
+     */
     public func translate (pt: Point)
     {
         sk_canvas_translate(handle, pt.x, pt.y)
     }
     
+    /**
+     * Scales `Matrix` by `scale` on the x-axis and  y-axis.
+     * Mathematically, replaces `Matrix` with a scale matrix
+     * premultiplied with `Matrix`.
+     * This has the effect of scaling the drawing by (sx, sy) before transforming
+     * the result with `Matrix`.
+     * - Parameter scale: amount to scale on both axis
+     */
     public func scale (_ scale: Float)
     {
         sk_canvas_scale (handle, scale, scale)
     }
     
+    /**
+     * Scales `Matrix` by sx on the x-axis and sy on the y-axis.
+     * Mathematically, replaces `Matrix` with a scale matrix
+     * premultiplied with `Matrix`.
+     * This has the effect of scaling the drawing by (sx, sy) before transforming
+     * the result with `Matrix`.
+     * - Parameter sx: amount to scale on x-axis
+     * - Parameter sy: amount to scale on y-axis
+     */
     public func scale (sx: Float, sy: Float)
     {
         sk_canvas_scale (handle, sx, sy)
     }
     
-    public func scale (size: Point)
+    /**
+     * Scales `Matrix` by sx on the x-axis and sy on the y-axis.
+     * Mathematically, replaces `Matrix` with a scale matrix
+     * premultiplied with `Matrix`.
+     * This has the effect of scaling the drawing by (sx, sy) before transforming
+     * the result with `Matrix`.
+     * - Parameter factor: the scale encoded as a point
+     */
+    public func scale (factor: Point)
     {
-        sk_canvas_scale(handle, size.x, size.y)
+        sk_canvas_scale(handle, factor.x, factor.y)
     }
     
     /**
@@ -162,11 +237,27 @@ public class Canvas {
         translate (pt: -pivot)
     }
     
+    /**
+     * Rotates `Matrix` by degrees. Positive degrees rotates clockwise.
+     * Mathematically, replaces `Matrix` with a rotation matrix
+     * premultiplied with `Matrix`.
+     * This has the effect of rotating the drawing by degrees before transforming
+     * the result with `Matrix`.
+     * - Parameter degrees: amount to rotate, in degrees
+     */
     public func rotate (degrees: Float)
     {
         sk_canvas_rotate_degrees(handle, degrees)
     }
-    
+
+    /**
+     * Rotates `Matrix` by radians. Positive values rotates clockwise.
+     * Mathematically, replaces `Matrix` with a rotation matrix
+     * premultiplied with `Matrix`.
+     * This has the effect of rotating the drawing by radians before transforming
+     * the result with `Matrix`.
+     * - Parameter degrees: amount to rotate, in radians
+     */
     public func rotate (radians: Float)
     {
         sk_canvas_rotate_radians(handle, radians)

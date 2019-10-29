@@ -340,3 +340,47 @@ public enum PathOp : UInt32 {
     }
 }
 
+public enum TransferFunctionBehavior : UInt32 {
+    case respect = 0
+    case ignore
+    
+    internal func toNative () -> sk_transfer_function_behavior_t
+    {
+        return sk_transfer_function_behavior_t(rawValue: rawValue)
+    }
+    
+    internal static func fromNative (_ x: sk_transfer_function_behavior_t) -> TransferFunctionBehavior
+    {
+        return TransferFunctionBehavior.init (rawValue: x.rawValue)!
+    }
+}
+
+/**
+ * Enum describing format of encoded data.
+ */
+public enum EncodedImageFormat : UInt32 {
+    case bmp = 0
+    case gif
+    case ico
+    case jpeg
+    case png
+    case wbmp
+    case webp
+    case pkm
+    case ktx
+    case astc
+    case dng
+    case heif
+
+    internal func toNative () -> sk_encoded_image_format_t
+    {
+        return sk_encoded_image_format_t(rawValue: rawValue)
+    }
+    
+    internal static func fromNative (_ x: sk_encoded_image_format_t) -> EncodedImageFormat
+    {
+        return EncodedImageFormat.init (rawValue: x.rawValue)!
+    }
+
+}
+

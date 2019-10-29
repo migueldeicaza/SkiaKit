@@ -284,6 +284,28 @@ public class Bitmap {
         sk_bitmap_set_pixels(handle, buffer)
     }
 
+    /**
+     * Returns the pixels if they are available without having to lock the bitmap.
+     * - Returns: Returns the pixels if they are available, otherwise null.
+     */
+    public func peekPixels () -> Pixmap?
+    {
+        let pixmap = Pixmap ()
+        if peekPixels(pixmap) {
+            return pixmap
+        }
+        return nil
+    }
+    
+    /**
+     * Returns the pixmap of the bitmap
+     * - Returns: true on success, false on failure
+     */
+    public func peekPixels (_ pixmap: Pixmap) -> Bool
+    {
+        sk_bitmap_peek_pixels(handle, pixmap.handle)
+        
+    }
     //public func getPixels () -> [Color]
     //{
     //    var ret = Array<color>.init(unsafeUninitializedCapacity: Int(width) * Int(height)) { ptr,arg  in }
