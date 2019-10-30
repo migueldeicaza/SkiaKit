@@ -246,7 +246,7 @@ public final class Paint {
     
     public var typeface : Typeface {
         get {
-            Typeface (handle: sk_paint_get_typeface(handle))
+            Typeface (handle: sk_paint_get_typeface(handle), owns: true)
         }
         set {
             sk_paint_set_typeface(handle, newValue.handle)

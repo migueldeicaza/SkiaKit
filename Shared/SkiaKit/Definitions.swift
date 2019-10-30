@@ -47,10 +47,25 @@ public enum ColorType : UInt32 {
     }
 }
 
+/**
+ * Describes how to interpret the alpha component of a pixel. A pixel may
+ * be opaque, or alpha, describing multiple levels of transparency.
+ * In simple blending, alpha weights the draw color and the destination
+ * color to create a new color. If alpha describes a weight from zero to one:
+ * new color = draw color * alpha + destination color * (1 - alpha)
+ * In practice alpha is encoded in two or more bits, where 1.0 equals all bits set.
+ * RGB may have alpha included in each component value; the stored
+ * value is the original RGB multiplied by alpha. Premultiplied color
+ * components improve performance.
+ */
 public enum AlphaType : UInt32 {
+    /// Uninitialized
     case unknown = 0
+    /// pixel is opaque
     case opaque
+    /// pixel components are premultiplied by alpha
     case premul
+    /// pixel components are independent of alpha
     case unpremul
     
     internal func toNative () -> sk_alphatype_t
@@ -81,9 +96,19 @@ public enum PaintHinting : UInt32 {
     }
 }
 
+/**
+ * Set Style to fill, stroke, or both fill and stroke geometry.
+ *
+ * The stroke and fill share all paint attributes; for instance, they are drawn with the same color.
+ * Use `.strokeAndFill` to avoid hitting the same pixels twice with a stroke draw and
+ * a fill draw.
+ */
 public enum PaintStyle : UInt32 {
+    /// set to fill geometry
     case fill = 0
+    /// set to stroke geometry
     case stroke = 1
+    /// sets to stroke and fill geometry
     case strokeAndFill
     
     internal func toNative () -> sk_paint_style_t
@@ -97,9 +122,13 @@ public enum PaintStyle : UInt32 {
     }
 }
 
+/// Cap draws at the beginning and end of an open path contour.
 public enum StrokeCap : UInt32 {
+    /// no stroke extension - the default stroke value
     case butt = 0
+    /// adds circle
     case round = 1
+    /// adds square
     case square = 2
     
     internal func toNative () -> sk_stroke_cap_t
@@ -113,9 +142,25 @@ public enum StrokeCap : UInt32 {
     }
 }
 
+/**
+ * Join specifies how corners are drawn when a shape is stroked. Join
+ * affects the four corners of a stroked rectangle, and the connected segments in a
+ * stroked path.
+ *
+ * Choose miter join to draw sharp corners. Choose round join to draw a circle with a
+ * radius equal to the stroke width on top of the corner. Choose bevel join to minimally
+ * connect the thick strokes.
+ *
+ * The fill path constructed to describe the stroked path respects the join setting but may
+ * not contain the actual join. For instance, a fill path constructed with round joins does
+ * not necessarily include circles at each connected segment.
+ */
 public enum StrokeJoin : UInt32 {
+    /// extends to miter limit
     case miter = 0
+    /// adds circle
     case round = 1
+    /// connects outside edges
     case bevel = 2
     
     internal func toNative () -> sk_stroke_join_t
@@ -384,3 +429,83 @@ public enum EncodedImageFormat : UInt32 {
 
 }
 
+/**
+ * Refers to the density of a typeface, in terms of the lightness or heaviness of the strokes.
+ *
+ * A font weight describes the relative weight of a font, in terms of the lightness or heaviness of the strokes.
+ * Weight differences are generally differentiated by an increased stroke or thickness that is associated with a
+ * given character in a font, as compared to a "normal" character from that same font.
+ *
+ * The FontWeights values correspond to the `usWeightClass` definition in the OpenType specification.
+ * The `usWeightClass` represents an integer value between 1 and 999.
+ * Lower values indicate lighter weights; higher values indicate heavier weights.
+ *
+ *The numerical value of the enumeration is the `usWeightClass`
+ */
+public enum FontStyleWeight : Int32 {
+    /// Invisible weight
+    case invisible   =   0
+    /// Specifies a "Thin" font weight.
+    case thin        = 100
+    /// Specifies a "Extra Light" font weight.
+    case extraLight  = 200
+    /// Specifies a "Light" font weight.
+    case light       = 300
+    /// Specifies a "Normal" font weight.
+    case normal      = 400
+    /// Specifies a "Medirum" font weight.
+    case medium      = 500
+    /// Specifies a "Semi bold" font weight.
+    case semiBold    = 600
+    /// Specifies a "Bold" font weight.
+    case bold        = 700
+    /// Specifies a "Extra Bold" font weight.
+    case extraBold   = 800
+    /// Specifies a "Black" font weight.
+    case black       = 900
+    /// Specifies a "Extra Black" font weight.
+    case extraBlack  = 1000
+}
+
+
+/// Predefined font widths for use with Typeface, these values match the `usWidthClass` from the OpenType specification.   These are numbers from 1 to 9, lower numbers represent narrower widths, higher numbers indicate wider widths.
+public enum FontStyleWidth : Int32 {
+    /// 50% width of normal, `usWidthClass` = 1
+    case ultraCondensed   = 1
+    /// 62.5% width of normal, `usWidthClass` = 2
+    case extraCondensed   = 2
+    /// 75% width of normal, `usWidthClass` = 3
+    case condensed        = 3
+    /// 87.5% width of normal, `usWidthClass` = 4
+    case semiCondensed    = 4
+    /// 100% width of normal, `usWidthClass` = 5
+    case normal           = 5
+    /// 112.5% width of normal, `usWidthClass` = 6
+    case semiExpanded     = 6
+    /// 125% width of normal, `usWidthClass` = 7
+    case expanded         = 7
+    /// 150% width of normal, `usWidthClass` = 8
+    case extraExpanded    = 8
+    /// 200% width of normal, `usWidthClass` = 9
+    case ultraExpanded    = 9
+}
+
+/// Font slants for use with Typeface.
+public enum FontStyleSlant : UInt32 {
+    /// The upright/normal font slant.
+    case upright = 0
+    /// The italic font slant, in which the slanted characters appear as they were designed.
+    case italic  = 1
+    /// The characters in an oblique font are artificially slanted. The slant is achieved by performing a shear transformation on the characters from a normal font. When a true italic font is not available on a computer or printer, an oblique style can generated from the normal font and used to simulate an italic font.
+    case oblique = 2
+    
+    internal func toNative () -> sk_font_style_slant_t
+    {
+        return sk_font_style_slant_t(rawValue: rawValue)
+    }
+    
+    internal static func fromNative (_ x: sk_font_style_slant_t) -> FontStyleSlant
+    {
+        return FontStyleSlant.init (rawValue: x.rawValue)!
+    }
+}

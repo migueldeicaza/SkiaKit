@@ -320,18 +320,18 @@ public final class Pixmap {
     }
     
     
-    public func makeWith (colorType: ColorType) -> Pixmap
+    public func withColorType (_ colorType: ColorType) -> Pixmap
     {
-        return Pixmap (info: info.makeWith(colorType: colorType), addr: pixels, rowBytes: rowBytes)
+        return Pixmap (info: info.withColorType(colorType), addr: pixels, rowBytes: rowBytes)
     }
 
-    public func makeWith (colorSpace: ColorSpace ) -> Pixmap
+    public func withColorSpace (_ colorSpace: ColorSpace ) -> Pixmap
     {
-        return Pixmap (info: info.makeWith(colorSpace: colorSpace), addr: pixels, rowBytes: rowBytes)
+        return Pixmap (info: info.withColorSpace(colorSpace), addr: pixels, rowBytes: rowBytes)
     }
 
-    public func makeWith (alphaType: AlphaType) -> Pixmap
+    public func withAlphaType (_ alphaType: AlphaType) -> Pixmap
     {
-        return Pixmap (info: info.makeWith(alphaType: alphaType), addr: pixels, rowBytes: rowBytes)
+        return Pixmap (info: info.withAlphaType(alphaType), addr: pixels, rowBytes: rowBytes)
     }
 }

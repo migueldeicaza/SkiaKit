@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4912D98523693F710079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
 		49DA8E902363E8C10026FC2B /* SkiaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DA8E862363E8C00026FC2B /* SkiaKit.framework */; };
 		49DA8E952363E8C10026FC2B /* SkiaKit_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA8E942363E8C10026FC2B /* SkiaKit_iOSTests.swift */; };
 		49DA8E972363E8C10026FC2B /* SkiaKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 49DA8E892363E8C00026FC2B /* SkiaKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -293,6 +294,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4912D98423693F710079BAF7 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		49DA8E862363E8C00026FC2B /* SkiaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkiaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DA8E892363E8C00026FC2B /* SkiaKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkiaKit_iOS.h; sourceTree = "<group>"; };
 		49DA8E8A2363E8C00026FC2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 				49DA8F302363E98A0026FC2B /* Typeface.swift */,
 				49E9754923653BAE00042FE7 /* Surface.swift */,
 				49E975A62367ACAD00042FE7 /* Pixmap.swift */,
+				4912D98423693F710079BAF7 /* FontStyle.swift */,
 			);
 			path = SkiaKit;
 			sourceTree = "<group>";
@@ -1098,6 +1101,7 @@
 				49DA8F392363E98A0026FC2B /* Data.swift in Sources */,
 				49DA8F482363E98A0026FC2B /* ColorSpace.swift in Sources */,
 				49DA8F492363E98A0026FC2B /* Typeface.swift in Sources */,
+				4912D98523693F710079BAF7 /* FontStyle.swift in Sources */,
 				49DA8F372363E98A0026FC2B /* PathEffect.swift in Sources */,
 				49DA8F462363E98A0026FC2B /* SKString.swift in Sources */,
 				49DA8F352363E98A0026FC2B /* Colors.swift in Sources */,
