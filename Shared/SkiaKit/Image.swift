@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Image {
+public final class Image {
     var handle: OpaquePointer
     
     init (handle: OpaquePointer)

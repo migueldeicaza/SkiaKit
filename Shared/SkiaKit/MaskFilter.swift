@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class MaskFilter {
+public final class MaskFilter {
     var handle : OpaquePointer
     init (handle: OpaquePointer)
     {

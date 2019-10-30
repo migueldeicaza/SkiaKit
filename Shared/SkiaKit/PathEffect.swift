@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class PathEffect {
+public final class PathEffect {
     var handle : OpaquePointer
     init (handle: OpaquePointer)
     {

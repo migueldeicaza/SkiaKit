@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Data {
+public final class Data {
     var handle: OpaquePointer
     
     public init (size: Int = 0)

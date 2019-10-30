@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Typeface {
+public final class Typeface {
     var handle : OpaquePointer
     init (handle: OpaquePointer)
     {

@@ -23,7 +23,7 @@ import Foundation
  * outside the geometry. `Path` also describes the winding rule used to fill
  * overlapping contours.
  */
-public class Path {
+public final class Path {
     var handle : OpaquePointer
     init (handle: OpaquePointer)
     {

@@ -29,7 +29,7 @@ public enum BitmapError : Error {
  * Bitmap is not thread safe. Each thread must have its own copy of Bitmap fields,
  * although threads may share the underlying pixel array.
  */
-public class Bitmap {
+public final class Bitmap {
     var handle : OpaquePointer
   
     /**

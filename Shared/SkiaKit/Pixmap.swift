@@ -7,7 +7,19 @@
 
 import Foundation
 
-public class Pixmap {
+/**
+ * `Pixmap` provides a utility to pair `ImageInfo` with pixels and row bytes.
+ * `Pixmap` is a low level class which provides convenience functions to access
+ * raster destinations. `Canvas` can not draw `Pixmap`, nor does `Pixmap` provide
+ * a direct drawing destination.
+ *
+ * Use `Bitmap` to draw pixels referenced by `Pixmap`; use `Surface` to draw into
+ * pixels referenced by `Pixmap`.
+ *
+ */
+// `Pixmap` does not try to manage the lifetime of the pixel memory. Use `PixelRef`
+// to manage pixel memory; `PixelRef` is safe across threads.
+public final class Pixmap {
     var handle: OpaquePointer
     var owns: Bool
     
@@ -23,12 +35,34 @@ public class Pixmap {
         }
     }
     
+    /**
+     *  Creates an empty `Pixmap` without pixels, with `.unknown` `ColorType`, with
+     * `.unknown` `AlphaType`, and with a width and height of zero. Use
+     * `reset()` to associate pixels, `ColorType`, `AlphaType`, width, and height
+     * after `Pixmap` has been created.
+     */
     public init ()
     {
         handle = sk_pixmap_new()
         owns = true
     }
     
+    /**
+     * Creates `Pixmap` from info width, height, `AlphaType`, and `ColorType`.
+     * addr points to pixels, or `nil`.  This computes the bytes per row from the
+     * `info` parameter.
+     *
+     * No parameter checking is performed; it is up to the caller to ensure that
+     * `addr` and `rowBytes` agree with `info`.
+     *
+     * The memory lifetime of pixels is managed by the caller. When `Pixmap` goes
+     * out of scope, `addr` is unaffected.
+     * `Pixmap` may be later modified by `reset()` to change its size, pixel type, or
+     * storage.
+     * - Parameter info: width, height, `AlphaType`, `ColorType` of `ImageInfo`
+     * - Parameter addr: pointer to pixels allocated by caller; may be `nil`
+     * - Returns: initialized `Pixmap`
+     */
     public init (info: ImageInfo, addr: UnsafeMutableRawPointer)
     {
         var cinfo = info.toNative()
@@ -36,6 +70,21 @@ public class Pixmap {
         owns = true
     }
     
+    /**
+     * Creates `Pixmap` from info width, height, `AlphaType`, and `ColorType`.
+     * `addr` points to pixels, or `nil`. `rowBytes` should be `info.width` times
+     * `info.bytesPerPixel`, or larger.
+     * No parameter checking is performed; it is up to the caller to ensure that
+     * `addr` and `rowBytes` agree with `info`.
+     * The memory lifetime of pixels is managed by the caller. When `Pixmap` goes
+     * out of scope, addr is unaffected.
+     * `Pixmap` may be later modified by `reset()` to change its size, pixel type, or
+     * storage.
+     * - Parameter info: width, height, `AlphaType`, `ColorType` of `ImageInfo`
+     * - Parameter addr: pointer to pixels allocated by caller; may be `nil`
+     * - Parameter rowBytes: size of one row of addr; width times pixel size, or larger
+     * - Returns: initialized `Pixmap`
+     */
     public init (info: ImageInfo, addr: UnsafeMutableRawPointer, rowBytes: Int)
     {
         var cinfo = info.toNative()
@@ -43,17 +92,38 @@ public class Pixmap {
         owns = true
     }
     
+    /**
+     * Sets width, height, row bytes to zero; pixel address to `nil`; `ColorType` to
+     * `.unknown`; and `AlphaType` to `.unknown`
+     * The prior pixels are unaffected; it is up to the caller to release pixels
+     * memory if desired.
+     */
     public func reset ()
     {
         sk_pixmap_reset(handle)
     }
     
+    /**
+     * Sets width, height, `AlphaType`, and `ColorType` from `info`.
+     * Sets pixel address from `addr`, which may be `nil`.
+     * Sets row bytes from `rowBytes`, which should be `info.width` times
+     * `info.bytesPerPixel`, or larger.
+     * Does not check `addr`. Asserts if built with SK_DEBUG defined and if `rowBytes` is
+     * too small to hold one row of pixels.
+     * The memory lifetime pixels are managed by the caller. When `Pixmap` goes
+     * out of scope, `addr` is unaffected.
+     * - Parameter info: width, height, `AlphaType`, `ColorType` of `ImageInfo`
+     * - Parameter addr: pointer to pixels allocated by caller; may be `nil`
+     * - Parameter rowBytes: size of one row of `addr`; width times pixel size, or larger
+
+     */
     public func reset (info: ImageInfo, addr: UnsafeMutableRawPointer, rowBytes: Int)
     {
         var cinfo = info.toNative()
         sk_pixmap_reset_with_params (handle, &cinfo, addr, rowBytes);
     }
     
+    /// Returns width, height, `AlphaType`, `ColorType`, and `ColorSpace`.
     public var info: ImageInfo {
         get {
             var info: sk_imageinfo_t = sk_imageinfo_t()
@@ -63,6 +133,13 @@ public class Pixmap {
         }
     }
     
+    /// Returns pixel count in each pixel row. Should be equal or less than: `rowBytes` / `info.bytesPerPixel`
+    public var width : Int32 { info.width }
+    
+    /// Returns pixel row count.
+    public var height : Int32 { info.height }
+    
+    /// Return the dimensions of the pixmap (from its ImageInfo)
     public var rect: IRect {
         get {
             let i = info
@@ -70,12 +147,36 @@ public class Pixmap {
         }
     }
     
+    /// Returns the ColorType for this pixmap
+    public var colorType: ColorType { info.colorType }
+    
+    /// Returns the AlphaType for this pixmap
+    public var alphaType: AlphaType { info.alphaType }
+    
+    /// Returns SkColorSpace, the range of colors, associated with ImageInfo. The
+    /// reference count of SkColorSpace is unchanged. The returned SkColorSpace is
+    /// immutable.
+    public var colorSpace: ColorSpace? { info.colorSpace }
+    /**
+     * Returns row bytes, the interval from one pixel row to the next. Row bytes
+     * is at least as large as: `width` * `info.bytesPerPixel`.
+     * Returns zero if `colorType` `.unknown`
+     * It is up to the `Bitmap` creator to ensure that row bytes is a useful value.
+     */
     public var rowBytes : Int {
         get {
             sk_pixmap_get_row_bytes(handle)
         }
     }
     
+    /**
+     * Returns true if SkAlphaType is kOpaque_SkAlphaType.
+     * Does not check if SkColorType allows alpha, or if any pixel value has
+     * transparency.
+     */
+    public var isOpaque: Bool { info.isOpaque }
+    
+    /// Returns pixel address, the base address corresponding to the pixel origin.
     public var pixels : UnsafeMutableRawPointer {
         get {
             UnsafeMutableRawPointer (mutating: sk_pixmap_get_pixels(handle))
@@ -97,12 +198,53 @@ public class Pixmap {
         sk_pixmap_scale_pixels(handle, destination.handle, quality.toNative())
     }
     
+    /**
+     * Copies a rectangle of pixels to `dstPixels`. Copy starts at (`srcX`, `srcY`), and does not
+     * exceed `Pixmap` `(width, height)`.
+     * `dstInfo` specifies width, height, `ColorType`, `AlphaType`, and
+     * `ColorSpace` of destination. dstRowBytes specifics the gap from one destination
+     * row to the next. Returns `true` if pixels are copied. Returns `false` if
+     * `dstInfo` address equals `nil`, or `dstRowBytes` is less than `dstInfo.minRowBytes(`
+     *
+     * Pixels are copied only if pixel conversion is possible. If `Pixmap` `colorType` is
+     * `.gray8`, or `.alpha8`; `dstInfo.colorType` must match.
+     * If `Pixmap` `colorType` is `.gray8`, `dstInfo.colorSpace` must match.
+     * If `Pixmap`` alphaType` is `.opaque`, `dstInfo.alphaType` must
+     * match. If `Pixmap` `colorSpace` is `nil`, `dstInfo.colorSpace` must match.
+     * `srcX` and `srcY` may be negative to copy only top or left of source. Returns
+     * false if `Pixmap` `width` or `height` is zero or negative.
+     *
+     * - Parameter dstInfo: destination width, height, `ColorType`, `AlphaType`, `ColorSpace`
+     * - Parameter dstPixels: destination pixel storage
+     * - Parameter dstRowBytes: destination row length
+     * - Parameter srcX: column index whose absolute value is less than width()
+     * - Parameter srcY: row index whose absolute value is less than height()
+     * - Returns: true if pixels are copied to dstPixels, or `false` if the pixel convesion is not possible, or if width/height is zero or negative, or abs(srcX) >= Pixmap width(), or if abs(srcY) >= Pixmap height().
+     */
     public func readPixels (dstInfo: ImageInfo, dstPixels: UnsafeMutableRawPointer, dstRowBytes: Int, srcX: Int32 = 0, srcY: Int32 = 0, behavior: TransferFunctionBehavior = .respect) -> Bool
     {
         var cinfo = dstInfo.toNative()
         return sk_pixmap_read_pixels(handle, &cinfo, dstPixels, dstRowBytes, srcX, srcY, behavior.toNative ())
     }
     
+    /**
+     * Copies a rectangle of pixels to dst. Copy starts at `(srcX, srcY)`, and does not
+     * exceed `Pixmap` `(width, height)`. `dst` specifies width, height, `ColorType`,
+     * `AlphaType`, and `ColorSpace` of destination.  Returns true if pixels are copied.
+     * Returns false if dst address equals `nil`, or `dst.rowBytes` is less than
+     * dst `ImageInfo.minRowBytes`.
+     * Pixels are copied only if pixel conversion is possible. If `Pixmap` `colorType` is
+     * `.gray8`, or `.alpha8`; `dstInfo.colorType` must match.
+     * If `Pixmap` `colorType` is `.gray8`, `dstInfo.colorSpace` must match.
+     * If `Pixmap`` alphaType` is `.opaque`, `dstInfo.alphaType` must
+     * match. If `Pixmap` `colorSpace` is `nil`, `dstInfo.colorSpace` must match.
+     * `srcX` and `srcY` may be negative to copy only top or left of source. Returns
+     * false if `Pixmap` `width` or `height` is zero or negative.
+     * - Parameter dst: `ImageInfo` and pixel address to write to
+     * - Parameter srcX: column index whose absolute value is less than width()
+     * - Parameter srcY: row index whose absolute value is less than height()
+     * - Returns: true if pixels are copied to dst, or `false` if the pixel convesion is not possible, or if width/height is zero or negative, or abs(srcX) >= Pixmap width(), or if abs(srcY) >= Pixmap height().
+     */
     public func readPixels (into: Pixmap, srcX: Int32 = 0, srcY: Int32 = 0) -> Bool
     {
         readPixels(dstInfo: into.info, dstPixels: UnsafeMutableRawPointer (mutating: into.pixels), dstRowBytes: into.rowBytes, srcX: srcX, srcY: srcY, behavior: .respect)
@@ -178,17 +320,17 @@ public class Pixmap {
     }
     
     
-    public func makeWith (colorType: ColorType) -> ImageInfo
+    public func makeWith (colorType: ColorType) -> Pixmap
     {
         return Pixmap (info: info.makeWith(colorType: colorType), addr: pixels, rowBytes: rowBytes)
     }
 
-    public func makeWith (colorSpace: ColorSpace ) -> ImageInfo
+    public func makeWith (colorSpace: ColorSpace ) -> Pixmap
     {
         return Pixmap (info: info.makeWith(colorSpace: colorSpace), addr: pixels, rowBytes: rowBytes)
     }
 
-    public func makeWith (alphaType: AlphaType) -> ImageInfo
+    public func makeWith (alphaType: AlphaType) -> Pixmap
     {
         return Pixmap (info: info.makeWith(alphaType: alphaType), addr: pixels, rowBytes: rowBytes)
     }

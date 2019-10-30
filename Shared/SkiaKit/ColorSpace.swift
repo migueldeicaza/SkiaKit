@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ColorSpace {
+public final class ColorSpace {
     var handle: OpaquePointer
     
     public init ()

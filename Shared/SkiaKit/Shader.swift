@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Shader {
+public final class Shader {
     var handle : OpaquePointer
     init (handle: OpaquePointer)
     {

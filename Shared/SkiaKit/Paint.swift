@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Paint {
+public final class Paint {
     var handle : OpaquePointer
        
     init (handle: OpaquePointer)

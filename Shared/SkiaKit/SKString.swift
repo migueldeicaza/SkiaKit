@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SKString {
+class final SKString {
     var handle: OpaquePointer
     
     init (str: String)

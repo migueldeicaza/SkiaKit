@@ -31,7 +31,7 @@ import Foundation
  * This approach may be deprecated in the future.
 
  */
-public class Canvas {
+public final class Canvas {
     var handle: OpaquePointer
     var owns: Bool
     

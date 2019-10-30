@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Region {
+public final class Region {
     var handle: OpaquePointer
     
     public init ()

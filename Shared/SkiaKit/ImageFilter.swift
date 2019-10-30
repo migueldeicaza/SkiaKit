@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ImageFilter {
+public final class ImageFilter {
     var handle : OpaquePointer
     init (handle: OpaquePointer)
     {

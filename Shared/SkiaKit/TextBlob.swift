@@ -13,7 +13,7 @@ import Foundation
  * run consists of glyphs, `Paint`, and position. Only parts of `Paint` related to
  * fonts and text rendering are used by run.
  */
-public class TextBlob {
+public final class TextBlob {
     var handle: OpaquePointer
     
     init (handle: OpaquePointer)
@@ -42,7 +42,7 @@ public class TextBlob {
 }
 
 /// A builder object that is used to create a `TextBlob`.
-public class TextBlobBuilder {
+public final class TextBlobBuilder {
     var handle: OpaquePointer
     var owns: Bool
     

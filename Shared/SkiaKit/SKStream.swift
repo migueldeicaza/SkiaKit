@@ -212,7 +212,7 @@ public class SKStream {
 /**
  * A reading stream that wraps a native file.   To write use `SKFileWStream`
  */
-public class SKFileStream : SKStream {
+public final class SKFileStream : SKStream {
     /**
      * Initialize the stream by calling sk_fopen on the specified path.
      * This internal stream will be closed in the destructor.
@@ -240,7 +240,7 @@ public class SKFileStream : SKStream {
 /**
  * A memory-based stream.
  */
-public class SKMemoryStream: SKStream {
+public final class SKMemoryStream: SKStream {
     public init ()
     {
         super.init (handle: sk_memorystream_new(), owns: true)
@@ -358,7 +358,7 @@ public class SKWStream {
 /**
  * Opens a write-only stream to the specified file.  To read use `SKFileStream`
  */
-public class SKFileWStream : SKWStream {
+public final class SKFileWStream : SKWStream {
     public init? (path: String)
     {
        if let handle = sk_filewstream_new(path) {
@@ -382,7 +382,7 @@ public class SKFileWStream : SKWStream {
 /**
  * A writeable, dynamically-sized, memory-based stream.
  */
-public class SKDynamicMemoryWStream : SKWStream {
+public final class SKDynamicMemoryWStream : SKWStream {
     public init ()
     {
         super.init(handle: sk_dynamicmemorywstream_new(), owns: true)

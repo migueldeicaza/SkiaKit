@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class RoundRect {
+public final class RoundRect {
     var handle: OpaquePointer
     
     init (handle: OpaquePointer)

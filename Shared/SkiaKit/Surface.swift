@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Surface {
+public final class Surface {
     var handle: OpaquePointer
     
     init (handle: OpaquePointer)
