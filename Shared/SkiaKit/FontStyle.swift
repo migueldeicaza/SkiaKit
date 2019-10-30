@@ -46,11 +46,11 @@ public final class FontStyle {
     public var slant: FontStyleSlant { FontStyleSlant.fromNative (sk_fontstyle_get_slant(handle)) }
     
     /// Gets a new normal (upright and not bold) font style.
-    public var normal: FontStyle = FontStyle(weight: .normal, width: .normal, slant: .upright)
+    public static var normal: FontStyle = FontStyle(weight: .normal, width: .normal, slant: .upright)
     /// Gets a new upright font style that is bold.
-    public var bold: FontStyle = FontStyle(weight: .bold, width: .normal, slant: .upright)
+    public static var bold: FontStyle = FontStyle(weight: .bold, width: .normal, slant: .upright)
     /// Gets a new italic font style.
-    public var italic: FontStyle = FontStyle(weight: .normal, width: .normal, slant: .italic)
+    public static var italic: FontStyle = FontStyle(weight: .normal, width: .normal, slant: .italic)
     /// Gets a new italic font style that is bold.
-    public var boldItalic: FontStyle = FontStyle(weight: .bold, width: .normal, slant: .italic)
+    public static var boldItalic: FontStyle = FontStyle(weight: .bold, width: .normal, slant: .italic)
 }

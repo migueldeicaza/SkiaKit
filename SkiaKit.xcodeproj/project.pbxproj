@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4912D98523693F710079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
+		4912D986236A51430079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
+		4912D987236A51450079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
 		49DA8E902363E8C10026FC2B /* SkiaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DA8E862363E8C00026FC2B /* SkiaKit.framework */; };
 		49DA8E952363E8C10026FC2B /* SkiaKit_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA8E942363E8C10026FC2B /* SkiaKit_iOSTests.swift */; };
 		49DA8E972363E8C10026FC2B /* SkiaKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 49DA8E892363E8C00026FC2B /* SkiaKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1147,6 +1149,7 @@
 				49DA8F972363EB880026FC2B /* Bitmap.swift in Sources */,
 				49DA8F9B2363EB880026FC2B /* Colors.swift in Sources */,
 				49DA8FA92363EB880026FC2B /* RoundRect.swift in Sources */,
+				4912D986236A51430079BAF7 /* FontStyle.swift in Sources */,
 				49DA8FA82363EB880026FC2B /* Region.swift in Sources */,
 				49DA8FA12363EB880026FC2B /* ImageInfo.swift in Sources */,
 				49DA8FAB2363EB880026FC2B /* SKObject.swift in Sources */,
@@ -1192,6 +1195,7 @@
 				49DA8FB02363EB890026FC2B /* Bitmap.swift in Sources */,
 				49DA8FB42363EB890026FC2B /* Colors.swift in Sources */,
 				49DA8FC22363EB890026FC2B /* RoundRect.swift in Sources */,
+				4912D987236A51450079BAF7 /* FontStyle.swift in Sources */,
 				49DA8FC12363EB890026FC2B /* Region.swift in Sources */,
 				49DA8FBA2363EB890026FC2B /* ImageInfo.swift in Sources */,
 				49DA8FC42363EB890026FC2B /* SKObject.swift in Sources */,

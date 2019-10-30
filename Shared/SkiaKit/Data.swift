@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class Data {
+public final class SKData {
     var handle: OpaquePointer
     
     public init (size: Int = 0)
@@ -25,10 +25,10 @@ public final class Data {
         handle = sk_data_new_with_copy(data, data.count)
     }
     
-    public static func fromFile (file: String) -> Data?
+    public static func fromFile (file: String) -> SKData?
     {
         if let x = sk_data_new_from_file(file) {
-            return Data(handle: x)
+            return SKData(handle: x)
         }
         return nil
     }

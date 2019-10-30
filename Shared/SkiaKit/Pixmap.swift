@@ -283,7 +283,7 @@ public final class Pixmap {
      * - Parameter quality; the encoder-specific quality level
      * - Returns: nil on error, or Data containing the image in the specified format with the specified quality on success
      */
-    public func encode (encoder: EncodedImageFormat, quality: Int32) -> Data?
+    public func encode (encoder: EncodedImageFormat, quality: Int32) -> SKData?
     {
         let stream = SKDynamicMemoryWStream ()
         let result = Pixmap.encode (dest: stream, src: self, encoder: encoder, quality: quality)

@@ -278,7 +278,7 @@ public final class SKMemoryStream: SKStream {
      * Creates a new instance of SKMemoryStream with the buffer being the provided data.
      * - Parameter data: The data wrapper
      */
-    public init? (_ data: Data)
+    public init? (_ data: SKData)
     {
         if let h = sk_memorystream_new_with_skdata (data.handle) {
             super.init (handle: h, owns: true)
@@ -397,9 +397,9 @@ public final class SKDynamicMemoryWStream : SKWStream {
     /**
      * Returns the contents of this dynamic memory stream as a Data, this makes a copy of the underlying data
      */
-    public func getData () -> Data
+    public func getData () -> SKData
     {
-        let d = Data.init(size: bytesWritten)
+        let d = SKData.init(size: bytesWritten)
         sk_dynamicmemorywstream_copy_to (handle, UnsafeMutableRawPointer (mutating: d.data))
         return d
     }

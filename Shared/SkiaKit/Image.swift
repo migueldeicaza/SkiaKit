@@ -26,8 +26,8 @@ public final class Image {
         sk_image_unref(handle)
     }
     
-    public func encode () -> Data
+    public func encode () -> SKData
     {
-        Data (handle: sk_image_encode(handle))
+        SKData (handle: sk_image_encode(handle))
     }
 }
