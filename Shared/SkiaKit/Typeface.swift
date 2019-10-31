@@ -174,6 +174,83 @@ public final class Typeface {
     public func getTableSize (tag: UInt32) -> Int {
         sk_typeface_get_table_size(handle, tag)
     }
+    
+    /**
+     * Gets the contents of the specified table tag as an array, or nil if the table is not found
+     *
+     * - Parameter tag: The table tag whose contents are to be copied
+     * - Returns: An array with the table contents, or nil on error
+    */
+    public func getTableData (tag: UInt32) -> [UInt8]?
+    {
+        let size = getTableSize(tag: tag)
+        if size == 0 {
+            return nil
+        }
+        var arr = Array<UInt8>.init(repeating: 0, count: size)
+        
+        if getTableData(tag: tag, offset: 0, length: size, storage: &arr) == size {
+            return arr
+        }
+        return nil
+    }
+    
+    /**
+     * Copy the contents of a table into data (allocated by the caller). Note
+     * that the contents of the table will be in their native endian order
+     * (which for most truetype tables is big endian). If the table tag is
+     * not found, or there is an error copying the data, then 0 is returned.
+     * If this happens, it is possible that some or all of the memory pointed
+     * to by data may have been written to, even though an error has occured.
+     *
+     * - Parameter tag: The table tag whose contents are to be copied
+     * - Parameter offset: The offset in bytes into the table's contents where the
+     * copy should start from.
+     * - Parameter length: The number of bytes, starting at offset, of table data
+     * to copy.
+     * - Parameter storage: storage address where the table contents are copied to
+     * - Returns: the number of bytes actually copied into data. If offset+length
+     * exceeds the table's size, then only the bytes up to the table's
+     * size are actually copied, and this is the value returned. If
+     * offset > the table's size, or tag is not a valid table,
+     * then 0 is returned.
+     */
+    public func getTableData (tag: UInt32, offset: Int, length: Int, storage: UnsafeMutablePointer<UInt8>) -> Int
+    {
+        return sk_typeface_get_table_data(handle, tag, offset, length, storage)
+    }
+    
+    /// Returns the number of glyphs in the string.
+    public func countGlyphs (str: String) -> Int32
+    {
+        let utflen = str.utf8.count
+        return sk_typeface_chars_to_glyphs(handle, str, UTF8_ENCODING, nil, Int32 (utflen))
+    }
+    
+    /// Retrieve the corresponding glyph IDs of a string of characters.
+    /// - Returns: the array of glyphs, or nil if there is an error
+    public func getGlyphs (str: String) -> [UInt16]?
+    {
+        let utflen = str.utf8.count
+        let nglyphs = sk_typeface_chars_to_glyphs(handle, str, UTF8_ENCODING, nil, Int32 (utflen))
+        if nglyphs <= 0 {
+            return nil
+        }
+        var glyphs = Array<UInt16>.init (repeating: 0, count: Int(nglyphs))
+        sk_typeface_chars_to_glyphs(handle, str, UTF8_ENCODING, &glyphs, nglyphs)
+        return glyphs
+    }
+
+    /// Returns a stream for the contents of the font data.
+    public func openStream () -> (stream: SKStream, trueTypeCollectionIndex: Int32)?
+    {
+        var ttcIndex: Int32 = 0
+        if let x = sk_typeface_open_stream(handle, &ttcIndex) {
+            return (SKStream(handle: x, owns: true), ttcIndex)
+        }
+        return nil
+    }
+    
     deinit
     {
         if owns {

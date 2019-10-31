@@ -509,3 +509,26 @@ public enum FontStyleSlant : UInt32 {
         return FontStyleSlant.init (rawValue: x.rawValue)!
     }
 }
+
+/// Indications on how the shader should handle drawing outside the original bounds.
+public enum ShaderTileMode : UInt32 {
+    /// Replicate the edge color if the shader draws outside of its original bounds.
+    case clamp = 0
+    /// Repeat the shader's image horizontally and vertically.
+    case repeats
+    /// Repeat the shader's image horizontally and vertically, alternating mirror images so that adjacent images always seam.
+    case mirror
+    /// Only draw within the original domain, return transparent-black everywhere else.
+    case decal
+    
+    internal func toNative () -> sk_shader_tilemode_t
+    {
+        return sk_shader_tilemode_t(rawValue: rawValue)
+    }
+    
+    internal static func fromNative (_ x: sk_shader_tilemode_t) -> ShaderTileMode
+    {
+        return ShaderTileMode.init (rawValue: x.rawValue)!
+    }
+
+}
