@@ -133,3 +133,26 @@ public struct Size : Equatable {
         sk_size_t(w: width, h: height)
     }
 }
+
+public struct ISize : Equatable {
+    public var width, height: Float
+    
+    public var isEmpty : Bool {
+        get { width == 0 && height == 0 }
+    }
+    
+    public func toPoint () -> Point
+    {
+        return Point (x: width, y: height)
+    }
+    
+    static func fromNative (_ x: sk_isize_t) -> ISize
+    {
+        return ISize (width: x.w, height: x.h)
+    }
+    
+    func toNative () -> sk_isize_t
+    {
+        sk_isize_t(w: width, h: height)
+    }
+}
