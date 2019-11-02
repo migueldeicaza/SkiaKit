@@ -29,12 +29,24 @@ import Foundation
  *
  * `Canvas` can be constructed to draw to `Bitmap` without first creating raster surface.
  * This approach may be deprecated in the future.
-
+ *
  */
 public final class Canvas {
     var handle: OpaquePointer
     var owns: Bool
     
+    /**
+     * Constructs a canvas that draws into bitmap.
+     * Sets `SurfaceProps` .kLegacyFontHost_InitType` in constructed `Surface`.
+     *
+     * `Bitmap` is copied so that subsequently editing bitmap will not affect
+     * constructed `Canvas`.
+     *
+     * - Parameter bitmap: width, height, `ColorType`, `AlphaType`, and pixel
+     * storage of raster surface
+     * - Returns: `Canvas` that can be used to draw into bitmap
+     *
+     */
     public init (_ bitmap : Bitmap)
     {
         handle = sk_canvas_new_from_bitmap(bitmap.handle)
@@ -47,6 +59,7 @@ public final class Canvas {
         self.owns = owns
     }
     
+
     deinit {
         if owns {
             sk_canvas_destroy(handle)
@@ -60,6 +73,13 @@ public final class Canvas {
         sk_canvas_draw_text(handle, text, utf8.count, x, y, paint.handle)
     }
     
+    /**
+     * Returns true if `Rect` rect, transformed by `Matrix`, can be quickly determined to be
+     * outside of clip. May return false even though rect is outside of clip.
+     * Use to check if an area to be drawn is clipped out, to skip subsequent draw calls.
+     * - Parameter rect: `Rect` to compare with clip
+     * - Returns: true if rect, transformed by `Matrix`, does not intersect clip
+     */
     public func quickReject (rect: Rect) -> Bool
     {
         withUnsafePointer(to: rect.toNative()) {
@@ -72,13 +92,58 @@ public final class Canvas {
 //
 //    }
     
-    // TODO: saveLayer
-    
+    /**
+     * Saves `Matrix` and clip.
+     * Calling `restore` discards changes to `Matrix` and clip,
+     * restoring the `Matrix` and clip to their state when `save` was called.
+     *
+     * `Matrix` may be changed by `translate`, `scale`, `rotate`, `skew`, `concat`,
+     * `setMatrix`, and `resetMatrix` Clip may be changed by `clipRect`, `clipRRect`,
+     * `clipPath`, `clipRegion`.
+     *
+     * Saved `Canvas` state is put on a stack; multiple calls to save() should be balance
+     * by an equal number of calls to restore().
+     * Call restoreToCount() with result to restore this and subsequent saves.
+     * - Returns: depth of saved stack
+     */
     public func save () -> Int32
     {
         sk_canvas_save(handle)
     }
     
+    /**
+     * Saves `Matrix` and clip, and allocates a `Bitmap` for subsequent drawing.
+     * Calling restore() discards changes to `Matrix` and clip, and draws the `Bitmap`.
+     *
+     * `Matrix` may be changed by `translate`, `scale`, `rotate`, `skew`, `concat`,
+     * `setMatrix`, and `resetMatrix` Clip may be changed by `clipRect`, `clipRRect`,
+     * `clipPath`, `clipRegion`.
+     *
+     * `Rect` bounds suggests but does not define the `Bitmap` size. To clip drawing to
+     * a specific rectangle, use clipRect().
+     *
+     * Optional `Paint` paint applies alpha, `ColorFilter`, `ImageFilter`, and
+     * `BlendMode` when `restore` is called.
+     *
+     * Call `restoreToCount` with returned value to restore this and subsequent saves.
+     * - Parameter limit: hint to limit the size of the layer; may be `nil`
+     * - Parameter paint: graphics state for layer; may be `nil`
+     * - Returns: depth of saved stack
+     */
+    public func saveLayer (limit: Rect? = nil, paint: Paint? = nil)
+    {
+        var ptr : UnsafePointer<sk_rect_t>? = nil
+        
+        var r: sk_rect_t
+        
+        if let l = limit {
+            r = l.toNative()
+            ptr = UnsafePointer<sk_rect_t>(&r)
+        }
+    
+        sk_canvas_save_layer(handle, ptr, paint == nil ? nil : paint!.handle)
+    }
+
     /**
      * Fills clip with color color.
      * mode determines how ARGB is combined with destination.

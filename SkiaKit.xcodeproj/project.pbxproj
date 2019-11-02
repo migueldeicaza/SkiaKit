@@ -10,6 +10,9 @@
 		4912D98523693F710079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
 		4912D986236A51430079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
 		4912D987236A51450079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
+		4912D99C236E1A760079BAF7 /* SurfaceProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */; };
+		4912D99D236E1A760079BAF7 /* SurfaceProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */; };
+		4912D99E236E1A760079BAF7 /* SurfaceProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */; };
 		49DA8E902363E8C10026FC2B /* SkiaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DA8E862363E8C00026FC2B /* SkiaKit.framework */; };
 		49DA8E952363E8C10026FC2B /* SkiaKit_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA8E942363E8C10026FC2B /* SkiaKit_iOSTests.swift */; };
 		49DA8E972363E8C10026FC2B /* SkiaKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 49DA8E892363E8C00026FC2B /* SkiaKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -297,6 +300,7 @@
 
 /* Begin PBXFileReference section */
 		4912D98423693F710079BAF7 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceProperties.swift; sourceTree = "<group>"; };
 		49DA8E862363E8C00026FC2B /* SkiaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkiaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DA8E892363E8C00026FC2B /* SkiaKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkiaKit_iOS.h; sourceTree = "<group>"; };
 		49DA8E8A2363E8C00026FC2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -562,6 +566,7 @@
 				49DA8F2F2363E98A0026FC2B /* ColorSpace.swift */,
 				49DA8F202363E9890026FC2B /* Data.swift */,
 				49DA8F272363E98A0026FC2B /* Definitions.swift */,
+				4912D98423693F710079BAF7 /* FontStyle.swift */,
 				49DA8F232363E98A0026FC2B /* Image.swift */,
 				49DA8F262363E98A0026FC2B /* ImageFilter.swift */,
 				49DA8F222363E98A0026FC2B /* ImageInfo.swift */,
@@ -571,17 +576,17 @@
 				49DA8F312363E98A0026FC2B /* Paint.swift */,
 				49DA8F2A2363E98A0026FC2B /* Path.swift */,
 				49DA8F1E2363E9890026FC2B /* PathEffect.swift */,
+				49E975A62367ACAD00042FE7 /* Pixmap.swift */,
 				49DA8F282363E98A0026FC2B /* Region.swift */,
 				49DA8F322363E98A0026FC2B /* RoundRect.swift */,
 				49DA8F292363E98A0026FC2B /* Shader.swift */,
 				49DA8F1F2363E9890026FC2B /* SKObject.swift */,
 				49DA8F2B2363E98A0026FC2B /* SKStream.swift */,
 				49DA8F2D2363E98A0026FC2B /* SKString.swift */,
+				49E9754923653BAE00042FE7 /* Surface.swift */,
+				4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */,
 				49DA8F242363E98A0026FC2B /* TextBlob.swift */,
 				49DA8F302363E98A0026FC2B /* Typeface.swift */,
-				49E9754923653BAE00042FE7 /* Surface.swift */,
-				49E975A62367ACAD00042FE7 /* Pixmap.swift */,
-				4912D98423693F710079BAF7 /* FontStyle.swift */,
 			);
 			path = SkiaKit;
 			sourceTree = "<group>";
@@ -1100,6 +1105,7 @@
 				49E9756723654A3D00042FE7 /* SkiaView.swift in Sources */,
 				49DA8F3E2363E98A0026FC2B /* Color.swift in Sources */,
 				49DA8F3B2363E98A0026FC2B /* ImageInfo.swift in Sources */,
+				4912D99C236E1A760079BAF7 /* SurfaceProperties.swift in Sources */,
 				49DA8F392363E98A0026FC2B /* Data.swift in Sources */,
 				49DA8F482363E98A0026FC2B /* ColorSpace.swift in Sources */,
 				49DA8F492363E98A0026FC2B /* Typeface.swift in Sources */,
@@ -1146,6 +1152,7 @@
 				49E9756823654A3D00042FE7 /* SkiaView.swift in Sources */,
 				49DA8F9D2363EB880026FC2B /* Data.swift in Sources */,
 				49DA8FAD2363EB880026FC2B /* SKString.swift in Sources */,
+				4912D99D236E1A760079BAF7 /* SurfaceProperties.swift in Sources */,
 				49DA8F972363EB880026FC2B /* Bitmap.swift in Sources */,
 				49DA8F9B2363EB880026FC2B /* Colors.swift in Sources */,
 				49DA8FA92363EB880026FC2B /* RoundRect.swift in Sources */,
@@ -1192,6 +1199,7 @@
 				49E9756923654A3D00042FE7 /* SkiaView.swift in Sources */,
 				49DA8FB62363EB890026FC2B /* Data.swift in Sources */,
 				49DA8FC62363EB890026FC2B /* SKString.swift in Sources */,
+				4912D99E236E1A760079BAF7 /* SurfaceProperties.swift in Sources */,
 				49DA8FB02363EB890026FC2B /* Bitmap.swift in Sources */,
 				49DA8FB42363EB890026FC2B /* Colors.swift in Sources */,
 				49DA8FC22363EB890026FC2B /* RoundRect.swift in Sources */,

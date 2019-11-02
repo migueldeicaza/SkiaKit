@@ -530,5 +530,32 @@ public enum ShaderTileMode : UInt32 {
     {
         return ShaderTileMode.init (rawValue: x.rawValue)!
     }
+}
 
+public enum SKSurfacePropsFlags : UInt32 {
+    case none = 0
+    case useDeviceIndependentFonts = 1
+}
+
+/**
+ * Description of how the LCD strips are arranged for each pixel. If this is unknown, or the
+ * pixels are meant to be "portable" and/or transformed before showing (e.g. rotated, scaled)
+ * then use `.unknown`
+ */
+public enum PixelGeometry : UInt32 {
+    case unknown = 0
+    case rgbHorizontal
+    case bgrHorizontal
+    case rgbVertical
+    case bgrVertical
+    
+    internal func toNative () -> sk_pixelgeometry_t
+    {
+        return sk_pixelgeometry_t(rawValue: rawValue)
+    }
+    
+    internal static func fromNative (_ x: sk_pixelgeometry_t) -> PixelGeometry
+    {
+        return PixelGeometry.init (rawValue: x.rawValue)!
+    }
 }
