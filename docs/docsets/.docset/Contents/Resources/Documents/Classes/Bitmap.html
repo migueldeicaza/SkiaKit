@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bitmap Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Bitmap" class="dashAnchor"></a>
+    <a title="Bitmap Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (16% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Bitmap Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Bitmap.html">Bitmap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Canvas.html">Canvas</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit11ColorFilterC">ColorFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ColorSpace.html">ColorSpace</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit11ImageFilterC">ImageFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit10MaskFilterC">MaskFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Matrix.html">Matrix</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Paint.html">Paint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path.html">Path</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path/PathAddMode.html">– PathAddMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit10PathEffectC">PathEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pixmap.html">Pixmap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Region.html">Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RoundRect.html">RoundRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKDynamicMemoryWStream.html">SKDynamicMemoryWStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKFileStream.html">SKFileStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKFileWStream.html">SKFileWStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKMemoryStream.html">SKMemoryStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit8SKObjectC">SKObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKStream.html">SKStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKWStream.html">SKWStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit6ShaderC">Shader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SkiaLayer.html">SkiaLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SkiaView.html">SkiaView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Surface.html">Surface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextBlob.html">TextBlob</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextBlobBuilder.html">TextBlobBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit8TypefaceC">Typeface</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AlphaType.html">AlphaType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BitmapError.html">BitmapError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BlendMode.html">BlendMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClipOperation.html">ClipOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ColorType.html">ColorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EncodedImageFormat.html">EncodedImageFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FilterQuality.html">FilterQuality</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PaintHinting.html">PaintHinting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PaintStyle.html">PaintStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathConvexity.html">PathConvexity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathDirection.html">PathDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathFillType.html">PathFillType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathOp.html">PathOp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathSegmentMask.html">PathSegmentMask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PointMode.html">PointMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StrokeCap.html">StrokeCap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StrokeJoin.html">StrokeJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TextAlign.html">TextAlign</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TextEncoding.html">TextEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransferFunctionBehavior.html">TransferFunctionBehavior</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Colors.html">Colors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:7SkiaKit5IRectV">IRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageInfo.html">ImageInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Point.html">Point</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Rect.html">Rect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Size.html">Size</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Bitmap</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Bitmap</span></code></pre>
+
+                </div>
+              </div>
+            <p>Bitmap describes a two-dimensional raster pixel array. Bitmap is built on
+ ImageInfo, containing integer width and height, ColorType and AlphaType
+ describing the pixel format, and ColorSpace describing the range of colors.
+ Bitmap points to PixelRef, which describes the physical array of pixels.
+ ImageInfo bounds may be located anywhere fully inside PixelRef bounds.</p>
+
+<p>Bitmap can be drawn using Canvas. Bitmap can be a drawing destination for Canvas
+ draw member functions. Bitmap flexibility as a pixel container limits some
+ optimizations available to the target platform.</p>
+
+<p>If pixel array is primarily read-only, use Image for better performance.
+ If pixel array is primarily written to, use Surface for better performance.</p>
+
+<p>Bitmap is not thread safe. Each thread must have its own copy of Bitmap fields,
+ although threads may share the underlying pixel array.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapCACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an empty Bitmap without pixels, with <code><a href="../Classes/Bitmap.html#/s:7SkiaKit6BitmapC9colorTypeAA05ColorE0Ovp">colorType</a></code> set to <code>.unkonwn</code>
+ <code><a href="../Classes/Bitmap.html#/s:7SkiaKit6BitmapC9alphaTypeAA05AlphaE0Ovp">alphaType</a></code> set to <code>.unknown</code>, and with a width and height of zero. PixelRef origin is
+ set to (0, 0). Bitmap is not volatile.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>empty Bitmap
+example: <a href="https://fiddle.skia.org/c/@Bitmap_empty_constructor">https://fiddle.skia.org/c/@Bitmap_empty_constructor</a></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC__8isOpaqueACs5Int32V_AFSbtKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:_:isOpaque:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC__8isOpaqueACs5Int32V_AFSbtKcfc">init(_:_:isOpaque:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="n">_</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">isOpaque</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC_8rowBytesAcA9ImageInfoV_SiSgtKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:rowBytes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC_8rowBytesAcA9ImageInfoV_SiSgtKcfc">init(_:rowBytes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageInfo</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageInfo.html">ImageInfo</a></span><span class="p">,</span> <span class="nv">rowBytes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC8rowBytesSivp"></a>
+                    <a name="//apple_ref/swift/Property/rowBytes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC8rowBytesSivp">rowBytes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns row bytes, the interval from one pixel row to the next. Row bytes
+ is at least as large as: <code><a href="../Classes/Bitmap.html#/s:7SkiaKit6BitmapC5widths5Int32Vvp">width</a></code>* <code>imageInfo.bytesPerPixel</code>.
+ Returns zero if colorType is <code>.unknown</code>, or if row bytes supplied to
+ setInfo() is not large enough to hold a row of pixels.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rowBytes</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>byte length of pixel row</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC14tryAllocPixels4info8rowBytesSbSo14sk_imageinfo_ta_SiSgtF"></a>
+                    <a name="//apple_ref/swift/Method/tryAllocPixels(info:rowBytes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC14tryAllocPixels4info8rowBytesSbSo14sk_imageinfo_ta_SiSgtF">tryAllocPixels(info:rowBytes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets <code><a href="../Structs/ImageInfo.html">ImageInfo</a></code> to info following and allocates pixel
+ memory.  <code><a href="../Classes/Bitmap.html#/s:7SkiaKit6BitmapC8rowBytesSivp">rowBytes</a></code> must equal or exceed <code>info.width</code> times <code>info.bytesPerPixel</code>,
+ or equal zero. Pass in zero for <code><a href="../Classes/Bitmap.html#/s:7SkiaKit6BitmapC8rowBytesSivp">rowBytes</a></code> to compute the minimum valid value.
+ Returns <code>false</code> and calls <code><a href="../Classes/Bitmap.html#/s:7SkiaKit6BitmapC5resetyyF">reset()</a></code> if <code><a href="../Structs/ImageInfo.html">ImageInfo</a></code> could not be set, or memory could
+ not be allocated.</p>
+
+<p>On most platforms, allocating pixel memory may succeed even though there is
+ not sufficient memory to hold pixels; allocation does not take place
+ until the pixels are written to. The actual behavior depends on the platform
+ implementation of malloc().</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tryAllocPixels</span><span class="p">(</span><span class="nv">info</span><span class="p">:</span> <span class="n">sk_imageinfo_t</span><span class="p">,</span> <span class="nv">rowBytes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>info</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>contains width, height, <code><a href="../Enums/AlphaType.html">AlphaType</a></code>, <code><a href="../Enums/ColorType.html">ColorType</a></code>, <code><a href="../Classes/ColorSpace.html">ColorSpace</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rowBytes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>size of pixel row or larger; may be zero</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if pixel storage is allocated</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC5resetyyF"></a>
+                    <a name="//apple_ref/swift/Method/reset()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC5resetyyF">reset()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resets to its initial state; all fields are set to zero, as if <code>Bitmap</code> had
+ been initialized by <code>Bitmap</code>().</p>
+
+<p>Sets <code><a href="../Classes/Bitmap.html#/s:7SkiaKit6BitmapC5widths5Int32Vvp">width</a></code>, <code><a href="../Classes/Bitmap.html#/s:7SkiaKit6BitmapC6heights5Int32Vvp">height</a></code>, <code>row bytes</code> to zero; pixel address to <code>nil</code>; <code><a href="../Enums/ColorType.html">ColorType</a></code> to
+ <code>.unknown</code>; and <code><a href="../Enums/AlphaType.html">AlphaType</a></code> to <code>.unknown</code>.</p>
+
+<p>If <code>PixelRef</code> is allocated, its reference count is decreased by one, releasing
+ its memory if <code>Bitmap</code> is the sole owner.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC12setImmutableyyF"></a>
+                    <a name="//apple_ref/swift/Method/setImmutable()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC12setImmutableyyF">setImmutable()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets internal flag to mark <code>Bitmap</code> as immutable. Once set, pixels can not change.
+Any other bitmap sharing the same <code>PixelRef</code> are also marked as immutable.
+Once <code>PixelRef</code> is marked immutable, the setting cannot be cleared.
+Writing to immutable <code>Bitmap</code> pixels triggers an assert on debug builds.
+example: <a href="https://fiddle.skia.org/c/@Bitmap_setImmutable">https://fiddle.skia.org/c/@Bitmap_setImmutable</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setImmutable</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC5eraseyyAA5ColorVF"></a>
+                    <a name="//apple_ref/swift/Method/erase(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC5eraseyyAA5ColorVF">erase(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Replaces pixel values with c. All pixels contained by the bounds are affected.
+ If the <code><a href="../Classes/Bitmap.html#/s:7SkiaKit6BitmapC9colorTypeAA05ColorE0Ovp">colorType</a></code> is <code>.gray9</code> or <code>.krgb565</code>, then alpha
+ is ignored;  RGB is treated as opaque.  If colorType is <code>.alpha8</code>
+ then RGB is ignored.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">erase</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Structs/Color.html">Color</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>c</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unpremultiplied color
+example: <a href="https://fiddle.skia.org/c/@Bitmap_eraseColor">https://fiddle.skia.org/c/@Bitmap_eraseColor</a></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC5erase_4rectyAA5ColorV_AA5IRectVtF"></a>
+                    <a name="//apple_ref/swift/Method/erase(_:rect:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC5erase_4rectyAA5ColorV_AA5IRectVtF">erase(_:rect:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">erase</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Structs/Color.html">Color</a></span><span class="p">,</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:7SkiaKit5IRectV">IRect</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC8getAddr81x1ys5UInt8Vs5Int32V_AJtF"></a>
+                    <a name="//apple_ref/swift/Method/getAddr8(x:y:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC8getAddr81x1ys5UInt8Vs5Int32V_AJtF">getAddr8(x:y:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAddr8</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC9getAddr161x1ys6UInt16Vs5Int32V_AJtF"></a>
+                    <a name="//apple_ref/swift/Method/getAddr16(x:y:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC9getAddr161x1ys6UInt16Vs5Int32V_AJtF">getAddr16(x:y:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAddr16</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt16</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC9getAddr321x1ys6UInt32Vs5Int32V_AJtF"></a>
+                    <a name="//apple_ref/swift/Method/getAddr32(x:y:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC9getAddr321x1ys6UInt32Vs5Int32V_AJtF">getAddr32(x:y:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAddr32</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC9getAddr641x1ySvSgs5Int32V_AItF"></a>
+                    <a name="//apple_ref/swift/Method/getAddr64(x:y:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC9getAddr641x1ySvSgs5Int32V_AItF">getAddr64(x:y:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAddr64</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UnsafeMutableRawPointer</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC8getPixel1x1yAA5ColorVs5Int32V_AJtF"></a>
+                    <a name="//apple_ref/swift/Method/getPixel(x:y:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC8getPixel1x1yAA5ColorVs5Int32V_AJtF">getPixel(x:y:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPixel</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Color.html">Color</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC8setPixel1x1y5valueys5Int32V_AiA5ColorVtF"></a>
+                    <a name="//apple_ref/swift/Method/setPixel(x:y:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC8setPixel1x1y5valueys5Int32V_AiA5ColorVtF">setPixel(x:y:value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setPixel</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Structs/Color.html">Color</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC7canCopy2toSbAA9ColorTypeO_tF"></a>
+                    <a name="//apple_ref/swift/Method/canCopy(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC7canCopy2toSbAA9ColorTypeO_tF">canCopy(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canCopy</span><span class="p">(</span><span class="n">to</span> <span class="nv">colorType</span><span class="p">:</span> <span class="kt"><a href="../Enums/ColorType.html">ColorType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC9imageInfoAA05ImageE0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/imageInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC9imageInfoAA05ImageE0Vvp">imageInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">imageInfo</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageInfo.html">ImageInfo</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC5widths5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/width" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC5widths5Int32Vvp">width</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC6heights5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/height" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC6heights5Int32Vvp">height</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC9alphaTypeAA05AlphaE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/alphaType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC9alphaTypeAA05AlphaE0Ovp">alphaType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">alphaType</span><span class="p">:</span> <span class="kt"><a href="../Enums/AlphaType.html">AlphaType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC13bytesPerPixels5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/bytesPerPixel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC13bytesPerPixels5Int32Vvp">bytesPerPixel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bytesPerPixel</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC9colorTypeAA05ColorE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/colorType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC9colorTypeAA05ColorE0Ovp">colorType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">colorType</span><span class="p">:</span> <span class="kt"><a href="../Enums/ColorType.html">ColorType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC9byteCountSivp"></a>
+                    <a name="//apple_ref/swift/Property/byteCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC9byteCountSivp">byteCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">byteCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC9getPixelsSvSg6buffer_Si3lentyF"></a>
+                    <a name="//apple_ref/swift/Method/getPixels()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC9getPixelsSvSg6buffer_Si3lentyF">getPixels()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPixels</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">buffer</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="p">?,</span> <span class="nv">len</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC9setPixels6bufferySv_tF"></a>
+                    <a name="//apple_ref/swift/Method/setPixels(buffer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC9setPixels6bufferySv_tF">setPixels(buffer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setPixels</span><span class="p">(</span><span class="nv">buffer</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC10peekPixelsAA6PixmapCSgyF"></a>
+                    <a name="//apple_ref/swift/Method/peekPixels()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC10peekPixelsAA6PixmapCSgyF">peekPixels()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the pixels if they are available without having to lock the bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">peekPixels</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Pixmap.html">Pixmap</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the pixels if they are available, otherwise null.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6BitmapC10peekPixelsySbAA6PixmapCF"></a>
+                    <a name="//apple_ref/swift/Method/peekPixels(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6BitmapC10peekPixelsySbAA6PixmapCF">peekPixels(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the pixmap of the bitmap</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">peekPixels</span><span class="p">(</span><span class="n">_</span> <span class="nv">pixmap</span><span class="p">:</span> <span class="kt"><a href="../Classes/Pixmap.html">Pixmap</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true on success, false on failure</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-10-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

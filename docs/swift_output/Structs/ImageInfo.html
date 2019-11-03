@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ImageInfo Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/ImageInfo" class="dashAnchor"></a>
+    <a title="ImageInfo Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> master Docs</a> (32% documented)</p>
+        <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ImageInfo Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Bitmap.html">Bitmap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Canvas.html">Canvas</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit11ColorFilterC">ColorFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ColorSpace.html">ColorSpace</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FontStyle.html">FontStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit11ImageFilterC">ImageFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit10MaskFilterC">MaskFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Matrix.html">Matrix</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Paint.html">Paint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path.html">Path</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path/PathAddMode.html">– PathAddMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit10PathEffectC">PathEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pixmap.html">Pixmap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Region.html">Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RoundRect.html">RoundRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKData.html">SKData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKDynamicMemoryWStream.html">SKDynamicMemoryWStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKFileStream.html">SKFileStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKFileWStream.html">SKFileWStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKMemoryStream.html">SKMemoryStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit8SKObjectC">SKObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKStream.html">SKStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKWStream.html">SKWStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Shader.html">Shader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SkiaLayer.html">SkiaLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SkiaView.html">SkiaView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Surface.html">Surface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SurfaceProperties.html">SurfaceProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextBlob.html">TextBlob</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextBlobBuilder.html">TextBlobBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Typeface.html">Typeface</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AlphaType.html">AlphaType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BitmapError.html">BitmapError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BlendMode.html">BlendMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClipOperation.html">ClipOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ColorType.html">ColorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EncodedImageFormat.html">EncodedImageFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FilterQuality.html">FilterQuality</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FontStyleSlant.html">FontStyleSlant</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FontStyleWeight.html">FontStyleWeight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FontStyleWidth.html">FontStyleWidth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PaintHinting.html">PaintHinting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PaintStyle.html">PaintStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathConvexity.html">PathConvexity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathDirection.html">PathDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathFillType.html">PathFillType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathOp.html">PathOp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathSegmentMask.html">PathSegmentMask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PixelGeometry.html">PixelGeometry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PointMode.html">PointMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SKSurfacePropsFlags.html">SKSurfacePropsFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ShaderTileMode.html">ShaderTileMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StrokeCap.html">StrokeCap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StrokeJoin.html">StrokeJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TextAlign.html">TextAlign</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TextEncoding.html">TextEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransferFunctionBehavior.html">TransferFunctionBehavior</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Colors.html">Colors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:7SkiaKit5IRectV">IRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ISize.html">ISize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageInfo.html">ImageInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Point.html">Point</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Rect.html">Rect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Size.html">Size</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ImageInfo</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImageInfo</span></code></pre>
+
+                </div>
+              </div>
+            <p>Describes pixel dimensions and encoding. <code><a href="../Classes/Bitmap.html">Bitmap</a></code>, <code><a href="../Classes/Image.html">Image</a></code>, <code><a href="../Classes/Pixmap.html">Pixmap</a></code>, and <code><a href="../Classes/Surface.html">Surface</a></code>
+ can be created from <code>ImageInfo</code>. <code>ImageInfo</code> can be retrieved from <code><a href="../Classes/Bitmap.html">Bitmap</a></code> and
+ <code><a href="../Classes/Pixmap.html">Pixmap</a></code>, but not from <code><a href="../Classes/Image.html">Image</a></code> and <code><a href="../Classes/Surface.html">Surface</a></code>. For example, <code><a href="../Classes/Image.html">Image</a></code> and <code><a href="../Classes/Surface.html">Surface</a></code>
+ implementations may defer pixel depth, so may not completely specify <code>ImageInfo</code>.</p>
+
+<p><code>ImageInfo</code> contains dimensions, the pixel integral width and height. It encodes
+ how pixel bits describe alpha, transparency; color components red, blue,
+ and green; and <code><a href="../Classes/ColorSpace.html">ColorSpace</a></code>, the range and linearity of colors.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV5widths5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/width" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV5widths5Int32Vvp">width</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns pixel count in each row.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV6heights5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/height" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV6heights5Int32Vvp">height</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns pixel row count (height)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV9colorTypeAA05ColorF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/colorType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV9colorTypeAA05ColorF0Ovp">colorType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the colortype for this ImageInfo</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">colorType</span><span class="p">:</span> <span class="kt"><a href="../Enums/ColorType.html">ColorType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV9alphaTypeAA05AlphaF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/alphaType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV9alphaTypeAA05AlphaF0Ovp">alphaType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the alpha type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">alphaType</span><span class="p">:</span> <span class="kt"><a href="../Enums/AlphaType.html">AlphaType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L29">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV10colorSpaceAA05ColorF0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/colorSpace" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV10colorSpaceAA05ColorF0CSgvp">colorSpace</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns SkColorSpace, the range of colors - the returned value is immutable</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt"><a href="../Classes/ColorSpace.html">ColorSpace</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV5width6height9colorType05alphaH00G5SpaceACs5Int32V_AjA05ColorH0OAA05AlphaH0OAA0lJ0CSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(width:height:colorType:alphaType:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV5width6height9colorType05alphaH00G5SpaceACs5Int32V_AjA05ColorH0OAA05AlphaH0OAA0lJ0CSgtcfc">init(width:height:colorType:alphaType:colorSpace:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates <code>ImageInfo</code> from integral dimensions width and height, <code><a href="../Enums/ColorType.html">ColorType</a></code>,
+ <code><a href="../Enums/AlphaType.html">AlphaType</a></code>, and optionally `ColorSpace.</p>
+
+<p>If <code><a href="../Classes/ColorSpace.html">ColorSpace</a></code> cs is <code>nil</code> and <code>ImageInfo</code> is part of drawing source: <code><a href="../Classes/ColorSpace.html">ColorSpace</a></code>
+ defaults to sRGB, mapping into <code><a href="../Classes/Surface.html">Surface</a></code> <code><a href="../Classes/ColorSpace.html">ColorSpace</a></code>.</p>
+
+<p>Parameters are not validated to see if their values are legal, or that the
+ combination is supported.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">colorType</span><span class="p">:</span> <span class="kt"><a href="../Enums/ColorType.html">ColorType</a></span><span class="p">,</span> <span class="nv">alphaType</span><span class="p">:</span> <span class="kt"><a href="../Enums/AlphaType.html">AlphaType</a></span><span class="p">,</span> <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt"><a href="../Classes/ColorSpace.html">ColorSpace</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>width</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pixel column count; must be zero or greater</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>height</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pixel row count; must be zero or greater</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the colortype</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>alphaType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the alpha type</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>range of colors; may be <code>nil</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>created <code>ImageInfo</code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L49-L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoVyACs5Int32V_AEtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoVyACs5Int32V_AEtcfc">init(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates <code>ImageInfo</code> from integral dimensions width and height
+ The returned imageInfo sets the colorType to the default platform color type (rgb8888)
+ and the <code><a href="../Structs/ImageInfo.html#/s:7SkiaKit9ImageInfoV9alphaTypeAA05AlphaF0Ovp">alphaType</a></code> is set to <code>.premul</code> and the colorspace is set to <code>nil</code></p>
+
+<p>Parameters are not validated to see if their values are legal, or that the
+ combination is supported.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="n">_</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>created <code>ImageInfo</code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L69-L75">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV13bytesPerPixels5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/bytesPerPixel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV13bytesPerPixels5Int32Vvp">bytesPerPixel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns number of bytes per pixel required by the <code><a href="../Structs/ImageInfo.html#/s:7SkiaKit9ImageInfoV9colorTypeAA05ColorF0Ovp">colorType</a></code> (1, 2, 4 or 8 bytes) or zero if the <code><a href="../Structs/ImageInfo.html#/s:7SkiaKit9ImageInfoV9colorTypeAA05ColorF0Ovp">colorType</a></code> is set to <code>.unknown</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bytesPerPixel</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L99-L114">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV12bitsPerPixels5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/bitsPerPixel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV12bitsPerPixels5Int32Vvp">bitsPerPixel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Number of bits used by the colorType (this is bytesPerPixel multiplied by 8)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bitsPerPixel</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L117-L121">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV9bytesSizeSivp"></a>
+                    <a name="//apple_ref/swift/Property/bytesSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV9bytesSizeSivp">bytesSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the number of bytes necesary to allocate the image of the <code>width</code>x<code>height</code> that uses <code><a href="../Structs/ImageInfo.html#/s:7SkiaKit9ImageInfoV13bytesPerPixels5Int32Vvp">bytesPerPixel</a></code> to store the data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bytesSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L124-L128">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV8rowBytesSivp"></a>
+                    <a name="//apple_ref/swift/Property/rowBytes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV8rowBytesSivp">rowBytes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the number of bytes necessary to store one row of pixels</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rowBytes</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L131-L135">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV7isEmptySbvp"></a>
+                    <a name="//apple_ref/swift/Property/isEmpty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV7isEmptySbvp">isEmpty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns if ImageInfo describes an empty area of pixels by checking if either <code><a href="../Structs/ImageInfo.html#/s:7SkiaKit9ImageInfoV5widths5Int32Vvp">width</a></code> or <code><a href="../Structs/ImageInfo.html#/s:7SkiaKit9ImageInfoV6heights5Int32Vvp">height</a></code> is zero or smaller.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L138-L142">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV8isOpaqueSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isOpaque" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV8isOpaqueSbvp">isOpaque</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns true if <code><a href="../Structs/ImageInfo.html#/s:7SkiaKit9ImageInfoV9alphaTypeAA05AlphaF0Ovp">alphaType</a></code> is set to hint that all pixels are opaque; their
+ alpha value is implicitly or explicitly 1.0. If true, and all pixels are
+ not opaque, Skia may draw incorrectly.</p>
+
+<p>Does not check if <code><a href="../Structs/ImageInfo.html#/s:7SkiaKit9ImageInfoV9colorTypeAA05ColorF0Ovp">colorType</a></code> allows alpha, or if any pixel value has
+ transparency.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isOpaque</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L152-L156">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV14withDimensions5width6heightACs5Int32V_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/withDimensions(width:height:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV14withDimensions5width6heightACs5Int32V_AHtF">withDimensions(width:height:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new ImageInfo instance that has the width and height changed per the specified parameters</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withDimensions</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageInfo</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L159-L165">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV13withColorTypeyAcA0fG0OF"></a>
+                    <a name="//apple_ref/swift/Method/withColorType(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV13withColorTypeyAcA0fG0OF">withColorType(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new ImageInfo instance that has the colorType changed with the specified parameter</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withColorType</span><span class="p">(</span><span class="n">_</span> <span class="nv">colorType</span><span class="p">:</span> <span class="kt"><a href="../Enums/ColorType.html">ColorType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageInfo</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L168-L173">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV14withColorSpaceyAcA0fG0CSgF"></a>
+                    <a name="//apple_ref/swift/Method/withColorSpace(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV14withColorSpaceyAcA0fG0CSgF">withColorSpace(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new ImageInfo instance that has the colorSpace changed with the specified parameter</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withColorSpace</span><span class="p">(</span><span class="n">_</span> <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt"><a href="../Classes/ColorSpace.html">ColorSpace</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ImageInfo</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L176-L181">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit9ImageInfoV13withAlphaTypeyAcA0fG0OF"></a>
+                    <a name="//apple_ref/swift/Method/withAlphaType(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit9ImageInfoV13withAlphaTypeyAcA0fG0OF">withAlphaType(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new ImageInfo instance that has the colorSpace changed with the specified parameter</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withAlphaType</span><span class="p">(</span><span class="n">_</span> <span class="nv">alphaType</span><span class="p">:</span> <span class="kt"><a href="../Enums/AlphaType.html">AlphaType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageInfo</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/ImageInfo.swift#L184-L189">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-02)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

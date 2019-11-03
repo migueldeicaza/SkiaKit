@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Paint Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Paint" class="dashAnchor"></a>
+    <a title="Paint Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (16% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Paint Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Bitmap.html">Bitmap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Canvas.html">Canvas</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit11ColorFilterC">ColorFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ColorSpace.html">ColorSpace</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit11ImageFilterC">ImageFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit10MaskFilterC">MaskFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Matrix.html">Matrix</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Paint.html">Paint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path.html">Path</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path/PathAddMode.html">– PathAddMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit10PathEffectC">PathEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pixmap.html">Pixmap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Region.html">Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RoundRect.html">RoundRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKDynamicMemoryWStream.html">SKDynamicMemoryWStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKFileStream.html">SKFileStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKFileWStream.html">SKFileWStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKMemoryStream.html">SKMemoryStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit8SKObjectC">SKObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKStream.html">SKStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SKWStream.html">SKWStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit6ShaderC">Shader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SkiaLayer.html">SkiaLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SkiaView.html">SkiaView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Surface.html">Surface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextBlob.html">TextBlob</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextBlobBuilder.html">TextBlobBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:7SkiaKit8TypefaceC">Typeface</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AlphaType.html">AlphaType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BitmapError.html">BitmapError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BlendMode.html">BlendMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClipOperation.html">ClipOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ColorType.html">ColorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EncodedImageFormat.html">EncodedImageFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FilterQuality.html">FilterQuality</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PaintHinting.html">PaintHinting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PaintStyle.html">PaintStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathConvexity.html">PathConvexity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathDirection.html">PathDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathFillType.html">PathFillType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathOp.html">PathOp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PathSegmentMask.html">PathSegmentMask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PointMode.html">PointMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StrokeCap.html">StrokeCap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StrokeJoin.html">StrokeJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TextAlign.html">TextAlign</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TextEncoding.html">TextEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransferFunctionBehavior.html">TransferFunctionBehavior</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Colors.html">Colors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:7SkiaKit5IRectV">IRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageInfo.html">ImageInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Point.html">Point</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Rect.html">Rect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Size.html">Size</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Paint</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Paint</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintCACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC5resetyyF"></a>
+                    <a name="//apple_ref/swift/Method/reset()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC5resetyyF">reset()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC11isAntialiasSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isAntialias" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC11isAntialiasSbvp">isAntialias</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isAntialias</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC8isDitherSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isDither" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC8isDitherSbvp">isDither</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isDither</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC14isVerticalTextSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isVerticalText" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC14isVerticalTextSbvp">isVerticalText</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isVerticalText</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC12isLinearTextSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isLinearText" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC12isLinearTextSbvp">isLinearText</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isLinearText</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC12subpixelTextSbvp"></a>
+                    <a name="//apple_ref/swift/Property/subpixelText" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC12subpixelTextSbvp">subpixelText</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">subpixelText</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC15lcdRenderedTextSbvp"></a>
+                    <a name="//apple_ref/swift/Property/lcdRenderedText" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC15lcdRenderedTextSbvp">lcdRenderedText</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lcdRenderedText</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC20isEmbeddedBitmapTextSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isEmbeddedBitmapText" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC20isEmbeddedBitmapTextSbvp">isEmbeddedBitmapText</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isEmbeddedBitmapText</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC12isAutohintedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isAutohinted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC12isAutohintedSbvp">isAutohinted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isAutohinted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC12fakeBoldTextSbvp"></a>
+                    <a name="//apple_ref/swift/Property/fakeBoldText" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC12fakeBoldTextSbvp">fakeBoldText</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fakeBoldText</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC12hintingLevelAA0C7HintingOvp"></a>
+                    <a name="//apple_ref/swift/Property/hintingLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC12hintingLevelAA0C7HintingOvp">hintingLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hintingLevel</span><span class="p">:</span> <span class="kt"><a href="../Enums/PaintHinting.html">PaintHinting</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC20deviceKerningEnabledSbvp"></a>
+                    <a name="//apple_ref/swift/Property/deviceKerningEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC20deviceKerningEnabledSbvp">deviceKerningEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">deviceKerningEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC8isStrokeSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isStroke" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC8isStrokeSbvp">isStroke</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isStroke</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC5styleAA0C5StyleOvp"></a>
+                    <a name="//apple_ref/swift/Property/style" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC5styleAA0C5StyleOvp">style</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Enums/PaintStyle.html">PaintStyle</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC5colorAA5ColorVvp"></a>
+                    <a name="//apple_ref/swift/Property/color" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC5colorAA5ColorVvp">color</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Structs/Color.html">Color</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC11strokeWidthSfvp"></a>
+                    <a name="//apple_ref/swift/Property/strokeWidth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC11strokeWidthSfvp">strokeWidth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">strokeWidth</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC11strokeMiterSfvp"></a>
+                    <a name="//apple_ref/swift/Property/strokeMiter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC11strokeMiterSfvp">strokeMiter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">strokeMiter</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC9strokeCapAA06StrokeE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/strokeCap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC9strokeCapAA06StrokeE0Ovp">strokeCap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">strokeCap</span><span class="p">:</span> <span class="kt"><a href="../Enums/StrokeCap.html">StrokeCap</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC10strokeJoinAA06StrokeE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/strokeJoin" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC10strokeJoinAA06StrokeE0Ovp">strokeJoin</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">strokeJoin</span><span class="p">:</span> <span class="kt"><a href="../Enums/StrokeJoin.html">StrokeJoin</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC6shaderAA6ShaderCvp"></a>
+                    <a name="//apple_ref/swift/Property/shader" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC6shaderAA6ShaderCvp">shader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">shader</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:7SkiaKit6ShaderC">Shader</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC10maskFilterAA04MaskE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/maskFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC10maskFilterAA04MaskE0Cvp">maskFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">maskFilter</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:7SkiaKit10MaskFilterC">MaskFilter</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC11colorFilterAA05ColorE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/colorFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC11colorFilterAA05ColorE0Cvp">colorFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">colorFilter</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:7SkiaKit11ColorFilterC">ColorFilter</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC11imageFilterAA05ImageE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/imageFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC11imageFilterAA05ImageE0Cvp">imageFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">imageFilter</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:7SkiaKit11ImageFilterC">ImageFilter</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC9blendModeAA05BlendE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/blendMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC9blendModeAA05BlendE0Ovp">blendMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">blendMode</span><span class="p">:</span> <span class="kt"><a href="../Enums/BlendMode.html">BlendMode</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC13filterQualityAA06FilterE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/filterQuality" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC13filterQualityAA06FilterE0Ovp">filterQuality</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">filterQuality</span><span class="p">:</span> <span class="kt"><a href="../Enums/FilterQuality.html">FilterQuality</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC8typefaceAA8TypefaceCvp"></a>
+                    <a name="//apple_ref/swift/Property/typeface" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC8typefaceAA8TypefaceCvp">typeface</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">typeface</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:7SkiaKit8TypefaceC">Typeface</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC8textSizeSfvp"></a>
+                    <a name="//apple_ref/swift/Property/textSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC8textSizeSfvp">textSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">textSize</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC9textAlignAA04TextE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/textAlign" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC9textAlignAA04TextE0Ovp">textAlign</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">textAlign</span><span class="p">:</span> <span class="kt"><a href="../Enums/TextAlign.html">TextAlign</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC12textEncodingAA04TextE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/textEncoding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC12textEncodingAA04TextE0Ovp">textEncoding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">textEncoding</span><span class="p">:</span> <span class="kt"><a href="../Enums/TextEncoding.html">TextEncoding</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC10textScaleXSfvp"></a>
+                    <a name="//apple_ref/swift/Property/textScaleX" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC10textScaleXSfvp">textScaleX</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">textScaleX</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC9textSkewXSfvp"></a>
+                    <a name="//apple_ref/swift/Property/textSkewX" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC9textSkewXSfvp">textSkewX</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">textSkewX</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC10pathEffectAA04PathE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/pathEffect" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC10pathEffectAA04PathE0Cvp">pathEffect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pathEffect</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:7SkiaKit10PathEffectC">PathEffect</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC11fontSpacingSfvp"></a>
+                    <a name="//apple_ref/swift/Property/fontSpacing" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC11fontSpacingSfvp">fontSpacing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fontSpacing</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC11fontMetricsSo16sk_fontmetrics_tavp"></a>
+                    <a name="//apple_ref/swift/Property/fontMetrics" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC11fontMetricsSo16sk_fontmetrics_tavp">fontMetrics</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fontMetrics</span><span class="p">:</span> <span class="n">sk_fontmetrics_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC14getFontMetrics7metrics5scaleSfSo16sk_fontmetrics_taz_SftF"></a>
+                    <a name="//apple_ref/swift/Method/getFontMetrics(metrics:scale:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC14getFontMetrics7metrics5scaleSfSo16sk_fontmetrics_taz_SftF">getFontMetrics(metrics:scale:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFontMetrics</span><span class="p">(</span><span class="nv">metrics</span><span class="p">:</span> <span class="k">inout</span> <span class="n">sk_fontmetrics_t</span><span class="p">,</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC5cloneACyF"></a>
+                    <a name="//apple_ref/swift/Method/clone()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC5cloneACyF">clone()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clone</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Paint</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC11measureText4textSfSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/measureText(text:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC11measureText4textSfSS_tF">measureText(text:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">measureText</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC11measureText4text6boundsSfSS_AA4RectVztF"></a>
+                    <a name="//apple_ref/swift/Method/measureText(text:bounds:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC11measureText4text6boundsSfSS_AA4RectVztF">measureText(text:bounds:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">measureText</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">bounds</span><span class="p">:</span> <span class="k">inout</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-10-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
