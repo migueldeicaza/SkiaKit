@@ -52,7 +52,10 @@ public class SkiaView: UIView {
         }
 
         if let bitmapData = malloc(info.bytesSize) {
-            let surface = Surface.make (info: info, pixels: bitmapData, rowBytes: info.rowBytes)
+            guard let surface = Surface.make (info, bitmapData, info.rowBytes) else {
+                free (bitmapData)
+                return
+            }
             drawingCallback (surface, info)
             surface.canvas.flush ()
             

@@ -14,20 +14,25 @@ import Foundation
  */
 public class SurfaceProperties {
     var handle: OpaquePointer
+    var owns: Bool
     
-    init (handle: OpaquePointer)
+    init (handle: OpaquePointer, owns: Bool)
     {
         self.handle = handle
+        self.owns = owns
     }
     
     
     public init (_ pixelGeometry: PixelGeometry)
     {
         handle = sk_surfaceprops_new(0, pixelGeometry.toNative())
+        owns =  true
     }
     
     deinit {
-        sk_surfaceprops_delete(handle)
+        if owns {
+            sk_surfaceprops_delete(handle)
+        }
     }
     
     /// The pixel geometry for the surface
