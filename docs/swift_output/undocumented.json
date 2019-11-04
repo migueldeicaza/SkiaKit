@@ -2234,6 +2234,55 @@
       "warning": "undocumented"
     },
     {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
+      "line": 563,
+      "symbol": "RegionOperation",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
+      "line": 564,
+      "symbol": "RegionOperation.difference",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
+      "line": 565,
+      "symbol": "RegionOperation.intersect",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
+      "line": 566,
+      "symbol": "RegionOperation.union",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
+      "line": 567,
+      "symbol": "RegionOperation.xor",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
+      "line": 568,
+      "symbol": "RegionOperation.reverseDifference",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
+      "line": 569,
+      "symbol": "RegionOperation.replace",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Image.swift",
       "line": 11,
       "symbol": "Image",
@@ -2396,63 +2445,84 @@
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 95,
+      "line": 94,
+      "symbol": "Rect.ceiling",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 102,
       "symbol": "IRect",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 114,
+      "line": 110,
+      "symbol": "IRect.ceiling(value:outwards:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 131,
+      "symbol": "IRect.isEmpty",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 138,
       "symbol": "Size",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 115,
+      "line": 139,
       "symbol": "Size.width",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 117,
+      "line": 141,
       "symbol": "Size.isEmpty",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 121,
+      "line": 145,
       "symbol": "Size.toPoint()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 137,
+      "line": 161,
       "symbol": "ISize",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 138,
+      "line": 162,
       "symbol": "ISize.width",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 140,
+      "line": 164,
       "symbol": "ISize.isEmpty",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 144,
+      "line": 168,
       "symbol": "ISize.toPoint()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -3292,22 +3362,22 @@
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Region.swift",
-      "line": 11,
-      "symbol": "Region",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Region.swift",
-      "line": 14,
-      "symbol": "Region.init()",
+      "line": 45,
+      "symbol": "Region.init(rect:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Region.swift",
-      "line": 19,
-      "symbol": "Region.init(region:)",
+      "line": 51,
+      "symbol": "Region.init(path:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Region.swift",
+      "line": 122,
+      "symbol": "Region.op(path:op:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -3424,15 +3494,8 @@
       "warning": "undocumented"
     },
     {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Surface.swift",
-      "line": 56,
-      "symbol": "Surface.canvas",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/SurfaceProperties.swift",
-      "line": 24,
+      "line": 26,
       "symbol": "SurfaceProperties.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

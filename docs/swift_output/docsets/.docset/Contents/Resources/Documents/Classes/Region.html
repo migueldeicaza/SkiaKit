@@ -14,7 +14,7 @@
     <a title="Region Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (32% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (34% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -191,6 +191,9 @@
                 <a href="../Enums/PointMode.html">PointMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/RegionOperation.html">RegionOperation</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/SKSurfacePropsFlags.html">SKSurfacePropsFlags</a>
               </li>
               <li class="nav-group-task">
@@ -223,7 +226,7 @@
                 <a href="../Structs/Colors.html">Colors</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs.html#/s:7SkiaKit5IRectV">IRect</a>
+                <a href="../Structs/IRect.html">IRect</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/ISize.html">ISize</a>
@@ -254,7 +257,11 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p><code>Region</code> describes the set of pixels used to clip <code><a href="../Classes/Canvas.html">Canvas</a></code>. <code>Region</code> is compact,
+efficiently storing a single integer rectangle, or a run length encoded array
+of rectangles. <code>Region</code> may reduce the current <code><a href="../Classes/Canvas.html">Canvas</a></code> clip, or may be drawn as
+one or more integer rectangles. <code>Region</code> iterator returns the scan lines or
+rectangles contained by it, optionally intersecting a bounding rectangle.</p>
 
           </section>
           <section class="section task-group-section">
@@ -273,7 +280,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Constructs an empty <code>Region</code>. <code>Region</code> is set to empty bounds
+at (0, 0) with zero width and height.</p>
 
                       </div>
                       <div class="declaration">
@@ -285,7 +293,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L14-L17">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L25-L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -303,7 +311,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Constructs a copy of an existing region.
+Copy constructor makes two regions identical by value. Internally, region and
+the returned result share pointer values. The underlying <code><a href="../Structs/Rect.html">Rect</a></code> array is
+copied when modified.
+Creating a <code>Region</code> copy is very efficient and never allocates memory.
+<code>Region</code> are always copied by value from the interface; the underlying shared
+pointers are not exposed.</p>
 
                       </div>
                       <div class="declaration">
@@ -314,8 +328,563 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>region</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Region</code> to copy by value</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L19-L22">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L40-L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC4rectAcA5IRectV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(rect:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC4rectAcA5IRectV_tcfc">init(rect:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/IRect.html">IRect</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L45-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC4pathAcA4PathC_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(path:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC4pathAcA4PathC_tcfc">init(path:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path.html">Path</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L51-L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC7setRectySbAA5IRectVF"></a>
+                    <a name="//apple_ref/swift/Method/setRect(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC7setRectySbAA5IRectVF">setRect(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constructs a rectangular <code>Region</code> matching the bounds of rect.
+If rect is empty, constructs empty and returns false.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/IRect.html">IRect</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>bounds of constructed <code>Region</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if rect is not empty</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L63-L67">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC7setPath_4clipyAA0E0C_ACtF"></a>
+                    <a name="//apple_ref/swift/Method/setPath(_:clip:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC7setPath_4clipyAA0E0C_ACtF">setPath(_:clip:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constructs <code>Region</code> to match outline of path within clip.
+Returns false if constructed <code>Region</code> is empty.
+Constructed <code>Region</code> draws the same pixels as path through clip when
+anti-aliasing is disabled.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path.html">Path</a></span><span class="p">,</span> <span class="nv">clip</span><span class="p">:</span> <span class="kt">Region</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/Path.html">Path</a></code> providing outline</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clip</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Region</code> containing path</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if constructed <code>Region</code> is not empty</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L78-L81">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC7setPathyyAA0E0CF"></a>
+                    <a name="//apple_ref/swift/Method/setPath(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC7setPathyyAA0E0CF">setPath(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set this region to the area described by the path, clipped to the current region.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path.html">Path</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The replacement path.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if constructed <code>Region</code> is not empty</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L88-L96">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC2op4rectADSbAA5IRectV_AA0C9OperationOtF"></a>
+                    <a name="//apple_ref/swift/Method/op(rect:op:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC2op4rectADSbAA5IRectV_AA0C9OperationOtF">op(rect:op:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Replaces <code>Region</code> with the result of <code>Region</code> op rect.
+Returns true if replaced <code>Region</code> is not empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">op</span><span class="p">(</span><span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/IRect.html">IRect</a></span><span class="p">,</span> <span class="nv">op</span><span class="p">:</span> <span class="kt"><a href="../Enums/RegionOperation.html">RegionOperation</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Structs/IRect.html">IRect</a></code> operand</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>op</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>operator to apply</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>false if result is empty</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L105-L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC2op6regionADSbAC_AA0C9OperationOtF"></a>
+                    <a name="//apple_ref/swift/Method/op(region:op:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC2op6regionADSbAC_AA0C9OperationOtF">op(region:op:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Replaces <code>Region</code> with the result of <code>Region</code> op rgn.
+Returns true if replaced <code>Region</code> is not empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">op</span><span class="p">(</span><span class="nv">region</span><span class="p">:</span> <span class="kt">Region</span><span class="p">,</span> <span class="nv">op</span><span class="p">:</span> <span class="kt"><a href="../Enums/RegionOperation.html">RegionOperation</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rgn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Region</code> operand</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>op</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>operator to apply</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>false if result is empty</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L117-L120">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC2op4pathADSbAA4PathC_AA0C9OperationOtF"></a>
+                    <a name="//apple_ref/swift/Method/op(path:op:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC2op4pathADSbAA4PathC_AA0C9OperationOtF">op(path:op:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">op</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path.html">Path</a></span><span class="p">,</span> <span class="n">op</span> <span class="nv">inop</span><span class="p">:</span> <span class="kt"><a href="../Enums/RegionOperation.html">RegionOperation</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L122-L126">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC6boundsAA5IRectVvp"></a>
+                    <a name="//apple_ref/swift/Property/bounds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC6boundsAA5IRectVvp">bounds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns minimum and maximum axes values of <code><a href="../Structs/IRect.html">IRect</a></code> array.
+Returns (0, 0, 0, 0) if <code>Region</code> is empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bounds</span><span class="p">:</span> <span class="kt"><a href="../Structs/IRect.html">IRect</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L136-L143">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC10intersects6regionSbAC_tF"></a>
+                    <a name="//apple_ref/swift/Method/intersects(region:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC10intersects6regionSbAC_tF">intersects(region:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns true if <code>Region</code> intersects other.
+ Returns false if either other or <code>Region</code> is empty, or do not intersect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">intersects</span><span class="p">(</span><span class="nv">region</span><span class="p">:</span> <span class="kt">Region</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Region</code> to intersect</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if other and <code>Region</code> have area in common</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L157-L159">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit6RegionC10intersects4rectSbAA5IRectV_tF"></a>
+                    <a name="//apple_ref/swift/Method/intersects(rect:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit6RegionC10intersects4rectSbAA5IRectV_tF">intersects(rect:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns true if <code>Region</code> intersects rect.
+Returns false if either rect or <code>Region</code> is empty, or do not intersect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">intersects</span><span class="p">(</span><span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/IRect.html">IRect</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Structs/IRect.html">IRect</a></code> to intersect</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if rect and <code>Region</code> have area in common</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Region.swift#L167-L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -325,7 +894,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-02)</p>
+          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
