@@ -8,6 +8,17 @@
 
 import Foundation
 
+/**
+ * `Matrix` holds a 3x3 matrix for transforming coordinates. This allows mapping
+ * `Point` and vectors with translation, scaling, skewing, rotation, and
+ * perspective.
+ * `Matrix` elements are in row major order. `Matrix` does not have a constructor,
+ * so it must be explicitly initialized. setIdentity() initializes `Matrix`
+ * so it has no effect. setTranslate(), setScale(), set`ew`(), setRotate(), set9 and setAll()
+ * initializes all `Matrix` elements with the corresponding mapping.
+ * `Matrix` includes a hidden variable that classifies the type of matrix to
+ * improve performance. `Matrix` is not thread safe unless getType() is called first.
+ */
 public class Matrix {
     public var scaleX, skewX, transX : Float
     public var scaleY, skewY, transY : Float
@@ -69,6 +80,12 @@ public class Matrix {
         }
     }
     
+    /**
+     * Sets SkMatrix to translate by (dx, dy).
+     * - Parameter dx: horizontal translation
+     * - Parameter dy: vertical translation
+     * - Returns: `Matrix` with translation
+     */
     public static func makeTranslation (sx: Float, sy: Float) -> Matrix
     {
         if sx == 1 && sy == 1 {

@@ -8,6 +8,19 @@
 
 import Foundation
 
+/**
+ * `Image` describes a two dimensional array of pixels to draw. The pixels may be
+ * decoded in a raster bitmap, encoded in a `Picture` or compressed data stream,
+ * or located in GPU memory as a GPU texture.
+ * `Image` cannot be modified after it is created. `Image` may allocate additional
+ * storage as needed; for instance, an encoded `Image` may decode when drawn.
+ * `Image` width and height are greater than zero. Creating an `Image` with zero width
+ * or height returns `Image` equal to `nil`.
+ * `Image` may be created from `Bitmap`, `Pixmap`, `Surface`, `Picture`, encoded streams,
+ * GPU texture, YUV_ColorSpace data, or hardware buffer. Encoded streams supported
+ * include BMP, GIF, HEIF, ICO, JPEG, PNG, WBMP, WebP. Supported encoding details
+ * vary with platform.
+ */
 public final class Image {
     var handle: OpaquePointer
     
@@ -25,9 +38,20 @@ public final class Image {
     deinit {
         sk_image_unref(handle)
     }
-    
-    public func encode () -> SKData
+
+   /**
+    * Encodes `Image` pixels, returning result as `Data`. Returns existing encoded data
+    * if present; otherwise, `Image` is encoded with `EncodedImageFormat`::kPNG. `ia`
+    * must be built with SK_HAS_PNG_LIBRARY to encode `Image`.
+    * Returns `nil` if existing encoded data is missing or invalid, and
+    * encoding fails.
+    * - Returns: encoded `Image`, or `nil`
+    */
+    public func encode () -> SKData?
     {
-        SKData (handle: sk_image_encode(handle))
+        if let x = sk_image_encode(handle) {
+            return SKData (handle: x)
+        }
+        return nil
     }
 }

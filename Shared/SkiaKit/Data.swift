@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ * `SKData` holds an immutable data buffer. Not only is the data immutable,
+ * but the actual ptr that is returned (by `data`)) is guaranteed
+ * to always be the same for the life of this instance.
+ */
 public final class SKData {
     var handle: OpaquePointer
     
@@ -25,6 +30,11 @@ public final class SKData {
         handle = sk_data_new_with_copy(data, data.count)
     }
     
+    /**
+     * Creates a new `Data` with the contents of the specified file
+     * - Parameter file: the file to load
+     * - Returns: if the file is present, a new `SKData` with the contents of the file, or nil on failure
+     */
     public static func fromFile (file: String) -> SKData?
     {
         if let x = sk_data_new_from_file(file) {
@@ -42,6 +52,7 @@ public final class SKData {
         sk_data_unref(handle)
     }
     
+    /// Returns the number of bytes stored.
     public var size: Int {
         get {
             return sk_data_get_size(handle)
@@ -54,6 +65,7 @@ public final class SKData {
         }
     }
     
+    /// Returns the ptr to the data.
     public var data: UnsafeRawPointer! {
         get {
             sk_data_get_data(handle)
