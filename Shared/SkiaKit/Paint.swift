@@ -8,6 +8,14 @@
 
 import Foundation
 
+/**
+ * `Paint` controls options applied when drawing. `Paint` collects all
+ * options outside of the `Canvas` clip and `Canvas` matrix.
+ * Various options apply to strokes and fills, and images.
+ * `Paint` collects effects and filters that describe single-pass and multiple-pass
+ * algorithms that alter the drawing geometry, color, and transparency. For instance,
+ * `Paint` does not directly implement dashing or blur, but contains the objects that do so.
+ */
 public final class Paint {
     var handle : OpaquePointer
        
@@ -16,6 +24,7 @@ public final class Paint {
         self.handle = handle
     }
     
+    /// Constructs SkPaint with default values.
     public init ()
     {
        handle = sk_paint_new()
@@ -25,11 +34,18 @@ public final class Paint {
        sk_paint_delete(handle)
     }
     
+    /**
+     * Sets all `Paint` contents to their initial values. This is equivalent to replacing
+     * `Paint` with the result of `Paint`
+     */
     public func reset ()
     {
         sk_paint_reset(handle)
     }
     
+    /// Returns true if pixels on the active edges of SkPath may be drawn with partial transparency.
+    /// When setting, requests, but does not require, that edge pixels draw opaque or with
+    /// partial transparency.
     public var isAntialias : Bool {
         get {
             sk_paint_is_antialias(handle)
@@ -39,6 +55,8 @@ public final class Paint {
         }
     }
     
+    /// Returns true if color error may be distributed to smooth color transition.
+    /// When setting, requests, but does not require, to distribute color error.
     public var isDither : Bool {
         get {
             sk_paint_is_dither(handle)
