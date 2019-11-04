@@ -1479,50 +1479,22 @@
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Data.swift",
-      "line": 11,
-      "symbol": "SKData",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Data.swift",
-      "line": 14,
+      "line": 19,
       "symbol": "SKData.init(size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Data.swift",
-      "line": 23,
+      "line": 28,
       "symbol": "SKData.init(data:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Data.swift",
-      "line": 28,
-      "symbol": "SKData.fromFile(file:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Data.swift",
-      "line": 45,
-      "symbol": "SKData.size",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Data.swift",
-      "line": 51,
+      "line": 62,
       "symbol": "SKData.isEmpty",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Data.swift",
-      "line": 57,
-      "symbol": "SKData.data",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -2284,22 +2256,8 @@
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Image.swift",
-      "line": 11,
-      "symbol": "Image",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Image.swift",
-      "line": 19,
+      "line": 32,
       "symbol": "Image.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Image.swift",
-      "line": 29,
-      "symbol": "Image.encode()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2529,329 +2487,280 @@
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Matrix.swift",
-      "line": 11,
-      "symbol": "Matrix",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Matrix.swift",
-      "line": 12,
+      "line": 23,
       "symbol": "Matrix.scaleX",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Matrix.swift",
-      "line": 13,
+      "line": 24,
       "symbol": "Matrix.scaleY",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Matrix.swift",
-      "line": 14,
+      "line": 25,
       "symbol": "Matrix.persp0",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Matrix.swift",
-      "line": 28,
+      "line": 39,
       "symbol": "Matrix.init(scaleX:skewX:transX:scaleY:skewY:transY:persp0:persp1:persp2:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Matrix.swift",
-      "line": 66,
+      "line": 77,
       "symbol": "Matrix.values",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Matrix.swift",
-      "line": 72,
-      "symbol": "Matrix.makeTranslation(sx:sy:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 11,
-      "symbol": "Paint",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 19,
-      "symbol": "Paint.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 28,
-      "symbol": "Paint.reset()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 33,
-      "symbol": "Paint.isAntialias",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 42,
-      "symbol": "Paint.isDither",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 51,
-      "symbol": "Paint.isVerticalText",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 60,
-      "symbol": "Paint.isLinearText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 69,
-      "symbol": "Paint.subpixelText",
+      "symbol": "Paint.isVerticalText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 78,
-      "symbol": "Paint.lcdRenderedText",
+      "symbol": "Paint.isLinearText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 87,
-      "symbol": "Paint.isEmbeddedBitmapText",
+      "symbol": "Paint.subpixelText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 96,
-      "symbol": "Paint.isAutohinted",
+      "symbol": "Paint.lcdRenderedText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 105,
-      "symbol": "Paint.fakeBoldText",
+      "symbol": "Paint.isEmbeddedBitmapText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 114,
-      "symbol": "Paint.hintingLevel",
+      "symbol": "Paint.isAutohinted",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 123,
-      "symbol": "Paint.deviceKerningEnabled",
+      "symbol": "Paint.fakeBoldText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 132,
-      "symbol": "Paint.isStroke",
+      "symbol": "Paint.hintingLevel",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 141,
-      "symbol": "Paint.style",
+      "symbol": "Paint.deviceKerningEnabled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 150,
-      "symbol": "Paint.color",
+      "symbol": "Paint.isStroke",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 159,
-      "symbol": "Paint.strokeWidth",
+      "symbol": "Paint.style",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 168,
-      "symbol": "Paint.strokeMiter",
+      "symbol": "Paint.color",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 177,
-      "symbol": "Paint.strokeCap",
+      "symbol": "Paint.strokeWidth",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 186,
-      "symbol": "Paint.strokeJoin",
+      "symbol": "Paint.strokeMiter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 195,
-      "symbol": "Paint.shader",
+      "symbol": "Paint.strokeCap",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 204,
-      "symbol": "Paint.maskFilter",
+      "symbol": "Paint.strokeJoin",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 213,
-      "symbol": "Paint.colorFilter",
+      "symbol": "Paint.shader",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
       "line": 222,
+      "symbol": "Paint.maskFilter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
+      "line": 231,
+      "symbol": "Paint.colorFilter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
+      "line": 240,
       "symbol": "Paint.imageFilter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 230,
+      "line": 248,
       "symbol": "Paint.blendMode",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 238,
+      "line": 256,
       "symbol": "Paint.filterQuality",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 247,
+      "line": 265,
       "symbol": "Paint.typeface",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 256,
+      "line": 274,
       "symbol": "Paint.textSize",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 265,
+      "line": 283,
       "symbol": "Paint.textAlign",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 274,
+      "line": 292,
       "symbol": "Paint.textEncoding",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 283,
+      "line": 301,
       "symbol": "Paint.textScaleX",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 292,
+      "line": 310,
       "symbol": "Paint.textSkewX",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 301,
+      "line": 319,
       "symbol": "Paint.pathEffect",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 310,
+      "line": 328,
       "symbol": "Paint.fontSpacing",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 316,
+      "line": 334,
       "symbol": "Paint.fontMetrics",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 325,
+      "line": 343,
       "symbol": "Paint.getFontMetrics(metrics:scale:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 334,
+      "line": 352,
       "symbol": "Paint.clone()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 341,
+      "line": 359,
       "symbol": "Paint.measureText(text:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Paint.swift",
-      "line": 346,
+      "line": 364,
       "symbol": "Paint.measureText(text:bounds:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

@@ -14,7 +14,7 @@
     <a title="Image Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (34% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (35% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -257,7 +257,17 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p><code>Image</code> describes a two dimensional array of pixels to draw. The pixels may be
+decoded in a raster bitmap, encoded in a <code>Picture</code> or compressed data stream,
+or located in GPU memory as a GPU texture.
+<code>Image</code> cannot be modified after it is created. <code>Image</code> may allocate additional
+storage as needed; for instance, an encoded <code>Image</code> may decode when drawn.
+<code>Image</code> width and height are greater than zero. Creating an <code>Image</code> with zero width
+or height returns <code>Image</code> equal to <code>nil</code>.
+<code>Image</code> may be created from <code><a href="../Classes/Bitmap.html">Bitmap</a></code>, <code><a href="../Classes/Pixmap.html">Pixmap</a></code>, <code><a href="../Classes/Surface.html">Surface</a></code>, <code>Picture</code>, encoded streams,
+GPU texture, YUV_ColorSpace data, or hardware buffer. Encoded streams supported
+include BMP, GIF, HEIF, ICO, JPEG, PNG, WBMP, WebP. Supported encoding details
+vary with platform.</p>
 
           </section>
           <section class="section task-group-section">
@@ -288,7 +298,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Image.swift#L19-L22">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Image.swift#L32-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -296,9 +306,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit5ImageC6encodeAA6SKDataCyF"></a>
+                    <a name="/s:7SkiaKit5ImageC6encodeAA6SKDataCSgyF"></a>
                     <a name="//apple_ref/swift/Method/encode()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit5ImageC6encodeAA6SKDataCyF">encode()</a>
+                    <a class="token" href="#/s:7SkiaKit5ImageC6encodeAA6SKDataCSgyF">encode()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -306,19 +316,27 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Encodes <code>Image</code> pixels, returning result as <code>Data</code>. Returns existing encoded data
+if present; otherwise, <code>Image</code> is encoded with <code><a href="../Enums/EncodedImageFormat.html">EncodedImageFormat</a></code>::kPNG. <code>ia</code>
+must be built with SK_HAS_PNG_LIBRARY to encode <code>Image</code>.
+Returns <code>nil</code> if existing encoded data is missing or invalid, and
+encoding fails.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SKData.html">SKData</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SKData.html">SKData</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>encoded <code>Image</code>, or <code>nil</code></p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Image.swift#L29-L32">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Image.swift#L50-L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

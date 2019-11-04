@@ -14,7 +14,7 @@
     <a title="Paint Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (34% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (35% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -257,7 +257,12 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p><code>Paint</code> controls options applied when drawing. <code>Paint</code> collects all
+options outside of the <code><a href="../Classes/Canvas.html">Canvas</a></code> clip and <code><a href="../Classes/Canvas.html">Canvas</a></code> matrix.
+Various options apply to strokes and fills, and images.
+<code>Paint</code> collects effects and filters that describe single-pass and multiple-pass
+algorithms that alter the drawing geometry, color, and transparency. For instance,
+<code>Paint</code> does not directly implement dashing or blur, but contains the objects that do so.</p>
 
           </section>
           <section class="section task-group-section">
@@ -276,7 +281,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Constructs SkPaint with default values.</p>
 
                       </div>
                       <div class="declaration">
@@ -288,7 +293,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L19-L22">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L28-L31">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -306,7 +311,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sets all <code>Paint</code> contents to their initial values. This is equivalent to replacing
+<code>Paint</code> with the result of <code>Paint</code></p>
 
                       </div>
                       <div class="declaration">
@@ -318,7 +324,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L28-L31">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L41-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -336,7 +342,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns true if pixels on the active edges of SkPath may be drawn with partial transparency.
+When setting, requests, but does not require, that edge pixels draw opaque or with
+partial transparency.</p>
 
                       </div>
                       <div class="declaration">
@@ -348,7 +356,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L33-L40">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L49-L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -366,7 +374,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns true if color error may be distributed to smooth color transition.
+When setting, requests, but does not require, to distribute color error.</p>
 
                       </div>
                       <div class="declaration">
@@ -378,7 +387,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L42-L49">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L60-L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -408,7 +417,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L51-L58">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L69-L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -438,7 +447,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L60-L67">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L78-L85">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -468,7 +477,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L69-L76">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L87-L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -498,7 +507,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L78-L85">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L96-L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -528,7 +537,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L87-L94">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L105-L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -558,7 +567,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L96-L103">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L114-L121">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -588,7 +597,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L105-L112">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L123-L130">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -618,7 +627,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L114-L121">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L132-L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -648,7 +657,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L123-L130">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L141-L148">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -678,7 +687,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L132-L139">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L150-L157">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -708,7 +717,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L141-L148">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L159-L166">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -738,7 +747,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L150-L157">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L168-L175">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -768,7 +777,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L159-L166">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L177-L184">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -798,7 +807,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L168-L175">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L186-L193">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -828,7 +837,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L177-L184">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L195-L202">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -858,7 +867,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L186-L193">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L204-L211">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -888,7 +897,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L195-L202">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L213-L220">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -918,7 +927,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L204-L211">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L222-L229">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -948,7 +957,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L213-L220">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L231-L238">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -978,7 +987,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L222-L229">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L240-L247">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1008,7 +1017,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L230-L237">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L248-L255">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1038,7 +1047,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L238-L245">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L256-L263">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1068,7 +1077,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L247-L254">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L265-L272">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1098,7 +1107,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L256-L263">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L274-L281">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1128,7 +1137,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L265-L272">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L283-L290">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1158,7 +1167,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L274-L281">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L292-L299">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1188,7 +1197,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L283-L290">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L301-L308">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1218,7 +1227,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L292-L299">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L310-L317">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1248,7 +1257,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L301-L308">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L319-L326">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1278,7 +1287,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L310-L314">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L328-L332">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1308,7 +1317,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L316-L323">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L334-L341">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1338,7 +1347,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L325-L332">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L343-L350">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1368,7 +1377,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L334-L337">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L352-L355">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1398,7 +1407,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L341-L344">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L359-L362">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1428,7 +1437,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L346-L352">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L364-L370">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

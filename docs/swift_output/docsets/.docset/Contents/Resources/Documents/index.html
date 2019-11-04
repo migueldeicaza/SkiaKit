@@ -13,7 +13,7 @@
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> master Docs</a> (34% documented)</p>
+        <p><a href="index.html"> master Docs</a> (35% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -256,6 +256,8 @@
 <a href="https://skia.org">Skia</a> graphics library, the same library that powers Google Chrome 
 and Android graphics.</p>
 
+<p>You can review the <a href="https://migueldeicaza.github.io/SkiaKit/">API Documentation</a></p>
+
 <p>The Swift bindings are intended to be cross-platform, both to Apple platforms, and
 new platforms where Skia and Swift run.</p>
 
@@ -263,6 +265,20 @@ new platforms where Skia and Swift run.</p>
 Matthew Leibowitz and dozens of contributors.   SkiaSharp just happens to have
 a very advanced set of bridge APIs to the underlying Skia engine that does not 
 existin in the upstream Google Skia project.</p>
+
+<p>== Getting this to work locally ==</p>
+
+<p>You can either download and install the SkiaSharp.nuget package, or
+build your own local copy of Mono&rsquo;s Skia fork
+(<a href="https://github.com/mono/skia/tree/77049b872966dc300ed233fc6e3930eb21bac5e3">https://github.com/mono/skia/tree/77049b872966dc300ed233fc6e3930eb21bac5e3</a>
+from <a href="https://github.com/mono/skiasharp">https://github.com/mono/skiasharp</a>) and then copy the following binaries:</p>
+
+<p>SkiaKit/iOS:
+    Copy the iOS directory libSkiaSharp.framework here
+SkiaKit/macOS:
+    Copy the file libSkiaSharp.dylib here
+SkiaKit/tvOS:
+    Copy the tvOS directory libSkiaSharp.framework here</p>
 
           </section>
         </section>
