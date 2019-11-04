@@ -559,3 +559,23 @@ public enum PixelGeometry : UInt32 {
         return PixelGeometry.init (rawValue: x.rawValue)!
     }
 }
+
+public enum RegionOperation: UInt32 {
+    case difference = 0
+    case intersect
+    case union
+    case xor
+    case reverseDifference
+    case replace
+    
+    internal func toNative () -> sk_region_op_t
+    {
+        return sk_region_op_t(rawValue: rawValue)
+    }
+    
+    internal static func fromNative (_ x: sk_region_op_t) -> RegionOperation
+    {
+        return RegionOperation.init (rawValue: x.rawValue)!
+    }
+
+}

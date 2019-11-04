@@ -90,6 +90,13 @@ public struct Rect : Equatable {
     {
         sk_rect_t(left: left, top: top, right: right, bottom: bottom)
     }
+    
+    public var ceiling: IRect {
+        get {
+            IRect.ceiling (value: self, outwards: false)
+        }
+    }
+    
 }
 
 public struct IRect : Equatable {
@@ -100,6 +107,17 @@ public struct IRect : Equatable {
     var width: Int32 { right - left }
     var height: Int32 { bottom - top }
     
+    public static func ceiling (value: Rect, outwards: Bool) -> IRect {
+        var x, y, r, b : Int32
+
+        x = Int32 ((outwards && value.width > 0) ? floor (Float (value.left)) : ceil (Float (value.left)));
+        y = Int32 ((outwards && value.height > 0) ? floor (Float (value.top)) : ceil (Float (value.top)));
+        r = Int32 ((outwards && value.width < 0) ? floor (Float (value.right)) : ceil (Float (value.right)));
+        b = Int32 ((outwards && value.height < 0) ? floor (Float (value.bottom)) : ceil (Float (value.bottom)));
+        
+        return IRect (left: x, top: y, right: r, bottom: b)
+    }
+    
     static func fromNative (_ x: sk_irect_t) -> IRect
     {
         return IRect (left: x.left, top: x.top, right: x.right, bottom: x.bottom)
@@ -108,6 +126,12 @@ public struct IRect : Equatable {
     func toNative () -> sk_irect_t
     {
         sk_irect_t(left: left, top: top, right: right, bottom: bottom)
+    }
+    
+    public var isEmpty: Bool {
+        get {
+            return left == 0 && top == 0 && right == 0 && bottom == 0
+        }
     }
 }
 
