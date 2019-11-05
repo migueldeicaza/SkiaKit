@@ -18,6 +18,11 @@ public final class FontStyle {
         self.owns = owns
     }
     
+    public convenience init ()
+    {
+        self.init(weight: .normal, width: .normal, slant: .upright)
+    }
+    
     /// Creates a new SKFontStyle with the specified weight, width and slant.
     public init (weight: Int32, width: Int32, slant: FontStyleSlant)
     {
