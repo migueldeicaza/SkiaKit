@@ -1500,758 +1500,191 @@
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 81,
-      "symbol": "PaintHinting",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 82,
-      "symbol": "PaintHinting.noHinting",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 83,
-      "symbol": "PaintHinting.slight",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 84,
-      "symbol": "PaintHinting.normal",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 85,
-      "symbol": "PaintHinting.full",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 176,
-      "symbol": "BlendMode",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 177,
-      "symbol": "BlendMode.clear",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 178,
-      "symbol": "BlendMode.src",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 179,
-      "symbol": "BlendMode.dst",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 180,
-      "symbol": "BlendMode.srcOver",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 181,
-      "symbol": "BlendMode.dstOver",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 182,
-      "symbol": "BlendMode.srcIn",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 183,
-      "symbol": "BlendMode.dstIn",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 184,
-      "symbol": "BlendMode.srcOut",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 185,
-      "symbol": "BlendMode.dstOut",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 186,
-      "symbol": "BlendMode.srcATop",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 187,
-      "symbol": "BlendMode.dstATop",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 188,
-      "symbol": "BlendMode.xor",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 189,
-      "symbol": "BlendMode.plus",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 190,
-      "symbol": "BlendMode.modulate",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 191,
-      "symbol": "BlendMode.screen",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 192,
-      "symbol": "BlendMode.overlay",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 193,
-      "symbol": "BlendMode.darken",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 194,
-      "symbol": "BlendMode.lighten",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 195,
-      "symbol": "BlendMode.colorDodge",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 196,
-      "symbol": "BlendMode.colorBurn",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 197,
-      "symbol": "BlendMode.hardLight",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 198,
-      "symbol": "BlendMode.softLight",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 199,
-      "symbol": "BlendMode.difference",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 200,
-      "symbol": "BlendMode.exclusion",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 201,
-      "symbol": "BlendMode.multiply",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 202,
-      "symbol": "BlendMode.hue",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 203,
-      "symbol": "BlendMode.saturation",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 204,
-      "symbol": "BlendMode.color",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 205,
-      "symbol": "BlendMode.luminosity",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 218,
-      "symbol": "FilterQuality",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 220,
-      "symbol": "FilterQuality.none",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 221,
-      "symbol": "FilterQuality.low",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 222,
-      "symbol": "FilterQuality.medium",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 223,
-      "symbol": "FilterQuality.high",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 236,
-      "symbol": "TextAlign",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 237,
-      "symbol": "TextAlign.left",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 238,
-      "symbol": "TextAlign.center",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 239,
-      "symbol": "TextAlign.right",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 252,
-      "symbol": "TextEncoding",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 253,
-      "symbol": "TextEncoding.utf8",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 254,
-      "symbol": "TextEncoding.utf16",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 255,
-      "symbol": "TextEncoding.utf32",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 256,
-      "symbol": "TextEncoding.glyphId",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 269,
+      "line": 376,
       "symbol": "ClipOperation",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 270,
+      "line": 377,
       "symbol": "ClipOperation.difference",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 271,
+      "line": 378,
       "symbol": "ClipOperation.intersect",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 284,
-      "symbol": "PointMode",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 285,
-      "symbol": "PointMode.Points",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 286,
-      "symbol": "PointMode.Lines",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 287,
-      "symbol": "PointMode.Polygon",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 300,
-      "symbol": "PathFillType",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 302,
-      "symbol": "PathFillType.winding",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 303,
-      "symbol": "PathFillType.evenOdd",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 304,
-      "symbol": "PathFillType.inverseWinding",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 305,
-      "symbol": "PathFillType.inverseEvenOdd",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 318,
-      "symbol": "PathConvexity",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 319,
-      "symbol": "PathConvexity.unknown",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 320,
-      "symbol": "PathConvexity.convex",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 321,
-      "symbol": "PathConvexity.concave",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 334,
-      "symbol": "PathSegmentMask",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 335,
-      "symbol": "PathSegmentMask.line",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 336,
-      "symbol": "PathSegmentMask.quad",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 337,
-      "symbol": "PathSegmentMask.conic",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 338,
-      "symbol": "PathSegmentMask.cubic",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 355,
+      "line": 502,
       "symbol": "PathDirection.clockwise",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 356,
+      "line": 503,
       "symbol": "PathDirection.counterClockwise",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 369,
-      "symbol": "PathOp",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 370,
-      "symbol": "PathOp.difference",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 371,
-      "symbol": "PathOp.intersect",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 372,
-      "symbol": "PathOp.union",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 373,
-      "symbol": "PathOp.xor",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 374,
-      "symbol": "PathOp.reverseDifference",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 387,
+      "line": 540,
       "symbol": "TransferFunctionBehavior",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 388,
-      "symbol": "TransferFunctionBehavior.respect",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 389,
-      "symbol": "TransferFunctionBehavior.ignore",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 406,
+      "line": 559,
       "symbol": "EncodedImageFormat.bmp",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 407,
+      "line": 560,
       "symbol": "EncodedImageFormat.gif",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 408,
+      "line": 561,
       "symbol": "EncodedImageFormat.ico",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 409,
+      "line": 562,
       "symbol": "EncodedImageFormat.jpeg",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 410,
+      "line": 563,
       "symbol": "EncodedImageFormat.png",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 411,
+      "line": 564,
       "symbol": "EncodedImageFormat.wbmp",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 412,
+      "line": 565,
       "symbol": "EncodedImageFormat.webp",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 413,
+      "line": 566,
       "symbol": "EncodedImageFormat.pkm",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 414,
+      "line": 567,
       "symbol": "EncodedImageFormat.ktx",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 415,
+      "line": 568,
       "symbol": "EncodedImageFormat.astc",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 416,
+      "line": 569,
       "symbol": "EncodedImageFormat.dng",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 417,
+      "line": 570,
       "symbol": "EncodedImageFormat.heif",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 534,
+      "line": 686,
       "symbol": "SKSurfacePropsFlags",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 535,
+      "line": 687,
       "symbol": "SKSurfacePropsFlags.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 536,
+      "line": 688,
       "symbol": "SKSurfacePropsFlags.useDeviceIndependentFonts",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 545,
+      "line": 697,
       "symbol": "PixelGeometry.unknown",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 546,
+      "line": 698,
       "symbol": "PixelGeometry.rgbHorizontal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 547,
+      "line": 699,
       "symbol": "PixelGeometry.bgrHorizontal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 548,
+      "line": 700,
       "symbol": "PixelGeometry.rgbVertical",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 549,
+      "line": 701,
       "symbol": "PixelGeometry.bgrVertical",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 562,
-      "symbol": "RegionOperation",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 563,
-      "symbol": "RegionOperation.difference",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 564,
-      "symbol": "RegionOperation.intersect",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 565,
-      "symbol": "RegionOperation.union",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 566,
-      "symbol": "RegionOperation.xor",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 567,
-      "symbol": "RegionOperation.reverseDifference",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Definitions.swift",
-      "line": 568,
-      "symbol": "RegionOperation.replace",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/FontStyle.swift",
+      "line": 21,
+      "symbol": "FontStyle.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {

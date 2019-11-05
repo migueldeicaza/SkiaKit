@@ -14,7 +14,7 @@
     <a title="TextEncoding Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (35% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (47% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -45,7 +45,13 @@
                 <a href="../Classes/ColorSpace.html">ColorSpace</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/FontManager.html">FontManager</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/FontStyle.html">FontStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FontStyleSet.html">FontStyleSet</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Image.html">Image</a>
@@ -257,7 +263,23 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>TextEncoding determines whether text specifies character codes and their encoded
+size, or glyph indices. Characters are encoded as specified by the Unicode standard.</p>
+
+<p>Character codes encoded size are specified by UTF-8, UTF-16, or UTF-32.
+All character code formats are able to represent all of Unicode, differing only
+in the total storage required.</p>
+
+<p>UTF-8 (RFC 3629) encodes each character as one or more 8-bit bytes.</p>
+
+<p>UTF-16 (RFC 2781) encodes each character as one or two 16-bit words.</p>
+
+<p>UTF-32 encodes each character as one 32-bit word.</p>
+
+<p>font manager uses font data to convert character code points into glyph indices.
+A glyph index is a 16-bit word.</p>
+
+<p>TextEncoding is set to <code>.utf8</code> by default.</p>
 
           </section>
           <section class="section task-group-section">
@@ -276,7 +298,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Uses bytes to represent UTF-8 or ASCII.</p>
 
                       </div>
                       <div class="declaration">
@@ -288,7 +310,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L357">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -306,7 +328,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Uses two byte words to represent most of Unicode.</p>
 
                       </div>
                       <div class="declaration">
@@ -318,7 +340,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L359">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -336,7 +358,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Uses four byte words to represent all of Unicode.</p>
 
                       </div>
                       <div class="declaration">
@@ -348,7 +370,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L361">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -366,7 +388,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Uses two byte words to represent glyph indices.</p>
 
                       </div>
                       <div class="declaration">
@@ -378,7 +400,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L363">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -14,7 +14,7 @@
     <a title="PathConvexity Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (35% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (47% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -45,7 +45,13 @@
                 <a href="../Classes/ColorSpace.html">ColorSpace</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/FontManager.html">FontManager</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/FontStyle.html">FontStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FontStyleSet.html">FontStyleSet</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Image.html">Image</a>
@@ -257,7 +263,16 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p><code><a href="../Classes/Path.html">Path</a></code> is convex if it contains one contour and contour loops no more than
+360 degrees, and contour angles all have same Direction. Convex <code><a href="../Classes/Path.html">Path</a></code>
+may have better performance and require fewer resources on GPU surface.</p>
+
+<p><code><a href="../Classes/Path.html">Path</a></code> is concave when either at least one Direction change is clockwise and
+another is counterclockwise, or the sum of the changes in Direction is not 360
+degrees.</p>
+
+<p>Initially <code><a href="../Classes/Path.html">Path</a></code> Convexity is kUnknown_Convexity. <code><a href="../Classes/Path.html">Path</a></code> Convexity is computed
+f needed by destination <code><a href="../Classes/Surface.html">Surface</a></code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -276,7 +291,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Indicates Convexity has not been determined.</p>
 
                       </div>
                       <div class="declaration">
@@ -288,7 +303,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L458">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -306,7 +321,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Path has one contour made of a simple geometry without indentations.</p>
 
                       </div>
                       <div class="declaration">
@@ -318,7 +333,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L460">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -336,7 +351,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Path has more than one contour, or a geometry with indentations.</p>
 
                       </div>
                       <div class="declaration">
@@ -348,7 +363,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L462">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

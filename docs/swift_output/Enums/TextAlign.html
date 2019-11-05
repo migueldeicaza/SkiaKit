@@ -14,7 +14,7 @@
     <a title="TextAlign Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (35% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (47% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -45,7 +45,13 @@
                 <a href="../Classes/ColorSpace.html">ColorSpace</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/FontManager.html">FontManager</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/FontStyle.html">FontStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FontStyleSet.html">FontStyleSet</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Image.html">Image</a>
@@ -257,7 +263,22 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>TextAlign adjusts the text relative to the text position.
+TextAlign affects glyphs drawn with: <code>Canvas.drawText</code>, <code>Canvas.drawPosText</code>,
+<code>Canvas.drawPosTextH</code>, <code>Canvas.drawTextOnPath</code>,
+<code>Canvas.drawTextOnPathHV</code>, <code>Canvas.rawTextRSXform</code>, <code>Canvas.drawTextBlob</code>,
+and <code>Canvas.drawString</code>;
+as well as calls that place text glyphs like <code>getTextWidths()</code> and <code>getTextPath()</code>.</p>
+
+<p>The text position is set by the font for both horizontal and vertical text.
+Typically, for horizontal text, the position is to the left side of the glyph on the
+base line; and for vertical text, the position is the horizontal center of the glyph
+at the caps height.</p>
+
+<p>Align adjusts the glyph position to center it or move it to abut the position
+using the metrics returned by the font.</p>
+
+<p>Align defaults to <code>.left</code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -276,7 +297,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Leaves the glyph at the position computed by the font offset by the text position.</p>
 
                       </div>
                       <div class="declaration">
@@ -288,7 +309,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L319">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -306,7 +327,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Moves the glyph half its width if flags has <code>.verticalText</code> clear, and half its height if flags has <code>.verticalText</code> set.</p>
 
                       </div>
                       <div class="declaration">
@@ -318,7 +339,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L321">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -336,7 +357,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Moves the glyph by its width if flags has <code>verticalText</code> clear, and by its height if flags has <code>verticalText</code> set.</p>
 
                       </div>
                       <div class="declaration">
@@ -348,7 +369,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L323">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -14,7 +14,7 @@
     <a title="Enumerations  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> master Docs</a> (35% documented)</p>
+        <p><a href="index.html"> master Docs</a> (47% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -45,7 +45,13 @@
                 <a href="Classes/ColorSpace.html">ColorSpace</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/FontManager.html">FontManager</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/FontStyle.html">FontStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FontStyleSet.html">FontStyleSet</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Image.html">Image</a>
@@ -376,7 +382,12 @@ components improve performance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Hinting adjusts the glyph outlines so that the shape provides a uniform
+look at a given point size on font engines that support it. Hinting may have a
+muted effect or no effect at all depending on the platform.</p>
+
+<p>The four levels roughly control corresponding features on platforms that use FreeType
+as the font engine.</p>
 
                         <a href="Enums/PaintHinting.html" class="slightly-smaller">See more</a>
                       </div>
@@ -389,7 +400,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L81-L96">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L90-L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -410,8 +421,8 @@ components improve performance.</p>
                         <p>Set Style to fill, stroke, or both fill and stroke geometry.</p>
 
 <p>The stroke and fill share all paint attributes; for instance, they are drawn with the same color.
- Use <code>.strokeAndFill</code> to avoid hitting the same pixels twice with a stroke draw and
- a fill draw.</p>
+Use <code>.strokeAndFill</code> to avoid hitting the same pixels twice with a stroke draw and
+a fill draw.</p>
 
                         <a href="Enums/PaintStyle.html" class="slightly-smaller">See more</a>
                       </div>
@@ -424,7 +435,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L105-L122">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L133-L150">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -455,7 +466,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L125-L142">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L153-L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -474,16 +485,16 @@ components improve performance.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Join specifies how corners are drawn when a shape is stroked. Join
- affects the four corners of a stroked rectangle, and the connected segments in a
- stroked path.</p>
+affects the four corners of a stroked rectangle, and the connected segments in a
+stroked path.</p>
 
 <p>Choose miter join to draw sharp corners. Choose round join to draw a circle with a
- radius equal to the stroke width on top of the corner. Choose bevel join to minimally
- connect the thick strokes.</p>
+radius equal to the stroke width on top of the corner. Choose bevel join to minimally
+connect the thick strokes.</p>
 
 <p>The fill path constructed to describe the stroked path respects the join setting but may
- not contain the actual join. For instance, a fill path constructed with round joins does
- not necessarily include circles at each connected segment.</p>
+not contain the actual join. For instance, a fill path constructed with round joins does
+not necessarily include circles at each connected segment.</p>
 
                         <a href="Enums/StrokeJoin.html" class="slightly-smaller">See more</a>
                       </div>
@@ -496,7 +507,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L157-L174">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L185-L202">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -514,7 +525,7 @@ components improve performance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Blending modes for compositing digital images.   These are an implementation of the Porter Duff blending modes</p>
 
                         <a href="Enums/BlendMode.html" class="slightly-smaller">See more</a>
                       </div>
@@ -527,7 +538,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L176-L216">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L205-L274">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -545,7 +556,7 @@ components improve performance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Controls how much filtering to be done when scaling/transforming complex colors</p>
 
                         <a href="Enums/FilterQuality.html" class="slightly-smaller">See more</a>
                       </div>
@@ -558,7 +569,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L218-L234">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L277-L297">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -576,7 +587,22 @@ components improve performance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>TextAlign adjusts the text relative to the text position.
+TextAlign affects glyphs drawn with: <code>Canvas.drawText</code>, <code>Canvas.drawPosText</code>,
+<code>Canvas.drawPosTextH</code>, <code>Canvas.drawTextOnPath</code>,
+<code>Canvas.drawTextOnPathHV</code>, <code>Canvas.rawTextRSXform</code>, <code>Canvas.drawTextBlob</code>,
+and <code>Canvas.drawString</code>;
+as well as calls that place text glyphs like <code>getTextWidths()</code> and <code>getTextPath()</code>.</p>
+
+<p>The text position is set by the font for both horizontal and vertical text.
+Typically, for horizontal text, the position is to the left side of the glyph on the
+base line; and for vertical text, the position is the horizontal center of the glyph
+at the caps height.</p>
+
+<p>Align adjusts the glyph position to center it or move it to abut the position
+using the metrics returned by the font.</p>
+
+<p>Align defaults to <code>.left</code>.</p>
 
                         <a href="Enums/TextAlign.html" class="slightly-smaller">See more</a>
                       </div>
@@ -589,7 +615,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L236-L250">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L317-L334">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -607,7 +633,23 @@ components improve performance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>TextEncoding determines whether text specifies character codes and their encoded
+size, or glyph indices. Characters are encoded as specified by the Unicode standard.</p>
+
+<p>Character codes encoded size are specified by UTF-8, UTF-16, or UTF-32.
+All character code formats are able to represent all of Unicode, differing only
+in the total storage required.</p>
+
+<p>UTF-8 (RFC 3629) encodes each character as one or more 8-bit bytes.</p>
+
+<p>UTF-16 (RFC 2781) encodes each character as one or two 16-bit words.</p>
+
+<p>UTF-32 encodes each character as one 32-bit word.</p>
+
+<p>font manager uses font data to convert character code points into glyph indices.
+A glyph index is a 16-bit word.</p>
+
+<p>TextEncoding is set to <code>.utf8</code> by default.</p>
 
                         <a href="Enums/TextEncoding.html" class="slightly-smaller">See more</a>
                       </div>
@@ -620,7 +662,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L252-L267">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L355-L374">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -651,7 +693,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L269-L282">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L376-L389">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -669,7 +711,7 @@ components improve performance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Selects if an array of points are drawn as discrete points, as lines, or as an open polygon.</p>
 
                         <a href="Enums/PointMode.html" class="slightly-smaller">See more</a>
                       </div>
@@ -682,7 +724,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L284-L298">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L392-L409">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -700,7 +742,13 @@ components improve performance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>FillType selects the rule used to fill <code><a href="Classes/Path.html">Path</a></code>. <code><a href="Classes/Path.html">Path</a></code> set to <code>.winding</code>
+fills if the sum of contour edges is not zero, where clockwise edges add one, and
+counterclockwise edges subtract one. <code><a href="Classes/Path.html">Path</a></code> set to <code>.evenOdd</code> fills if the
+number of contour edges is odd. Each FillType has an inverse variant that
+reverses the rule:
+<code>.inverseWinding</code> fills where the sum of contour edges is zero;
+<code>.inverseEvenOdd</code> fills where the number of contour edges is even.</p>
 
                         <a href="Enums/PathFillType.html" class="slightly-smaller">See more</a>
                       </div>
@@ -713,7 +761,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L300-L316">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L421-L441">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -731,7 +779,16 @@ components improve performance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p><code><a href="Classes/Path.html">Path</a></code> is convex if it contains one contour and contour loops no more than
+360 degrees, and contour angles all have same Direction. Convex <code><a href="Classes/Path.html">Path</a></code>
+may have better performance and require fewer resources on GPU surface.</p>
+
+<p><code><a href="Classes/Path.html">Path</a></code> is concave when either at least one Direction change is clockwise and
+another is counterclockwise, or the sum of the changes in Direction is not 360
+degrees.</p>
+
+<p>Initially <code><a href="Classes/Path.html">Path</a></code> Convexity is kUnknown_Convexity. <code><a href="Classes/Path.html">Path</a></code> Convexity is computed
+f needed by destination <code><a href="Classes/Surface.html">Surface</a></code>.</p>
 
                         <a href="Enums/PathConvexity.html" class="slightly-smaller">See more</a>
                       </div>
@@ -744,7 +801,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L318-L332">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L456-L473">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -762,7 +819,8 @@ components improve performance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>SegmentMask constants correspond to each drawing Verb type in Path; for
+instance, if Path only contains lines, only the <code>.line</code> bit is set.</p>
 
                         <a href="Enums/PathSegmentMask.html" class="slightly-smaller">See more</a>
                       </div>
@@ -775,7 +833,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L334-L339">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L477-L486">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -794,16 +852,16 @@ components improve performance.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>PathDirection</code> describes whether contour is clockwise or counterclockwise.
- When <code><a href="Classes/Path.html">Path</a></code> contains multiple overlapping contours, <code>PathDirection</code> together with
- <code>FillType</code> determines whether overlaps are filled or form holes.</p>
+When <code><a href="Classes/Path.html">Path</a></code> contains multiple overlapping contours, <code>PathDirection</code> together with
+<code>FillType</code> determines whether overlaps are filled or form holes.</p>
 
 <p><code>PathDirection</code> also determines how contour is measured. For instance, dashing
- measures along <code><a href="Classes/Path.html">Path</a></code> to determine where to start and stop stroke; <code>PathDirection</code>
- will change dashed results as it steps clockwise or counterclockwise.</p>
+measures along <code><a href="Classes/Path.html">Path</a></code> to determine where to start and stop stroke; <code>PathDirection</code>
+will change dashed results as it steps clockwise or counterclockwise.</p>
 
 <p>Closed contours like <code><a href="Structs/Rect.html">Rect</a></code>, <code>RRect</code>, circle, and oval added with
- <code>.clockwise</code> travel clockwise; the same added with <code>.counterclockwise</code>
- travel counterclockwise.</p>
+<code>.clockwise</code> travel clockwise; the same added with <code>.counterclockwise</code>
+travel counterclockwise.</p>
 
                         <a href="Enums/PathDirection.html" class="slightly-smaller">See more</a>
                       </div>
@@ -816,7 +874,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L354-L367">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L501-L514">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -834,7 +892,7 @@ components improve performance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The logical operations that can be performed when combining two paths</p>
 
                         <a href="Enums/PathOp.html" class="slightly-smaller">See more</a>
                       </div>
@@ -847,7 +905,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L369-L385">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L517-L538">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -878,7 +936,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L387-L400">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L540-L555">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -909,7 +967,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L405-L429">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L558-L582">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -950,7 +1008,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L444-L467">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L596-L619">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -981,7 +1039,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L471-L490">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L623-L642">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1012,7 +1070,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L493-L510">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L645-L662">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1043,7 +1101,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L513-L532">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L665-L684">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1074,7 +1132,7 @@ components improve performance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L534-L537">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L686-L689">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1107,7 +1165,7 @@ then use <code>.unknown</code></p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L544-L560">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L696-L712">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1125,7 +1183,7 @@ then use <code>.unknown</code></p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The logical operations that can be performed when combining two regions.</p>
 
                         <a href="Enums/RegionOperation.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1138,7 +1196,7 @@ then use <code>.unknown</code></p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L562-L580">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L715-L739">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
