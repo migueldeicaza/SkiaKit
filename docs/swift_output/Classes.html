@@ -14,7 +14,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> master Docs</a> (47% documented)</p>
+        <p><a href="index.html"> master Docs</a> (48% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -55,6 +55,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Image/CachingHint.html">– CachingHint</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes.html#/s:7SkiaKit11ImageFilterC">ImageFilter</a>
@@ -230,6 +233,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/Colors.html">Colors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/IPoint.html">IPoint</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/IRect.html">IRect</a>
@@ -499,7 +505,7 @@ The default font manager can be accessed via the <code>default</code> static pro
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/FontManager.swift#L12-L113">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/FontManager.swift#L12-L167">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -592,16 +598,19 @@ The default font manager can be accessed via the <code>default</code> static pro
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>Image</code> describes a two dimensional array of pixels to draw. The pixels may be
-decoded in a raster bitmap, encoded in a <code>Picture</code> or compressed data stream,
-or located in GPU memory as a GPU texture.
-<code>Image</code> cannot be modified after it is created. <code>Image</code> may allocate additional
-storage as needed; for instance, an encoded <code>Image</code> may decode when drawn.
-<code>Image</code> width and height are greater than zero. Creating an <code>Image</code> with zero width
-or height returns <code>Image</code> equal to <code>nil</code>.
-<code>Image</code> may be created from <code><a href="Classes/Bitmap.html">Bitmap</a></code>, <code><a href="Classes/Pixmap.html">Pixmap</a></code>, <code><a href="Classes/Surface.html">Surface</a></code>, <code>Picture</code>, encoded streams,
-GPU texture, YUV_ColorSpace data, or hardware buffer. Encoded streams supported
-include BMP, GIF, HEIF, ICO, JPEG, PNG, WBMP, WebP. Supported encoding details
-vary with platform.</p>
+ decoded in a raster bitmap, encoded in a <code>Picture</code> or compressed data stream,
+ or located in GPU memory as a GPU texture.</p>
+
+<p><code>Image</code> cannot be modified after it is created. <code>Image</code> may allocate additional
+ storage as needed; for instance, an encoded <code>Image</code> may decode when drawn.</p>
+
+<p><code>Image</code> width and height are greater than zero. Creating an <code>Image</code> with zero width
+ or height returns <code>Image</code> equal to <code>nil</code>.</p>
+
+<p><code>Image</code> may be created from <code><a href="Classes/Bitmap.html">Bitmap</a></code>, <code><a href="Classes/Pixmap.html">Pixmap</a></code>, <code><a href="Classes/Surface.html">Surface</a></code>, <code>Picture</code>, encoded streams,
+ GPU texture, YUV_ColorSpace data, or hardware buffer. Encoded streams supported
+ include BMP, GIF, HEIF, ICO, JPEG, PNG, WBMP, WebP. Supported encoding details
+ vary with platform.</p>
 
                         <a href="Classes/Image.html" class="slightly-smaller">See more</a>
                       </div>
@@ -614,7 +623,7 @@ vary with platform.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Image.swift#L24-L57">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Image.swift#L27-L486">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1509,7 +1518,7 @@ fonts and text rendering are used by run.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-04)</p>
+          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -1681,16 +1681,16 @@
       "warning": "undocumented"
     },
     {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/FontStyle.swift",
-      "line": 21,
-      "symbol": "FontStyle.init()",
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/FontManager.swift",
+      "line": 102,
+      "symbol": "FontManager.scan(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/Image.swift",
-      "line": 32,
-      "symbol": "Image.init(_:)",
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/FontStyle.swift",
+      "line": 21,
+      "symbol": "FontStyle.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1788,132 +1788,195 @@
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
       "line": 67,
-      "symbol": "Rect",
+      "symbol": "IPoint",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
       "line": 68,
+      "symbol": "IPoint.init(x:y:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 73,
+      "symbol": "IPoint.x",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 74,
+      "symbol": "IPoint.length",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 76,
+      "symbol": "IPoint.offset(dx:dy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 82,
+      "symbol": "IPoint.offset(point:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 88,
+      "symbol": "IPoint.+(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 93,
+      "symbol": "IPoint.-(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 98,
+      "symbol": "IPoint.-(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 115,
+      "symbol": "Rect",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
+      "line": 116,
       "symbol": "Rect.init(left:top:right:bottom:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 75,
+      "line": 123,
       "symbol": "Rect.left",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 77,
+      "line": 125,
       "symbol": "Rect.midX",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 78,
+      "line": 126,
       "symbol": "Rect.midY",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 79,
+      "line": 127,
       "symbol": "Rect.width",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 80,
+      "line": 128,
       "symbol": "Rect.height",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 94,
+      "line": 142,
       "symbol": "Rect.ceiling",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 102,
+      "line": 150,
       "symbol": "IRect",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 110,
+      "line": 158,
       "symbol": "IRect.ceiling(value:outwards:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 131,
+      "line": 179,
       "symbol": "IRect.isEmpty",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 138,
+      "line": 186,
       "symbol": "Size",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 139,
+      "line": 187,
       "symbol": "Size.width",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 141,
+      "line": 189,
       "symbol": "Size.isEmpty",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 145,
+      "line": 193,
       "symbol": "Size.toPoint()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 161,
+      "line": 209,
       "symbol": "ISize",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 162,
+      "line": 210,
       "symbol": "ISize.width",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 164,
+      "line": 212,
       "symbol": "ISize.isEmpty",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/System/Volumes/Data/cvs/work/SkiaKit/Shared/SkiaKit/MathTypes.swift",
-      "line": 168,
+      "line": 216,
       "symbol": "ISize.toPoint()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

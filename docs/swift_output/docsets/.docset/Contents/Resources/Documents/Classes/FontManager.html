@@ -14,7 +14,7 @@
     <a title="FontManager Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (47% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (48% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -55,6 +55,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Image/CachingHint.html">– CachingHint</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes.html#/s:7SkiaKit11ImageFilterC">ImageFilter</a>
@@ -230,6 +233,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Colors.html">Colors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/IPoint.html">IPoint</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/IRect.html">IRect</a>
@@ -687,6 +693,123 @@ The default font manager can be accessed via the <code>default</code> static pro
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7SkiaKit11FontManagerC4scanySayq_Gx_q_q_q__7ElementQztXEtSTRzr0_lF"></a>
+                    <a name="//apple_ref/swift/Method/scan(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit11FontManagerC4scanySayq_Gx_q_q_q__7ElementQztXEtSTRzr0_lF">scan(_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">scan</span><span class="o">&lt;</span>
+  <span class="kt">S</span> <span class="p">:</span> <span class="kt">Sequence</span><span class="p">,</span> <span class="kt">U</span>
+<span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">seq</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">initial</span><span class="p">:</span> <span class="kt">U</span><span class="p">,</span> <span class="n">_</span> <span class="nv">combine</span><span class="p">:</span> <span class="p">(</span><span class="kt">U</span><span class="p">,</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Iterator</span><span class="o">.</span><span class="kt">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">U</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/FontManager.swift#L102-L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit11FontManagerC5match10familyName4char5style5bcp47AA8TypefaceCSgSS_SJAA0C5StyleCSaySSGSgtF"></a>
+                    <a name="//apple_ref/swift/Method/match(familyName:char:style:bcp47:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit11FontManagerC5match10familyName4char5style5bcp47AA8TypefaceCSgSS_SJAA0C5StyleCSaySSGSgtF">match(familyName:char:style:bcp47:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use the system fallback to find a typeface for the given character.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">match</span><span class="p">(</span><span class="nv">familyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">char</span><span class="p">:</span> <span class="kt">Character</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/FontStyle.html">FontStyle</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="nv">bcp47</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Typeface.html">Typeface</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>char</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The character to find a typeface for.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>familyName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>&lt;#familyName description#&gt;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>style</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The family name to use when searching.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bcp47</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ISO 639, 15924, and 3166-1 code to use when searching, such as <q>ja</q> and <q>zh</q></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/FontManager.swift#L145-L154">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7SkiaKit11FontManagerC14createTypeface4data5indexAA0F0CSgAA6SKDataC_s5Int32VtF"></a>
                     <a name="//apple_ref/swift/Method/createTypeface(data:index:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:7SkiaKit11FontManagerC14createTypeface4data5indexAA0F0CSgAA6SKDataC_s5Int32VtF">createTypeface(data:index:)</a>
@@ -744,7 +867,7 @@ The default font manager can be accessed via the <code>default</code> static pro
                         <p>the typeface from the specified path and TTC index, or nil on error.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/FontManager.swift#L106-L111">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/FontManager.swift#L160-L165">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -754,7 +877,7 @@ The default font manager can be accessed via the <code>default</code> static pro
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-04)</p>
+          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
