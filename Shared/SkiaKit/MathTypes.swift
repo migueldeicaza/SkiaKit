@@ -64,6 +64,54 @@ public struct Point : Equatable {
     }
 }
 
+public struct IPoint : Equatable {
+    public init(x: Int32, y: Int32) {
+        self.x = x
+        self.y = y
+    }
+    
+    public var x, y: Int32
+    public var length : Float { sqrtf(Float (x*x+y*y)) }
+    
+    public mutating func offset (dx: Int32, dy: Int32)
+    {
+        x = x + dx
+        y = y + dy
+    }
+    
+    public mutating func offset (point: IPoint)
+    {
+        x = x + point.x
+        y = y + point.y
+    }
+        
+    public static func + (ls: IPoint, rs: IPoint) -> IPoint
+    {
+        IPoint (x: ls.x + rs.x, y: ls.y + rs.y)
+    }
+
+    public static func - (ls: IPoint, rs: IPoint) -> IPoint
+    {
+        IPoint (x: ls.x - rs.x, y: ls.y - rs.y)
+    }
+    
+    public static prefix func - (pt: IPoint) -> IPoint
+    {
+        IPoint (x: -pt.x, y: -pt.y)
+    }
+    
+//    func toNative () -> sk_ipoint_t
+//    {
+//        sk_ipoint_t(x: x, y: y)
+//    }
+//
+//    static func fromNative (v: sk_ipoint_t) -> IPoint
+//    {
+//        return IPoint (x: v.x, y: v.y)
+//    }
+
+}
+
 public struct Rect : Equatable {
     public init(left: Float, top: Float, right: Float, bottom: Float) {
         self.left = left
