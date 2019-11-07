@@ -27,13 +27,24 @@ import Foundation
  * `Document` based `Canvas` and other `Canvas` subclasses reference `BaseDevice` describing the
  * destination.
  *
- * `Canvas` can be constructed to draw to `Bitmap` without first creating raster surface.
- * This approach may be deprecated in the future.
- *
+ * Typically you create the Canvas from a bitmap, but an empty canvas can be created with the
+ * some fo the static `make` methods, and serve special purposes:
+ * * `makeEmpty(width:height)` - creates an empty canvas that ignores all drawing commands
+ * * `makeOverdraw(canvas:)` - A canvas that captures all drawing commands, and rather than draw
+ *    the actual content, it increments the alpha channel of each pixel every time it would have been touched
+ *    by a draw call.
+ * * `makeNway(width:height:)` - will create a passthrough n-way canvas.  Once created you can add canvas with `addCanvas`, and remove them with `removeCanvas`
  */
 public final class Canvas {
+    enum kind {
+        case doesNotOwn // we do not own the reference
+        case owns       // regular canvas
+        case empty      // we own an empty canvas
+        case overdraw   // we own an overdraw canvas
+        case nway       // we own an n-way canvas
+    }
     var handle: OpaquePointer
-    var owns: Bool
+    var owns: kind
     
     /**
      * Constructs a canvas that draws into bitmap.
@@ -50,20 +61,81 @@ public final class Canvas {
     public init (_ bitmap : Bitmap)
     {
         handle = sk_canvas_new_from_bitmap(bitmap.handle)
-        owns = true
+        owns = .owns
     }
     
-    init (handle: OpaquePointer, owns: Bool)
+    /**
+     * A type of SKCanvas that provides a base type for canvases that do not need to rasterize.
+     */
+    public static func makeEmpty (width: Int32, height: Int32) -> Canvas
+    {
+        return Canvas (handle: sk_nodraw_canvas_new(width, height), owns: .empty)
+    }
+    
+    /// A canvas that captures all drawing commands, and rather than draw the actual content, it increments the alpha channel of each pixel every time it would have been touched by a draw call.
+    /// - Parameter baseCanvas: The canvas to draw on.
+    /// - Returns: the new overdrawn canvas
+    public static func makeOverdraw (baseCanvas: Canvas) -> Canvas {
+        return Canvas (handle: sk_overdraw_canvas_new(baseCanvas.handle), owns: .overdraw)
+    }
+    
+    /// Creates a canvas that can draw into multiple canvases at once, the methods `addCanvas`, `removeCanvas` and `removeAll` can be used in this case
+    /// - Parameter width: widht for the canvas
+    /// - Parameter height: height for the canvas
+    /// - Returns: the new n-way canvas
+    public static func makeNway (width: Int32, height: Int32) -> Canvas
+    {
+        return Canvas (handle: sk_nway_canvas_new(width, height), owns: .nway)
+    }
+    
+    init (handle: OpaquePointer, owns: kind)
     {
         self.handle = handle
         self.owns = owns
     }
-    
 
     deinit {
-        if owns {
+        switch owns {
+        case .owns:
             sk_canvas_destroy(handle)
+        case .empty:
+            sk_nodraw_canvas_destroy(handle)
+        case .overdraw:
+            sk_overdraw_canvas_destroy(handle)
+        case .nway:
+            sk_nway_canvas_destroy(handle)
+        case .doesNotOwn:
+            break
         }
+    }
+    
+    
+    /// Adds a new canvas to an nway-canvas - any operations performed on the canvas from this point on will additionally be reflected in the additional canvas.
+    /// - Parameter canvas: the new canvas to add
+    public func addCanvas (_ canvas: Canvas)
+    {
+        guard owns == .nway else {
+            return
+        }
+        sk_nway_canvas_add_canvas(handle, canvas.handle)
+    }
+
+    /// Removes a canvas in an nway-canvas that was previously added with `addCanvas`
+    public func removeCanvas (_ canvas: Canvas)
+    {
+        guard owns == .nway else {
+            return
+        }
+        sk_nway_canvas_remove_canvas(handle, canvas.handle)
+    }
+    
+    /// Removes all the additional canvases that have been added to an nway-canvas, and brings back the nway canvas to have no canvas to drawn on.
+    public func removeAll ()
+    {
+        guard owns == .nway else {
+            return
+        }
+        sk_nway_canvas_remove_all(handle)
     }
     
     public func drawText (text: String, x: Float, y: Float, paint: Paint)

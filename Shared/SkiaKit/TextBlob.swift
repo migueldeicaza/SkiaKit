@@ -85,6 +85,28 @@ public final class TextBlobBuilder {
         run.clusters.copyMemory(from: glyphs, byteCount: glyphs.count * 2)
     }
     
+    /// Adds a new horizontally-positioned run to the builder.
+    /// - Parameter font: The font to use for this run
+    /// - Parameter y: The vertical offset within the blob.
+    /// - Parameter glyphs: The glyphs to use for this run
+    public func addHorizontalRun (font: Paint, y: Float, glyphs: [ushort], positions: [Float])
+    {
+        let run = allocateHorizontalRun(font: font, count: Int32 (glyphs.count), y: y)
+        run.clusters.copyMemory(from: glyphs, byteCount: glyphs.count * 2)
+        run.pos.copyMemory(from: positions, byteCount: positions.count * MemoryLayout<Float>.size)
+    }
+
+    /// Adds a new horizontally-positioned run to the builder.
+    /// - Parameter font: The font to use for this run
+    /// - Parameter y: The vertical offset within the blob.
+    /// - Parameter glyphs: The glyphs to use for this run
+    public func addPositionedRun (font: Paint, y: Float, glyphs: [ushort], positions: [Point])
+    {
+        let run = allocateHorizontalRun(font: font, count: Int32 (glyphs.count), y: y)
+        run.clusters.copyMemory(from: glyphs, byteCount: glyphs.count * 2)
+        run.pos.copyMemory(from: positions, byteCount: positions.count * MemoryLayout<Point>.size)
+    }
+
     /**
      * Returns run with storage for glyphs. Caller must write count glyphs to
      * Glyphs share metrics in font.
@@ -115,5 +137,36 @@ public final class TextBlobBuilder {
         
         return ret
     }
+    
+    func allocateHorizontalRun (font: Paint, count: Int32, y: Float, textByteCount: Int32 = 0, bounds: Rect? = nil) -> sk_textblob_builder_runbuffer_t
+    {
+        let lang = SKString()
+        var ret = sk_textblob_builder_runbuffer_t ()
+        if let b = bounds {
+            var nb = b.toNative()
+            
+            sk_textblob_builder_alloc_run_text_pos_h(handle, font.handle, count, y, textByteCount, lang.handle, &nb, &ret)
+        } else {
+            sk_textblob_builder_alloc_run_text_pos_h(handle, font.handle, count, y, textByteCount, lang.handle, nil, &ret)
+        }
+        
+        return ret
+    }
+    
+    func allocatePositionedRun (font: Paint, count: Int32, textByteCount: Int32 = 0, bounds: Rect? = nil) -> sk_textblob_builder_runbuffer_t
+    {
+        let lang = SKString()
+        var ret = sk_textblob_builder_runbuffer_t ()
+        if let b = bounds {
+            var nb = b.toNative()
+            
+            sk_textblob_builder_alloc_run_text_pos(handle, font.handle, count, textByteCount, lang.handle, &nb, &ret)
+        } else {
+            sk_textblob_builder_alloc_run_text_pos(handle, font.handle, count, textByteCount, lang.handle, nil, &ret)
+        }
+        
+        return ret
+    }
+
 }
 

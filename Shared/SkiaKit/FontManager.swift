@@ -9,7 +9,7 @@ import Foundation
 
 /// Skia's FontManager
 /// The default font manager can be accessed via the `default` static property of `FontManager`.
-public class FontManager {
+public final class FontManager {
     var handle: OpaquePointer
     var owns: Bool
     

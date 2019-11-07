@@ -33,6 +33,7 @@ public class SkiaLayer : CALayer {
         super.init (coder: coder)
     }
     
+    /// If true, this will ignore the pixel scaling of the device, otherwise some virtual pixels might use the number of physical pixels specified in the system
     public var ignorePixelScaling: Bool {
         didSet {
             setNeedsDisplay()

@@ -10,6 +10,12 @@
 		4902C77B23711DBA00FD5CE3 /* FontStyleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C77A23711DBA00FD5CE3 /* FontStyleSet.swift */; };
 		4902C77C23711DBA00FD5CE3 /* FontStyleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C77A23711DBA00FD5CE3 /* FontStyleSet.swift */; };
 		4902C77D23711DBA00FD5CE3 /* FontStyleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C77A23711DBA00FD5CE3 /* FontStyleSet.swift */; };
+		4902C7832373C06000FD5CE3 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7822373C06000FD5CE3 /* Picture.swift */; };
+		4902C7842373C06000FD5CE3 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7822373C06000FD5CE3 /* Picture.swift */; };
+		4902C7852373C06000FD5CE3 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7822373C06000FD5CE3 /* Picture.swift */; };
+		4902C7872373C19D00FD5CE3 /* PictureRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7862373C19D00FD5CE3 /* PictureRecorder.swift */; };
+		4902C7882373C19D00FD5CE3 /* PictureRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7862373C19D00FD5CE3 /* PictureRecorder.swift */; };
+		4902C7892373C19D00FD5CE3 /* PictureRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7862373C19D00FD5CE3 /* PictureRecorder.swift */; };
 		4912D98523693F710079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
 		4912D986236A51430079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
 		4912D987236A51450079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
@@ -306,6 +312,8 @@
 
 /* Begin PBXFileReference section */
 		4902C77A23711DBA00FD5CE3 /* FontStyleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleSet.swift; sourceTree = "<group>"; };
+		4902C7822373C06000FD5CE3 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		4902C7862373C19D00FD5CE3 /* PictureRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureRecorder.swift; sourceTree = "<group>"; };
 		4912D98423693F710079BAF7 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceProperties.swift; sourceTree = "<group>"; };
 		49BF9E5323711A55009A6B13 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
@@ -574,7 +582,9 @@
 				49DA8F2F2363E98A0026FC2B /* ColorSpace.swift */,
 				49DA8F202363E9890026FC2B /* Data.swift */,
 				49DA8F272363E98A0026FC2B /* Definitions.swift */,
+				49BF9E5323711A55009A6B13 /* FontManager.swift */,
 				4912D98423693F710079BAF7 /* FontStyle.swift */,
+				4902C77A23711DBA00FD5CE3 /* FontStyleSet.swift */,
 				49DA8F232363E98A0026FC2B /* Image.swift */,
 				49DA8F262363E98A0026FC2B /* ImageFilter.swift */,
 				49DA8F222363E98A0026FC2B /* ImageInfo.swift */,
@@ -584,6 +594,8 @@
 				49DA8F312363E98A0026FC2B /* Paint.swift */,
 				49DA8F2A2363E98A0026FC2B /* Path.swift */,
 				49DA8F1E2363E9890026FC2B /* PathEffect.swift */,
+				4902C7822373C06000FD5CE3 /* Picture.swift */,
+				4902C7862373C19D00FD5CE3 /* PictureRecorder.swift */,
 				49E975A62367ACAD00042FE7 /* Pixmap.swift */,
 				49DA8F282363E98A0026FC2B /* Region.swift */,
 				49DA8F322363E98A0026FC2B /* RoundRect.swift */,
@@ -595,8 +607,6 @@
 				4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */,
 				49DA8F242363E98A0026FC2B /* TextBlob.swift */,
 				49DA8F302363E98A0026FC2B /* Typeface.swift */,
-				49BF9E5323711A55009A6B13 /* FontManager.swift */,
-				4902C77A23711DBA00FD5CE3 /* FontStyleSet.swift */,
 			);
 			path = SkiaKit;
 			sourceTree = "<group>";
@@ -1107,6 +1117,7 @@
 				49DA8F4B2363E98A0026FC2B /* RoundRect.swift in Sources */,
 				49DA8F402363E98A0026FC2B /* Definitions.swift in Sources */,
 				49DA8F342363E98A0026FC2B /* Canvas.swift in Sources */,
+				4902C7872373C19D00FD5CE3 /* PictureRecorder.swift in Sources */,
 				49DA8F432363E98A0026FC2B /* Path.swift in Sources */,
 				49DA8F4C2363E98A0026FC2B /* MaskFilter.swift in Sources */,
 				49DA8F3C2363E98A0026FC2B /* Image.swift in Sources */,
@@ -1136,6 +1147,7 @@
 				49DA8F422363E98A0026FC2B /* Shader.swift in Sources */,
 				49DA8F442363E98A0026FC2B /* SKStream.swift in Sources */,
 				49BF9E5423711A55009A6B13 /* FontManager.swift in Sources */,
+				4902C7832373C06000FD5CE3 /* Picture.swift in Sources */,
 				49E975A72367ACAD00042FE7 /* Pixmap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1156,6 +1168,7 @@
 				49DA8FA42363EB880026FC2B /* Matrix.swift in Sources */,
 				49DA8F9E2363EB880026FC2B /* Definitions.swift in Sources */,
 				49DA8FA62363EB880026FC2B /* Path.swift in Sources */,
+				4902C7882373C19D00FD5CE3 /* PictureRecorder.swift in Sources */,
 				49DA8FA22363EB880026FC2B /* MaskFilter.swift in Sources */,
 				49DA8FA02363EB880026FC2B /* ImageFilter.swift in Sources */,
 				49DA8FAE2363EB880026FC2B /* TextBlob.swift in Sources */,
@@ -1185,6 +1198,7 @@
 				49DA8F992363EB880026FC2B /* Color.swift in Sources */,
 				49DA8FAC2363EB880026FC2B /* SKStream.swift in Sources */,
 				49BF9E5523711A55009A6B13 /* FontManager.swift in Sources */,
+				4902C7842373C06000FD5CE3 /* Picture.swift in Sources */,
 				49E975A82367ACAD00042FE7 /* Pixmap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1205,6 +1219,7 @@
 				49DA8FBD2363EB890026FC2B /* Matrix.swift in Sources */,
 				49DA8FB72363EB890026FC2B /* Definitions.swift in Sources */,
 				49DA8FBF2363EB890026FC2B /* Path.swift in Sources */,
+				4902C7892373C19D00FD5CE3 /* PictureRecorder.swift in Sources */,
 				49DA8FBB2363EB890026FC2B /* MaskFilter.swift in Sources */,
 				49DA8FB92363EB890026FC2B /* ImageFilter.swift in Sources */,
 				49DA8FC72363EB890026FC2B /* TextBlob.swift in Sources */,
@@ -1234,6 +1249,7 @@
 				49DA8FB22363EB890026FC2B /* Color.swift in Sources */,
 				49DA8FC52363EB890026FC2B /* SKStream.swift in Sources */,
 				49BF9E5623711A55009A6B13 /* FontManager.swift in Sources */,
+				4902C7852373C06000FD5CE3 /* Picture.swift in Sources */,
 				49E975A92367ACAD00042FE7 /* Pixmap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

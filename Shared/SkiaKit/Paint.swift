@@ -17,6 +17,85 @@ import Foundation
  * `Paint` does not directly implement dashing or blur, but contains the objects that do so.
  */
 public final class Paint {
+    ///
+    /// Set Style to fill, stroke, or both fill and stroke geometry.
+    ///
+    /// The stroke and fill share all paint attributes; for instance, they are drawn with the same color.
+    /// Use `.strokeAndFill` to avoid hitting the same pixels twice with a stroke draw and
+    /// a fill draw.
+    ///
+    public enum Style : UInt32 {
+        /// set to fill geometry
+        case fill = 0
+        /// set to stroke geometry
+        case stroke = 1
+        /// sets to stroke and fill geometry
+        case strokeAndFill
+        
+        internal func toNative () -> sk_paint_style_t
+        {
+            return sk_paint_style_t.init(rawValue)
+        }
+       
+        internal static func fromNative (_ x : sk_paint_style_t) -> Style
+        {
+            return Style.init(rawValue: x.rawValue)!
+        }
+    }
+    
+    ///
+    /// Join specifies how corners are drawn when a shape is stroked. Join
+    /// affects the four corners of a stroked rectangle, and the connected segments in a
+    /// stroked path.
+    ///
+    /// Choose miter join to draw sharp corners. Choose round join to draw a circle with a
+    /// radius equal to the stroke width on top of the corner. Choose bevel join to minimally
+    /// connect the thick strokes.
+    ///
+    /// The fill path constructed to describe the stroked path respects the join setting but may
+    /// not contain the actual join. For instance, a fill path constructed with round joins does
+    /// not necessarily include circles at each connected segment.
+    ///
+    public enum StrokeJoin : UInt32 {
+        /// extends to miter limit
+        case miter = 0
+        /// adds circle
+        case round = 1
+        /// connects outside edges
+        case bevel = 2
+        
+        internal func toNative () -> sk_stroke_join_t
+        {
+            return sk_stroke_join_t.init(rawValue)
+        }
+        
+        internal static func fromNative (_ x: sk_stroke_join_t) -> StrokeJoin
+        {
+            return StrokeJoin.init(rawValue: x.rawValue)!
+        }
+    }
+
+
+    /// Cap draws at the beginning and end of an open path contour.
+    public enum StrokeCap : UInt32 {
+        /// no stroke extension - the default stroke value
+        case butt = 0
+        /// adds circle
+        case round = 1
+        /// adds square
+        case square = 2
+        
+        internal func toNative () -> sk_stroke_cap_t
+        {
+            return sk_stroke_cap_t.init(rawValue)
+        }
+        
+        internal static func fromNative (_ x: sk_stroke_cap_t) -> StrokeCap
+        {
+            return StrokeCap.init(rawValue: x.rawValue)!
+        }
+    }
+
     var handle : OpaquePointer
        
     init (handle: OpaquePointer)
@@ -156,9 +235,9 @@ public final class Paint {
         }
     }
     
-    public var style : PaintStyle {
+    public var style : Style {
         get {
-            PaintStyle.fromNative (sk_paint_get_style(handle))
+            Style.fromNative (sk_paint_get_style(handle))
         }
         set {
             sk_paint_set_style(handle, newValue.toNative())

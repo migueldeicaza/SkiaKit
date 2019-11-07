@@ -14,7 +14,7 @@
     <a title="Enumerations  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> master Docs</a> (48% documented)</p>
+        <p><a href="index.html"> master Docs</a> (50% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -72,6 +72,15 @@
                 <a href="Classes/Paint.html">Paint</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/Paint/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Paint/StrokeJoin.html">– StrokeJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Paint/StrokeCap.html">– StrokeCap</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Path.html">Path</a>
               </li>
               <li class="nav-group-task">
@@ -79,6 +88,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes.html#/s:7SkiaKit10PathEffectC">PathEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Picture.html">Picture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PictureRecorder.html">PictureRecorder</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Pixmap.html">Pixmap</a>
@@ -176,9 +191,6 @@
                 <a href="Enums/PaintHinting.html">PaintHinting</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/PaintStyle.html">PaintStyle</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/PathConvexity.html">PathConvexity</a>
               </li>
               <li class="nav-group-task">
@@ -207,12 +219,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="Enums/ShaderTileMode.html">ShaderTileMode</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/StrokeCap.html">StrokeCap</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/StrokeJoin.html">StrokeJoin</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/TextAlign.html">TextAlign</a>
@@ -414,113 +420,6 @@ as the font engine.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit10PaintStyleO"></a>
-                    <a name="//apple_ref/swift/Enum/PaintStyle" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit10PaintStyleO">PaintStyle</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set Style to fill, stroke, or both fill and stroke geometry.</p>
-
-<p>The stroke and fill share all paint attributes; for instance, they are drawn with the same color.
-Use <code>.strokeAndFill</code> to avoid hitting the same pixels twice with a stroke draw and
-a fill draw.</p>
-
-                        <a href="Enums/PaintStyle.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PaintStyle</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L133-L150">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SkiaKit9StrokeCapO"></a>
-                    <a name="//apple_ref/swift/Enum/StrokeCap" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit9StrokeCapO">StrokeCap</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Cap draws at the beginning and end of an open path contour.</p>
-
-                        <a href="Enums/StrokeCap.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">StrokeCap</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L153-L170">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SkiaKit10StrokeJoinO"></a>
-                    <a name="//apple_ref/swift/Enum/StrokeJoin" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit10StrokeJoinO">StrokeJoin</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Join specifies how corners are drawn when a shape is stroked. Join
-affects the four corners of a stroked rectangle, and the connected segments in a
-stroked path.</p>
-
-<p>Choose miter join to draw sharp corners. Choose round join to draw a circle with a
-radius equal to the stroke width on top of the corner. Choose bevel join to minimally
-connect the thick strokes.</p>
-
-<p>The fill path constructed to describe the stroked path respects the join setting but may
-not contain the actual join. For instance, a fill path constructed with round joins does
-not necessarily include circles at each connected segment.</p>
-
-                        <a href="Enums/StrokeJoin.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">StrokeJoin</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L185-L202">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:7SkiaKit9BlendModeO"></a>
                     <a name="//apple_ref/swift/Enum/BlendMode" class="dashAnchor"></a>
                     <a class="token" href="#/s:7SkiaKit9BlendModeO">BlendMode</a>
@@ -544,7 +443,7 @@ not necessarily include circles at each connected segment.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L205-L274">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L127-L196">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -575,7 +474,7 @@ not necessarily include circles at each connected segment.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L277-L297">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L199-L219">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -621,7 +520,7 @@ using the metrics returned by the font.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L317-L334">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L239-L256">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -668,7 +567,7 @@ A glyph index is a 16-bit word.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L355-L374">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L277-L296">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -699,7 +598,7 @@ A glyph index is a 16-bit word.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L376-L389">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L298-L311">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -730,7 +629,7 @@ A glyph index is a 16-bit word.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L392-L409">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L314-L331">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -767,7 +666,7 @@ reverses the rule:
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L421-L441">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L343-L363">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -807,7 +706,7 @@ f needed by destination <code><a href="Classes/Surface.html">Surface</a></code>.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L456-L473">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L378-L395">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -839,7 +738,7 @@ instance, if Path only contains lines, only the <code>.line</code> bit is set.</
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L477-L486">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L399-L408">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -880,7 +779,7 @@ travel counterclockwise.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L501-L514">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L423-L436">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -911,7 +810,7 @@ travel counterclockwise.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L517-L538">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L439-L460">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -942,7 +841,7 @@ travel counterclockwise.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L540-L555">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L462-L477">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -973,7 +872,7 @@ travel counterclockwise.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L558-L582">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L480-L504">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1014,7 +913,7 @@ travel counterclockwise.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L596-L619">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L518-L541">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1045,7 +944,7 @@ travel counterclockwise.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L623-L642">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L545-L564">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1076,7 +975,7 @@ travel counterclockwise.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L645-L662">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L567-L584">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1107,7 +1006,7 @@ travel counterclockwise.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L665-L684">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L587-L606">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1138,7 +1037,7 @@ travel counterclockwise.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L686-L689">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L608-L611">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1171,7 +1070,7 @@ then use <code>.unknown</code></p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L696-L712">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L618-L634">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1202,7 +1101,7 @@ then use <code>.unknown</code></p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L715-L739">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L637-L661">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1212,7 +1111,7 @@ then use <code>.unknown</code></p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-05)</p>
+          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="Paint Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (48% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (50% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -72,6 +72,15 @@
                 <a href="../Classes/Paint.html">Paint</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Paint/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Paint/StrokeJoin.html">– StrokeJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Paint/StrokeCap.html">– StrokeCap</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Path.html">Path</a>
               </li>
               <li class="nav-group-task">
@@ -79,6 +88,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes.html#/s:7SkiaKit10PathEffectC">PathEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Picture.html">Picture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PictureRecorder.html">PictureRecorder</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Pixmap.html">Pixmap</a>
@@ -176,9 +191,6 @@
                 <a href="../Enums/PaintHinting.html">PaintHinting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/PaintStyle.html">PaintStyle</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/PathConvexity.html">PathConvexity</a>
               </li>
               <li class="nav-group-task">
@@ -207,12 +219,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ShaderTileMode.html">ShaderTileMode</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/StrokeCap.html">StrokeCap</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/StrokeJoin.html">StrokeJoin</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TextAlign.html">TextAlign</a>
@@ -283,6 +289,113 @@ algorithms that alter the drawing geometry, color, and transparency. For instanc
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7SkiaKit5PaintC5StyleO"></a>
+                    <a name="//apple_ref/swift/Enum/Style" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC5StyleO">Style</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set Style to fill, stroke, or both fill and stroke geometry.</p>
+
+<p>The stroke and fill share all paint attributes; for instance, they are drawn with the same color.
+Use <code>.strokeAndFill</code> to avoid hitting the same pixels twice with a stroke draw and
+a fill draw.</p>
+
+                        <a href="../Classes/Paint/Style.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Style</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L27-L44">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC10StrokeJoinO"></a>
+                    <a name="//apple_ref/swift/Enum/StrokeJoin" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC10StrokeJoinO">StrokeJoin</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Join specifies how corners are drawn when a shape is stroked. Join
+affects the four corners of a stroked rectangle, and the connected segments in a
+stroked path.</p>
+
+<p>Choose miter join to draw sharp corners. Choose round join to draw a circle with a
+radius equal to the stroke width on top of the corner. Choose bevel join to minimally
+connect the thick strokes.</p>
+
+<p>The fill path constructed to describe the stroked path respects the join setting but may
+not contain the actual join. For instance, a fill path constructed with round joins does
+not necessarily include circles at each connected segment.</p>
+
+                        <a href="../Classes/Paint/StrokeJoin.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">StrokeJoin</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L59-L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit5PaintC9StrokeCapO"></a>
+                    <a name="//apple_ref/swift/Enum/StrokeCap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC9StrokeCapO">StrokeCap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Cap draws at the beginning and end of an open path contour.</p>
+
+                        <a href="../Classes/Paint/StrokeCap.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">StrokeCap</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L80-L97">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7SkiaKit5PaintCACycfc"></a>
                     <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
                     <a class="token" href="#/s:7SkiaKit5PaintCACycfc">init()</a>
@@ -305,7 +418,7 @@ algorithms that alter the drawing geometry, color, and transparency. For instanc
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L28-L31">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L107-L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -336,7 +449,7 @@ algorithms that alter the drawing geometry, color, and transparency. For instanc
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L41-L44">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L120-L123">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -368,7 +481,7 @@ partial transparency.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L49-L56">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L128-L135">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -399,7 +512,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L60-L67">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L139-L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -429,7 +542,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L69-L76">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L148-L155">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -459,7 +572,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L78-L85">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L157-L164">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -489,7 +602,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L87-L94">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L166-L173">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -519,7 +632,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L96-L103">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L175-L182">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -549,7 +662,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L105-L112">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L184-L191">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -579,7 +692,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L114-L121">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L193-L200">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -609,7 +722,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L123-L130">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L202-L209">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -639,7 +752,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L132-L139">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L211-L218">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -669,7 +782,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L141-L148">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L220-L227">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -699,7 +812,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L150-L157">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L229-L236">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -707,9 +820,9 @@ When setting, requests, but does not require, to distribute color error.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit5PaintC5styleAA0C5StyleOvp"></a>
+                    <a name="/s:7SkiaKit5PaintC5styleAC5StyleOvp"></a>
                     <a name="//apple_ref/swift/Property/style" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit5PaintC5styleAA0C5StyleOvp">style</a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC5styleAC5StyleOvp">style</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -724,12 +837,12 @@ When setting, requests, but does not require, to distribute color error.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Enums/PaintStyle.html">PaintStyle</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/Paint/Style.html">Style</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L159-L166">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L238-L245">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -759,7 +872,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L168-L175">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L247-L254">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -789,7 +902,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L177-L184">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L256-L263">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -819,7 +932,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L186-L193">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L265-L272">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -827,9 +940,9 @@ When setting, requests, but does not require, to distribute color error.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit5PaintC9strokeCapAA06StrokeE0Ovp"></a>
+                    <a name="/s:7SkiaKit5PaintC9strokeCapAC06StrokeE0Ovp"></a>
                     <a name="//apple_ref/swift/Property/strokeCap" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit5PaintC9strokeCapAA06StrokeE0Ovp">strokeCap</a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC9strokeCapAC06StrokeE0Ovp">strokeCap</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -844,12 +957,12 @@ When setting, requests, but does not require, to distribute color error.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">strokeCap</span><span class="p">:</span> <span class="kt"><a href="../Enums/StrokeCap.html">StrokeCap</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">strokeCap</span><span class="p">:</span> <span class="kt"><a href="../Classes/Paint/StrokeCap.html">StrokeCap</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L195-L202">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L274-L281">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -857,9 +970,9 @@ When setting, requests, but does not require, to distribute color error.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit5PaintC10strokeJoinAA06StrokeE0Ovp"></a>
+                    <a name="/s:7SkiaKit5PaintC10strokeJoinAC06StrokeE0Ovp"></a>
                     <a name="//apple_ref/swift/Property/strokeJoin" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit5PaintC10strokeJoinAA06StrokeE0Ovp">strokeJoin</a>
+                    <a class="token" href="#/s:7SkiaKit5PaintC10strokeJoinAC06StrokeE0Ovp">strokeJoin</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -874,12 +987,12 @@ When setting, requests, but does not require, to distribute color error.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">strokeJoin</span><span class="p">:</span> <span class="kt"><a href="../Enums/StrokeJoin.html">StrokeJoin</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">strokeJoin</span><span class="p">:</span> <span class="kt"><a href="../Classes/Paint/StrokeJoin.html">StrokeJoin</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L204-L211">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L283-L290">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -909,7 +1022,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L213-L220">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L292-L299">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -939,7 +1052,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L222-L229">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L301-L308">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -969,7 +1082,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L231-L238">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L310-L317">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -999,7 +1112,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L240-L247">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L319-L326">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1029,7 +1142,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L248-L255">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L327-L334">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1059,7 +1172,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L256-L263">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L335-L342">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1089,7 +1202,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L265-L272">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L344-L351">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1119,7 +1232,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L274-L281">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L353-L360">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1149,7 +1262,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L283-L290">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L362-L369">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1179,7 +1292,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L292-L299">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L371-L378">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1209,7 +1322,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L301-L308">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L380-L387">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1239,7 +1352,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L310-L317">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L389-L396">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1269,7 +1382,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L319-L326">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L398-L405">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1299,7 +1412,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L328-L332">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L407-L411">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1329,7 +1442,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L334-L341">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L413-L420">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1359,7 +1472,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L343-L350">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L422-L429">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1389,7 +1502,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L352-L355">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L431-L434">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1419,7 +1532,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L359-L362">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L438-L441">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1449,7 +1562,7 @@ When setting, requests, but does not require, to distribute color error.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L364-L370">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Paint.swift#L443-L449">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1459,7 +1572,7 @@ When setting, requests, but does not require, to distribute color error.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-05)</p>
+          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

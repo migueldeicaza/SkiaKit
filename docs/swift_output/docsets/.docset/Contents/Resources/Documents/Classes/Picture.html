@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>StrokeCap Enumeration Reference</title>
+    <title>Picture Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,11 +10,11 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/StrokeCap" class="dashAnchor"></a>
-    <a title="StrokeCap Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Class/Picture" class="dashAnchor"></a>
+    <a title="Picture Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (48% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (50% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        StrokeCap Enumeration Reference
+        Picture Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -72,6 +72,15 @@
                 <a href="../Classes/Paint.html">Paint</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Paint/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Paint/StrokeJoin.html">– StrokeJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Paint/StrokeCap.html">– StrokeCap</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Path.html">Path</a>
               </li>
               <li class="nav-group-task">
@@ -79,6 +88,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes.html#/s:7SkiaKit10PathEffectC">PathEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Picture.html">Picture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PictureRecorder.html">PictureRecorder</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Pixmap.html">Pixmap</a>
@@ -176,9 +191,6 @@
                 <a href="../Enums/PaintHinting.html">PaintHinting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/PaintStyle.html">PaintStyle</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/PathConvexity.html">PathConvexity</a>
               </li>
               <li class="nav-group-task">
@@ -207,12 +219,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ShaderTileMode.html">ShaderTileMode</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/StrokeCap.html">StrokeCap</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/StrokeJoin.html">StrokeJoin</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TextAlign.html">TextAlign</a>
@@ -262,14 +268,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>StrokeCap</h1>
+            <h1>Picture</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">StrokeCap</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Picture</span></code></pre>
 
                 </div>
               </div>
-            <p>Cap draws at the beginning and end of an open path contour.</p>
+            <p>Undocumented</p>
 
           </section>
           <section class="section task-group-section">
@@ -278,9 +284,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit9StrokeCapO4buttyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/butt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit9StrokeCapO4buttyA2CmF">butt</a>
+                    <a name="/s:7SkiaKit7PictureC8uniqueIds6UInt32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/uniqueId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit7PictureC8uniqueIds6UInt32Vvp">uniqueId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -288,19 +294,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>no stroke extension - the default stroke value</p>
+                        <p>Gets the non-zero value unique among all pictures.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">butt</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">uniqueId</span><span class="p">:</span> <span class="kt">UInt32</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L155">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Picture.swift#L19-L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -308,9 +314,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit9StrokeCapO5roundyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/round" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit9StrokeCapO5roundyA2CmF">round</a>
+                    <a name="/s:7SkiaKit7PictureC8cullRectAA0E0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/cullRect" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit7PictureC8cullRectAA0E0Vvp">cullRect</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -318,49 +324,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>adds circle</p>
+                        <p>Gets the culling rectangle for this picture.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">round</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cullRect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L157">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SkiaKit9StrokeCapO6squareyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/square" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit9StrokeCapO6squareyA2CmF">square</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>adds square</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">square</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Definitions.swift#L159">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Picture.swift#L26-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -370,7 +346,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-05)</p>
+          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -118,7 +118,7 @@ public final class Surface {
      * is deleted.
      * - Returns: drawing `Canvas` for `Surface`
      */
-    public var canvas: Canvas { Canvas (handle: sk_surface_get_canvas(handle), owns: false)}
+    public var canvas: Canvas { Canvas (handle: sk_surface_get_canvas(handle), owns: .doesNotOwn)}
     
     /// Returns SurfaceProps for the surface which contains the LCD striping orientation and setting for device independent fonts
     public var surfaceProperties: SurfaceProperties {

@@ -19,7 +19,7 @@ import Foundation
  * `Matrix` includes a hidden variable that classifies the type of matrix to
  * improve performance. `Matrix` is not thread safe unless getType() is called first.
  */
-public class Matrix {
+public final class Matrix {
     public var scaleX, skewX, transX : Float
     public var scaleY, skewY, transY : Float
     public var persp0, persp1, persp2: Float

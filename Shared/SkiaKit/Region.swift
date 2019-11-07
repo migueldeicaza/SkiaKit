@@ -60,6 +60,7 @@ public final class Region {
      * - Parameter rect: bounds of constructed `Region`
      * - Returns: true if rect is not empty
      */
+    @discardableResult
     public func setRect (_ rect: IRect) -> Bool
     {
         var r = rect.toNative()

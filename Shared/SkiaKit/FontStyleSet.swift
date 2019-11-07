@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represets the set of styles for a particular font family.
-public class FontStyleSet {
+public final class FontStyleSet {
     var handle: OpaquePointer
     
     init (handle: OpaquePointer) {

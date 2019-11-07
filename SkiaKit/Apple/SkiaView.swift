@@ -18,6 +18,8 @@ import UIKit
  * `contentScaleFactor`
  */
 public class SkiaView: UIView {
+    /// This property when set points to the method to invoke when drawing.   The  method
+    /// receives a surface and the ImageInfo where it should draw its contents.
     public var drawingCallback: (_ surface: Surface, _ imageInfo: ImageInfo) -> () = emptyCallback(surface:imageInfo:)
     
     static func emptyCallback (surface: Surface, imageInfo: ImageInfo)
@@ -25,6 +27,7 @@ public class SkiaView: UIView {
         // Does nothing
     }
 
+    /// If true, this will ignore the pixel scaling of the device, otherwise some virtual pixels might use the number of physical pixels specified in the system
     public var ignorePixelScaling: Bool = false {
         didSet {
             setNeedsDisplay()

@@ -14,7 +14,7 @@
     <a title="TextBlobBuilder Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (48% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (50% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -72,6 +72,15 @@
                 <a href="../Classes/Paint.html">Paint</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Paint/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Paint/StrokeJoin.html">– StrokeJoin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Paint/StrokeCap.html">– StrokeCap</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Path.html">Path</a>
               </li>
               <li class="nav-group-task">
@@ -79,6 +88,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes.html#/s:7SkiaKit10PathEffectC">PathEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Picture.html">Picture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PictureRecorder.html">PictureRecorder</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Pixmap.html">Pixmap</a>
@@ -176,9 +191,6 @@
                 <a href="../Enums/PaintHinting.html">PaintHinting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/PaintStyle.html">PaintStyle</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/PathConvexity.html">PathConvexity</a>
               </li>
               <li class="nav-group-task">
@@ -207,12 +219,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ShaderTileMode.html">ShaderTileMode</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/StrokeCap.html">StrokeCap</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/StrokeJoin.html">StrokeJoin</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TextAlign.html">TextAlign</a>
@@ -339,12 +345,243 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit15TextBlobBuilderC6addRun4font1x1y6glyphsyAA5PaintC_S2fSays6UInt16VGtF"></a>
+                    <a name="//apple_ref/swift/Method/addRun(font:x:y:glyphs:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit15TextBlobBuilderC6addRun4font1x1y6glyphsyAA5PaintC_S2fSays6UInt16VGtF">addRun(font:x:y:glyphs:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a new default-positioned run to the builder.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRun</span><span class="p">(</span><span class="nv">font</span><span class="p">:</span> <span class="kt"><a href="../Classes/Paint.html">Paint</a></span><span class="p">,</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">ushort</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>font</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The font to use for this run</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>x</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The x position for this run</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>y</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The y position for this run</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>glyphs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The glyphs to use for this run</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/TextBlob.swift#L82-L86">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit15TextBlobBuilderC16addHorizontalRun4font1y6glyphs9positionsyAA5PaintC_SfSays6UInt16VGSaySfGtF"></a>
+                    <a name="//apple_ref/swift/Method/addHorizontalRun(font:y:glyphs:positions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit15TextBlobBuilderC16addHorizontalRun4font1y6glyphs9positionsyAA5PaintC_SfSays6UInt16VGSaySfGtF">addHorizontalRun(font:y:glyphs:positions:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a new horizontally-positioned run to the builder.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addHorizontalRun</span><span class="p">(</span><span class="nv">font</span><span class="p">:</span> <span class="kt"><a href="../Classes/Paint.html">Paint</a></span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">ushort</span><span class="p">],</span> <span class="nv">positions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Float</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>font</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The font to use for this run</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>y</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The vertical offset within the blob.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>glyphs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The glyphs to use for this run</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/TextBlob.swift#L92-L97">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit15TextBlobBuilderC16addPositionedRun4font1y6glyphs9positionsyAA5PaintC_SfSays6UInt16VGSayAA5PointVGtF"></a>
+                    <a name="//apple_ref/swift/Method/addPositionedRun(font:y:glyphs:positions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit15TextBlobBuilderC16addPositionedRun4font1y6glyphs9positionsyAA5PaintC_SfSays6UInt16VGSayAA5PointVGtF">addPositionedRun(font:y:glyphs:positions:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a new horizontally-positioned run to the builder.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPositionedRun</span><span class="p">(</span><span class="nv">font</span><span class="p">:</span> <span class="kt"><a href="../Classes/Paint.html">Paint</a></span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">ushort</span><span class="p">],</span> <span class="nv">positions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>font</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The font to use for this run</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>y</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The vertical offset within the blob.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>glyphs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The glyphs to use for this run</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/TextBlob.swift#L103-L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-05)</p>
+          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

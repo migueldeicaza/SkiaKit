@@ -12,7 +12,7 @@ import Foundation
  * during drawing, and can sometimes optimize its performance (e.g. disabling an expensive
  * feature).
  */
-public class SurfaceProperties {
+public final class SurfaceProperties {
     var handle: OpaquePointer
     var owns: Bool
     
