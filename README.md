@@ -14,7 +14,7 @@ Matthew Leibowitz and dozens of contributors.   SkiaSharp just happens to have
 a very advanced set of bridge APIs to the underlying Skia engine that does not 
 existin in the upstream Google Skia project.
 
-== Getting this to work locally ==
+## Getting this to work locally
 
 You can either download and install the SkiaSharp.nuget package, or
 build your own local copy of Mono's Skia fork
