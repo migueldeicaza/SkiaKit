@@ -21,10 +21,11 @@ build your own local copy of Mono's Skia fork
 (https://github.com/mono/skia/tree/77049b872966dc300ed233fc6e3930eb21bac5e3
 from https://github.com/mono/skiasharp) and then copy the following binaries:
 
+```
 SkiaKit/iOS:
 	Copy the iOS directory libSkiaSharp.framework here
 SkiaKit/macOS:
 	Copy the file libSkiaSharp.dylib here
 SkiaKit/tvOS:
 	Copy the tvOS directory libSkiaSharp.framework here
-
+```
