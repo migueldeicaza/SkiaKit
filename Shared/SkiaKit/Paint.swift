@@ -75,6 +75,50 @@ public final class Paint {
         }
     }
 
+    ///
+    /// Hinting adjusts the glyph outlines so that the shape provides a uniform
+    /// look at a given point size on font engines that support it. Hinting may have a
+    /// muted effect or no effect at all depending on the platform.
+    ///
+    /// The four levels roughly control corresponding features on platforms that use FreeType
+    /// as the font engine.
+    ///
+    ///
+    public enum Hinting : UInt32 {
+        /// Leaves glyph outlines unchanged from their native representation.
+        /// With FreeType, this is equivalent to the FT_LOAD_NO_HINTING
+        /// bit-field constant supplied to FT_Load_Glyph, which indicates that the vector
+        /// outline being loaded should not be fitted to the pixel grid but simply scaled
+        /// to 26.6 fractional pixels.
+        case noHinting = 0
+        /// Modifies glyph outlines minimally to improve constrast.
+        /// With FreeType, this is equivalent in spirit to the
+        /// FT_LOAD_TARGET_LIGHT value supplied to FT_Load_Glyph. It chooses a
+        /// lighter hinting algorithm for non-monochrome modes.
+        /// Generated glyphs may be fuzzy but better resemble their original shape.
+        case slight = 1
+        /// Modifies glyph outlines to improve constrast. This is the default.
+        /// With FreeType, this supplies FT_LOAD_TARGET_NORMAL to FT_Load_Glyph,
+        /// choosing the default hinting algorithm, which is optimized for standard
+        /// gray-level rendering.
+        case normal = 2
+        /// Modifies glyph outlines for maxiumum constrast. With FreeType, this selects
+        /// FT_LOAD_TARGET_LCD or FT_LOAD_TARGET_LCD_V if kLCDRenderText_Flag is set.
+        /// FT_LOAD_TARGET_LCD is a variant of FT_LOAD_TARGET_NORMAL optimized for
+        /// horizontally decimated LCD displays; FT_LOAD_TARGET_LCD_V is a
+        /// variant of FT_LOAD_TARGET_NORMAL optimized for vertically decimated LCD displays.
+        case full = 3
+        
+        internal func toNative () -> sk_paint_hinting_t
+        {
+            return sk_paint_hinting_t.init(rawValue)
+        }
+        
+        internal static func fromNative (_ x : sk_paint_hinting_t) -> Hinting
+        {
+            return Hinting.init(rawValue: x.rawValue)!
+        }
+    }
 
     /// Cap draws at the beginning and end of an open path contour.
     public enum StrokeCap : UInt32 {
@@ -208,9 +252,9 @@ public final class Paint {
         }
     }
     
-    public var hintingLevel : PaintHinting {
+    public var hintingLevel : Hinting {
         get {
-            PaintHinting.fromNative (sk_paint_get_hinting(handle))
+            Hinting.fromNative (sk_paint_get_hinting(handle))
         }
         set {
             sk_paint_set_hinting(handle, newValue.toNative())

@@ -568,8 +568,36 @@ public final class Canvas {
             }
         }
     }
+
+    /**
+     * Draws `Picture` picture, using clip and `Matrix`.
+     * Clip and `Matrix` are unchanged by picture contents, as if
+     * save() was called before and restore() was called after drawPicture().
+     * `Picture` records a series of draw commands for later playback.
+     * - Parameter picture: recorded drawing commands to play
+     * - Parameter paint: `Paint` to apply transparency, filtering, and so on; may be `nil`
+     */
+    public func drawPicture (_ picture: Picture, _ paint: Paint? = nil)
+    {
+        sk_canvas_draw_picture(handle, picture.handle, nil, paint?.handle)
+    }
     
-    // TODO drawPicture
+    /**
+     * Draws `Picture` picture, using clip and `Matrix`; transforming picture with
+     * `Matrix` matrix, if provided; and use `Paint` paint alpha, `ColorFilter`,
+     * `ImageFilter`, and `BlendMode`, if provided.
+     * matrix transformation is equivalent to: save(), concat(), drawPicture(), restore().
+     * paint use is equivalent to: saveLayer(), drawPicture(), restore().
+     * - Parameter picture: recorded drawing commands to play
+     * - Parameter matrix: `Matrix` to rotate, scale, translate, and so on; may be `nil`
+     * - Parameter paint: `Paint` to apply transparency, filtering, and so on; may be `nil`
+     */
+    public func drawPicture (_ picture: Picture, _ matrix: Matrix, _ paint: Paint? = nil)
+    {
+        var m = matrix.toNative()
+        sk_canvas_draw_picture(handle, picture.handle, &m, paint?.handle)
+    }
+    
     // TODO drawDrawable
     
     public func drawBitmap (_ bitmap: Bitmap, _ point: Point, _ paint: Paint? = nil)

@@ -14,7 +14,7 @@
     <a title="Path Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> master Docs</a> (50% documented)</p>
+        <p><a href="../index.html"> master Docs</a> (51% documented)</p>
         <p class="header-right"><a href="https://github.com/migueldeicaza/SkiaKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fmigueldeicaza%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -78,6 +78,9 @@
                 <a href="../Classes/Paint/StrokeJoin.html">– StrokeJoin</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Paint/Hinting.html">– Hinting</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Paint/StrokeCap.html">– StrokeCap</a>
               </li>
               <li class="nav-group-task">
@@ -85,6 +88,24 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Path/PathAddMode.html">– PathAddMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path/Size.html">– Size</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path/FillType.html">– FillType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path/Convexity.html">– Convexity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path/SegmentMask.html">– SegmentMask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path/Direction.html">– Direction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Path/Op.html">– Op</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes.html#/s:7SkiaKit10PathEffectC">PathEffect</a>
@@ -188,24 +209,6 @@
                 <a href="../Enums/FontStyleWidth.html">FontStyleWidth</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/PaintHinting.html">PaintHinting</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/PathConvexity.html">PathConvexity</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/PathDirection.html">PathDirection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/PathFillType.html">PathFillType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/PathOp.html">PathOp</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/PathSegmentMask.html">PathSegmentMask</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/PixelGeometry.html">PixelGeometry</a>
               </li>
               <li class="nav-group-task">
@@ -289,6 +292,10 @@
  outside the geometry. <code>Path</code> also describes the winding rule used to fill
  overlapping contours.</p>
 
+<p>The various commands that add to the path provide a fluid interface, meaning that
+ calling the methods return the instance on which it was invoked, easily allowing
+ the drawing operations to be concatenated.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -307,7 +314,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Constructs an empty <code>Path</code>. By default, <code>Path</code> has no verbs, no points, and no weights.
-the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp">fillType</a></code> is set to <code>.winding</code></p>
+the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAC04FillE0Ovp">fillType</a></code> is set to <code>.winding</code></p>
 
                       </div>
                       <div class="declaration">
@@ -319,7 +326,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L37-L40">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L41-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -327,9 +334,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp"></a>
+                    <a name="/s:7SkiaKit4PathC8fillTypeAC04FillE0Ovp"></a>
                     <a name="//apple_ref/swift/Property/fillType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp">fillType</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC8fillTypeAC04FillE0Ovp">fillType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -344,12 +351,12 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fillType</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathFillType.html">PathFillType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fillType</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/FillType.html">FillType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L45-L52">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L49-L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -357,9 +364,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC9convexityAA0C9ConvexityOvp"></a>
+                    <a name="/s:7SkiaKit4PathC9convexityAC9ConvexityOvp"></a>
                     <a name="//apple_ref/swift/Property/convexity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC9convexityAA0C9ConvexityOvp">convexity</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC9convexityAC9ConvexityOvp">convexity</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -374,12 +381,12 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">convexity</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathConvexity.html">PathConvexity</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">convexity</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Convexity.html">Convexity</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L54-L61">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L58-L65">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -397,7 +404,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns the number of elements on the verb array containing the draw operations</p>
 
                       </div>
                       <div class="declaration">
@@ -409,7 +416,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -487,7 +494,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns if <code>Path</code> is empty.
+Empty <code>Path</code> may have FillType but has no <code><a href="../Structs/Point.html">Point</a></code>, <code>Path.verb</code>, or conic weight.
+<code>Path</code>() constructs empty <code>Path</code>; reset() and rewind() make <code>Path</code> empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -499,7 +508,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -637,7 +646,8 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns the number of points in SkPath.
+the count is initially zero.</p>
 
                       </div>
                       <div class="declaration">
@@ -649,7 +659,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -657,9 +667,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC12segmentMasksAA0C11SegmentMaskOvp"></a>
+                    <a name="/s:7SkiaKit4PathC12segmentMasksAC11SegmentMaskOvp"></a>
                     <a name="//apple_ref/swift/Property/segmentMasks" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC12segmentMasksAA0C11SegmentMaskOvp">segmentMasks</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC12segmentMasksAC11SegmentMaskOvp">segmentMasks</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -667,19 +677,22 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns a mask, where each set bit corresponds to a SegmentMask constant
+if <code>Path</code> contains one or more verbs of that type.
+Returns zero if <code>Path</code> contains no lines, or curves: quads, conics, or cubics.
+<code>egmentMasks</code> returns a cached result; it is very fast.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">segmentMasks</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathSegmentMask.html">PathSegmentMask</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">segmentMasks</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/SegmentMask.html">SegmentMask</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -697,7 +710,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns <code><a href="../Structs/Point.html">Point</a></code> at index in <code><a href="../Structs/Point.html">Point</a></code> array. Valid range for index is
+0 to countPoints() - 1.
+Returns (0, 0) if index is out of range.</p>
 
                       </div>
                       <div class="declaration">
@@ -708,8 +723,31 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Structs/Point.html">Point</a></code> array element selector</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Structs/Point.html">Point</a></code> array value or (0, 0)</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L73-L77">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L105-L109">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -739,7 +777,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L78-L85">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L110-L117">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -757,7 +795,11 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns minimum and maximum axes values of <code><a href="../Structs/Point.html">Point</a></code> array.
+Returns (0, 0, 0, 0) if <code>Path</code> contains no points. Returned bounds width and height may
+be larger or smaller than area affected when <code>Path</code> is drawn.
+<code><a href="../Structs/Rect.html">Rect</a></code> returned includes all <code><a href="../Structs/Point.html">Point</a></code> added to <code>Path</code>, including <code><a href="../Structs/Point.html">Point</a></code> associated with
+<code>.move</code> that define empty contours.</p>
 
                       </div>
                       <div class="declaration">
@@ -768,8 +810,12 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>bounds of all <code><a href="../Structs/Point.html">Point</a></code> in <code><a href="../Structs/Point.html">Point</a></code> array</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L87-L94">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L127-L134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -787,7 +833,16 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns minimum and maximum axes values of the lines and curves in <code>Path</code>.
+ Returns (0, 0, 0, 0) if <code>Path</code> contains no points.
+ Returned bounds width and height may be larger or smaller than area affected
+ when <code>Path</code> is drawn.
+ Includes <code><a href="../Structs/Point.html">Point</a></code> associated with <code>.move</code> that define empty
+ contours.
+ Behaves identically to <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC6boundsAA4RectVvp">bounds</a></code> when <code>Path</code> contains
+ only lines. If <code>Path</code> contains curves, computed bounds includes
+ the maximum extent of the quad, conic, or cubic; is slower than <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC6boundsAA4RectVvp">bounds</a></code>
+ and unlike <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC6boundsAA4RectVvp">bounds</a></code>, does not cache the result.</p>
 
                       </div>
                       <div class="declaration">
@@ -798,8 +853,12 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>tight bounds of curves in <code>Path</code></p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L96-L103">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L150-L157">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -829,7 +888,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L105-L112">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L159-L166">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -859,7 +918,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L114-L121">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L168-L175">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -889,7 +948,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L123-L130">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L177-L184">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -919,7 +978,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L132-L139">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L186-L193">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -927,9 +986,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC7getRectAA0E0V4rect_Sb8isClosedAA0C9DirectionO9directiontyF"></a>
+                    <a name="/s:7SkiaKit4PathC7getRectAA0E0V4rect_Sb8isClosedAC9DirectionO9directiontyF"></a>
                     <a name="//apple_ref/swift/Method/getRect()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC7getRectAA0E0V4rect_Sb8isClosedAA0C9DirectionO9directiontyF">getRect()</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC7getRectAA0E0V4rect_Sb8isClosedAC9DirectionO9directiontyF">getRect()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -944,12 +1003,12 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getRect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">isClosed</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathDirection.html">PathDirection</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getRect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">isClosed</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Direction.html">Direction</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L141-L150">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L195-L204">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -979,7 +1038,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L155-L160">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L209-L214">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1009,7 +1068,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L162-L178">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L216-L232">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1027,7 +1086,8 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns true if the point (x, y) is contained by <code>Path</code>, taking into
+account FillType.</p>
 
                       </div>
                       <div class="declaration">
@@ -1038,8 +1098,43 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>x</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>x-axis value of containment test</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>y</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>y-axis value of containment test</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if <code><a href="../Structs/Point.html">Point</a></code> is in <code>Path</code></p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L180-L183">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L241-L244">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1057,7 +1152,8 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns true if the point (x, y) is contained by <code>Path</code>, taking into
+account FillType.</p>
 
                       </div>
                       <div class="declaration">
@@ -1068,8 +1164,31 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>point of containment test</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if <code><a href="../Structs/Point.html">Point</a></code> is in <code>Path</code></p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L185-L188">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L252-L255">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1099,7 +1218,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L190-L193">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L257-L260">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1129,7 +1248,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L195-L198">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L262-L265">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1137,9 +1256,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC4move2toyAA5PointV_tF"></a>
+                    <a name="/s:7SkiaKit4PathC4move2toAcA5PointV_tF"></a>
                     <a name="//apple_ref/swift/Method/move(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC4move2toyAA5PointV_tF">move(to:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC4move2toAcA5PointV_tF">move(to:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1154,12 +1273,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">move</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">move</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L200-L203">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L268-L272">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1167,9 +1287,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC6moveToyySf_SftF"></a>
+                    <a name="/s:7SkiaKit4PathC6moveToyACSf_SftF"></a>
                     <a name="//apple_ref/swift/Method/moveTo(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC6moveToyySf_SftF">moveTo(_:_:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC6moveToyACSf_SftF">moveTo(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1184,12 +1304,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">moveTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">moveTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L205-L208">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L275-L279">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1197,9 +1318,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC5rmove2toyAA5PointV_tF"></a>
+                    <a name="/s:7SkiaKit4PathC5rmove2toAcA5PointV_tF"></a>
                     <a name="//apple_ref/swift/Method/rmove(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC5rmove2toyAA5PointV_tF">rmove(to:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC5rmove2toAcA5PointV_tF">rmove(to:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1214,12 +1335,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rmove</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">rmove</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L210-L213">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L282-L286">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1227,9 +1349,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC7rmoveToyySf_SftF"></a>
+                    <a name="/s:7SkiaKit4PathC7rmoveToyACSf_SftF"></a>
                     <a name="//apple_ref/swift/Method/rmoveTo(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC7rmoveToyySf_SftF">rmoveTo(_:_:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC7rmoveToyACSf_SftF">rmoveTo(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1244,12 +1366,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rmoveTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">rmoveTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L215-L218">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L289-L293">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1257,9 +1380,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC4line2toyAA5PointV_tF"></a>
+                    <a name="/s:7SkiaKit4PathC4line2toAcA5PointV_tF"></a>
                     <a name="//apple_ref/swift/Method/line(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC4line2toyAA5PointV_tF">line(to:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC4line2toAcA5PointV_tF">line(to:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1274,12 +1397,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">line</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">line</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L220-L223">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L296-L300">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1287,9 +1411,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC6lineToyySf_SftF"></a>
+                    <a name="/s:7SkiaKit4PathC6lineToyACSf_SftF"></a>
                     <a name="//apple_ref/swift/Method/lineTo(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC6lineToyySf_SftF">lineTo(_:_:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC6lineToyACSf_SftF">lineTo(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1304,12 +1428,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lineTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">lineTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L225-L228">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L303-L307">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1317,9 +1442,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC5rline2toyAA5PointV_tF"></a>
+                    <a name="/s:7SkiaKit4PathC5rline2toAcA5PointV_tF"></a>
                     <a name="//apple_ref/swift/Method/rline(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC5rline2toyAA5PointV_tF">rline(to:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC5rline2toAcA5PointV_tF">rline(to:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1334,12 +1459,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rline</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">rline</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L230-L233">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L310-L314">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1347,9 +1473,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC7rlineToyySf_SftF"></a>
+                    <a name="/s:7SkiaKit4PathC7rlineToyACSf_SftF"></a>
                     <a name="//apple_ref/swift/Method/rlineTo(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC7rlineToyySf_SftF">rlineTo(_:_:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC7rlineToyACSf_SftF">rlineTo(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1364,12 +1490,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rlineTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">rlineTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L235-L238">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L317-L321">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1377,9 +1504,80 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC12addQuadCurve2to12controlPointyAA0I0V_AHtF"></a>
-                    <a name="//apple_ref/swift/Method/addQuadCurve(to:controlPoint:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC12addQuadCurve2to12controlPointyAA0I0V_AHtF">addQuadCurve(to:controlPoint:)</a>
+                    <a name="/s:7SkiaKit4PathC9quadCurve2to12controlPointAcA0H0V_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/quadCurve(to:controlPoint:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC9quadCurve2to12controlPointAcA0H0V_AHtF">quadCurve(to:controlPoint:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds quad from last point towards <code>p1</code>, to <code>p2</code>
+If <code>Path</code> is empty, or last <code>Path.verb</code> is <code>.close</code>, last point is set to (0, 0)
+before adding quad.
+Appends <code>.move</code> verb to verb array and (0, 0) to <code><a href="../Structs/Point.html">Point</a></code> array, if needed;
+then appends <code>.quad</code> to verb array; and <code><a href="../Structs/Point.html">Point</a></code> p1, p2
+to <code><a href="../Structs/Point.html">Point</a></code> array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">quadCurve</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>p1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>control <code><a href="../Structs/Point.html">Point</a></code> of added quad</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>p2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>end <code><a href="../Structs/Point.html">Point</a></code> of added quad</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the path</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L335-L339">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC6rcurve2to12controlPointAcA0G0V_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/rcurve(to:controlPoint:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC6rcurve2to12controlPointAcA0G0V_AHtF">rcurve(to:controlPoint:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1394,12 +1592,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addQuadCurve</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">rcurve</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L240-L243">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L342-L346">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1407,39 +1606,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC9addRCurve2to12controlPointyAA0H0V_AHtF"></a>
-                    <a name="//apple_ref/swift/Method/addRCurve(to:controlPoint:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC9addRCurve2to12controlPointyAA0H0V_AHtF">addRCurve(to:controlPoint:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRCurve</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L245-L248">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SkiaKit4PathC5conic2to3and10weightedByyAA5PointV_AISftF"></a>
+                    <a name="/s:7SkiaKit4PathC5conic2to3and10weightedByAcA5PointV_AISftF"></a>
                     <a name="//apple_ref/swift/Method/conic(to:and:weightedBy:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC5conic2to3and10weightedByyAA5PointV_AISftF">conic(to:and:weightedBy:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC5conic2to3and10weightedByAcA5PointV_AISftF">conic(to:and:weightedBy:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1454,12 +1623,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">conic</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">and</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">weightedBy</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">conic</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">and</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">weightedBy</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L250-L253">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L349-L353">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1467,9 +1637,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC6rconic2to3and10weightedByyAA5PointV_AISftF"></a>
+                    <a name="/s:7SkiaKit4PathC6rconic2to3and10weightedByAcA5PointV_AISftF"></a>
                     <a name="//apple_ref/swift/Method/rconic(to:and:weightedBy:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC6rconic2to3and10weightedByyAA5PointV_AISftF">rconic(to:and:weightedBy:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC6rconic2to3and10weightedByAcA5PointV_AISftF">rconic(to:and:weightedBy:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1484,12 +1654,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rconic</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">and</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">weightedBy</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">rconic</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">and</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">weightedBy</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L255-L258">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L356-L360">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1497,9 +1668,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC5cubic2to13controlPoint10F6Point2yAA5PointV_A2ItF"></a>
+                    <a name="/s:7SkiaKit4PathC5cubic2to13controlPoint10F6Point2AcA5PointV_A2ItF"></a>
                     <a name="//apple_ref/swift/Method/cubic(to:controlPoint1:controlPoint2:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC5cubic2to13controlPoint10F6Point2yAA5PointV_A2ItF">cubic(to:controlPoint1:controlPoint2:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC5cubic2to13controlPoint10F6Point2AcA5PointV_A2ItF">cubic(to:controlPoint1:controlPoint2:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1514,12 +1685,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cubic</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint1</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint2</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">cubic</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint1</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint2</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L260-L263">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L363-L367">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1527,9 +1699,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC7cubicToyySf_S5ftF"></a>
+                    <a name="/s:7SkiaKit4PathC7cubicToyACSf_S5ftF"></a>
                     <a name="//apple_ref/swift/Method/cubicTo(_:_:_:_:_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC7cubicToyySf_S5ftF">cubicTo(_:_:_:_:_:_:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC7cubicToyACSf_S5ftF">cubicTo(_:_:_:_:_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1544,12 +1716,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cubicTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x0</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y0</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">x1</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">cubicTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x0</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y0</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">x1</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L265-L268">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L370-L374">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1557,9 +1730,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC6rcubic2to13controlPoint10F6Point2yAA5PointV_A2ItF"></a>
+                    <a name="/s:7SkiaKit4PathC6rcubic2to13controlPoint10F6Point2AcA5PointV_A2ItF"></a>
                     <a name="//apple_ref/swift/Method/rcubic(to:controlPoint1:controlPoint2:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC6rcubic2to13controlPoint10F6Point2yAA5PointV_A2ItF">rcubic(to:controlPoint1:controlPoint2:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC6rcubic2to13controlPoint10F6Point2AcA5PointV_A2ItF">rcubic(to:controlPoint1:controlPoint2:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1574,12 +1747,13 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rcubic</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint1</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint2</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">rcubic</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint1</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">controlPoint2</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L270-L273">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L377-L381">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1587,9 +1761,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC8rcubicToyySf_S5ftF"></a>
+                    <a name="/s:7SkiaKit4PathC8rcubicToyACSf_S5ftF"></a>
                     <a name="//apple_ref/swift/Method/rcubicTo(_:_:_:_:_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC8rcubicToyySf_S5ftF">rcubicTo(_:_:_:_:_:_:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC8rcubicToyACSf_S5ftF">rcubicTo(_:_:_:_:_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1604,12 +1778,432 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rcubicTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x0</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y0</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">x1</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">rcubicTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x0</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y0</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">x1</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L275-L278">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L384-L388">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC5arcTo6radius11xAxisRotate8largeArc5sweep3endAcA5PointV_SfAC4SizeOAC9DirectionOAKtF"></a>
+                    <a name="//apple_ref/swift/Method/arcTo(radius:xAxisRotate:largeArc:sweep:end:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC5arcTo6radius11xAxisRotate8largeArc5sweep3endAcA5PointV_SfAC4SizeOAC9DirectionOAKtF">arcTo(radius:xAxisRotate:largeArc:sweep:end:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends arc to <code>Path</code>. Arc is implemented by one or more conics weighted to
+describe part of oval with radii (rx, ry) rotated by xAxisRotate degrees. Arc
+curves from last <code>Path</code> <code><a href="../Structs/Point.html">Point</a></code> to (x, y), choosing one of four possible routes:
+clockwise or counterclockwise, and smaller or larger.
+Arc sweep is always less than 360 degrees. arcTo() appends line to (x, y) if
+either radii are zero, or if last <code>Path</code> <code><a href="../Structs/Point.html">Point</a></code> equals (x, y). arcTo() scales radii
+(rx, ry) to fit last <code>Path</code> <code><a href="../Structs/Point.html">Point</a></code> and (x, y) if both are greater than zero but
+too small.
+arcTo() appends up to four conic curves.
+arcTo() implements the functionality of SVG arc, although SVG sweep-flag value
+is opposite the integer value of sweep; SVG sweep-flag uses 1 for clockwise,
+while kCW_Direction cast to int is zero.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">arcTo</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">xAxisRotate</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">largeArc</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Size.html">Size</a></span><span class="p">,</span> <span class="nv">sweep</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Direction.html">Direction</a></span><span class="p">,</span> <span class="nv">end</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>radius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>radius on x-axis and y-aix before x-axis, y-axis rotation</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>xAxisRotate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>x-axis rotation in degrees; positive values are clockwise</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>largeArc</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>chooses smaller or larger arc</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sweep</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>chooses clockwise or counterclockwise arc</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>end</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>end of arc</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L410-L414">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC6rarcTo6radius11xAxisRotate8largeArc5sweep6offsetAcA5PointV_SfAC4SizeOAC9DirectionOAKtF"></a>
+                    <a name="//apple_ref/swift/Method/rarcTo(radius:xAxisRotate:largeArc:sweep:offset:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC6rarcTo6radius11xAxisRotate8largeArc5sweep6offsetAcA5PointV_SfAC4SizeOAC9DirectionOAKtF">rarcTo(radius:xAxisRotate:largeArc:sweep:offset:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends arc to <code>Path</code>, relative to last <code>Path</code> <code><a href="../Structs/Point.html">Point</a></code>. Arc is implemented by one or
+more conic, weighted to describe part of oval with radii (rx, ry) rotated by
+xAxisRotate degrees. Arc curves from last <code>Path</code> <code><a href="../Structs/Point.html">Point</a></code> to relative end <code><a href="../Structs/Point.html">Point</a></code>:
+(dx, dy), choosing one of four possible routes: clockwise or
+counterclockwise, and smaller or larger. If <code>Path</code> is empty, the start arc <code><a href="../Structs/Point.html">Point</a></code>
+is (0, 0).
+Arc sweep is always less than 360 degrees. arcTo() appends line to end <code><a href="../Structs/Point.html">Point</a></code>
+if either radii are zero, or if last <code>Path</code> <code><a href="../Structs/Point.html">Point</a></code> equals end <code><a href="../Structs/Point.html">Point</a></code>.
+arcTo() scales radii (rx, ry) to fit last <code>Path</code> <code><a href="../Structs/Point.html">Point</a></code> and end <code><a href="../Structs/Point.html">Point</a></code> if both are
+greater than zero but too small to describe an arc.
+arcTo() appends up to four conic curves.
+arcTo() implements the functionality of svg arc, although SVG <q>sweep-flag</q> value is
+opposite the integer value of sweep; SVG <q>sweep-flag</q> uses 1 for clockwise, while
+<code>.direction</code> cast to int is zero.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">rarcTo</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span> <span class="nv">xAxisRotate</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">largeArc</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Size.html">Size</a></span><span class="p">,</span> <span class="nv">sweep</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Direction.html">Direction</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>radius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>radius before the rotation</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>xAxisRotate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>x-axis rotation in degrees; positive values are clockwise</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>largeArc</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>chooses smaller or larger arc</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sweep</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>chooses clockwise or counterclockwise arc</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>offset end of arc from last <code>Path</code> <code><a href="../Structs/Point.html">Point</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L438-L442">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC5arcTo4oval10startAngle05sweepH009forceMoveE0AcA4RectV_S2fSbtF"></a>
+                    <a name="//apple_ref/swift/Method/arcTo(oval:startAngle:sweepAngle:forceMoveTo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC5arcTo4oval10startAngle05sweepH009forceMoveE0AcA4RectV_S2fSbtF">arcTo(oval:startAngle:sweepAngle:forceMoveTo:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends arc to <code>Path</code>. Arc added is part of ellipse
+bounded by oval, from startAngle through sweepAngle. Both startAngle and
+sweepAngle are measured in degrees, where zero degrees is aligned with the
+positive x-axis, and positive sweeps extends arc clockwise.
+arcTo() adds line connecting <code>Path</code> last <code><a href="../Structs/Point.html">Point</a></code> to initial arc <code><a href="../Structs/Point.html">Point</a></code> if forceMoveTo
+is false and <code>Path</code> is not empty. Otherwise, added contour begins with first point
+of arc. Angles greater than -360 and less than 360 are treated modulo 360.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">arcTo</span><span class="p">(</span><span class="nv">oval</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">startAngle</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">sweepAngle</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">forceMoveTo</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>oval</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>bounds of ellipse containing arc</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startAngle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>starting angle of arc in degrees</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sweepAngle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>sweep, in degrees. Positive is clockwise; treated modulo 360</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>forceMoveTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>true to start a new contour with arc</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L458-L463">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC5arcTo2x12y12x22y26radiusACSf_S4ftF"></a>
+                    <a name="//apple_ref/swift/Method/arcTo(x1:y1:x2:y2:radius:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC5arcTo2x12y12x22y26radiusACSf_S4ftF">arcTo(x1:y1:x2:y2:radius:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends arc to <code>Path</code>, after appending line if needed. Arc is implemented by conic
+weighted to describe part of circle. Arc is contained by tangent from
+last <code>Path</code> point to (x1, y1), and tangent from (x1, y1) to (x2, y2). Arc
+is part of circle sized to radius, positioned so it touches both tangent lines.
+If last Path Point does not start Arc, arcTo appends connecting Line to Path.
+The length of Vector from (x1, y1) to (x2, y2) does not affect Arc.
+Arc sweep is always less than 180 degrees. If radius is zero, or if
+tangents are nearly parallel, arcTo appends Line from last Path Point to (x1, y1).
+arcTo appends at most one Line and one conic.
+arcTo implements the functionality of PostScript arct and HTML Canvas arcTo.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">arcTo</span><span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>x1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>x-axis value common to pair of tangents</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>y1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>y-axis value common to pair of tangents</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>x2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>x-axis value end of second tangent</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>y2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>y-axis value end of second tangent</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>radius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>distance from arc to circle center</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L483-L487">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1627,7 +2221,12 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Appends <code>.close</code> to <code>Path</code>. A closed contour connects the first and last <code><a href="../Structs/Point.html">Point</a></code>
+with line, forming a continuous loop. Open and closed contour draw the same
+with <code>Paint.Fill</code>. With <code>Paint.Stroke</code>, open contour draws
+<code>Paint.Cap</code> at contour start and end; closed contour draws
+<code>Paint.Join</code>::Join at contour start and end.
+close() has no effect if <code>Path</code> is empty or last <code>Path</code> <code>.close</code></p>
 
                       </div>
                       <div class="declaration">
@@ -1639,7 +2238,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L283-L286">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L497-L500">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1657,7 +2256,11 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sets <code>Path</code> to its initial state, preserving internal storage.
+Removes verb array, <code><a href="../Structs/Point.html">Point</a></code> array, and weights, and sets FillType to kWinding_FillType.
+Internal storage associated with <code>Path</code> is retained.
+Use rewind() instead of reset() if <code>Path</code> storage will be reused and performance
+is critical.</p>
 
                       </div>
                       <div class="declaration">
@@ -1669,7 +2272,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L288-L291">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L509-L512">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1687,7 +2290,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sets <code>Path</code> to its initial state.
+ Removes verb array, <code><a href="../Structs/Point.html">Point</a></code> array, and weights, and sets FillType to kWinding_FillType.
+ Internal storage associated with <code>Path</code> is released.</p>
 
                       </div>
                       <div class="declaration">
@@ -1699,7 +2304,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L293-L296">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L520-L523">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1707,9 +2312,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC7addRect_9directionyAA0E0V_AA0C9DirectionOtF"></a>
+                    <a name="/s:7SkiaKit4PathC7addRect_9directionAcA0E0V_AC9DirectionOtF"></a>
                     <a name="//apple_ref/swift/Method/addRect(_:direction:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC7addRect_9directionyAA0E0V_AA0C9DirectionOtF">addRect(_:direction:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC7addRect_9directionAcA0E0V_AC9DirectionOtF">addRect(_:direction:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1727,7 +2332,8 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathDirection.html">PathDirection</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Direction.html">Direction</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
@@ -1763,7 +2369,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L307-L311">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L535-L540">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1771,9 +2377,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC7addRect_9direction5startyAA0E0V_AA0C9DirectionOs6UInt32VtF"></a>
+                    <a name="/s:7SkiaKit4PathC7addRect_9direction5startAcA0E0V_AC9DirectionOs6UInt32VtF"></a>
                     <a name="//apple_ref/swift/Method/addRect(_:direction:start:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC7addRect_9direction5startyAA0E0V_AA0C9DirectionOs6UInt32VtF">addRect(_:direction:start:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC7addRect_9direction5startAcA0E0V_AC9DirectionOs6UInt32VtF">addRect(_:direction:start:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1791,7 +2397,8 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathDirection.html">PathDirection</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">,</span> <span class="nv">start</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Direction.html">Direction</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">,</span> <span class="nv">start</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
@@ -1839,7 +2446,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L323-L327">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L553-L558">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1847,9 +2454,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC14addRoundedRect_9directionyAA05RoundF0C_AA0C9DirectionOtF"></a>
+                    <a name="/s:7SkiaKit4PathC14addRoundedRect_9directionAcA05RoundF0C_AC9DirectionOtF"></a>
                     <a name="//apple_ref/swift/Method/addRoundedRect(_:direction:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC14addRoundedRect_9directionyAA05RoundF0C_AA0C9DirectionOtF">addRoundedRect(_:direction:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC14addRoundedRect_9directionAcA05RoundF0C_AC9DirectionOtF">addRoundedRect(_:direction:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1873,7 +2480,8 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRoundedRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">roundedRect</span><span class="p">:</span> <span class="kt"><a href="../Classes/RoundRect.html">RoundRect</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathDirection.html">PathDirection</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRoundedRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">roundedRect</span><span class="p">:</span> <span class="kt"><a href="../Classes/RoundRect.html">RoundRect</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Direction.html">Direction</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
@@ -1897,7 +2505,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L343-L346">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L575-L579">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1905,9 +2513,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC14addRoundedRect_9direction5startyAA05RoundF0C_AA0C9DirectionOs6UInt32VtF"></a>
+                    <a name="/s:7SkiaKit4PathC14addRoundedRect_9direction5startAcA05RoundF0C_AC9DirectionOs6UInt32VtF"></a>
                     <a name="//apple_ref/swift/Method/addRoundedRect(_:direction:start:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC14addRoundedRect_9direction5startyAA05RoundF0C_AA0C9DirectionOs6UInt32VtF">addRoundedRect(_:direction:start:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC14addRoundedRect_9direction5startAcA05RoundF0C_AC9DirectionOs6UInt32VtF">addRoundedRect(_:direction:start:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1931,7 +2539,8 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRoundedRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">roundedRect</span><span class="p">:</span> <span class="kt"><a href="../Classes/RoundRect.html">RoundRect</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathDirection.html">PathDirection</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">,</span> <span class="nv">start</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRoundedRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">roundedRect</span><span class="p">:</span> <span class="kt"><a href="../Classes/RoundRect.html">RoundRect</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Direction.html">Direction</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">,</span> <span class="nv">start</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
@@ -1967,7 +2576,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L363-L366">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L597-L601">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1975,9 +2584,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC7addOval_9directionyAA4RectV_AA0C9DirectionOtF"></a>
+                    <a name="/s:7SkiaKit4PathC7addOval_9directionAcA4RectV_AC9DirectionOtF"></a>
                     <a name="//apple_ref/swift/Method/addOval(_:direction:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC7addOval_9directionyAA4RectV_AA0C9DirectionOtF">addOval(_:direction:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC7addOval_9directionAcA4RectV_AC9DirectionOtF">addOval(_:direction:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1985,19 +2594,54 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Adds oval to path, appending kMove_Verb, four kConic_Verb, and kClose_Verb.
+Oval is upright ellipse bounded by <code><a href="../Structs/Rect.html">Rect</a></code> oval with radii equal to half oval width
+and half oval height. Oval begins at (oval.fRight, oval.centerY()) and continues
+clockwise if dir is kCW_Direction, counterclockwise if dir is kCCW_Direction.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addOval</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathDirection.html">PathDirection</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addOval</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Direction.html">Direction</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>bounds of ellipse added</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Path</code>::Direction to wind ellipse</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L368-L372">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L612-L617">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2005,9 +2649,9 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC6addArc_10startAngle05sweepG0yAA4RectV_S2ftF"></a>
+                    <a name="/s:7SkiaKit4PathC6addArc_10startAngle05sweepG0AcA4RectV_S2ftF"></a>
                     <a name="//apple_ref/swift/Method/addArc(_:startAngle:sweepAngle:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC6addArc_10startAngle05sweepG0yAA4RectV_S2ftF">addArc(_:startAngle:sweepAngle:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC6addArc_10startAngle05sweepG0AcA4RectV_S2ftF">addArc(_:startAngle:sweepAngle:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2029,7 +2673,8 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addArc</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">startAngle</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">sweepAngle</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addArc</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span><span class="p">,</span> <span class="nv">startAngle</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">sweepAngle</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
@@ -2065,7 +2710,7 @@ the <code><a href="../Classes/Path.html#/s:7SkiaKit4PathC8fillTypeAA0c4FillE0Ovp
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L387-L391">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L633-L638">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2097,7 +2742,7 @@ Path is replaced by transformed data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L398-L403">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L645-L650">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2128,7 +2773,7 @@ Path is replaced by transformed data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L405-L408">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L652-L655">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2136,9 +2781,9 @@ Path is replaced by transformed data.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC03addC0_2dx2dy4modeyAC_S2fAC0C7AddModeOtF"></a>
+                    <a name="/s:7SkiaKit4PathC03addC0_2dx2dy4modeA2C_S2fAC0C7AddModeOtF"></a>
                     <a name="//apple_ref/swift/Method/addPath(_:dx:dy:mode:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC03addC0_2dx2dy4modeyAC_S2fAC0C7AddModeOtF">addPath(_:dx:dy:mode:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC03addC0_2dx2dy4modeA2C_S2fAC0C7AddModeOtF">addPath(_:dx:dy:mode:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2153,12 +2798,13 @@ Path is replaced by transformed data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="nv">dx</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">dy</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/PathAddMode.html">PathAddMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">append</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="nv">dx</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">dy</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/PathAddMode.html">PathAddMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">append</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L410-L413">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L658-L662">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2166,9 +2812,9 @@ Path is replaced by transformed data.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC03addC0_4modeyAC_AC0C7AddModeOtF"></a>
+                    <a name="/s:7SkiaKit4PathC03addC0_4modeA2C_AC0C7AddModeOtF"></a>
                     <a name="//apple_ref/swift/Method/addPath(_:mode:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC03addC0_4modeyAC_AC0C7AddModeOtF">addPath(_:mode:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC03addC0_4modeA2C_AC0C7AddModeOtF">addPath(_:mode:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2183,12 +2829,13 @@ Path is replaced by transformed data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/PathAddMode.html">PathAddMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">append</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/PathAddMode.html">PathAddMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">append</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L415-L418">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L665-L669">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2196,9 +2843,9 @@ Path is replaced by transformed data.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC03addC0_6matrix4modeyAC_AA6MatrixCAC0C7AddModeOtF"></a>
+                    <a name="/s:7SkiaKit4PathC03addC0_6matrix4modeA2C_AA6MatrixCAC0C7AddModeOtF"></a>
                     <a name="//apple_ref/swift/Method/addPath(_:matrix:mode:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC03addC0_6matrix4modeyAC_AA6MatrixCAC0C7AddModeOtF">addPath(_:matrix:mode:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC03addC0_6matrix4modeA2C_AA6MatrixCAC0C7AddModeOtF">addPath(_:matrix:mode:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2213,12 +2860,13 @@ Path is replaced by transformed data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="nv">matrix</span><span class="p">:</span> <span class="kt"><a href="../Classes/Matrix.html">Matrix</a></span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/PathAddMode.html">PathAddMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">append</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="nv">matrix</span><span class="p">:</span> <span class="kt"><a href="../Classes/Matrix.html">Matrix</a></span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/PathAddMode.html">PathAddMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">append</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L420-L424">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L672-L677">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2226,9 +2874,9 @@ Path is replaced by transformed data.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC03addC7ReverseyyACF"></a>
+                    <a name="/s:7SkiaKit4PathC03addC7ReverseyA2CF"></a>
                     <a name="//apple_ref/swift/Method/addPathReverse(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC03addC7ReverseyyACF">addPathReverse(_:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC03addC7ReverseyA2CF">addPathReverse(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2243,12 +2891,13 @@ Path is replaced by transformed data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPathReverse</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPathReverse</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L426-L429">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L680-L684">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2256,9 +2905,9 @@ Path is replaced by transformed data.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC9addCircle1x1y6radius9directionySf_S2fAA0C9DirectionOtF"></a>
+                    <a name="/s:7SkiaKit4PathC9addCircle1x1y6radius9directionACSf_S2fAC9DirectionOtF"></a>
                     <a name="//apple_ref/swift/Method/addCircle(x:y:radius:direction:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC9addCircle1x1y6radius9directionySf_S2fAA0C9DirectionOtF">addCircle(x:y:radius:direction:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC9addCircle1x1y6radius9directionACSf_S2fAC9DirectionOtF">addCircle(x:y:radius:direction:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2273,12 +2922,13 @@ Path is replaced by transformed data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addCircle</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathDirection.html">PathDirection</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addCircle</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Direction.html">Direction</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">clockwise</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L431-L434">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L687-L691">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2286,9 +2936,9 @@ Path is replaced by transformed data.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC7addPoly6points5closeySayAA5PointVG_SbtF"></a>
+                    <a name="/s:7SkiaKit4PathC7addPoly6points5closeACSayAA5PointVG_SbtF"></a>
                     <a name="//apple_ref/swift/Method/addPoly(points:close:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC7addPoly6points5closeySayAA5PointVG_SbtF">addPoly(points:close:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC7addPoly6points5closeACSayAA5PointVG_SbtF">addPoly(points:close:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2303,12 +2953,13 @@ Path is replaced by transformed data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPoly</span><span class="p">(</span><span class="nv">points</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">],</span> <span class="nv">close</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPoly</span><span class="p">(</span><span class="nv">points</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">],</span> <span class="nv">close</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L436-L443">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L694-L702">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2316,9 +2967,9 @@ Path is replaced by transformed data.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC2op5otherAD6resultSbAC_AA0C2OpOACtF"></a>
+                    <a name="/s:7SkiaKit4PathC2op5otherAD6resultSbAC_AC2OpOACtF"></a>
                     <a name="//apple_ref/swift/Method/op(other:op:result:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC2op5otherAD6resultSbAC_AA0C2OpOACtF">op(other:op:result:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC2op5otherAD6resultSbAC_AC2OpOACtF">op(other:op:result:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2333,12 +2984,12 @@ Path is replaced by transformed data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">op</span><span class="p">(</span><span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="nv">op</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathOp.html">PathOp</a></span><span class="p">,</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">op</span><span class="p">(</span><span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="nv">op</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Op.html">Op</a></span><span class="p">,</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L445-L448">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L704-L707">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2346,9 +2997,9 @@ Path is replaced by transformed data.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit4PathC2op5otherAdCSgAC_AA0C2OpOtF"></a>
+                    <a name="/s:7SkiaKit4PathC2op5otherAdCSgAC_AC2OpOtF"></a>
                     <a name="//apple_ref/swift/Method/op(other:op:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit4PathC2op5otherAdCSgAC_AA0C2OpOtF">op(other:op:)</a>
+                    <a class="token" href="#/s:7SkiaKit4PathC2op5otherAdCSgAC_AC2OpOtF">op(other:op:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2363,12 +3014,12 @@ Path is replaced by transformed data.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">op</span><span class="p">(</span><span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="n">op</span> <span class="nv">localop</span><span class="p">:</span> <span class="kt"><a href="../Enums/PathOp.html">PathOp</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">op</span><span class="p">(</span><span class="nv">other</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="n">op</span> <span class="nv">localop</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path/Op.html">Op</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L450-L457">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L709-L716">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2398,7 +3049,7 @@ Path is replaced by transformed data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L459-L462">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L718-L721">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2428,7 +3079,7 @@ Path is replaced by transformed data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L464-L469">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L723-L728">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2458,7 +3109,7 @@ Path is replaced by transformed data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L471-L476">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L730-L735">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2488,7 +3139,220 @@ Path is replaced by transformed data.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L478-L486">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L737-L745">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC4SizeO"></a>
+                    <a name="//apple_ref/swift/Enum/Size" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC4SizeO">Size</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Four oval parts with radii (rx, ry) start at last SkPath SkPoint and ends at (x, y).
+Size and Direction select one of the four oval parts.</p>
+
+                        <a href="../Classes/Path/Size.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Size</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L757-L772">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC8FillTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/FillType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC8FillTypeO">FillType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>FillType selects the rule used to fill <code><a href="../Classes/Path.html">Path</a></code>. <code><a href="../Classes/Path.html">Path</a></code> set to <code>.winding</code>
+fills if the sum of contour edges is not zero, where clockwise edges add one, and
+counterclockwise edges subtract one. <code><a href="../Classes/Path.html">Path</a></code> set to <code>.evenOdd</code> fills if the
+number of contour edges is odd. Each FillType has an inverse variant that
+reverses the rule:
+<code>.inverseWinding</code> fills where the sum of contour edges is zero;
+<code>.inverseEvenOdd</code> fills where the number of contour edges is even.</p>
+
+                        <a href="../Classes/Path/FillType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FillType</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L785-L805">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC9ConvexityO"></a>
+                    <a name="//apple_ref/swift/Enum/Convexity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC9ConvexityO">Convexity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="../Classes/Path.html">Path</a></code> is convex if it contains one contour and contour loops no more than
+360 degrees, and contour angles all have same Direction. Convex <code><a href="../Classes/Path.html">Path</a></code>
+may have better performance and require fewer resources on GPU surface.</p>
+
+<p><code><a href="../Classes/Path.html">Path</a></code> is concave when either at least one Direction change is clockwise and
+another is counterclockwise, or the sum of the changes in Direction is not 360
+degrees.</p>
+
+<p>Initially <code><a href="../Classes/Path.html">Path</a></code> Convexity is kUnknown_Convexity. <code><a href="../Classes/Path.html">Path</a></code> Convexity is computed
+f needed by destination <code><a href="../Classes/Surface.html">Surface</a></code>.</p>
+
+                        <a href="../Classes/Path/Convexity.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Convexity</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L820-L837">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC11SegmentMaskO"></a>
+                    <a name="//apple_ref/swift/Enum/SegmentMask" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC11SegmentMaskO">SegmentMask</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>SegmentMask constants correspond to each drawing Verb type in Path; for
+instance, if Path only contains lines, only the <code>.line</code> bit is set.</p>
+
+                        <a href="../Classes/Path/SegmentMask.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SegmentMask</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L841-L850">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC9DirectionO"></a>
+                    <a name="//apple_ref/swift/Enum/Direction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC9DirectionO">Direction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>PathDirection</code> describes whether contour is clockwise or counterclockwise.
+When <code><a href="../Classes/Path.html">Path</a></code> contains multiple overlapping contours, <code>PathDirection</code> together with
+<code><a href="../Classes/Path/FillType.html">FillType</a></code> determines whether overlaps are filled or form holes.</p>
+
+<p><code>PathDirection</code> also determines how contour is measured. For instance, dashing
+measures along <code><a href="../Classes/Path.html">Path</a></code> to determine where to start and stop stroke; <code>PathDirection</code>
+will change dashed results as it steps clockwise or counterclockwise.</p>
+
+<p>Closed contours like <code><a href="../Structs/Rect.html">Rect</a></code>, <code>RRect</code>, circle, and oval added with
+<code>.clockwise</code> travel clockwise; the same added with <code>.counterclockwise</code>
+travel counterclockwise.</p>
+
+                        <a href="../Classes/Path/Direction.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Direction</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L865-L878">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SkiaKit4PathC2OpO"></a>
+                    <a name="//apple_ref/swift/Enum/Op" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit4PathC2OpO">Op</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The logical operations that can be performed when combining two paths</p>
+
+                        <a href="../Classes/Path/Op.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Op</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/Path.swift#L881-L902">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2498,7 +3362,7 @@ Path is replaced by transformed data.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-06)</p>
+          <p>&copy; 2019 <a class="link" href="https://tirania.org/" target="_blank" rel="external">Miguel de Icaza</a>. All rights reserved. (Last updated: 2019-11-07)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
