@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>TextBlob Class Reference</title>
+    <title>PathEffect Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/TextBlob" class="dashAnchor"></a>
-    <a title="TextBlob Class Reference"></a>
+    <a name="//apple_ref/swift/Class/PathEffect" class="dashAnchor"></a>
+    <a title="PathEffect Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> master Docs</a> (52% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        TextBlob Class Reference
+        PathEffect Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -271,16 +271,17 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>TextBlob</h1>
+            <h1>PathEffect</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TextBlob</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">PathEffect</span></code></pre>
 
                 </div>
               </div>
-            <p><code>TextBlob</code> combines multiple text runs into an immutable container. Each text
-run consists of glyphs, <code><a href="../Classes/Paint.html">Paint</a></code>, and position. Only parts of <code><a href="../Classes/Paint.html">Paint</a></code> related to
-fonts and text rendering are used by run.</p>
+            <p><code>PathEffect</code> is the base class for objects in the <code><a href="../Classes/Paint.html">Paint</a></code> that affect
+the geometry of a drawing primitive before it is transformed by the
+canvas&rsquo; matrix and drawn.
+Dashing is implemented as a subclass of <code>PathEffect</code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -289,9 +290,9 @@ fonts and text rendering are used by run.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SkiaKit8TextBlobC11getUniqueIds6UInt32VyF"></a>
-                    <a name="//apple_ref/swift/Method/getUniqueId()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit8TextBlobC11getUniqueIds6UInt32VyF">getUniqueId()</a>
+                    <a name="/s:7SkiaKit10PathEffectC10make2DPath6matrix4pathAcA6MatrixVz_AA0C0CtFZ"></a>
+                    <a name="//apple_ref/swift/Method/make2DPath(matrix:path:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SkiaKit10PathEffectC10make2DPath6matrix4pathAcA6MatrixVz_AA0C0CtFZ">make2DPath(matrix:path:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -299,49 +300,50 @@ fonts and text rendering are used by run.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the unique, non-zero value representing the text blob.</p>
+                        <p>Stamp the specified path to fill the shape, using the matrix to define the latice.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getUniqueId</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">make2DPath</span><span class="p">(</span><span class="nv">matrix</span><span class="p">:</span> <span class="k">inout</span> <span class="kt"><a href="../Structs/Matrix.html">Matrix</a></span><span class="p">,</span> <span class="nv">path</span><span class="p">:</span> <span class="kt"><a href="../Classes/Path.html">Path</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PathEffect</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>matrix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>&lt;#matrix description#&gt;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>&lt;#path description#&gt;</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/TextBlob.swift#L25-L28">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SkiaKit8TextBlobC6boundsAA4RectVvp"></a>
-                    <a name="//apple_ref/swift/Property/bounds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SkiaKit8TextBlobC6boundsAA4RectVvp">bounds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Gets the conservative blob bounding box.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bounds</span><span class="p">:</span> <span class="kt"><a href="../Structs/Rect.html">Rect</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/TextBlob.swift#L31-L37">Show on GitHub</a>
+                        <a href="https://github.com/migueldeicaza/SkiaKit/tree/master/Shared/SkiaKit/PathEffect.swift#L29-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
