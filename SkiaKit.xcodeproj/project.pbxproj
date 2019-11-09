@@ -16,6 +16,11 @@
 		4902C7872373C19D00FD5CE3 /* PictureRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7862373C19D00FD5CE3 /* PictureRecorder.swift */; };
 		4902C7882373C19D00FD5CE3 /* PictureRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7862373C19D00FD5CE3 /* PictureRecorder.swift */; };
 		4902C7892373C19D00FD5CE3 /* PictureRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7862373C19D00FD5CE3 /* PictureRecorder.swift */; };
+		4902C78B23765A1900FD5CE3 /* GradientSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C78A23765A1900FD5CE3 /* GradientSample.swift */; };
+		4902C78D23765A3B00FD5CE3 /* FractalPerlinNoiseShaderSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C78C23765A3B00FD5CE3 /* FractalPerlinNoiseShaderSample.swift */; };
+		4902C78F23765A6300FD5CE3 /* FilledHeptagramSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C78E23765A6300FD5CE3 /* FilledHeptagramSample.swift */; };
+		4902C7912376644300FD5CE3 /* 2DPathSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7902376644300FD5CE3 /* 2DPathSample.swift */; };
+		4902C7932376647F00FD5CE3 /* SimplePathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902C7922376647F00FD5CE3 /* SimplePathTest.swift */; };
 		4912D98523693F710079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
 		4912D986236A51430079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
 		4912D987236A51450079BAF7 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D98423693F710079BAF7 /* FontStyle.swift */; };
@@ -314,6 +319,11 @@
 		4902C77A23711DBA00FD5CE3 /* FontStyleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleSet.swift; sourceTree = "<group>"; };
 		4902C7822373C06000FD5CE3 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		4902C7862373C19D00FD5CE3 /* PictureRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureRecorder.swift; sourceTree = "<group>"; };
+		4902C78A23765A1900FD5CE3 /* GradientSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSample.swift; sourceTree = "<group>"; };
+		4902C78C23765A3B00FD5CE3 /* FractalPerlinNoiseShaderSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalPerlinNoiseShaderSample.swift; sourceTree = "<group>"; };
+		4902C78E23765A6300FD5CE3 /* FilledHeptagramSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledHeptagramSample.swift; sourceTree = "<group>"; };
+		4902C7902376644300FD5CE3 /* 2DPathSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2DPathSample.swift; sourceTree = "<group>"; };
+		4902C7922376647F00FD5CE3 /* SimplePathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePathTest.swift; sourceTree = "<group>"; };
 		4912D98423693F710079BAF7 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceProperties.swift; sourceTree = "<group>"; };
 		49BF9E5323711A55009A6B13 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
@@ -732,6 +742,11 @@
 				49E9756B2366430F00042FE7 /* PathBoundsSample.swift */,
 				49E9756F2366821800042FE7 /* TextSample.swift */,
 				49E97571236683E900042FE7 /* XamagonSample.swift */,
+				4902C78A23765A1900FD5CE3 /* GradientSample.swift */,
+				4902C78C23765A3B00FD5CE3 /* FractalPerlinNoiseShaderSample.swift */,
+				4902C78E23765A6300FD5CE3 /* FilledHeptagramSample.swift */,
+				4902C7902376644300FD5CE3 /* 2DPathSample.swift */,
+				4902C7922376647F00FD5CE3 /* SimplePathTest.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -1267,12 +1282,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4902C7932376647F00FD5CE3 /* SimplePathTest.swift in Sources */,
 				49E9752A2365360D00042FE7 /* AppDelegate.swift in Sources */,
 				49E9756E2366436600042FE7 /* Sample.swift in Sources */,
+				4902C78B23765A1900FD5CE3 /* GradientSample.swift in Sources */,
 				49E975702366821800042FE7 /* TextSample.swift in Sources */,
+				4902C7912376644300FD5CE3 /* 2DPathSample.swift in Sources */,
 				49E9756C2366430F00042FE7 /* PathBoundsSample.swift in Sources */,
+				4902C78D23765A3B00FD5CE3 /* FractalPerlinNoiseShaderSample.swift in Sources */,
 				49E9752E2365360D00042FE7 /* ContentView.swift in Sources */,
 				49E97572236683E900042FE7 /* XamagonSample.swift in Sources */,
+				4902C78F23765A6300FD5CE3 /* FilledHeptagramSample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

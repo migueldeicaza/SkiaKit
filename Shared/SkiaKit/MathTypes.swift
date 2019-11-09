@@ -120,6 +120,22 @@ public struct Rect : Equatable {
         self.bottom = bottom
     }
     
+    public init (x: Float, y: Float, width: Float, height: Float)
+    {
+        self.left = x
+        self.top = y
+        self.right = x + width
+        self.bottom = y + height
+    }
+    
+    public init (width: Float, height: Float)
+    {
+        self.left = 0
+        self.top = 0
+        self.right = width
+        self.bottom = height
+    }
+    
     public var left, top, right, bottom: Float
     
     public var midX : Float { left + (right - left) / 2.0}
@@ -149,6 +165,29 @@ public struct Rect : Equatable {
 
 public struct IRect : Equatable {
     var left, top, right, bottom: Int32
+    
+    public init(left: Int32, top: Int32, right: Int32, bottom: Int32) {
+        self.left = left
+        self.top = top
+        self.right = right
+        self.bottom = bottom
+    }
+    
+    public init (x: Int32, y: Int32, width: Int32, height: Int32)
+    {
+        self.left = x
+        self.top = y
+        self.right = x + width
+        self.bottom = y + height
+    }
+    
+    public init (width: Int32, height: Int32)
+    {
+        self.left = 0
+        self.top = 0
+        self.right = width
+        self.bottom = height
+    }
     
     var midX : Int32 { left + (right - left) / 2}
     var midY : Int32 { top + (bottom - top) / 2}

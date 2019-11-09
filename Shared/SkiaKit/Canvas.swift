@@ -647,8 +647,26 @@ public final class Canvas {
         }
     }
 
-    // TODO: drawSurface
+    /**
+     * Draws a surface on the canvas.
+     *
+     * - Parameter surface: The surface to draw
+     * - Parameter x: The destination x-coordinate for the surface.
+     * - Parameter y: The destination y-coordinate for the surface.
+     * - Parameter paint: The paint to use when drawing the surface, or nil.
+     */
+    public func drawSurface (_ surface: Surface, _ x: Float, _ y: Float, paint: Paint? = nil)
+    {
+        surface.draw(canvas: self, x: x, y: y, paint: paint)
+    }
     
+    /**
+     * Draws text on the canvas at the specified coordinates.
+     - Parameter text: The text to draw.
+     - Parameter x:The x-coordinate of the origin of the text being drawn.
+     - Parameter y: The y-coordinate of the origin of the text being drawn.
+     - Parameter paint: The paint to use when drawing the text.
+     */
     public func drawText (_ text: String, _ x: Float, _ y: Float, paint: Paint)
     {
         sk_canvas_draw_text(handle, text, text.utf8CString.count, x, y, paint.handle)
