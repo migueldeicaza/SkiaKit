@@ -1,0 +1,5 @@
+module SkiaSharp2 [system] {
+	umbrella header "umbrella.h"
+	link "SkiaSharp"
+	export *
+}

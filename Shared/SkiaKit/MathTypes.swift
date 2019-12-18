@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SkiaSharp2
 public struct Point : Equatable {
     public init(x: Float, y: Float) {
         self.x = x
