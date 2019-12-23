@@ -16,16 +16,31 @@ existin in the upstream Google Skia project.
 
 ## Getting this to work locally
 
+First, obtain the binary dependencies, then follow the instructions for your
+target platform below.
+
+### Binary Dependencies
+
 You can either download and install the SkiaSharp.nuget package, or
 build your own local copy of Mono's Skia fork
 (https://github.com/mono/skia/tree/77049b872966dc300ed233fc6e3930eb21bac5e3
-from https://github.com/mono/skiasharp) and then copy the following binaries:
+from https://github.com/mono/skiasharp). Then create the following directories
+in this location and then copy the following binaries:
 
 ```
-SkiaKit/iOS:
+native/ios:
 	Copy the iOS directory libSkiaSharp.framework here
-SkiaKit/macOS:
+native/osx:
 	Copy the file libSkiaSharp.dylib here
-SkiaKit/tvOS:
+native/tvos:
 	Copy the tvOS directory libSkiaSharp.framework here
 ```
+
+### Build for Mac or Linux
+
+1. Run `swift build`
+
+### Build for iOS or tvOS
+
+1. Run `make xcodeproj` to generate `SkiaKit.xcodeproj`
+2. Use the generated Xcode project to build a framework for iOS or tvOS

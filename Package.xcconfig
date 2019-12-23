@@ -1,0 +1,6 @@
+// HACK because `swift package generate-xcodeproj` doesn't respect conditional
+//  flags (just uses macos flags) and opening the directory directly as a
+//  Swift package in Xcode doesn't build a framework.
+
+OTHER_LDFLAGS[sdk=iphone*] = -F$(PROJECT_DIR)/native/ios -framework libSkiaSharp
+OTHER_LDFLAGS[sdk=appletv*] = -F$(PROJECT_DIR)/native/tvos -framework libSkiaSharp
