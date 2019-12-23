@@ -7,7 +7,6 @@
 
 import Foundation
 import SkiaKit
-import SwiftUI
 
 protocol Sample {
     init ()
@@ -16,6 +15,10 @@ protocol Sample {
     //var category: String { get } =
     func draw (canvas: Canvas, width: Int32, height: Int32)
 }
+
+#if canImport(SwiftUI) && canImport(UIKit)
+
+import SwiftUI
 
 struct SampleRender : UIViewRepresentable {
     var sample: Sample
@@ -57,3 +60,5 @@ struct sampleDraw : Sample {
         canvas.drawRect(Rect(left: 0, top: 0, right: Float(width), bottom: Float(height)), paint)
     }
 }
+
+#endif // canImport(SwiftUI) && canImport(UIKit)

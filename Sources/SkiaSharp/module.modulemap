@@ -1,0 +1,13 @@
+module SkiaSharp {
+    umbrella header "include/SkiaSharp.h"
+
+	module Dylib {
+		requires macos
+		link "SkiaSharp"
+	}
+
+	module Framework {
+		requires !macos
+		link framework "SkiaSharp"
+	}
+}
