@@ -1,6 +1,6 @@
 // swift-tools-version:5.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
-
+import Foundation
 import PackageDescription
 
 let sharedSources = [
@@ -39,6 +39,14 @@ let sharedSources = [
 	"./Shared/SkiaKit/Color.swift"
 ]
 
+let dir = URL(fileURLWithPath: #file).deletingLastPathComponent().path
+
+let linkFlags: [LinkerSetting] = [
+	.unsafeFlags(["-L" + dir + "/native/osx"], .when(platforms:[.macOS])),
+	.unsafeFlags(["-F" + dir + "/native/ios"], .when(platforms:[.iOS])),
+	.unsafeFlags(["-F" + dir + "/native/tvos"], .when(platforms:[.tvOS])),
+]
+
 let package = Package(
     name: "SkiaKit",
     products: [
@@ -49,22 +57,23 @@ let package = Package(
 		name: "SkiaKit", 
 		dependencies: ["CSkiaSharp"],
 		path: ".",
-		sources: ["Shared/SkiaKit/MathTypes.swift"],
+		sources: ["Shared/SkiaKit/MathTypes.swift", "Shared/SkiaKit/SKString.swift"],
 		cSettings: [
 	    	    .headerSearchPath("Shared/Headers"),
 	    	    .headerSearchPath("SkiaKit/macOS"),
-		    .headerSearchPath("include")]
+		    .headerSearchPath("include")],
+		linkerSettings: linkFlags
+		    
 		),
 	.target (
 		name: "CSkiaSharp",
 		path: "skiasharp",
-		sources: ["dummy.cpp"],
+		sources: ["dummy.m"],
 		cSettings: [
 	    	    .headerSearchPath("../Shared/Headers"),
 	    	    .headerSearchPath("../SkiaKit/macOS"),
 		    .headerSearchPath("include")]
 		)
-	//.systemLibrary (name: "SkiaSharp", path: "skiasharp")
     ]
 )
 
