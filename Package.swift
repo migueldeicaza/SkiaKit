@@ -49,6 +49,11 @@ let linkFlags: [LinkerSetting] = [
 
 let package = Package(
     name: "SkiaKit",
+    platforms: [
+	.macOS(.v10_15),
+	.iOS(.v13),
+	.tvOS(.v13),
+    ],    
     products: [
         .library(name: "SkiaKit", targets: ["SkiaKit"])
     ],
@@ -60,10 +65,12 @@ let package = Package(
 		sources: sharedSources,
 		cSettings: [
 	    	    .headerSearchPath("Shared/Headers"),
-	    	    .headerSearchPath("SkiaKit/macOS"),
-		    .headerSearchPath("include")]
-		    //		linkerSettings: linkFlags
-		    
+	    	    .headerSearchPath("SkiaKit/Apple", .when (platforms: [.macOS,.tvOS, .iOS])),
+	    	    .headerSearchPath("SkiaKit/macOS", .when (platforms: [.macOS])),
+	    	    .headerSearchPath("SkiaKit/iOS", .when (platforms: [.iOS])),
+	    	    .headerSearchPath("SkiaKit/tvOS", .when (platforms: [.tvOS])),
+		    .headerSearchPath("include")],
+		    linkerSettings: linkFlags
 		),
 	.target (
 		name: "CSkiaSharp",
@@ -71,7 +78,7 @@ let package = Package(
 		sources: ["dummy.m"],
 		cSettings: [
 	    	    .headerSearchPath("../Shared/Headers"),
-	    	    .headerSearchPath("../SkiaKit/macOS"),
+	    	    .headerSearchPath("../SkiaKit/macOS", .when (platforms: [.macOS])),
 		    .headerSearchPath("include")]
 		)
     ]
