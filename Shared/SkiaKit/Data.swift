@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * `SKData` holds an immutable data buffer. Not only is the data immutable,

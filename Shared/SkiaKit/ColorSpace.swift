@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 public final class ColorSpace {
     var handle: OpaquePointer

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * `Path` contain geometry. `Path` may be empty, or contain one or more verbs that

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * `Matrix` holds a 3x3 matrix for transforming coordinates. This allows mapping

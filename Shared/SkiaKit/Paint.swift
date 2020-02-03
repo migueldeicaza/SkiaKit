@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * `Paint` controls options applied when drawing. `Paint` collects all

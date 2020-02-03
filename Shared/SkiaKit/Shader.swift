@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * Shaders specify the source color(s) for what is being drawn. If a paint

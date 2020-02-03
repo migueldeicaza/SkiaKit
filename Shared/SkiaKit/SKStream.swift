@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * bstraction for a source of bytes. Subclasses can be backed by

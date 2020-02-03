@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 public struct Color : Equatable {
     var color : UInt32

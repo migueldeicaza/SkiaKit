@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /// Represents a particular style (bold, italic, condensed) of a typeface.
 public final class FontStyle {
