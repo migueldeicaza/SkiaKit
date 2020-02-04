@@ -11,8 +11,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build with Swift command line
       run: swift build -v
-    - name: Build with Xcodebuild
-      run: xcodebuild
-      
     - name: Run tests
       run: swift test -v
