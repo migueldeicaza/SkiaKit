@@ -227,7 +227,7 @@ public final class Typeface {
     public func countGlyphs (str: String) -> Int32
     {
         let utflen = str.utf8.count
-        return sk_typeface_chars_to_glyphs(handle, str, UTF8_ENCODING, nil, Int32 (utflen))
+        return sk_typeface_chars_to_glyphs(handle, str, UTF8_SK_ENCODING, nil, Int32 (utflen))
     }
     
     /// Retrieve the corresponding glyph IDs of a string of characters.
@@ -235,12 +235,12 @@ public final class Typeface {
     public func getGlyphs (str: String) -> [UInt16]?
     {
         let utflen = str.utf8.count
-        let nglyphs = sk_typeface_chars_to_glyphs(handle, str, UTF8_ENCODING, nil, Int32 (utflen))
+        let nglyphs = sk_typeface_chars_to_glyphs(handle, str, UTF8_SK_ENCODING, nil, Int32 (utflen))
         if nglyphs <= 0 {
             return nil
         }
         var glyphs = Array<UInt16>.init (repeating: 0, count: Int(nglyphs))
-        sk_typeface_chars_to_glyphs(handle, str, UTF8_ENCODING, &glyphs, nglyphs)
+        sk_typeface_chars_to_glyphs(handle, str, UTF8_SK_ENCODING, &glyphs, nglyphs)
         return glyphs
     }
 

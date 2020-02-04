@@ -42,13 +42,13 @@ public struct Matrix {
     
     public init (scaleX: Float = 0, skewX: Float = 0, transX: Float = 0, scaleY: Float = 0, skewY: Float = 0, transY: Float = 0, persp0: Float = 0, persp1: Float = 0, persp2: Float = 0)
     {
-        back = sk_matrix_t (mat: (scaleX, skewX, transX, skewY, scaleY, transY, persp0, persp1, persp2))
+        back = sk_matrix_t (scaleX: scaleX, skewX: skewX, transX: transX, skewY: skewY, scaleY: scaleY, transY: transY, persp0: persp0, persp1: persp1, persp2: persp2)
         mask = .unknown
     }
     
     init (scaleX: Float = 0, skewX: Float = 0, transX: Float = 0, scaleY: Float = 0, skewY: Float = 0, transY: Float = 0, persp0: Float = 0, persp1: Float = 0, persp2: Float = 0, mask: typeMask)
     {
-        back = sk_matrix_t (mat: (scaleX, skewX, transX, skewY, scaleY, transY, persp0, persp1, persp2))
+        back = sk_matrix_t (scaleX: scaleX, skewX: skewX, transX: transX, skewY: skewY, scaleY: scaleY, transY: transY, persp0: persp0, persp1: persp1, persp2: persp2)
         self.mask = mask
     }
     
@@ -116,8 +116,6 @@ public struct Matrix {
     
     static func fromNative (m: sk_matrix_t) -> Matrix
     {
-        let (a,b,c,d,e,f,g,h,i) = m.mat
-        
-        return Matrix(scaleX: a, skewX: b, transX: c, scaleY: d, skewY: e, transY: f, persp0: g, persp1: h, persp2: i)
+        return Matrix(scaleX: m.scaleX, skewX: m.skewX, transX: m.transX, scaleY: m.scaleY, skewY: m.skewY, transY: m.transY, persp0: m.persp0, persp1: m.persp1, persp2: m.persp2)
     }
 }

@@ -146,10 +146,10 @@ public final class Region {
         }
     }
     
-//    public func contains (region: Region) -> Bool
-//    {
-//        return sk_region_contains(handle, region.handle)
-//    }
+    public func contains (region: Region) -> Bool
+    {
+        return sk_region_contains(handle, region.handle)
+    }
     
     /**
      * Returns true if `Region` intersects other.

@@ -19,7 +19,12 @@ existin in the upstream Google Skia project.
 You can either download and install the SkiaSharp.nuget package, or
 build your own local copy of Mono's Skia fork
 (https://github.com/mono/skia/tree/77049b872966dc300ed233fc6e3930eb21bac5e3
-from https://github.com/mono/skiasharp) and then copy the following binaries:
+from https://github.com/mono/skiasharp).
+
+The `download-payload.sh` script automates the download, but relies on Mono
+to be installed for extracting the payload from the DLLs (the iOS/tvOS frameworks
+live inside a Zip file called libSkiaSharp.framework inside a resource in the
+SkiaSharp.dll)
 
 ```
 SkiaKit/iOS:

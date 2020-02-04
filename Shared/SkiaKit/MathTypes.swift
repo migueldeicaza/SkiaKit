@@ -249,7 +249,7 @@ public struct Size : Equatable {
 }
 
 public struct ISize : Equatable {
-    public var width, height: Float
+    public var width, height: Int32
     
     public var isEmpty : Bool {
         get { width == 0 && height == 0 }
@@ -257,9 +257,14 @@ public struct ISize : Equatable {
     
     public func toPoint () -> Point
     {
-        return Point (x: width, y: height)
+        return Point (x: Float (width), y: Float (height))
     }
-    
+
+    public func toIPoint () -> IPoint
+    {
+        return IPoint (x: width, y: height)
+    }
+
     static func fromNative (_ x: sk_isize_t) -> ISize
     {
         return ISize (width: x.w, height: x.h)
