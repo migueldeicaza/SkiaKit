@@ -7,7 +7,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /**
  * `Canvas` provides an interface for drawing, and how the drawing is clipped and transformed.

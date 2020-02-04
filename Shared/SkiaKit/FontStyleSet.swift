@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /// Represets the set of styles for a particular font family.
 public final class FontStyleSet {

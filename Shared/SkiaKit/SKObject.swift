@@ -7,7 +7,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 public class SKObject {
     

@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /**
  * Describes properties and constraints of a given `Surface`. The rendering engine can parse these

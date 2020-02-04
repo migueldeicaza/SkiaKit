@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 public final class Picture {
     var handle: OpaquePointer

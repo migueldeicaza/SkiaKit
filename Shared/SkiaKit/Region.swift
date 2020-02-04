@@ -7,7 +7,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /**
  * `Region` describes the set of pixels used to clip `Canvas`. `Region` is compact,

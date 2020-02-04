@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /// The picture recorder is used to record drawing operations made to a SKCanvas and stored in a SKPicture.
 /// call the `beginRecording` method to start, issue your commands into the returned `Canvas`

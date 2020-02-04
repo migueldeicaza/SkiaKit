@@ -888,10 +888,10 @@
 			buildConfigurationList = 49DA8E982363E8C10026FC2B /* Build configuration list for PBXNativeTarget "SkiaKit iOS" */;
 			buildPhases = (
 				49DA8E812363E8C00026FC2B /* Headers */,
+				49E9750E23649D8C00042FE7 /* Copy libSkiaSharp */,
 				49DA8E822363E8C00026FC2B /* Sources */,
 				49DA8E832363E8C00026FC2B /* Frameworks */,
 				49DA8E842363E8C00026FC2B /* Resources */,
-				49E9750E23649D8C00042FE7 /* Copy libSkiaSharp */,
 			);
 			buildRules = (
 			);
@@ -925,10 +925,10 @@
 			buildConfigurationList = 49DA8EB72363E9080026FC2B /* Build configuration list for PBXNativeTarget "SkiaKit tvOS" */;
 			buildPhases = (
 				49DA8EA12363E9070026FC2B /* Headers */,
+				49E9751423649FFF00042FE7 /* Copy libSkiaSharp.framework */,
 				49DA8EA22363E9070026FC2B /* Sources */,
 				49DA8EA32363E9070026FC2B /* Frameworks */,
 				49DA8EA42363E9070026FC2B /* Resources */,
-				49E9751423649FFF00042FE7 /* Copy libSkiaSharp.framework */,
 			);
 			buildRules = (
 			);
@@ -962,10 +962,10 @@
 			buildConfigurationList = 49DA8ED32363E9250026FC2B /* Build configuration list for PBXNativeTarget "SkiaKit macOS" */;
 			buildPhases = (
 				49DA8EBD2363E9250026FC2B /* Headers */,
+				49DA8FD52363F42C0026FC2B /* Copy libSkiaSharp.dylib */,
 				49DA8EBE2363E9250026FC2B /* Sources */,
 				49DA8EBF2363E9250026FC2B /* Frameworks */,
 				49DA8EC02363E9250026FC2B /* Resources */,
-				49DA8FD52363F42C0026FC2B /* Copy libSkiaSharp.dylib */,
 			);
 			buildRules = (
 			);

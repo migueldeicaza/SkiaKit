@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /// Skia's FontManager
 /// The default font manager can be accessed via the `default` static property of `FontManager`.

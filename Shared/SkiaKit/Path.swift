@@ -7,7 +7,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /**
  * `Path` contain geometry. `Path` may be empty, or contain one or more verbs that

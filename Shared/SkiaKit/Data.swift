@@ -7,7 +7,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /**
  * `SKData` holds an immutable data buffer. Not only is the data immutable,
@@ -22,7 +24,7 @@ public final class SKData {
      * creates an uninitialized SKData with the specified number of bytes
      * - Parameter size: number of bytes to allocate for this SKData, or zero for an empty one.
      */
-    public init (size: UInt = 0)
+    public init (size: Int = 0)
     {
         if size == 0 {
             handle = sk_data_new_empty()

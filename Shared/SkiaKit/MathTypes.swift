@@ -7,7 +7,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 public struct Point : Equatable {
     public init(x: Float, y: Float) {

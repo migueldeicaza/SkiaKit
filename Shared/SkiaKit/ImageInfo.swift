@@ -7,7 +7,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /**
  * Describes pixel dimensions and encoding. `Bitmap`, `Image`, `Pixmap`, and `Surface`

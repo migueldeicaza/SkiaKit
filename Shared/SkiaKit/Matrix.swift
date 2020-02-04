@@ -7,7 +7,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /**
  * `Matrix` holds a 3x3 matrix for transforming coordinates. This allows mapping

@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(CSkiaSharp)
 import CSkiaSharp
+#endif
 
 /**
  * `Pixmap` provides a utility to pair `ImageInfo` with pixels and row bytes.
