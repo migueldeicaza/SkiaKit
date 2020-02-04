@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * `TextBlob` combines multiple text runs into an immutable container. Each text

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * `Surface` is responsible for managing the pixels that a canvas draws into. The pixels can be

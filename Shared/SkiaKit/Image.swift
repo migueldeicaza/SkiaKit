@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * `Image` describes a two dimensional array of pixels to draw. The pixels may be

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * The `Typeface` class specifies the typeface and intrinsic style of a font.

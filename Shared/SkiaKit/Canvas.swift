@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * `Canvas` provides an interface for drawing, and how the drawing is clipped and transformed.

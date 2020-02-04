@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 final class SKString {
     var handle: OpaquePointer

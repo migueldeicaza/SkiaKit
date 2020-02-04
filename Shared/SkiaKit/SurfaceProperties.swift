@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * Describes properties and constraints of a given `Surface`. The rendering engine can parse these

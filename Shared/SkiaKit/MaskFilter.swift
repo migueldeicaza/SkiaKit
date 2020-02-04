@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 public final class MaskFilter {
     var handle : OpaquePointer

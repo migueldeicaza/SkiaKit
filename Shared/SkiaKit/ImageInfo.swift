@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSkiaSharp
 
 /**
  * Describes pixel dimensions and encoding. `Bitmap`, `Image`, `Pixmap`, and `Surface`
