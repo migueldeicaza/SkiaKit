@@ -17,7 +17,12 @@ import CSkiaSharp
 public final class SKData {
     var handle: OpaquePointer
     
-    public init (size: Int = 0)
+    /**
+     * Initializes a new instance of SKData, if `size` is zero, this creates an empty SKData, otherwise it
+     * creates an uninitialized SKData with the specified number of bytes
+     * - Parameter size: number of bytes to allocate for this SKData, or zero for an empty one.
+     */
+    public init (size: UInt = 0)
     {
         if size == 0 {
             handle = sk_data_new_empty()
@@ -26,9 +31,24 @@ public final class SKData {
         }
     }
     
+    /**
+     * Initializes a new instance of SKData with the contents of the provided array `data`
+     * - Parameter data: contains the initial data to load, the contents are copied.
+     */
     public init (data: [UInt8])
     {
         handle = sk_data_new_with_copy(data, data.count)
+    }
+    
+    /**
+     * Creates a subset SKData that reprents the specified range.
+     * - Parameter range: the range of bytes that will be extracted
+     * - Returns: the new SKData object, if the values of the range are beyond the boundaries of the SKData, an empty SKData is returned.
+     */
+    public subscript (_ range: Range<Int>) -> SKData {
+        get {
+                return SKData (handle:sk_data_new_subset(handle, range.startIndex, range.count))
+        }
     }
     
     /**
