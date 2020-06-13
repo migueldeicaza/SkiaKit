@@ -40,56 +40,6 @@ public final class Shader {
     }
 
     /**
-     * Creates a new shader that will draw with the specified bitmap.
-     *
-     * If the bitmap cannot be used (has no pixels, or its dimensions exceed implementation limits) then
-     * an empty shader may be returned. If the source bitmap's color type is Alpha8 then that
-     * mask will be colorized using the color on the paint.
-     *
-     * - Parameter source: The bitmap to use inside the shader.
-     * - Parameter tileModeX: The tiling mode to use when sampling the bitmap in the x-direction.
-     * - Parameter tileModeYThe tiling mode to use when sampling the bitmap in the y-direction.:
-     * - Returns: Returns a new SKShader, or an empty shader on error.
-     */
-    public static func makeBitmap (source: Bitmap, tileModeX: ShaderTileMode, tileModeY: ShaderTileMode) -> Shader
-    {
-        return Shader (handle: sk_shader_new_bitmap(source.handle, tileModeX.toNative(), tileModeY.toNative(), nil))
-    }
-
-    /**
-     * Creates a new shader that will draw with the specified bitmap.
-     *
-     * If the bitmap cannot be used (has no pixels, or its dimensions exceed implementation limits) then
-     * an empty shader may be returned. If the source bitmap's color type is Alpha8 then that
-     * mask will be colorized using the color on the paint.
-     *
-     * - Parameter source: The bitmap to use inside the shader.
-     * - Parameter tileModeX: The tiling mode to use when sampling the bitmap in the x-direction.
-     * - Parameter tileModeYThe tiling mode to use when sampling the bitmap in the y-direction.:
-     * - Parameter localMatrix: The matrix to apply before applying the shader.
-     * - Returns: Returns a new SKShader, or an nil shader on error.
-     */
-    public static func makeBitmap (source: Bitmap, tileModeX: ShaderTileMode, tileModeY: ShaderTileMode, localMatrix: Matrix)  -> Shader?
-    {
-        var l = localMatrix.toNative()
-        if let x = sk_shader_new_bitmap(source.handle, tileModeX.toNative(), tileModeY.toNative(), &l) {
-            return Shader (handle: x)
-        }
-        return nil
-    }
-
-    /**
-     * Creates a new shader that produces the same colors as invoking this shader and then applying the color filter.
-     * - Parameter shader: The shader to apply
-     * - Parameter tileModeX: the color filter to apply
-     * - Returns: Returns a new SKShader, or an empty shader on error.
-     */
-    public static func makeColorFilter (shader: Shader, colorFilter: ColorFilter) -> Shader
-    {
-        return Shader (handle: sk_shader_new_color_filter(shader.handle, colorFilter.handle))
-    }
-
-    /**
      * Creates a shader that first applies the specified matrix and then applies the shader.
      * - Parameter shader: The shader to apply
      * - Parameter localMatrix: The matrix to apply before applying the shader.
@@ -99,7 +49,7 @@ public final class Shader {
     {
         var l = localMatrix.toNative()
         
-        if let x = sk_shader_new_local_matrix(shader.handle, &l) {
+        if let x = sk_shader_with_local_matrix(shader.handle, &l) {
             return Shader (handle: x)
         }
         return nil
@@ -124,7 +74,7 @@ public final class Shader {
      */
     public static func makeLinearGradient (start: Point, end: Point, colors: [Color], colorPos: [Float]?, mode: ShaderTileMode) -> Shader
     {
-        var pt : [sk_point_t] = [start.toNative(), end.toNative()]
+        var pt : [sk_point_t] = [start, end]
         var ncolors = toNative (colors)
         if var cp = colorPos {
             return Shader (handle: sk_shader_new_linear_gradient(&pt, &ncolors, &cp, Int32 (colors.count), mode.toNative(), nil))
@@ -146,12 +96,13 @@ public final class Shader {
     {
         var ptr : UnsafePointer<sk_matrix_t>? = nil
         var native : sk_matrix_t
+        
         if let l = localMatrix {
             native = l.toNative()
             ptr = UnsafePointer<sk_matrix_t> (&native)
         }
         
-        var pt : [sk_point_t] = [start.toNative(), end.toNative()]
+        var pt : [sk_point_t] = [start, end]
         var ncolors = toNative (colors)
         var x: OpaquePointer!
         if var cp = colorPos {
@@ -184,7 +135,7 @@ public final class Shader {
         }
         
         let ncolors = toNative (colors)
-        var cpt = center.toNative()
+        var cpt = center
         var x: OpaquePointer!
         if var cp = colorPos {
             x = sk_shader_new_radial_gradient(&cpt, radius, ncolors, &cp, Int32 (colors.count), mode.toNative(), ptr)
@@ -217,7 +168,7 @@ public final class Shader {
         }
 
         let ncolors = toNative (colors)
-        var cpt = center.toNative()
+        var cpt = center
         var x: OpaquePointer!
         if var cp = colorPos {
             x = sk_shader_new_sweep_gradient(&cpt, ncolors, &cp, Int32(colors.count), mode.toNative(), startAngle, endAngle, ptr)
@@ -251,8 +202,8 @@ public final class Shader {
         }
 
         let ncolors = toNative (colors)
-        var startpt = start.toNative()
-        var endpt = end.toNative()
+        var startpt = start
+        var endpt = end
         var x: OpaquePointer!
         if var cp = colorPos {
             x = sk_shader_new_two_point_conical_gradient(&startpt, startRadius, &endpt, endRadius, ncolors, &cp, Int32(colors.count), mode.toNative(), ptr)
@@ -301,21 +252,7 @@ public final class Shader {
         }
         return Shader (handle: sk_shader_new_perlin_noise_turbulence(baseFrequencyX, baseFrequencyY, numOctaves, seed, ptr))
     }
-    
-    /// Create a new compose shader, which combines two shaders optionally, with a blend mode.
-    /// The colors from this shader are seen as the destination by the blend mode.
-    ///
-    /// - Parameter with: The colors from this shader are seen as the source by the blend mode.
-    /// - Parameter blend: The blend mode that combines the two shaders.
-    /// - Returns: a new shader that composes the current shader with the provided one
-    public func compose (with: Shader, blend: BlendMode? = nil) -> Shader
-    {
-        if let b = blend {
-            return Shader (handle: sk_shader_new_compose_with_mode (handle, with.handle, b.toNative()))
-        } else {
-            return Shader (handle: sk_shader_new_compose(handle, with.handle))
-        }
-    }
+ 
     deinit
     {
         sk_shader_unref(handle)

@@ -24,6 +24,22 @@ public final class TextBlob {
         self.handle = handle
     }
     
+    init? (str: String, font: Font, origin: Point = Point(x: 0, y: 0))
+    {
+        let nglyphs = font.countGlyphs(str: str)
+        if nglyphs < 0 {
+            return nil
+        }
+        let builder = TextBlobBuilder()
+        let tbb = builder.allocatePositionedRun(font: font, count: Int32 (nglyphs))
+        
+        sk_font_text_to_glyphs(font.handle, str, str.utf8.count, UTF8_SK_TEXT_ENCODING, UnsafeMutablePointer<UInt16>(OpaquePointer (tbb.glyphs!)), nglyphs)
+        var o = origin
+        
+        sk_font_get_pos(font.handle, UnsafeMutablePointer<UInt16>(OpaquePointer (tbb.glyphs!)), nglyphs, UnsafeMutablePointer<sk_point_t>(OpaquePointer (tbb.pos!)), &o)
+        handle = sk_textblob_builder_make(builder.handle)
+    }
+    
     /// Gets the unique, non-zero value representing the text blob.
     public func getUniqueId () -> UInt32
     {
@@ -82,7 +98,7 @@ public final class TextBlobBuilder {
     /// - Parameter x: The x position for this run
     /// - Parameter y: The y position for this run
     /// - Parameter glyphs: The glyphs to use for this run
-    public func addRun (font: Paint, x: Float, y: Float, glyphs: [ushort])
+    public func addRun (font: Font, x: Float, y: Float, glyphs: [ushort])
     {
         let run = allocateRun(font: font, count: Int32 (glyphs.count), x: x, y: y)
         run.clusters.copyMemory(from: glyphs, byteCount: glyphs.count * 2)
@@ -92,7 +108,7 @@ public final class TextBlobBuilder {
     /// - Parameter font: The font to use for this run
     /// - Parameter y: The vertical offset within the blob.
     /// - Parameter glyphs: The glyphs to use for this run
-    public func addHorizontalRun (font: Paint, y: Float, glyphs: [ushort], positions: [Float])
+    public func addHorizontalRun (font: Font, y: Float, glyphs: [ushort], positions: [Float])
     {
         let run = allocateHorizontalRun(font: font, count: Int32 (glyphs.count), y: y)
         run.clusters.copyMemory(from: glyphs, byteCount: glyphs.count * 2)
@@ -103,7 +119,7 @@ public final class TextBlobBuilder {
     /// - Parameter font: The font to use for this run
     /// - Parameter y: The vertical offset within the blob.
     /// - Parameter glyphs: The glyphs to use for this run
-    public func addPositionedRun (font: Paint, y: Float, glyphs: [ushort], positions: [Point])
+    public func addPositionedRun (font: Font, y: Float, glyphs: [ushort], positions: [Point])
     {
         let run = allocateHorizontalRun(font: font, count: Int32 (glyphs.count), y: y)
         run.clusters.copyMemory(from: glyphs, byteCount: glyphs.count * 2)
@@ -126,46 +142,43 @@ public final class TextBlobBuilder {
      * - Parameter bounds: optional run bounding box
      * - Returns: writable glyph buffer
      */
-    func allocateRun (font: Paint, count: Int32, x: Float, y: Float, textByteCount: Int32 = 0, bounds: Rect? = nil) -> sk_textblob_builder_runbuffer_t
+    func allocateRun (font: Font, count: Int32, x: Float, y: Float, textByteCount: Int32 = 0, bounds: Rect? = nil) -> sk_textblob_builder_runbuffer_t
     {
-        let lang = SKString()
         var ret = sk_textblob_builder_runbuffer_t ()
         if let b = bounds {
             var nb = b.toNative()
             
-            sk_textblob_builder_alloc_run_text(handle, font.handle, count, x, y, textByteCount, lang.handle, &nb, &ret)
+            sk_textblob_builder_alloc_run_text(handle, font.handle, count, x, y, textByteCount, &nb, &ret)
         } else {
-            sk_textblob_builder_alloc_run_text(handle, font.handle, count, x, y, textByteCount, lang.handle, nil, &ret)
+            sk_textblob_builder_alloc_run_text(handle, font.handle, count, x, y, textByteCount, nil, &ret)
         }
         
         return ret
     }
     
-    func allocateHorizontalRun (font: Paint, count: Int32, y: Float, textByteCount: Int32 = 0, bounds: Rect? = nil) -> sk_textblob_builder_runbuffer_t
+    func allocateHorizontalRun (font: Font, count: Int32, y: Float, textByteCount: Int32 = 0, bounds: Rect? = nil) -> sk_textblob_builder_runbuffer_t
     {
-        let lang = SKString()
-        var ret = sk_textblob_builder_runbuffer_t ()
+       var ret = sk_textblob_builder_runbuffer_t ()
         if let b = bounds {
             var nb = b.toNative()
             
-            sk_textblob_builder_alloc_run_text_pos_h(handle, font.handle, count, y, textByteCount, lang.handle, &nb, &ret)
+            sk_textblob_builder_alloc_run_text_pos_h(handle, font.handle, count, y, textByteCount, &nb, &ret)
         } else {
-            sk_textblob_builder_alloc_run_text_pos_h(handle, font.handle, count, y, textByteCount, lang.handle, nil, &ret)
+            sk_textblob_builder_alloc_run_text_pos_h(handle, font.handle, count, y, textByteCount, nil, &ret)
         }
         
         return ret
     }
     
-    func allocatePositionedRun (font: Paint, count: Int32, textByteCount: Int32 = 0, bounds: Rect? = nil) -> sk_textblob_builder_runbuffer_t
+    func allocatePositionedRun (font: Font, count: Int32, textByteCount: Int32 = 0, bounds: Rect? = nil) -> sk_textblob_builder_runbuffer_t
     {
-        let lang = SKString()
         var ret = sk_textblob_builder_runbuffer_t ()
         if let b = bounds {
             var nb = b.toNative()
             
-            sk_textblob_builder_alloc_run_text_pos(handle, font.handle, count, textByteCount, lang.handle, &nb, &ret)
+            sk_textblob_builder_alloc_run_text_pos(handle, font.handle, count, textByteCount, &nb, &ret)
         } else {
-            sk_textblob_builder_alloc_run_text_pos(handle, font.handle, count, textByteCount, lang.handle, nil, &ret)
+            sk_textblob_builder_alloc_run_text_pos(handle, font.handle, count, textByteCount, nil, &ret)
         }
         
         return ret

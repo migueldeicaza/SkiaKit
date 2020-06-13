@@ -11,6 +11,9 @@ import Foundation
 import CSkiaSharp
 #endif
 
+public typealias FontEdging = sk_font_edging_t
+public typealias FontHinting = sk_font_hinting_t
+
 /// 
 /// Describes how pixel bits encode color. A pixel may be an alpha mask, a grayscale, Red Green and Blue (RGB), or
 /// Alpha, Red, Green and Blue (ARGB)
@@ -286,23 +289,6 @@ public enum PointMode : UInt32 {
     internal static func fromNative (_ x: sk_point_mode_t) -> PointMode
     {
         return PointMode.init(rawValue: x.rawValue)!
-    }
-}
-
-public enum TransferFunctionBehavior : UInt32 {
-    /// Converts to a linear space before premultiplying, unpremultiplying, or blending.
-    case respect = 0
-    /// Premultiplies, unpremultiplies, and blends ignoring the transfer function.  Pixels are reated as if they are linear, regardless of their transfer function encoding.
-    case ignore
-    
-    internal func toNative () -> sk_transfer_function_behavior_t
-    {
-        return sk_transfer_function_behavior_t(rawValue: rawValue)
-    }
-    
-    internal static func fromNative (_ x: sk_transfer_function_behavior_t) -> TransferFunctionBehavior
-    {
-        return TransferFunctionBehavior.init (rawValue: x.rawValue)!
     }
 }
 

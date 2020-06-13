@@ -141,12 +141,12 @@ public final class Canvas {
         sk_nway_canvas_remove_all(handle)
     }
     
-    public func drawText (text: String, x: Float, y: Float, paint: Paint)
-    {
-        let utf8 = text.utf8CString
-        
-        sk_canvas_draw_text(handle, text, utf8.count, x, y, paint.handle)
-    }
+//    public func drawText (text: String, x: Float, y: Float, paint: Paint)
+//    {
+//        let utf8 = text.utf8CString
+//
+//        sk_canvas_draw_text(handle, text, utf8.count, x, y, paint.handle)
+//    }
     
     /**
      * Returns true if `Rect` rect, transformed by `Matrix`, can be quickly determined to be
@@ -215,7 +215,7 @@ public final class Canvas {
             r = l.toNative()
             ptr = UnsafePointer<sk_rect_t>(&r)
         }
-    
+        
         sk_canvas_save_layer(handle, ptr, paint == nil ? nil : paint!.handle)
     }
 
@@ -475,7 +475,7 @@ public final class Canvas {
         let bounds = UnsafeMutablePointer<sk_irect_t>.allocate(capacity: 1);
         
         let notEmpty = sk_canvas_get_device_clip_bounds(handle, bounds)
-        return (IRect.fromNative (bounds.pointee), !notEmpty)
+        return (bounds.pointee, !notEmpty)
     }
     
     public func draw (_ paint: Paint)
@@ -533,7 +533,7 @@ public final class Canvas {
     {
         var nativePoints: [sk_point_t] = []
         for x in points {
-            nativePoints.append(x.toNative ())
+            nativePoints.append(x)
         }
         
         sk_canvas_draw_points(handle, pointMode.toNative(), points.count, nativePoints, paint.handle)
@@ -670,9 +670,11 @@ public final class Canvas {
      - Parameter y: The y-coordinate of the origin of the text being drawn.
      - Parameter paint: The paint to use when drawing the text.
      */
-    public func drawText (_ text: String, _ x: Float, _ y: Float, paint: Paint)
+    public func draw (text: String, x: Float, y: Float, font: Font)
     {
-        sk_canvas_draw_text(handle, text, text.utf8CString.count, x, y, paint.handle)
+        if let tb = TextBlob(str: text, font: font) {
+            sk_canvas_draw_text_blob(handle, tb.handle, x, y, font.handle)
+        }
     }
 
     /**
@@ -698,25 +700,25 @@ public final class Canvas {
      *
      * example: https://fiddle.skia.org/c/@Canvas_drawTextBlob
      */
-    public func drawTextBlob (_ textBlob: TextBlob, _ x: Float, _ y: Float, paint: Paint)
+    public func draw (textBlob: TextBlob, x: Float, y: Float, font: Font)
     {
-        sk_canvas_draw_text_blob(handle, textBlob.handle, x, y, paint.handle)
+        sk_canvas_draw_text_blob(handle, textBlob.handle, x, y, font.handle)
     }
     
-    public func drawPositionedText (_ text: String, _ points: [Point], _ paint: Paint)
-    {
-        var nativePoints: [sk_point_t] = []
-        for x in points {
-            nativePoints.append(x.toNative ())
-        }
-        
-        sk_canvas_draw_pos_text(handle, text, text.utf8CString.count, nativePoints, paint.handle)
-    }
-    
-    public func drawTextOnPath (_ text: String, _ path: Path, _ hOffset: Float, _ vOffset: Float, _ paint: Paint)
-    {
-        sk_canvas_draw_text_on_path(handle, text, text.utf8CString.count, path.handle, hOffset, vOffset, paint.handle)
-    }
+//    public func drawPositionedText (_ text: String, _ points: [Point], _ paint: Paint)
+//    {
+//        var nativePoints: [sk_point_t] = []
+//        for x in points {
+//            nativePoints.append(x.toNative ())
+//        }
+//
+//        sk_canvas_draw_pos_text(handle, text, text.utf8CString.count, nativePoints, paint.handle)
+//    }
+//
+//    public func drawTextOnPath (_ text: String, _ path: Path, _ hOffset: Float, _ vOffset: Float, _ paint: Paint)
+//    {
+//        sk_canvas_draw_text_on_path(handle, text, text.utf8CString.count, path.handle, hOffset, vOffset, paint.handle)
+//    }
     
     /**
      * Triggers the immediate execution of all pending draw operations.
@@ -729,24 +731,24 @@ public final class Canvas {
         sk_canvas_flush(handle)
     }
     
-    public func drawBitmapNinePatch (_ bitmap: Bitmap, _ center: IRect, _ dest: Rect, _ paint: Paint? = nil)
-    {
-        withUnsafePointer(to: dest.toNative()) { destPtr in
-            withUnsafePointer(to: center.toNative()) { centerPtr in
-                sk_canvas_draw_bitmap_nine(handle, bitmap.handle, centerPtr, destPtr, paint == nil ? nil : paint!.handle)
-            }
-        }
-    }
-    
-    public func drawImageNinePatch (_ image: Image, _ center: IRect, _ dest: Rect, _ paint: Paint? = nil)
-    {
-        withUnsafePointer(to: dest.toNative()) { destPtr in
-            withUnsafePointer(to: center.toNative()) { centerPtr in
-                sk_canvas_draw_image_nine(handle, image.handle, centerPtr, destPtr, paint == nil ? nil : paint!.handle)
-            }
-        }
-    }
-    
+//    public func drawBitmapNinePatch (_ bitmap: Bitmap, _ center: IRect, _ dest: Rect, _ paint: Paint? = nil)
+//    {
+//        withUnsafePointer(to: dest.toNative()) { destPtr in
+//            withUnsafePointer(to: center.toNative()) { centerPtr in
+//                sk_canvas_draw_bitmap_nine(handle, bitmap.handle, centerPtr, destPtr, paint == nil ? nil : paint!.handle)
+//            }
+//        }
+//    }
+//    
+//    public func drawImageNinePatch (_ image: Image, _ center: IRect, _ dest: Rect, _ paint: Paint? = nil)
+//    {
+//        withUnsafePointer(to: dest.toNative()) { destPtr in
+//            withUnsafePointer(to: center.toNative()) { centerPtr in
+//                sk_canvas_draw_image_nine(handle, image.handle, centerPtr, destPtr, paint == nil ? nil : paint!.handle)
+//            }
+//        }
+//    }
+//    
     // TODO: drawAnnotation
     // TODO: drawUrlAnnotation
     // TODO: drawNamedDestinationAnnotation

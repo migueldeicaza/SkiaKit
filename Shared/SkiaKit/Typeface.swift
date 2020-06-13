@@ -56,7 +56,7 @@ public final class Typeface {
      */
     public init? (familyName: String?, style: FontStyle)
     {
-        if let x = sk_typeface_create_from_name_with_font_style(familyName, style.handle) {
+        if let x = sk_typeface_create_from_name(familyName, style.handle) {
             handle = x
             owns = true
         } else {
@@ -223,26 +223,26 @@ public final class Typeface {
         return sk_typeface_get_table_data(handle, tag, offset, length, storage)
     }
     
-    /// Returns the number of glyphs in the string.
-    public func countGlyphs (str: String) -> Int32
-    {
-        let utflen = str.utf8.count
-        return sk_typeface_chars_to_glyphs(handle, str, UTF8_SK_ENCODING, nil, Int32 (utflen))
-    }
-    
-    /// Retrieve the corresponding glyph IDs of a string of characters.
-    /// - Returns: the array of glyphs, or nil if there is an error
-    public func getGlyphs (str: String) -> [UInt16]?
-    {
-        let utflen = str.utf8.count
-        let nglyphs = sk_typeface_chars_to_glyphs(handle, str, UTF8_SK_ENCODING, nil, Int32 (utflen))
-        if nglyphs <= 0 {
-            return nil
-        }
-        var glyphs = Array<UInt16>.init (repeating: 0, count: Int(nglyphs))
-        sk_typeface_chars_to_glyphs(handle, str, UTF8_SK_ENCODING, &glyphs, nglyphs)
-        return glyphs
-    }
+//    /// Returns the number of glyphs in the string.
+//    public func countGlyphs (str: String) -> Int32
+//    {
+//        let utflen = str.utf8.count
+//        return sk_typeface_chars_to_glyphs(handle, str, UTF8_SK_ENCODING, nil, Int32 (utflen))
+//    }
+//    
+//    /// Retrieve the corresponding glyph IDs of a string of characters.
+//    /// - Returns: the array of glyphs, or nil if there is an error
+//    public func getGlyphs (str: String) -> [UInt16]?
+//    {
+//        let utflen = str.utf8.count
+//        let nglyphs = sk_typeface_chars_to_glyphs(handle, str, UTF8_SK_ENCODING, nil, Int32 (utflen))
+//        if nglyphs <= 0 {
+//            return nil
+//        }
+//        var glyphs = Array<UInt16>.init (repeating: 0, count: Int(nglyphs))
+//        sk_typeface_chars_to_glyphs(handle, str, UTF8_SK_ENCODING, &glyphs, nglyphs)
+//        return glyphs
+//    }
 
     /// Returns a stream for the contents of the font data.
     public func openStream () -> (stream: SKStream, trueTypeCollectionIndex: Int32)?

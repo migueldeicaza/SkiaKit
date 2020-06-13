@@ -698,7 +698,7 @@ public final class Path {
     {
         var p : [sk_point_t] = []
         for x in points {
-            p.append(x.toNative())
+            p.append(x)
         }
         sk_path_add_poly(handle, &p, Int32 (p.count), close)
         return self

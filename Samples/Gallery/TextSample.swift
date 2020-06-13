@@ -15,32 +15,32 @@ struct sampleText : Sample {
     {
         canvas.drawColor(Colors.white)
         
+        var font = Font()
+        font.size = 64
         var paint = Paint()
-        paint.textSize = 64
         paint.isAntialias = true
         paint.color = Color (0xff4281a4)
         paint.isStroke = false
         
-        canvas.drawText (text: "SkiaKit", x: Float (width/2), y: 64, paint: paint)
+        canvas.draw (text: "SkiaKit", x: Float (width/2), y: 64, font: font)
         
         paint = Paint()
-        paint.textSize = 64
         paint.isAntialias = true
         paint.color = Color (0xff9cafb7)
         paint.isStroke = true
         paint.strokeWidth = 3
-        paint.textAlign = .center
+        //paint.textAlign = .center
         
-        canvas.drawText (text: "SkiaKit", x: Float (width/2), y: 144, paint: paint)
+        canvas.draw (text: "SkiaKit", x: Float (width/2), y: 144, font: font)
 
         paint = Paint()
-        paint.textSize = 64
+        
         paint.isAntialias = true
         paint.color = Color (0xffe6b89c)
-        paint.textScaleX = 1.5
-        paint.textAlign = .right
+        font.scaleX = 1.5
+        //paint.textAlign = .right
         
-        canvas.drawText (text: "SkiaKit", x: Float (width/2), y: 224, paint: paint)
+        canvas.draw (text: "SkiaKit", x: Float (width/2), y: 224, font: font)
 
     }
 }

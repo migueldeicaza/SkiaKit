@@ -48,9 +48,10 @@ struct sampleDraw : Sample {
     func draw (canvas: Canvas, width: Int32, height: Int32)
     {
         canvas.clear (color: Colors.aqua)
+        let font = Font()
         let paint = Paint()
-        paint.textSize = 64
-        canvas.drawText (text: "text", x: 150, y: 175, paint: paint)
+        font.size = 64
+        canvas.draw (text: "text", x: 150, y: 175, font: font)
         paint.strokeWidth = 10
         paint.color = Colors.green
         paint.style = .stroke

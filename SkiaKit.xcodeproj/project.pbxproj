@@ -27,6 +27,12 @@
 		4912D99C236E1A760079BAF7 /* SurfaceProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */; };
 		4912D99D236E1A760079BAF7 /* SurfaceProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */; };
 		4912D99E236E1A760079BAF7 /* SurfaceProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */; };
+		498857A724947974005663E8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498857A624947974005663E8 /* Font.swift */; };
+		498857A824947974005663E8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498857A624947974005663E8 /* Font.swift */; };
+		498857A924947974005663E8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498857A624947974005663E8 /* Font.swift */; };
+		498857AB24947B13005663E8 /* sk_font.h in Headers */ = {isa = PBXBuildFile; fileRef = 498857AA24947B13005663E8 /* sk_font.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		498857AC24947B13005663E8 /* sk_font.h in Headers */ = {isa = PBXBuildFile; fileRef = 498857AA24947B13005663E8 /* sk_font.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		498857AD24947B13005663E8 /* sk_font.h in Headers */ = {isa = PBXBuildFile; fileRef = 498857AA24947B13005663E8 /* sk_font.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		49BF9E5423711A55009A6B13 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF9E5323711A55009A6B13 /* FontManager.swift */; };
 		49BF9E5523711A55009A6B13 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF9E5323711A55009A6B13 /* FontManager.swift */; };
 		49BF9E5623711A55009A6B13 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF9E5323711A55009A6B13 /* FontManager.swift */; };
@@ -326,6 +332,8 @@
 		4902C7922376647F00FD5CE3 /* SimplePathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePathTest.swift; sourceTree = "<group>"; };
 		4912D98423693F710079BAF7 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceProperties.swift; sourceTree = "<group>"; };
+		498857A624947974005663E8 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		498857AA24947B13005663E8 /* sk_font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_font.h; sourceTree = "<group>"; };
 		49BF9E5323711A55009A6B13 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		49DA8E862363E8C00026FC2B /* SkiaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkiaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DA8E892363E8C00026FC2B /* SkiaKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkiaKit_iOS.h; sourceTree = "<group>"; };
@@ -554,6 +562,7 @@
 				49DA8EE02363E95D0026FC2B /* sk_data.h */,
 				49DA8EF12363E95E0026FC2B /* sk_document.h */,
 				49DA8EEB2363E95D0026FC2B /* sk_drawable.h */,
+				498857AA24947B13005663E8 /* sk_font.h */,
 				49DA8EDE2363E95D0026FC2B /* sk_general.h */,
 				49DA8EF42363E95E0026FC2B /* sk_image.h */,
 				49DA8EDA2363E95D0026FC2B /* sk_imagefilter.h */,
@@ -617,6 +626,7 @@
 				4912D99B236E1A760079BAF7 /* SurfaceProperties.swift */,
 				49DA8F242363E98A0026FC2B /* TextBlob.swift */,
 				49DA8F302363E98A0026FC2B /* Typeface.swift */,
+				498857A624947974005663E8 /* Font.swift */,
 			);
 			path = SkiaKit;
 			sourceTree = "<group>";
@@ -777,6 +787,7 @@
 				49DA8F122363E95E0026FC2B /* sk_document.h in Headers */,
 				49DA8F052363E95E0026FC2B /* sk_mask.h in Headers */,
 				49DA8F0E2363E95E0026FC2B /* sk_shader.h in Headers */,
+				498857AB24947B13005663E8 /* sk_font.h in Headers */,
 				49DA8F0A2363E95E0026FC2B /* sk_pixmap.h in Headers */,
 				49DA8F002363E95E0026FC2B /* sk_maskfilter.h in Headers */,
 				49DA8EFB2363E95E0026FC2B /* sk_imagefilter.h in Headers */,
@@ -819,6 +830,7 @@
 				49DA8F592363E9DD0026FC2B /* sk_colortable.h in Headers */,
 				49DA8F602363E9DD0026FC2B /* sk_mask.h in Headers */,
 				49DA8F692363E9DD0026FC2B /* sk_rrect.h in Headers */,
+				498857AC24947B13005663E8 /* sk_font.h in Headers */,
 				49DA8F5E2363E9DD0026FC2B /* sk_image.h in Headers */,
 				49DA8F702363E9DD0026FC2B /* sk_typeface.h in Headers */,
 				49DA8F5B2363E9DD0026FC2B /* sk_document.h in Headers */,
@@ -861,6 +873,7 @@
 				49DA8F7A2363E9DE0026FC2B /* sk_colortable.h in Headers */,
 				49DA8F812363E9DE0026FC2B /* sk_mask.h in Headers */,
 				49DA8F8A2363E9DE0026FC2B /* sk_rrect.h in Headers */,
+				498857AD24947B13005663E8 /* sk_font.h in Headers */,
 				49DA8F7F2363E9DE0026FC2B /* sk_image.h in Headers */,
 				49DA8F912363E9DE0026FC2B /* sk_typeface.h in Headers */,
 				49DA8F7C2363E9DE0026FC2B /* sk_document.h in Headers */,
@@ -1129,6 +1142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498857A724947974005663E8 /* Font.swift in Sources */,
 				49DA8F4B2363E98A0026FC2B /* RoundRect.swift in Sources */,
 				49DA8F402363E98A0026FC2B /* Definitions.swift in Sources */,
 				49DA8F342363E98A0026FC2B /* Canvas.swift in Sources */,
@@ -1180,6 +1194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498857A824947974005663E8 /* Font.swift in Sources */,
 				49DA8FA42363EB880026FC2B /* Matrix.swift in Sources */,
 				49DA8F9E2363EB880026FC2B /* Definitions.swift in Sources */,
 				49DA8FA62363EB880026FC2B /* Path.swift in Sources */,
@@ -1231,6 +1246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498857A924947974005663E8 /* Font.swift in Sources */,
 				49DA8FBD2363EB890026FC2B /* Matrix.swift in Sources */,
 				49DA8FB72363EB890026FC2B /* Definitions.swift in Sources */,
 				49DA8FBF2363EB890026FC2B /* Path.swift in Sources */,

@@ -11,94 +11,79 @@ import Foundation
 import CSkiaSharp
 #endif
 
-public struct Point : Equatable {
-    public init(x: Float, y: Float) {
-        self.x = x
-        self.y = y
-    }
+public typealias Point = sk_point_t
+public extension Point {
+    var length : Float { sqrtf(x*x+y*y)}
     
-    public var x, y: Float
-    public var length : Float { sqrtf(x*x+y*y)}
-    
-    public mutating func offset (dx: Float, dy: Float)
+    mutating func offset (dx: Float, dy: Float)
     {
         x = x + dx
         y = y + dy
     }
     
-    public mutating func offset (point: Point)
+    mutating func offset (point: Point)
     {
         x = x + point.x
         y = y + point.y
     }
     
-    public func normalize (_ point: Point) -> Point
+    func normalize (_ point: Point) -> Point
     {
         let ls = point.x * point.x + point.y * point.y
         let invNorm =  1.0 / sqrtf(ls)
         return Point (x: point.x * invNorm, y: point.y * invNorm)
     }
     
-    public func distance (_ first: Point, _ second: Point) -> Float
+    func distance (_ first: Point, _ second: Point) -> Float
     {
         let dx = first.x - second.x
         let dy = first.y - second.y
         return sqrtf (dx*dx + dy*dy)
     }
     
-    public static func + (ls: Point, rs: Point) -> Point
+    static func + (ls: Point, rs: Point) -> Point
     {
         Point (x: ls.x + rs.x, y: ls.y + rs.y)
     }
 
-    public static func - (ls: Point, rs: Point) -> Point
+    static func - (ls: Point, rs: Point) -> Point
     {
         Point (x: ls.x - rs.x, y: ls.y - rs.y)
     }
     
-    public static prefix func - (pt: Point) -> Point
+    static prefix func - (pt: Point) -> Point
     {
         Point (x: -pt.x, y: -pt.y)
     }
-    
-    func toNative () -> sk_point_t
-    {
-        sk_point_t(x: x, y: y)
-    }
 }
 
-public struct IPoint : Equatable {
-    public init(x: Int32, y: Int32) {
-        self.x = x
-        self.y = y
-    }
+public typealias IPoint = sk_ipoint_t
+public extension IPoint {
+    var length : Float { sqrtf(Float (x*x+y*y)) }
     
-    public var x, y: Int32
-    public var length : Float { sqrtf(Float (x*x+y*y)) }
-    
-    public mutating func offset (dx: Int32, dy: Int32)
+    mutating func offset (dx: Int32, dy: Int32)
     {
         x = x + dx
         y = y + dy
     }
     
-    public mutating func offset (point: IPoint)
+    mutating func offset (point: IPoint)
     {
         x = x + point.x
         y = y + point.y
     }
         
-    public static func + (ls: IPoint, rs: IPoint) -> IPoint
+    static func + (ls: IPoint, rs: IPoint) -> IPoint
     {
         IPoint (x: ls.x + rs.x, y: ls.y + rs.y)
     }
 
-    public static func - (ls: IPoint, rs: IPoint) -> IPoint
+    static func - (ls: IPoint, rs: IPoint) -> IPoint
     {
         IPoint (x: ls.x - rs.x, y: ls.y - rs.y)
     }
     
-    public static prefix func - (pt: IPoint) -> IPoint
+    static prefix func - (pt: IPoint) -> IPoint
     {
         IPoint (x: -pt.x, y: -pt.y)
     }
@@ -166,30 +151,16 @@ public struct Rect : Equatable {
     
 }
 
-public struct IRect : Equatable {
-    var left, top, right, bottom: Int32
-    
-    public init(left: Int32, top: Int32, right: Int32, bottom: Int32) {
-        self.left = left
-        self.top = top
-        self.right = right
-        self.bottom = bottom
+public typealias IRect = sk_irect_t
+public extension IRect {
+    init (x: Int32, y: Int32, width: Int32, height: Int32)
+    {
+        self.init(left: x, top: y, right: x+width, bottom: y+height)
     }
     
-    public init (x: Int32, y: Int32, width: Int32, height: Int32)
+    init (width: Int32, height: Int32)
     {
-        self.left = x
-        self.top = y
-        self.right = x + width
-        self.bottom = y + height
-    }
-    
-    public init (width: Int32, height: Int32)
-    {
-        self.left = 0
-        self.top = 0
-        self.right = width
-        self.bottom = height
+        self.init(left: 0, top: 0, right: width, bottom: height)
     }
     
     var midX : Int32 { left + (right - left) / 2}
@@ -197,7 +168,7 @@ public struct IRect : Equatable {
     var width: Int32 { right - left }
     var height: Int32 { bottom - top }
     
-    public static func ceiling (value: Rect, outwards: Bool) -> IRect {
+    static func ceiling (value: Rect, outwards: Bool) -> IRect {
         var x, y, r, b : Int32
 
         x = Int32 ((outwards && value.width > 0) ? floor (Float (value.left)) : ceil (Float (value.left)));
@@ -208,17 +179,7 @@ public struct IRect : Equatable {
         return IRect (left: x, top: y, right: r, bottom: b)
     }
     
-    static func fromNative (_ x: sk_irect_t) -> IRect
-    {
-        return IRect (left: x.left, top: x.top, right: x.right, bottom: x.bottom)
-    }
-    
-    func toNative () -> sk_irect_t
-    {
-        sk_irect_t(left: left, top: top, right: right, bottom: bottom)
-    }
-    
-    public var isEmpty: Bool {
+    var isEmpty: Bool {
         get {
             return left == 0 && top == 0 && right == 0 && bottom == 0
         }

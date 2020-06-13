@@ -131,7 +131,7 @@ public final class Image {
     public init? (data: SKData, subset: IRect? = nil)
     {
         if let sb = subset {
-            var sub = sb.toNative()
+            var sub = sb
             
             if let x = sk_image_new_from_encoded(data.handle, &sub) {
                 handle = x
@@ -462,7 +462,7 @@ public final class Image {
      * - Returns: partial or full `Image`, or `nil`
      */
     public func subset (_ subset: IRect) -> Image? {
-        var r = subset.toNative()
+        var r = subset
         if let x = sk_image_make_subset(handle, &r) {
             return Image (handle: x)
         } else {

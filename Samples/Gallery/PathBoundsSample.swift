@@ -38,7 +38,8 @@ struct samplePathBounds : Sample {
         paint.color = Colors.darkBlue
         canvas.drawRect(rect, paint)
         
-        canvas.drawText(text: "Bounds", x: rect.left, y: rect.bottom + paint.textSize + 10, paint: textPaint)
+        var font = Font()
+        canvas.draw(text: "Bounds", x: rect.left, y: rect.bottom + font.size, font: font)
         
         // move for next curve
         path.offset (Point (x: 100, y: 0))
@@ -50,7 +51,7 @@ struct samplePathBounds : Sample {
         if let rect = path.getTightBounds() {
             paint.color = Colors.darkBlue
             canvas.drawRect(rect, paint)
-            canvas.drawText("TightBounds", rect.left, rect.bottom + paint.textSize, paint: textPaint)
+            canvas.draw(text: "TightBounds", x: rect.left, y: rect.bottom + font.size, font: font)
         }
     }
 }

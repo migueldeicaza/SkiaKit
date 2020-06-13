@@ -38,6 +38,28 @@
     #endif
 #endif
 
+#if defined(_WIN32)
+    // On Windows, Vulkan commands use the stdcall convention
+    #define VKAPI_ATTR
+    #define VKAPI_CALL __stdcall
+    #define VKAPI_PTR  VKAPI_CALL
+#elif defined(__ANDROID__) && defined(__ARM_ARCH) && __ARM_ARCH < 7
+    #error "Vulkan isn't supported for the 'armeabi' NDK ABI"
+#elif defined(__ANDROID__) && defined(__ARM_ARCH) && __ARM_ARCH >= 7 && defined(__ARM_32BIT_STATE)
+    // On Android 32-bit ARM targets, Vulkan functions use the "hardfloat"
+    // calling convention, i.e. float parameters are passed in registers. This
+    // is true even if the rest of the application passes floats on the stack,
+    // as it does by default when compiling for the armeabi-v7a NDK ABI.
+    #define VKAPI_ATTR __attribute__((pcs("aapcs-vfp")))
+    #define VKAPI_CALL
+    #define VKAPI_PTR  VKAPI_ATTR
+#else
+    // On other platforms, use the default calling convention
+    #define VKAPI_ATTR
+    #define VKAPI_CALL
+    #define VKAPI_PTR
+#endif
+
 ///////////////////////////////////////////////////////////////////////////////////////
 
 SK_C_PLUS_PLUS_BEGIN_GUARD
@@ -55,6 +77,13 @@ typedef uint32_t sk_pmcolor_t;
 #define sk_color_get_g(c)               (((c) >>  8) & 0xFF)
 #define sk_color_get_b(c)               (((c) >>  0) & 0xFF)
 
+typedef struct sk_color4f_t {
+    float fR;
+    float fG;
+    float fB;
+    float fA;
+} sk_color4f_t;
+
 typedef enum {
     UNKNOWN_SK_COLORTYPE = 0,
     ALPHA_8_SK_COLORTYPE,
@@ -66,7 +95,17 @@ typedef enum {
     RGBA_1010102_SK_COLORTYPE,
     RGB_101010X_SK_COLORTYPE,
     GRAY_8_SK_COLORTYPE,
+    RGBA_F16_NORM_SK_COLORTYPE,
     RGBA_F16_SK_COLORTYPE,
+    RGBA_F32_SK_COLORTYPE,
+
+    // READONLY
+    R8G8_UNORM_SK_COLORTYPE,
+    A16_FLOAT_SK_COLORTYPE,
+    R16G16_FLOAT_SK_COLORTYPE,
+    A16_UNORM_SK_COLORTYPE,
+    R16G16_UNORM_SK_COLORTYPE,
+    R16G16B16A16_UNORM_SK_COLORTYPE,
 } sk_colortype_t;
 
 typedef enum {
@@ -112,59 +151,6 @@ typedef struct {
     float   bottom;
 } sk_rect_t;
 
-/**
-    The sk_matrix_t struct holds a 3x3 perspective matrix for
-    transforming coordinates:
-
-        (X,Y) = T[M]((x,y))
-        X = (M[0] * x + M[1] * y + M[2]) / (M[6] * x + M[7] * y + M[8]);
-        Y = (M[3] * x + M[4] * y + M[5]) / (M[6] * x + M[7] * y + M[8]);
-
-    Therefore, the identity matrix is
-
-        sk_matrix_t identity = {{1, 0, 0,
-                                 0, 1, 0,
-                                 0, 0, 1}};
-
-    A matrix that scales by sx and sy is:
-
-        sk_matrix_t scale = {{sx, 0,  0,
-                              0,  sy, 0,
-                              0,  0,  1}};
-
-    A matrix that translates by tx and ty is:
-
-        sk_matrix_t translate = {{1, 0, tx,
-                                  0, 1, ty,
-                                  0, 0, 1}};
-
-    A matrix that rotates around the origin by A radians:
-
-        sk_matrix_t rotate = {{cos(A), -sin(A), 0,
-                               sin(A),  cos(A), 0,
-                               0,       0,      1}};
-
-    Two matrixes can be concatinated by:
-
-         void concat_matrices(sk_matrix_t* dst,
-                             const sk_matrix_t* matrixU,
-                             const sk_matrix_t* matrixV) {
-            const float* u = matrixU->mat;
-            const float* v = matrixV->mat;
-            sk_matrix_t result = {{
-                    u[0] * v[0] + u[1] * v[3] + u[2] * v[6],
-                    u[0] * v[1] + u[1] * v[4] + u[2] * v[7],
-                    u[0] * v[2] + u[1] * v[5] + u[2] * v[8],
-                    u[3] * v[0] + u[4] * v[3] + u[5] * v[6],
-                    u[3] * v[1] + u[4] * v[4] + u[5] * v[7],
-                    u[3] * v[2] + u[4] * v[5] + u[5] * v[8],
-                    u[6] * v[0] + u[7] * v[3] + u[8] * v[6],
-                    u[6] * v[1] + u[7] * v[4] + u[8] * v[7],
-                    u[6] * v[2] + u[7] * v[5] + u[8] * v[8]
-            }};
-            *dst = result;
-        }
-*/
 typedef struct {
     float scaleX, skewX, transX;
     float skewY, scaleY, transY;
@@ -220,6 +206,7 @@ typedef struct sk_maskfilter_t sk_maskfilter_t;
     draw geometries, text and bitmaps.
 */
 typedef struct sk_paint_t sk_paint_t;
+typedef struct sk_font_t sk_font_t;
 /**
     A sk_path_t encapsulates compound (multiple contour) geometric
     paths consisting of straight line segments, quadratic curves, and
@@ -254,6 +241,9 @@ typedef struct sk_surface_t sk_surface_t;
     clipping areas for drawing.
 */
 typedef struct sk_region_t sk_region_t;
+typedef struct sk_region_iterator_t sk_region_iterator_t;
+typedef struct sk_region_cliperator_t sk_region_cliperator_t;
+typedef struct sk_region_spanerator_t sk_region_spanerator_t;
 
 typedef enum {
     CLEAR_SK_BLENDMODE,
@@ -380,12 +370,6 @@ typedef struct sk_wstream_dynamicmemorystream_t sk_wstream_dynamicmemorystream_t
    High-level API for creating a document-based canvas.
 */
 typedef struct sk_document_t sk_document_t;
-
-typedef enum {
-    UTF8_SK_ENCODING,
-    UTF16_SK_ENCODING,
-    UTF32_SK_ENCODING
-} sk_encoding_t;
 
 typedef enum {
     POINTS_SK_POINT_MODE,
@@ -519,17 +503,11 @@ typedef enum {
     NO_SK_CODEC_ZERO_INITIALIZED,
 } sk_codec_zero_initialized_t;
 
-typedef enum {
-    RESPECT_SK_TRANSFER_FUNCTION_BEHAVIOR,
-    IGNORE_SK_TRANSFER_FUNCTION_BEHAVIOR,
-} sk_transfer_function_behavior_t;
-
 typedef struct {
     sk_codec_zero_initialized_t fZeroInitialized;
     sk_irect_t* fSubset;
     int fFrameIndex;
     int fPriorFrame;
-    sk_transfer_function_behavior_t fPremulBehavior;
 } sk_codec_options_t;
 
 typedef enum {
@@ -592,6 +570,7 @@ typedef enum {
     CLAMP_SK_SHADER_TILEMODE,
     REPEAT_SK_SHADER_TILEMODE,
     MIRROR_SK_SHADER_TILEMODE,
+    DECAL_SK_SHADER_TILEMODE,
 } sk_shader_tilemode_t;
 
 typedef enum {
@@ -618,11 +597,17 @@ typedef enum {
 } sk_paint_style_t;
 
 typedef enum {
-    NO_HINTING_SK_PAINT_HINTING,
-    SLIGHT_HINTING_SK_PAINT_HINTING,
-    NORMAL_HINTING_SK_PAINT_HINTING,
-    FULL_HINTING_SK_PAINT_HINTING,
-} sk_paint_hinting_t;
+    NONE_SK_FONT_HINTING,
+    SLIGHT_SK_FONT_HINTING,
+    NORMAL_SK_FONT_HINTING,
+    FULL_SK_FONT_HINTING,
+} sk_font_hinting_t;
+
+typedef enum {
+    ALIAS_SK_FONT_EDGING,
+    ANTIALIAS_SK_FONT_EDGING,
+    SUBPIXEL_ANTIALIAS_SK_FONT_EDGING,
+} sk_font_edging_t;
 
 typedef struct sk_colortable_t sk_colortable_t;
 
@@ -634,29 +619,12 @@ typedef enum {
 } gr_surfaceorigin_t;
 
 typedef enum {
-    UNKNOWN_GR_PIXEL_CONFIG,
-    ALPHA_8_GR_PIXEL_CONFIG,
-    GRAY_8_GR_PIXEL_CONFIG,
-    RGB_565_GR_PIXEL_CONFIG,
-    RGBA_4444_GR_PIXEL_CONFIG,
-    RGBA_8888_GR_PIXEL_CONFIG,
-    RGB_888_GR_PIXEL_CONFIG,
-    BGRA_8888_GR_PIXEL_CONFIG,
-    SRGBA_8888_GR_PIXEL_CONFIG,
-    SBGRA_8888_GR_PIXEL_CONFIG,
-    RGBA_1010102_GR_PIXEL_CONFIG,
-    RGBA_FLOAT_GR_PIXEL_CONFIG,
-    RG_FLOAT_GR_PIXEL_CONFIG,
-    ALPHA_HALF_GR_PIXEL_CONFIG,
-    RGBA_HALF_GR_PIXEL_CONFIG,
-} gr_pixelconfig_t;
-
-typedef enum {
-    BW_SK_MASK_FORMAT,             //!< 1bit per pixel mask (e.g. monochrome)
-    A8_SK_MASK_FORMAT,             //!< 8bits per pixel mask (e.g. antialiasing)
-    THREE_D_SK_MASK_FORMAT,        //!< 3 8bit per pixl planes: alpha, mul, add
-    ARGB32_SK_MASK_FORMAT,         //!< SkPMColor
-    LCD16_SK_MASK_FORMAT,          //!< 565 alpha for r/g/b
+    BW_SK_MASK_FORMAT,
+    A8_SK_MASK_FORMAT,
+    THREE_D_SK_MASK_FORMAT,
+    ARGB32_SK_MASK_FORMAT,
+    LCD16_SK_MASK_FORMAT,
+    SDF_SK_MASK_FORMAT,
 } sk_mask_format_t;
 
 typedef struct {
@@ -675,6 +643,7 @@ typedef struct gr_context_t gr_context_t;
 
 typedef enum {
     METAL_GR_BACKEND,
+    DAWN_GR_BACKEND,
     OPENGL_GR_BACKEND,
     VULKAN_GR_BACKEND,
 } gr_backend_t;
@@ -696,6 +665,81 @@ typedef struct {
     unsigned int fFBOID;
     unsigned int fFormat;
 } gr_gl_framebufferinfo_t;
+
+typedef struct vk_instance_t vk_instance_t;
+typedef struct gr_vkinterface_t gr_vkinterface_t;
+typedef struct vk_physical_device_t vk_physical_device_t;
+typedef struct vk_physical_device_features_t vk_physical_device_features_t;
+typedef struct vk_physical_device_features_2_t vk_physical_device_features_2_t;
+typedef struct vk_device_t vk_device_t;
+typedef struct vk_queue_t vk_queue_t;
+
+typedef struct gr_vk_extensions_t gr_vk_extensions_t;
+typedef struct gr_vk_memory_allocator_t gr_vk_memory_allocator_t;
+
+typedef VKAPI_ATTR void (VKAPI_CALL *gr_vk_func_ptr)(void);
+typedef gr_vk_func_ptr (*gr_vk_get_proc)(void* ctx, const char* name, vk_instance_t* instance, vk_device_t* device);
+
+typedef struct {
+    vk_instance_t*                          fInstance;
+    vk_physical_device_t*                   fPhysicalDevice;
+    vk_device_t*                            fDevice;
+    vk_queue_t*                             fQueue;
+    uint32_t                                fGraphicsQueueIndex;
+    uint32_t                                fMinAPIVersion;
+    uint32_t                                fInstanceVersion;
+    uint32_t                                fMaxAPIVersion;
+    uint32_t                                fExtensions;
+    const gr_vk_extensions_t*               fVkExtensions;
+    uint32_t                                fFeatures;
+    const vk_physical_device_features_t*    fDeviceFeatures;
+    const vk_physical_device_features_2_t*  fDeviceFeatures2;
+    gr_vk_memory_allocator_t*               fMemoryAllocator;
+    gr_vk_get_proc                          fGetProc;
+    void*                                   fGetProcUserData;
+    bool                                    fOwnsInstanceAndDevice;
+    bool                                    fProtectedContext;
+} gr_vk_backendcontext_t;
+
+typedef intptr_t gr_vk_backendmemory_t;
+
+typedef struct {
+    uint64_t               fMemory;
+    uint64_t               fOffset;
+    uint64_t               fSize;
+    uint32_t               fFlags;
+    gr_vk_backendmemory_t  fBackendMemory;
+    bool                   _private_fUsesSystemHeap;
+} gr_vk_alloc_t;
+
+typedef struct {
+    uint32_t  fFormat;
+    uint64_t  fExternalFormat;
+    uint32_t  fYcbcrModel;
+    uint32_t  fYcbcrRange;
+    uint32_t  fXChromaOffset;
+    uint32_t  fYChromaOffset;
+    uint32_t  fChromaFilter;
+    uint32_t  fForceExplicitReconstruction;
+    uint32_t  fFormatFeatures;
+} gr_vk_ycbcrconversioninfo_t;
+
+typedef struct {
+    uint64_t                        fImage;
+    gr_vk_alloc_t                   fAlloc;
+    uint32_t                        fImageTiling;
+    uint32_t                        fImageLayout;
+    uint32_t                        fFormat;
+    uint32_t                        fLevelCount;
+    uint32_t                        fCurrentQueueFamily;
+    bool                            fProtected;
+    gr_vk_ycbcrconversioninfo_t     fYcbcrConversionInfo;
+} gr_vk_imageinfo_t;
+
+typedef struct vk_instance_t vk_instance_t;
+typedef struct vk_physical_device_t vk_physical_device_t;
+typedef struct vk_device_t vk_device_t;
+typedef struct vk_queue_t vk_queue_t;
 
 typedef enum {
     DIFFERENCE_SK_PATHOP,
@@ -745,6 +789,8 @@ typedef void (*sk_image_raster_release_proc)(const void* addr, void* context);
 typedef void (*sk_image_texture_release_proc)(void* context);
 
 typedef void (*sk_surface_raster_release_proc)(void* addr, void* context);
+
+typedef void (*sk_glyph_path_proc)(const sk_path_t* pathOrNull, const sk_matrix_t* matrix, void* context);
 
 typedef enum {
     ALLOW_SK_IMAGE_CACHING_HINT,
@@ -818,32 +864,7 @@ typedef enum {
 
 typedef struct sk_vertices_t sk_vertices_t;
 
-typedef enum {
-    LINEAR_SK_GAMMA_NAMED,
-    SRGB_SK_GAMMA_NAMED,
-    TWO_DOT_TWO_CURVE_SK_GAMMA_NAMED,
-    NON_STANDARD_SK_GAMMA_NAMED,
-} sk_gamma_named_t;
-
-typedef enum {
-    RGB_SK_COLORSPACE_TYPE,
-    CMYK_SK_COLORSPACE_TYPE,
-    GRAY_SK_COLORSPACE_TYPE,
-} sk_colorspace_type_t;
-
-typedef enum {
-    LINEAR_SK_COLORSPACE_RENDER_TARGET_GAMMA,
-    SRGB_SK_COLORSPACE_RENDER_TARGET_GAMMA,
-} sk_colorspace_render_target_gamma_t;
-
-typedef enum {
-    SRGB_SK_COLORSPACE_GAMUT,
-    ADOBE_RGB_SK_COLORSPACE_GAMUT,
-    DCIP3_D65_SK_COLORSPACE_GAMUT,
-    REC2020_SK_COLORSPACE_GAMUT,
-} sk_colorspace_gamut_t;
-
-typedef struct {
+typedef struct sk_colorspace_transfer_fn_t {
     float fG;
     float fA;
     float fB;
@@ -853,7 +874,7 @@ typedef struct {
     float fF;
 } sk_colorspace_transfer_fn_t;
 
-typedef struct {
+typedef struct sk_colorspace_primaries_t {
     float fRX;
     float fRY;
     float fGX;
@@ -862,7 +883,21 @@ typedef struct {
     float fBY;
     float fWX;
     float fWY;
-} sk_colorspaceprimaries_t;
+} sk_colorspace_primaries_t;
+
+typedef struct sk_colorspace_xyz_t {
+    float fM00;
+    float fM01;
+    float fM02;
+    float fM10;
+    float fM11;
+    float fM12;
+    float fM20;
+    float fM21;
+    float fM22;
+} sk_colorspace_xyz_t;
+
+typedef struct sk_colorspace_icc_profile_t sk_colorspace_icc_profile_t;
 
 typedef enum {
     NO_INVERT_SK_HIGH_CONTRAST_CONFIG_INVERT_STYLE,
@@ -893,7 +928,6 @@ typedef enum {
 typedef struct {
     sk_pngencoder_filterflags_t fFilterFlags;
     int fZLibLevel;
-    sk_transfer_function_behavior_t fUnpremulBehavior;
     void* fComments;
 } sk_pngencoder_options_t;
 
@@ -912,7 +946,6 @@ typedef struct {
     int fQuality;
     sk_jpegencoder_downsample_t fDownsample;
     sk_jpegencoder_alphaoption_t fAlphaOption;
-    sk_transfer_function_behavior_t fBlendBehavior;
 } sk_jpegencoder_options_t;
 
 typedef enum {
@@ -923,8 +956,8 @@ typedef enum {
 typedef struct {
     sk_webpencoder_compression_t fCompression;
     float fQuality;
-    sk_transfer_function_behavior_t fUnpremulBehavior;
 } sk_webpencoder_options_t;
+
 typedef struct sk_rrect_t sk_rrect_t;
 
 typedef enum {
@@ -952,6 +985,13 @@ typedef struct {
     void* utf8text;
     void* clusters;
 } sk_textblob_builder_runbuffer_t;
+
+typedef struct {
+    float fSCos;
+    float fSSin;
+    float fTX;
+    float fTY;
+} sk_rsxform_t;
 
 SK_C_PLUS_PLUS_END_GUARD
 

@@ -146,27 +146,27 @@ public final class Bitmap {
     
     public func erase (_ color: Color, rect: IRect)
     {
-        var r = rect.toNative()
+        var r = rect
         
         sk_bitmap_erase_rect (handle, color.color, &r)
     }
     
-    public func getAddr8 (x: Int32, y: Int32) -> UInt8
+    public func getAddr8 (x: Int32, y: Int32) -> UnsafeMutablePointer<UInt8>!
     {
         sk_bitmap_get_addr_8(handle, x, y)
     }
     
-    public func getAddr16 (x: Int32, y: Int32) -> UInt16
+    public func getAddr16 (x: Int32, y: Int32) -> UnsafeMutablePointer<UInt16>!
     {
         sk_bitmap_get_addr_16(handle, x, y)
     }
     
-    public func getAddr32 (x: Int32, y: Int32) -> UInt32
+    public func getAddr32 (x: Int32, y: Int32) -> UnsafeMutablePointer<UInt32>!
     {
         sk_bitmap_get_addr_32(handle, x, y)
     }
     
-    public func getAddr64 (x: Int32, y: Int32) -> UnsafeMutableRawPointer?
+    public func getAddr64 (x: Int32, y: Int32) -> UnsafeMutableRawPointer!
     {
         sk_bitmap_get_addr (handle, x, y)
     }
@@ -174,11 +174,6 @@ public final class Bitmap {
     public func getPixel (x: Int32, y: Int32) -> Color
     {
         Color (sk_bitmap_get_pixel_color(handle, x, y))
-    }
-    
-    public func setPixel (x: Int32, y: Int32, value: Color)
-    {
-        sk_bitmap_set_pixel_color(handle, x, y, value.color)
     }
     
     public func canCopy (to colorType: ColorType) -> Bool
