@@ -51,7 +51,7 @@ struct sampleDraw : Sample {
         let font = Font()
         let paint = Paint()
         font.size = 64
-        canvas.draw (text: "text", x: 150, y: 175, font: font)
+        canvas.draw (text: "text", x: 150, y: 175, font: font, paint: paint)
         paint.strokeWidth = 10
         paint.color = Colors.green
         paint.style = .stroke

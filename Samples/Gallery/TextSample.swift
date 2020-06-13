@@ -22,7 +22,7 @@ struct sampleText : Sample {
         paint.color = Color (0xff4281a4)
         paint.isStroke = false
         
-        canvas.draw (text: "SkiaKit", x: Float (width/2), y: 64, font: font)
+        canvas.draw (text: "SkiaKit", x: Float (width/2), y: 64, font: font, paint: paint)
         
         paint = Paint()
         paint.isAntialias = true
@@ -31,7 +31,7 @@ struct sampleText : Sample {
         paint.strokeWidth = 3
         //paint.textAlign = .center
         
-        canvas.draw (text: "SkiaKit", x: Float (width/2), y: 144, font: font)
+        canvas.draw (text: "SkiaKit", x: Float (width/2), y: 144, font: font, paint: paint)
 
         paint = Paint()
         
@@ -40,7 +40,7 @@ struct sampleText : Sample {
         font.scaleX = 1.5
         //paint.textAlign = .right
         
-        canvas.draw (text: "SkiaKit", x: Float (width/2), y: 224, font: font)
+        canvas.draw (text: "SkiaKit", x: Float (width/2), y: 224, font: font, paint: paint)
 
     }
 }

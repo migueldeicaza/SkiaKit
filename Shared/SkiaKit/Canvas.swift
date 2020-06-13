@@ -668,12 +668,13 @@ public final class Canvas {
      - Parameter text: The text to draw.
      - Parameter x:The x-coordinate of the origin of the text being drawn.
      - Parameter y: The y-coordinate of the origin of the text being drawn.
+     - Parameter font: the font used to set the `text`
      - Parameter paint: The paint to use when drawing the text.
      */
-    public func draw (text: String, x: Float, y: Float, font: Font)
+    public func draw (text: String, x: Float, y: Float, font: Font, paint: Paint)
     {
         if let tb = TextBlob(str: text, font: font) {
-            sk_canvas_draw_text_blob(handle, tb.handle, x, y, font.handle)
+            sk_canvas_draw_text_blob(handle, tb.handle, x, y, paint.handle)
         }
     }
 
@@ -700,9 +701,9 @@ public final class Canvas {
      *
      * example: https://fiddle.skia.org/c/@Canvas_drawTextBlob
      */
-    public func draw (textBlob: TextBlob, x: Float, y: Float, font: Font)
+    public func draw (textBlob: TextBlob, x: Float, y: Float, paint: Paint)
     {
-        sk_canvas_draw_text_blob(handle, textBlob.handle, x, y, font.handle)
+        sk_canvas_draw_text_blob(handle, textBlob.handle, x, y, paint.handle)
     }
     
 //    public func drawPositionedText (_ text: String, _ points: [Point], _ paint: Paint)
