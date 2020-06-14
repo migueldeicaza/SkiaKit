@@ -224,10 +224,10 @@ public final class Pixmap {
      * - Parameter srcY: row index whose absolute value is less than height()
      * - Returns: true if pixels are copied to dstPixels, or `false` if the pixel convesion is not possible, or if width/height is zero or negative, or abs(srcX) >= Pixmap width(), or if abs(srcY) >= Pixmap height().
      */
-    public func readPixels (dstInfo: ImageInfo, dstPixels: UnsafeMutableRawPointer, dstRowBytes: Int, srcX: Int32 = 0, srcY: Int32 = 0, behavior: TransferFunctionBehavior = .respect) -> Bool
+    public func readPixels (dstInfo: ImageInfo, dstPixels: UnsafeMutableRawPointer, dstRowBytes: Int, srcX: Int32 = 0, srcY: Int32 = 0) -> Bool
     {
         var cinfo = dstInfo.toNative()
-        return sk_pixmap_read_pixels(handle, &cinfo, dstPixels, dstRowBytes, srcX, srcY, behavior.toNative ())
+        return sk_pixmap_read_pixels(handle, &cinfo, dstPixels, dstRowBytes, srcX, srcY)
     }
     
     /**
@@ -250,7 +250,7 @@ public final class Pixmap {
      */
     public func readPixels (into: Pixmap, srcX: Int32 = 0, srcY: Int32 = 0) -> Bool
     {
-        readPixels(dstInfo: into.info, dstPixels: UnsafeMutableRawPointer (mutating: into.pixels), dstRowBytes: into.rowBytes, srcX: srcX, srcY: srcY, behavior: .respect)
+        readPixels(dstInfo: into.info, dstPixels: UnsafeMutableRawPointer (mutating: into.pixels), dstRowBytes: into.rowBytes, srcX: srcX, srcY: srcY)
     }
     
     /**
@@ -307,7 +307,7 @@ public final class Pixmap {
 
     public func extract (into: Pixmap, subset: IRect) -> Bool
     {
-        var ir = subset.toNative()
+        var ir = subset
         return sk_pixmap_extract_subset(handle, into.handle, &ir)
     }
 
@@ -318,7 +318,7 @@ public final class Pixmap {
     
     public func erase (_ color: Color, _ rect: IRect)
     {
-        var r = rect.toNative()
+        var r = rect
         sk_pixmap_erase_color(handle, color.color, &r)
     }
     
@@ -337,4 +337,8 @@ public final class Pixmap {
     {
         return Pixmap (info: info.withAlphaType(alphaType), addr: pixels, rowBytes: rowBytes)
     }
+    
+    //sk_pixmap_erase_color4f
+    //sk_pixmap_get_writable_addr
+
 }

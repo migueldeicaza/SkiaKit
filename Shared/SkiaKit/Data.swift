@@ -94,4 +94,10 @@ public final class SKData {
             sk_data_get_data(handle)
         }
     }
+    
+    //sk_data_get_bytes
+    //sk_data_new_from_stream
+    //sk_data_new_with_proc
+    //sk_data_ref
+
 }

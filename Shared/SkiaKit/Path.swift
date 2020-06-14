@@ -132,7 +132,7 @@ public final class Path {
             var rect: sk_rect_t = sk_rect_t()
             
             sk_path_get_bounds(handle, &rect)
-            return Rect.fromNative(rect)
+            return rect
         }
     }
     
@@ -163,7 +163,7 @@ public final class Path {
     {
         var ret = sk_rect_t ()
         if sk_pathop_tight_bounds(handle, &ret) {
-            return Rect.fromNative(ret)
+            return ret
         }
         return nil
     }
@@ -172,7 +172,7 @@ public final class Path {
     {
         var ret = sk_rect_t ()
         if sk_path_is_oval(handle, &ret) {
-            return Rect.fromNative(ret)
+            return ret
         }
         return nil
     }
@@ -203,7 +203,7 @@ public final class Path {
         
         sk_path_is_rect(handle, &rect, &isClosed, &dir)
         
-        return (Rect.fromNative(rect), isClosed, dir.rawValue == 0 ? .clockwise : .counterClockwise)
+        return (rect, isClosed, dir.rawValue == 0 ? .clockwise : .counterClockwise)
     }
     
     /**
@@ -460,7 +460,7 @@ public final class Path {
     @discardableResult
     public func arcTo (oval: Rect, startAngle: Float, sweepAngle: Float, forceMoveTo: Bool) -> Path
     {
-        var o = oval.toNative()
+        var o = oval
         sk_path_arc_to_with_oval(handle, &o, startAngle, sweepAngle, forceMoveTo)
         return self
     }
@@ -537,7 +537,7 @@ public final class Path {
     @discardableResult
     public func addRect (_ rect: Rect, direction: Direction = .clockwise) -> Path
     {
-        var r = rect.toNative()
+        var r = rect
         sk_path_add_rect(handle, &r, direction.toNative())
         return self
     }
@@ -555,7 +555,7 @@ public final class Path {
     @discardableResult
     public func addRect (_ rect: Rect, direction: Direction = .clockwise, start: UInt32) -> Path
     {
-        var r = rect.toNative()
+        var r = rect
         sk_path_add_rect_start(handle, &r, direction.toNative(), start)
         return self
     }
@@ -614,7 +614,7 @@ public final class Path {
     @discardableResult
     public func addOval (_ rect: Rect, direction: Direction = .clockwise) -> Path
     {
-        var m = rect.toNative()
+        var m = rect
         sk_path_add_oval(handle, &m, direction.toNative())
         return self
     }
@@ -635,7 +635,7 @@ public final class Path {
     @discardableResult
     public func addArc (_ rect: Rect, startAngle: Float, sweepAngle: Float) -> Path
     {
-        var m = rect.toNative()
+        var m = rect
         sk_path_add_arc(handle, &m, startAngle, sweepAngle)
         return self
     }
@@ -698,7 +698,7 @@ public final class Path {
     {
         var p : [sk_point_t] = []
         for x in points {
-            p.append(x.toNative())
+            p.append(x)
         }
         sk_path_add_poly(handle, &p, Int32 (p.count), close)
         return self
@@ -903,5 +903,39 @@ public final class Path {
             return Op.init(rawValue: x.rawValue)!
         }
     }
+    //sk_opbuilder_add
+    //sk_opbuilder_destroy
+    //sk_opbuilder_new
+    //sk_opbuilder_resolve
+    //sk_path_add_path
+    //sk_path_add_path_matrix
+    //sk_path_add_path_offset
+    //sk_path_add_rounded_rect
+    //sk_path_clone
+    //sk_path_compute_tight_bounds
+    //sk_path_convert_conic_to_quads
+    //sk_path_create_iter
+    //sk_path_create_rawiter
+    //sk_path_iter_conic_weight
+    //sk_path_iter_destroy
+    //sk_path_iter_is_close_line
+    //sk_path_iter_is_closed_contour
+    //sk_path_iter_next
+    //sk_path_rawiter_conic_weight
+    //sk_path_rawiter_destroy
+    //sk_path_rawiter_next
+    //sk_path_rawiter_peek
+    //sk_path_transform_to_dest
+    //sk_pathmeasure_destroy
+    //sk_pathmeasure_get_length
+    //sk_pathmeasure_get_matrix
+    //sk_pathmeasure_get_pos_tan
+    //sk_pathmeasure_get_segment
+    //sk_pathmeasure_is_closed
+    //sk_pathmeasure_new
+    //sk_pathmeasure_new_with_path
+    //sk_pathmeasure_next_contour
+    //sk_pathmeasure_set_path
+    //sk_pathop_as_winding
 
 }

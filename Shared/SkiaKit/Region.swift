@@ -29,21 +29,6 @@ public final class Region {
     {
         handle = sk_region_new()
     }
-
-    /**
-     * Constructs a copy of an existing region.
-     * Copy constructor makes two regions identical by value. Internally, region and
-     * the returned result share pointer values. The underlying `Rect` array is
-     * copied when modified.
-     * Creating a `Region` copy is very efficient and never allocates memory.
-     * `Region` are always copied by value from the interface; the underlying shared
-     * pointers are not exposed.
-     * - Parameter region: `Region` to copy by value
-     */
-    public init (region: Region)
-    {
-        handle = sk_region_new2(region.handle)
-    }
     
     public convenience init (rect: IRect)
     {
@@ -66,7 +51,7 @@ public final class Region {
     @discardableResult
     public func setRect (_ rect: IRect) -> Bool
     {
-        var r = rect.toNative()
+        var r = rect
         return sk_region_set_rect(handle, &r)
     }
     
@@ -108,27 +93,10 @@ public final class Region {
      */
     public func op (rect: IRect, op: RegionOperation) -> Bool
     {
-        sk_region_op(handle, rect.left, rect.top, rect.right, rect.bottom, op.toNative ())
+        var r = rect
+        return sk_region_op_rect (handle, &r, op.toNative ())
     }
 
-    /**
-     * Replaces `Region` with the result of `Region` op rgn.
-     * Returns true if replaced `Region` is not empty.
-     * - Parameter rgn: `Region` operand
-     * - Parameter op: operator to apply
-     * - Returns: false if result is empty
-     */
-    public func op (region: Region, op: RegionOperation) -> Bool
-    {
-        sk_region_op2(handle, region.handle, op.toNative ())
-    }
-
-    public func op (path: Path, op inop: RegionOperation) -> Bool
-    {
-        let p = Region (path: path)
-        return op (region: p, op: inop)
-    }
-    
     deinit {
         sk_region_delete(handle)
     }
@@ -142,7 +110,7 @@ public final class Region {
             var r = sk_irect_t()
             
             sk_region_get_bounds(handle, &r)
-            return IRect.fromNative(r)
+            return r
         }
     }
     
@@ -169,8 +137,40 @@ public final class Region {
      * - Returns: true if rect and `Region` have area in common
      */
     public func intersects (rect: IRect) -> Bool {
-        var r = rect.toNative()
+        var r = rect
         return sk_region_intersects_rect(handle, &r);
     }
+    //sk_region_cliperator_delete
+    //sk_region_cliperator_done
+    //sk_region_cliperator_new
+    //sk_region_cliperator_next
+    //sk_region_cliperator_rect
+    //sk_region_cliperator_t
+    //sk_region_contains_point
+    //sk_region_contains_rect
+    //sk_region_get_boundary_path
+    //sk_region_is_complex
+    //sk_region_is_empty
+    //sk_region_is_rect
+    //sk_region_iterator_delete
+    //sk_region_iterator_done
+    //sk_region_iterator_new
+    //sk_region_iterator_next
+    //sk_region_iterator_rect
+    //sk_region_iterator_rewind
+    //sk_region_iterator_t
+    //sk_region_op
+    //sk_region_quick_contains
+    //sk_region_quick_reject
+    //sk_region_quick_reject_rect
+    //sk_region_set_empty
+    //sk_region_set_rects
+    //sk_region_set_region
+    //sk_region_spanerator_delete
+    //sk_region_spanerator_new
+    //sk_region_spanerator_next
+    //sk_region_spanerator_t
+    //sk_region_t
+    //sk_region_translate
 
 }

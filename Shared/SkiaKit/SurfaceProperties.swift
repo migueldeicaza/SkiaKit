@@ -40,4 +40,5 @@ public final class SurfaceProperties {
     
     /// The pixel geometry for the surface
     public var pixelGeometry: PixelGeometry { PixelGeometry.fromNative (sk_surfaceprops_get_pixel_geometry(handle)) }
+    //sk_surfaceprops_get_flags
 }

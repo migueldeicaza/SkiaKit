@@ -7,6 +7,7 @@
 
 import Foundation
 import SkiaKit
+import SwiftUI
 
 struct sampleXamagon : Sample {
     static var title = "Xamagon"
@@ -24,16 +25,8 @@ struct sampleXamagon : Sample {
 
         let imageWidth = imageRight - imageLeft
 
-        let scale = (Float ((height > width ? width : height)) / imageWidth) * paddingFactor
-
-        var translateX = ((imageLeft + imageRight) / -2.0)
-        translateX = translateX + (Float (width) / (scale * 0.5))
-        var translateY = ((imageBottom + imageTop) / -2.0)
-        translateY = translateY + (Float (height) / (scale * 0.5))
-
+        var scale = (Float ((height > width ? width : height)) / imageWidth) * paddingFactor
         canvas.scale (scale)
-        canvas.translate (dx: translateX, dy: translateY)
-
         let paint = Paint ()
         
         paint.isAntialias = true
@@ -94,5 +87,16 @@ struct sampleXamagon : Sample {
 
         paint.color = Colors.white
         canvas.drawPath(path, paint)
+    }
+}
+
+struct Xamarin_Preview: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            HStack {
+                Text ("")
+                SampleRender(sampleXamagon())
+            }
+        }
     }
 }

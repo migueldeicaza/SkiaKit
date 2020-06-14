@@ -19,6 +19,7 @@
 #include "sk_data.h"
 #include "sk_document.h"
 #include "sk_drawable.h"
+#include "sk_font.h"
 #include "sk_general.h"
 #include "sk_image.h"
 #include "sk_imagefilter.h"

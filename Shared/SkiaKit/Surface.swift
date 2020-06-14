@@ -213,4 +213,10 @@ public final class Surface {
         }
         return nil
     }
+    
+    //sk_surface_new_backend_texture
+    //sk_surface_new_backend_texture_as_render_target
+    //sk_surface_new_render_target
+    //sk_surface_unref
+
 }

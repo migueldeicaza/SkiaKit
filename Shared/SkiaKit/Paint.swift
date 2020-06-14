@@ -78,50 +78,50 @@ public final class Paint {
         }
     }
 
-    ///
-    /// Hinting adjusts the glyph outlines so that the shape provides a uniform
-    /// look at a given point size on font engines that support it. Hinting may have a
-    /// muted effect or no effect at all depending on the platform.
-    ///
-    /// The four levels roughly control corresponding features on platforms that use FreeType
-    /// as the font engine.
-    ///
-    ///
-    public enum Hinting : UInt32 {
-        /// Leaves glyph outlines unchanged from their native representation.
-        /// With FreeType, this is equivalent to the FT_LOAD_NO_HINTING
-        /// bit-field constant supplied to FT_Load_Glyph, which indicates that the vector
-        /// outline being loaded should not be fitted to the pixel grid but simply scaled
-        /// to 26.6 fractional pixels.
-        case noHinting = 0
-        /// Modifies glyph outlines minimally to improve constrast.
-        /// With FreeType, this is equivalent in spirit to the
-        /// FT_LOAD_TARGET_LIGHT value supplied to FT_Load_Glyph. It chooses a
-        /// lighter hinting algorithm for non-monochrome modes.
-        /// Generated glyphs may be fuzzy but better resemble their original shape.
-        case slight = 1
-        /// Modifies glyph outlines to improve constrast. This is the default.
-        /// With FreeType, this supplies FT_LOAD_TARGET_NORMAL to FT_Load_Glyph,
-        /// choosing the default hinting algorithm, which is optimized for standard
-        /// gray-level rendering.
-        case normal = 2
-        /// Modifies glyph outlines for maxiumum constrast. With FreeType, this selects
-        /// FT_LOAD_TARGET_LCD or FT_LOAD_TARGET_LCD_V if kLCDRenderText_Flag is set.
-        /// FT_LOAD_TARGET_LCD is a variant of FT_LOAD_TARGET_NORMAL optimized for
-        /// horizontally decimated LCD displays; FT_LOAD_TARGET_LCD_V is a
-        /// variant of FT_LOAD_TARGET_NORMAL optimized for vertically decimated LCD displays.
-        case full = 3
-        
-        internal func toNative () -> sk_paint_hinting_t
-        {
-            return sk_paint_hinting_t.init(rawValue)
-        }
-        
-        internal static func fromNative (_ x : sk_paint_hinting_t) -> Hinting
-        {
-            return Hinting.init(rawValue: x.rawValue)!
-        }
-    }
+//    /
+//    / Hinting adjusts the glyph outlines so that the shape provides a uniform
+//    / look at a given point size on font engines that support it. Hinting may have a
+//    / muted effect or no effect at all depending on the platform.
+//    /
+//    / The four levels roughly control corresponding features on platforms that use FreeType
+//    / as the font engine.
+//    /
+//    /
+//    public enum Hinting : UInt32 {
+//        /// Leaves glyph outlines unchanged from their native representation.
+//        /// With FreeType, this is equivalent to the FT_LOAD_NO_HINTING
+//        /// bit-field constant supplied to FT_Load_Glyph, which indicates that the vector
+//        /// outline being loaded should not be fitted to the pixel grid but simply scaled
+//        /// to 26.6 fractional pixels.
+//        case noHinting = 0
+//        /// Modifies glyph outlines minimally to improve constrast.
+//        /// With FreeType, this is equivalent in spirit to the
+//        /// FT_LOAD_TARGET_LIGHT value supplied to FT_Load_Glyph. It chooses a
+//        /// lighter hinting algorithm for non-monochrome modes.
+//        /// Generated glyphs may be fuzzy but better resemble their original shape.
+//        case slight = 1
+//        /// Modifies glyph outlines to improve constrast. This is the default.
+//        /// With FreeType, this supplies FT_LOAD_TARGET_NORMAL to FT_Load_Glyph,
+//        /// choosing the default hinting algorithm, which is optimized for standard
+//        /// gray-level rendering.
+//        case normal = 2
+//        /// Modifies glyph outlines for maxiumum constrast. With FreeType, this selects
+//        /// FT_LOAD_TARGET_LCD or FT_LOAD_TARGET_LCD_V if kLCDRenderText_Flag is set.
+//        /// FT_LOAD_TARGET_LCD is a variant of FT_LOAD_TARGET_NORMAL optimized for
+//        /// horizontally decimated LCD displays; FT_LOAD_TARGET_LCD_V is a
+//        /// variant of FT_LOAD_TARGET_NORMAL optimized for vertically decimated LCD displays.
+//        case full = 3
+//
+//        internal func toNative () -> sk_paint_hinting_t
+//        {
+//            return sk_paint_hinting_t.init(rawValue)
+//        }
+//
+//        internal static func fromNative (_ x : sk_paint_hinting_t) -> Hinting
+//        {
+//            return Hinting.init(rawValue: x.rawValue)!
+//        }
+//    }
 
     /// Cap draws at the beginning and end of an open path contour.
     public enum StrokeCap : UInt32 {
@@ -189,87 +189,6 @@ public final class Paint {
         }
         set {
             sk_paint_set_dither(handle, newValue)
-        }
-    }
-    
-    public var isVerticalText : Bool {
-        get {
-            sk_paint_is_verticaltext(handle)
-        }
-        set {
-            sk_paint_set_verticaltext(handle, newValue)
-        }
-    }
-    
-    public var isLinearText : Bool {
-        get {
-            sk_paint_is_linear_text(handle)
-        }
-        set {
-            sk_paint_set_linear_text(handle, newValue)
-        }
-    }
-
-    public var subpixelText : Bool {
-        get {
-            sk_paint_is_subpixel_text(handle)
-        }
-        set {
-            sk_paint_set_subpixel_text(handle, newValue)
-        }
-    }
-
-    public var lcdRenderedText : Bool {
-        get {
-            sk_paint_is_lcd_render_text(handle)
-        }
-        set {
-            sk_paint_set_lcd_render_text(handle, newValue)
-        }
-    }
-
-    public var isEmbeddedBitmapText  : Bool {
-        get {
-            sk_paint_is_embedded_bitmap_text(handle)
-        }
-        set {
-            sk_paint_set_embedded_bitmap_text(handle, newValue)
-        }
-    }
-    
-    public var isAutohinted : Bool {
-        get {
-            sk_paint_is_autohinted(handle)
-        }
-        set {
-            sk_paint_set_autohinted (handle, newValue)
-        }
-    }
-    
-    public var fakeBoldText : Bool {
-        get {
-            sk_paint_is_fake_bold_text(handle)
-        }
-        set {
-            sk_paint_set_fake_bold_text (handle, newValue)
-        }
-    }
-    
-    public var hintingLevel : Hinting {
-        get {
-            Hinting.fromNative (sk_paint_get_hinting(handle))
-        }
-        set {
-            sk_paint_set_hinting(handle, newValue.toNative())
-        }
-    }
-    
-    public var deviceKerningEnabled : Bool {
-        get {
-            sk_paint_is_dev_kern_text(handle)
-        }
-        set {
-            sk_paint_set_dev_kern_text(handle, newValue)
         }
     }
     
@@ -388,60 +307,6 @@ public final class Paint {
         }
     }
     
-    public var typeface : Typeface {
-        get {
-            Typeface (handle: sk_paint_get_typeface(handle), owns: true)
-        }
-        set {
-            sk_paint_set_typeface(handle, newValue.handle)
-        }
-    }
-    
-    public var textSize : Float {
-        get {
-            sk_paint_get_textsize(handle)
-        }
-        set {
-            sk_paint_set_textsize(handle, newValue)
-        }
-    }
-    
-    public var textAlign : TextAlign {
-        get {
-            TextAlign.fromNative (sk_paint_get_text_align(handle))
-        }
-        set {
-            sk_paint_set_text_align(handle, newValue.toNative())
-        }
-    }
-    
-    public var textEncoding : TextEncoding {
-        get {
-            TextEncoding.fromNative (sk_paint_get_text_encoding(handle))
-        }
-        set {
-            sk_paint_set_text_encoding(handle, newValue.toNative())
-        }
-    }
-    
-    public var textScaleX : Float {
-        get {
-            sk_paint_get_text_scale_x(handle)
-        }
-        set {
-            sk_paint_set_text_scale_x(handle, newValue)
-        }
-    }
-    
-    public var textSkewX : Float {
-        get {
-            sk_paint_get_text_skew_x(handle)
-        }
-        set {
-            sk_paint_set_text_skew_x(handle, newValue)
-        }
-    }
-    
     public var pathEffect : PathEffect {
         get {
             PathEffect (handle: sk_paint_get_path_effect(handle))
@@ -451,29 +316,29 @@ public final class Paint {
         }
     }
     
-    public var fontSpacing : Float {
-        get {
-            sk_paint_get_fontmetrics(handle, nil, 0)
-        }
-    }
-    
-    public var fontMetrics : sk_fontmetrics_t {
-        get {
-            let ptr = UnsafeMutablePointer<sk_fontmetrics_t>.allocate(capacity: 1)
-            sk_paint_get_fontmetrics(handle, ptr, 0)
-            
-            return ptr.pointee
-        }
-    }
-    
-    public func getFontMetrics (metrics : inout sk_fontmetrics_t, scale: Float = 0) -> Float
-    {
-        let ptr = UnsafeMutablePointer<sk_fontmetrics_t>.allocate(capacity: 1)
-        let res = sk_paint_get_fontmetrics(handle, ptr, 0)
-        
-        metrics = ptr.pointee
-        return res
-    }
+//    public var fontSpacing : Float {
+//        get {
+//            sk_paint_get_fontmetrics(handle, nil, 0)
+//        }
+//    }
+//    
+//    public var fontMetrics : sk_fontmetrics_t {
+//        get {
+//            let ptr = UnsafeMutablePointer<sk_fontmetrics_t>.allocate(capacity: 1)
+//            sk_paint_get_fontmetrics(handle, ptr, 0)
+//            
+//            return ptr.pointee
+//        }
+//    }
+//    
+//    public func getFontMetrics (metrics : inout sk_fontmetrics_t, scale: Float = 0) -> Float
+//    {
+//        let ptr = UnsafeMutablePointer<sk_fontmetrics_t>.allocate(capacity: 1)
+//        let res = sk_paint_get_fontmetrics(handle, ptr, 0)
+//
+//        metrics = ptr.pointee
+//        return res
+//    }
     
     public func clone () -> Paint
     {
@@ -482,28 +347,22 @@ public final class Paint {
     
     // MeasureText
 
-    public func measureText (text: String) -> Float
-    {
-        return sk_paint_measure_text(handle, text, text.utf8.count, nil)
-    }
+//    public func measureText (text: String) -> Float
+//    {
+//        return sk_paint_measure_text(handle, text, text.utf8.count, nil)
+//    }
+//
+//    public func measureText (text: String, bounds: inout Rect) -> Float
+//    {
+//        let ret = UnsafeMutablePointer<sk_rect_t>.allocate(capacity: 1)
+//        let r = sk_paint_measure_text(handle, text, text.utf8.count, ret)
+//        bounds = Rect.fromNative (ret.pointee)
+//        return r
+//    }
+    
 
-    public func measureText (text: String, bounds: inout Rect) -> Float
-    {
-        let ret = UnsafeMutablePointer<sk_rect_t>.allocate(capacity: 1)
-        let r = sk_paint_measure_text(handle, text, text.utf8.count, ret)
-        bounds = Rect.fromNative (ret.pointee)
-        return r
-    }
-    
-    // TODO: BreakText
-    // TODO: GetTextPath
-    // TODO: GetFillPath
-    // TODO: CountGlyphs
-    // TODO: GetGlyphs
-    // TODO: ContainsGlyphs
-    // TODO: GetGlyphWidhts
-    // TODO: GetTextIntercepts
-    // TODO: GetPositionedTextIntercepts
-    // TODO: GetHorizontalTextIntercepts
-    
+    //sk_paint_get_color4f
+    //sk_paint_get_fill_path
+    //sk_paint_set_color4f
+
 }

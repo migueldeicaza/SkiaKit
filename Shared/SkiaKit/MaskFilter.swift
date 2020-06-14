@@ -22,4 +22,12 @@ public final class MaskFilter {
     {
         sk_maskfilter_unref(handle)
     }
+    //sk_maskfilter_new_blur
+    //sk_maskfilter_new_blur_with_flags
+    //sk_maskfilter_new_clip
+    //sk_maskfilter_new_gamma
+    //sk_maskfilter_new_shader
+    //sk_maskfilter_new_table
+    //sk_maskfilter_ref
+
 }

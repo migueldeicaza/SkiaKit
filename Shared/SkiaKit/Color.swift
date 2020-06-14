@@ -99,4 +99,10 @@ public struct Color : Equatable {
             (UInt8)(color  & 0xff)
         }
     }
+    //sk_color_get_bit_shift
+    //sk_color_premultiply
+    //sk_color_premultiply_array
+    //sk_color_unpremultiply
+    //sk_color_unpremultiply_array
+
 }

@@ -146,27 +146,27 @@ public final class Bitmap {
     
     public func erase (_ color: Color, rect: IRect)
     {
-        var r = rect.toNative()
+        var r = rect
         
         sk_bitmap_erase_rect (handle, color.color, &r)
     }
     
-    public func getAddr8 (x: Int32, y: Int32) -> UInt8
+    public func getAddr8 (x: Int32, y: Int32) -> UnsafeMutablePointer<UInt8>!
     {
         sk_bitmap_get_addr_8(handle, x, y)
     }
     
-    public func getAddr16 (x: Int32, y: Int32) -> UInt16
+    public func getAddr16 (x: Int32, y: Int32) -> UnsafeMutablePointer<UInt16>!
     {
         sk_bitmap_get_addr_16(handle, x, y)
     }
     
-    public func getAddr32 (x: Int32, y: Int32) -> UInt32
+    public func getAddr32 (x: Int32, y: Int32) -> UnsafeMutablePointer<UInt32>!
     {
         sk_bitmap_get_addr_32(handle, x, y)
     }
     
-    public func getAddr64 (x: Int32, y: Int32) -> UnsafeMutableRawPointer?
+    public func getAddr64 (x: Int32, y: Int32) -> UnsafeMutableRawPointer!
     {
         sk_bitmap_get_addr (handle, x, y)
     }
@@ -174,11 +174,6 @@ public final class Bitmap {
     public func getPixel (x: Int32, y: Int32) -> Color
     {
         Color (sk_bitmap_get_pixel_color(handle, x, y))
-    }
-    
-    public func setPixel (x: Int32, y: Int32, value: Color)
-    {
-        sk_bitmap_set_pixel_color(handle, x, y, value.color)
     }
     
     public func canCopy (to colorType: ColorType) -> Bool
@@ -350,6 +345,51 @@ public final class Bitmap {
         sk_bitmap_peek_pixels(handle, pixmap.handle)
         
     }
+    
+    /// Return true iff the bitmap has no pixels nor a pixelref. Note: this can
+    /// return true even if the dimensions of the bitmap are > 0 (see empty()).
+    public var isNull: Bool {
+        get {
+            sk_bitmap_is_null(handle)
+        }
+    }
+    
+    ///  Returns true if the bitmap is volatile (i.e. should not be cached by devices.)
+    public var isVolatile: Bool {
+        get {
+            sk_bitmap_is_volatile(handle)
+        }
+        set {
+            sk_bitmap_set_volatile(handle, newValue)
+        }
+    }
+    
+    /// Call this to be sure that the bitmap is valid enough to be drawn (i.e.
+    /// it has non-null pixels, and if required by its config, it has a
+    /// non-null colortable. Returns true if all of the above are met.
+    public var readyToDraw: Bool {
+        get {
+            sk_bitmap_ready_to_draw(handle)
+        }
+    }
+    
+    /// Call this if you have changed the contents of the pixels. This will in-
+    /// turn cause a different generation ID value to be returned from
+    /// `getGenerationID()`.
+    public func notifyPixelsChanged()
+    {
+        sk_bitmap_notify_pixels_changed(handle)
+    }
+    // sk_bitmap_extract_alpha
+    // sk_bitmap_install_mask_pixels
+    // sk_bitmap_install_pixels
+    // sk_bitmap_install_pixels_with_pixmap
+    // sk_bitmap_is_immutable
+    // sk_bitmap_make_shader
+    // sk_bitmap_notify_pixels_changed
+    // sk_bitmap_swap
+    // sk_bitmap_try_alloc_pixels_with_flags
+
     //public func getPixels () -> [Color]
     //{
     //    var ret = Array<color>.init(unsafeUninitializedCapacity: Int(width) * Int(height)) { ptr,arg  in }

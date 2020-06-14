@@ -28,4 +28,11 @@ final class SKString {
     {
         return String (cString: sk_string_get_c_str(handle))
     }
+    
+    deinit {
+        sk_string_destructor(handle)
+    }
+    
+    // sk_string_get_size
+    
 }

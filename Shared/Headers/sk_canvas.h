@@ -45,9 +45,6 @@ SK_C_API void sk_canvas_draw_color(sk_canvas_t* ccanvas, sk_color_t color, sk_bl
 SK_C_API void sk_canvas_draw_points(sk_canvas_t*, sk_point_mode_t, size_t, const sk_point_t[], const sk_paint_t*);
 SK_C_API void sk_canvas_draw_point(sk_canvas_t*, float, float, const sk_paint_t*);
 SK_C_API void sk_canvas_draw_line(sk_canvas_t* ccanvas, float x0, float y0, float x1, float y1, sk_paint_t* cpaint);
-SK_C_API void sk_canvas_draw_text (sk_canvas_t*, const char* text, size_t byteLength, float x, float y, const sk_paint_t* paint);
-SK_C_API void sk_canvas_draw_pos_text (sk_canvas_t*, const char* text, size_t byteLength, const sk_point_t[], const sk_paint_t* paint);
-SK_C_API void sk_canvas_draw_text_on_path (sk_canvas_t*, const char* text, size_t byteLength, const sk_path_t*path, float hOffset, float vOffset, const sk_paint_t* paint);
 SK_C_API void sk_canvas_draw_text_blob (sk_canvas_t*, sk_textblob_t* text, float x, float y, const sk_paint_t* paint);
 SK_C_API void sk_canvas_draw_bitmap(sk_canvas_t* ccanvas, const sk_bitmap_t* bitmap, float left, float top, const sk_paint_t* paint);
 SK_C_API void sk_canvas_draw_bitmap_rect(sk_canvas_t* ccanvas, const sk_bitmap_t* bitmap, const sk_rect_t* src, const sk_rect_t* dst, const sk_paint_t* paint);
@@ -70,7 +67,13 @@ SK_C_API void sk_canvas_draw_bitmap_lattice(sk_canvas_t* t, const sk_bitmap_t* b
 SK_C_API void sk_canvas_draw_image_lattice(sk_canvas_t* t, const sk_image_t* image, const sk_lattice_t* lattice, const sk_rect_t* dst, const sk_paint_t* paint);
 SK_C_API void sk_canvas_draw_bitmap_nine(sk_canvas_t* t, const sk_bitmap_t* bitmap, const sk_irect_t* center, const sk_rect_t* dst, const sk_paint_t* paint);
 SK_C_API void sk_canvas_draw_image_nine(sk_canvas_t* t, const sk_image_t* image, const sk_irect_t* center, const sk_rect_t* dst, const sk_paint_t* paint);
-SK_C_API void sk_canvas_draw_vertices(sk_canvas_t* ccanvas, sk_vertices_t* vertices, sk_blendmode_t mode, const sk_paint_t* paint);
+SK_C_API void sk_canvas_draw_vertices(sk_canvas_t* ccanvas, const sk_vertices_t* vertices, sk_blendmode_t mode, const sk_paint_t* paint);
+SK_C_API void sk_canvas_draw_arc(sk_canvas_t* ccanvas, const sk_rect_t* oval, float startAngle, float sweepAngle, bool useCenter, const sk_paint_t* paint);
+SK_C_API void sk_canvas_draw_drrect(sk_canvas_t* ccanvas, const sk_rrect_t* outer, const sk_rrect_t* inner, const sk_paint_t* paint);
+SK_C_API void sk_canvas_draw_atlas(sk_canvas_t* ccanvas, const sk_image_t* atlas, const sk_rsxform_t* xform, const sk_rect_t* tex, const sk_color_t* colors, int count, sk_blendmode_t mode, const sk_rect_t* cullRect, const sk_paint_t* paint);
+SK_C_API void sk_canvas_draw_patch(sk_canvas_t* ccanvas, const sk_point_t* cubics, const sk_color_t* colors, const sk_point_t* texCoords, sk_blendmode_t mode, const sk_paint_t* paint);
+SK_C_API bool sk_canvas_is_clip_empty(sk_canvas_t* ccanvas);
+SK_C_API bool sk_canvas_is_clip_rect(sk_canvas_t* ccanvas);
 
 SK_C_API sk_nodraw_canvas_t* sk_nodraw_canvas_new(int width, int height);
 SK_C_API void sk_nodraw_canvas_destroy(sk_nodraw_canvas_t*);

@@ -22,4 +22,13 @@ public final class ColorFilter {
     {
         sk_colorfilter_unref(handle)
     }
+    // sk_colorfilter_new_color_matrix
+    // sk_colorfilter_new_compose
+    // sk_colorfilter_new_high_contrast
+    // sk_colorfilter_new_lighting
+    // sk_colorfilter_new_luma_color
+    // sk_colorfilter_new_mode
+    // sk_colorfilter_new_table
+    // sk_colorfilter_new_table_argb
+
 }

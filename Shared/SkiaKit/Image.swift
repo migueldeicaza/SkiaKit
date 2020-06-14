@@ -131,7 +131,7 @@ public final class Image {
     public init? (data: SKData, subset: IRect? = nil)
     {
         if let sb = subset {
-            var sub = sb.toNative()
+            var sub = sb
             
             if let x = sk_image_new_from_encoded(data.handle, &sub) {
                 handle = x
@@ -462,7 +462,7 @@ public final class Image {
      * - Returns: partial or full `Image`, or `nil`
      */
     public func subset (_ subset: IRect) -> Image? {
-        var r = subset.toNative()
+        var r = subset
         if let x = sk_image_make_subset(handle, &r) {
             return Image (handle: x)
         } else {
@@ -486,4 +486,15 @@ public final class Image {
 //            return (Image (handle: x), IRect.fromNative (outsub), IPoint.fromNative (outoffset))
 //        }
 //    }
+    
+    //sk_image_is_valid
+    //sk_image_make_raster_image
+    //sk_image_make_texture_image
+    //sk_image_new_from_adopted_texture
+    //sk_image_new_from_picture
+    //sk_image_new_from_texture
+    //sk_image_new_raster_copy
+    //sk_image_new_raster_copy_with_pixmap
+    //sk_image_ref
+
 }
