@@ -337,4 +337,8 @@ public final class Pixmap {
     {
         return Pixmap (info: info.withAlphaType(alphaType), addr: pixels, rowBytes: rowBytes)
     }
+    
+    //sk_pixmap_erase_color4f
+    //sk_pixmap_get_writable_addr
+
 }

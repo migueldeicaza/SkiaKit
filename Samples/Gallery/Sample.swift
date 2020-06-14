@@ -47,7 +47,8 @@ struct sampleDraw : Sample {
     
     func draw (canvas: Canvas, width: Int32, height: Int32)
     {
-        canvas.clear (color: Colors.aqua)
+        canvas.clear (color: Colors.yellow)
+        
         let font = Font()
         let paint = Paint()
         font.size = 64
@@ -56,5 +57,18 @@ struct sampleDraw : Sample {
         paint.color = Colors.green
         paint.style = .stroke
         canvas.drawRect(Rect(left: 0, top: 0, right: Float(width), bottom: Float(height)), paint)
+    }
+}
+
+struct Sample_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            Text ("Hello")
+            HStack {
+                Text ("")
+                SampleRender(sampleDraw())
+            }
+            Text ("Good bye")
+        }
     }
 }

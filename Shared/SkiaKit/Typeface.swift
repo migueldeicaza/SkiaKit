@@ -254,10 +254,24 @@ public final class Typeface {
         return nil
     }
     
+    ///  Return the number of glyphs in the typeface.
+    public var count: Int {
+        get {
+            Int (sk_typeface_count_glyphs(handle))
+        }
+    }
     deinit
     {
         if owns {
             sk_typeface_unref(handle)
         }
     }
+    //sk_typeface_copy_table_data
+    //sk_typeface_create_from_data
+    //sk_typeface_get_kerning_pair_adjustments
+    //sk_typeface_get_table_tags
+    //sk_typeface_is_fixed_pitch
+    //sk_typeface_unichar_to_glyph
+    //sk_typeface_unichars_to_glyphs
+
 }

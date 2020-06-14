@@ -100,50 +100,26 @@ public extension IPoint {
 
 }
 
-public struct Rect : Equatable {
-    public init(left: Float, top: Float, right: Float, bottom: Float) {
-        self.left = left
-        self.top = top
-        self.right = right
-        self.bottom = bottom
-    }
-    
-    public init (x: Float, y: Float, width: Float, height: Float)
+public typealias Rect = sk_rect_t
+public extension Rect {
+    init (x: Float, y: Float, width: Float, height: Float)
     {
-        self.left = x
-        self.top = y
-        self.right = x + width
-        self.bottom = y + height
+        self.init(left: x, top: y, right: x+width, bottom: y+height)
     }
     
-    public init (width: Float, height: Float)
+    init (width: Float, height: Float)
     {
-        self.left = 0
-        self.top = 0
-        self.right = width
-        self.bottom = height
+        self.init(left: 0, top: 0, right: width, bottom: height)
     }
     
-    public var left, top, right, bottom: Float
-    
-    public var midX : Float { left + (right - left) / 2.0}
-    public var midY : Float { top + (bottom - top) / 2.0}
-    public var width: Float { right - left }
-    public var height: Float { bottom - top }
+    var midX : Float { left + (right - left) / 2.0}
+    var midY : Float { top + (bottom - top) / 2.0}
+    var width: Float { right - left }
+    var height: Float { bottom - top }
     
     static var empty: Rect { Rect(left: 0, top: 0, right: 0, bottom: 0)}
     
-    static func fromNative (_ x: sk_rect_t) -> Rect
-    {
-        return Rect (left: x.left, top: x.top, right: x.right, bottom: x.bottom)
-    }
-    
-    func toNative () -> sk_rect_t
-    {
-        sk_rect_t(left: left, top: top, right: right, bottom: bottom)
-    }
-    
-    public var ceiling: IRect {
+    var ceiling: IRect {
         get {
             IRect.ceiling (value: self, outwards: false)
         }
@@ -186,53 +162,40 @@ public extension IRect {
     }
 }
 
-public struct Size : Equatable {
-    public var width, height: Float
-    
-    public var isEmpty : Bool {
+public typealias Size = sk_size_t
+public extension Size {
+    var width: Float { return self.w }
+    var height: Float { return self.h }
+    var isEmpty : Bool {
         get { width == 0 && height == 0 }
     }
     
-    public func toPoint () -> Point
-    {
-        return Point (x: width, y: height)
-    }
-    
-    static func fromNative (_ x: sk_size_t) -> Size
-    {
-        return Size (width: x.w, height: x.h)
-    }
-    
-    func toNative () -> sk_size_t
-    {
-        sk_size_t(w: width, h: height)
-    }
-}
-
-public struct ISize : Equatable {
-    public var width, height: Int32
-    
-    public var isEmpty : Bool {
-        get { width == 0 && height == 0 }
-    }
-    
-    public func toPoint () -> Point
+    func toPoint () -> Point
     {
         return Point (x: Float (width), y: Float (height))
     }
 
-    public func toIPoint () -> IPoint
+    func toIPoint () -> IPoint
     {
-        return IPoint (x: width, y: height)
+        return IPoint (x: Int32(width), y: Int32(height))
     }
+}
 
-    static func fromNative (_ x: sk_isize_t) -> ISize
-    {
-        return ISize (width: x.w, height: x.h)
+public typealias ISize = sk_isize_t
+public extension ISize{
+    var width:  Int32 { return self.w }
+    var height: Int32 { return self.h }
+    var isEmpty : Bool {
+        get { width == 0 && height == 0 }
     }
     
-    func toNative () -> sk_isize_t
+    func toPoint () -> Point
     {
-        sk_isize_t(w: width, h: height)
+        return Point (x: Float (width), y: Float (height))
+    }
+
+    func toIPoint () -> IPoint
+    {
+        return IPoint (x: width, y: height)
     }
 }

@@ -38,4 +38,16 @@ public final class PathEffect {
     {
         sk_path_effect_unref(handle)
     }
+    
+    //sk_path_effect_create_1d_path
+    //sk_path_effect_create_2d_line
+    //sk_path_effect_create_2d_path
+    //sk_path_effect_create_compose
+    //sk_path_effect_create_corner
+    //sk_path_effect_create_dash
+    //sk_path_effect_create_discrete
+    //sk_path_effect_create_sum
+    //sk_path_effect_create_trim
+    //sk_path_effect_unref
+
 }

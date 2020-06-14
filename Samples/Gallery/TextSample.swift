@@ -15,7 +15,7 @@ struct sampleText : Sample {
     {
         canvas.drawColor(Colors.white)
         
-        var font = Font()
+        let font = Font()
         font.size = 64
         var paint = Paint()
         paint.isAntialias = true

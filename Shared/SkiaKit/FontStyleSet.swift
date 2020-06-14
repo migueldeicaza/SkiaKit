@@ -78,4 +78,6 @@ public final class FontStyleSet {
         sk_fontstyleset_get_style(handle, index, nil, str.handle)
         return str.getStr()
     }
+    //sk_fontstyleset_create_empty
+
 }

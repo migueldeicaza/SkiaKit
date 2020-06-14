@@ -166,5 +166,18 @@ public final class FontManager {
         }
         return nil
     }
+    //sk_fontmgr_count_families
+    //sk_fontmgr_create_default
+    //sk_fontmgr_create_from_data
+    //sk_fontmgr_create_from_file
+    //sk_fontmgr_create_from_stream
+    //sk_fontmgr_create_styleset
+    //sk_fontmgr_get_family_name
+    //sk_fontmgr_match_face_style
+    //sk_fontmgr_match_family
+    //sk_fontmgr_match_family_style
+    //sk_fontmgr_match_family_style_character
+    //sk_fontmgr_ref_default
+    //sk_fontmgr_unref
 
 }

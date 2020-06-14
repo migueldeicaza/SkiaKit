@@ -35,7 +35,7 @@ public struct Colors
     public static var cornsilk = Color (0xFFFFF8DC)
     public static var crimson = Color (0xFFDC143C)
     public static var cyan = Color (0xFF00FFFF)
-    public static var darkBlue = Color (0xFF00008)
+    public static var darkBlue = Color (0xFF00008b)
     public static var darkCyan = Color (0xFF008B8B)
     public static var darkGoldenrod = Color (0xFFB8860B)
     public static var darkGray = Color (0xFFA9A9A9)

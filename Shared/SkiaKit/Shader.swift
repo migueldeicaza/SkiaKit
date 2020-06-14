@@ -229,7 +229,7 @@ public final class Shader {
         var ptr : UnsafePointer<sk_isize_t>? = nil
         var n: sk_isize_t
         if let t = tileSize {
-            n = t.toNative()
+            n = t
             ptr = UnsafePointer<sk_isize_t>(&n)
         }
         return Shader (handle: sk_shader_new_perlin_noise_fractal_noise(baseFrequencyX, baseFrequencyY, numOctaves, seed, ptr))
@@ -247,7 +247,7 @@ public final class Shader {
         var ptr : UnsafePointer<sk_isize_t>? = nil
         var n: sk_isize_t
         if let t = tileSize {
-            n = t.toNative()
+            n = t
             ptr = UnsafePointer<sk_isize_t>(&n)
         }
         return Shader (handle: sk_shader_new_perlin_noise_turbulence(baseFrequencyX, baseFrequencyY, numOctaves, seed, ptr))
@@ -257,5 +257,16 @@ public final class Shader {
     {
         sk_shader_unref(handle)
     }
-    
+    //sk_shader_new_blend
+    //sk_shader_new_color4f
+    //sk_shader_new_lerp
+    //sk_shader_new_lerp_red
+    //sk_shader_new_linear_gradient_color4f
+    //sk_shader_new_perlin_noise_improved_noise
+    //sk_shader_new_radial_gradient_color4f
+    //sk_shader_new_sweep_gradient_color4f
+    //sk_shader_new_two_point_conical_gradient_color4f
+    //sk_shader_ref
+    //sk_shader_with_color_filter
+
 }

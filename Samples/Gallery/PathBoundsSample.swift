@@ -38,7 +38,7 @@ struct samplePathBounds : Sample {
         paint.color = Colors.darkBlue
         canvas.drawRect(rect, paint)
         
-        var font = Font()
+        let font = Font()
         canvas.draw(text: "Bounds", x: rect.left, y: rect.bottom + font.size, font: font, paint: paint)
         
         // move for next curve

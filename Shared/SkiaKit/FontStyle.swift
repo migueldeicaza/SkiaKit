@@ -61,4 +61,5 @@ public final class FontStyle {
     public static var italic: FontStyle = FontStyle(weight: .normal, width: .normal, slant: .italic)
     /// Gets a new italic font style that is bold.
     public static var boldItalic: FontStyle = FontStyle(weight: .bold, width: .normal, slant: .italic)
+    
 }

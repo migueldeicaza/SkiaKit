@@ -140,5 +140,37 @@ public final class Region {
         var r = rect
         return sk_region_intersects_rect(handle, &r);
     }
+    //sk_region_cliperator_delete
+    //sk_region_cliperator_done
+    //sk_region_cliperator_new
+    //sk_region_cliperator_next
+    //sk_region_cliperator_rect
+    //sk_region_cliperator_t
+    //sk_region_contains_point
+    //sk_region_contains_rect
+    //sk_region_get_boundary_path
+    //sk_region_is_complex
+    //sk_region_is_empty
+    //sk_region_is_rect
+    //sk_region_iterator_delete
+    //sk_region_iterator_done
+    //sk_region_iterator_new
+    //sk_region_iterator_next
+    //sk_region_iterator_rect
+    //sk_region_iterator_rewind
+    //sk_region_iterator_t
+    //sk_region_op
+    //sk_region_quick_contains
+    //sk_region_quick_reject
+    //sk_region_quick_reject_rect
+    //sk_region_set_empty
+    //sk_region_set_rects
+    //sk_region_set_region
+    //sk_region_spanerator_delete
+    //sk_region_spanerator_new
+    //sk_region_spanerator_next
+    //sk_region_spanerator_t
+    //sk_region_t
+    //sk_region_translate
 
 }

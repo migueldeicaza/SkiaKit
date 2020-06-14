@@ -51,7 +51,7 @@ public final class TextBlob {
         get {
             var r = sk_rect_t()
             sk_textblob_get_bounds(handle, &r)
-            return Rect.fromNative(r)
+            return r
         }
     }
     
@@ -146,7 +146,7 @@ public final class TextBlobBuilder {
     {
         var ret = sk_textblob_builder_runbuffer_t ()
         if let b = bounds {
-            var nb = b.toNative()
+            var nb = b
             
             sk_textblob_builder_alloc_run_text(handle, font.handle, count, x, y, textByteCount, &nb, &ret)
         } else {
@@ -160,7 +160,7 @@ public final class TextBlobBuilder {
     {
        var ret = sk_textblob_builder_runbuffer_t ()
         if let b = bounds {
-            var nb = b.toNative()
+            var nb = b
             
             sk_textblob_builder_alloc_run_text_pos_h(handle, font.handle, count, y, textByteCount, &nb, &ret)
         } else {
@@ -174,7 +174,7 @@ public final class TextBlobBuilder {
     {
         var ret = sk_textblob_builder_runbuffer_t ()
         if let b = bounds {
-            var nb = b.toNative()
+            var nb = b
             
             sk_textblob_builder_alloc_run_text_pos(handle, font.handle, count, textByteCount, &nb, &ret)
         } else {
@@ -183,6 +183,13 @@ public final class TextBlobBuilder {
         
         return ret
     }
+    //sk_textblob_builder_alloc_run
+    //sk_textblob_builder_alloc_run_pos
+    //sk_textblob_builder_alloc_run_pos_h
+    //sk_textblob_builder_alloc_run_rsxform
+    //sk_textblob_builder_t
+    //sk_textblob_get_intercepts
+    //sk_textblob_ref
 
 }
 

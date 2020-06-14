@@ -30,11 +30,15 @@ public final class Picture {
         get {
             var r = sk_rect_t ()
             sk_picture_get_cull_rect(handle, &r)
-            return Rect.fromNative(r)
+            return r
         }
     }
     
     deinit {
         sk_picture_unref(handle)
     }
+    //sk_picture_get_recording_canvas
+    //sk_picture_make_shader
+    //sk_picture_ref
+
 }

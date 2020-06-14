@@ -415,4 +415,21 @@ public final class SKDynamicMemoryWStream : SKWStream {
     {
         sk_dynamicmemorywstream_write_to_stream(handle, to.handle)
     }
+    //sk_dynamicmemorywstream_detach_as_data
+    //sk_dynamicmemorywstream_detach_as_stream
+    //sk_filestream_destroy
+    //sk_filestream_is_valid
+    //sk_stream_asset_destroy
+    //sk_stream_destroy
+    //sk_stream_duplicate
+    //sk_stream_read_bool
+    //sk_wstream_get_size_of_packed_uint
+    //sk_wstream_write_bigdec_as_text
+    //sk_wstream_write_bool
+    //sk_wstream_write_dec_as_text
+    //sk_wstream_write_hex_as_text
+    //sk_wstream_write_packed_uint
+    //sk_wstream_write_scalar
+    //sk_wstream_write_scalar_as_text
+
 }

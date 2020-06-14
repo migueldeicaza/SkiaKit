@@ -34,7 +34,7 @@ public final class PictureRecorder {
     /// - Parameter cullRect: The culling rectangle for the new picture.
     /// - Returns: a `Canvas` that you can issue draw operations on, and that will be recorded
     public func beginRecording (cullRect: Rect) -> Canvas {
-        var r = cullRect.toNative()
+        var r = cullRect
         return Canvas (handle: sk_picture_recorder_begin_recording(handle, &r), owns: .doesNotOwn)
     }
     
@@ -57,4 +57,6 @@ public final class PictureRecorder {
             sk_picture_recorder_delete(handle)
         }
     }
+    //sk_picture_recorder_end_recording_as_drawable
+
 }

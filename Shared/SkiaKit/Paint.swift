@@ -360,15 +360,9 @@ public final class Paint {
 //        return r
 //    }
     
-    // TODO: BreakText
-    // TODO: GetTextPath
-    // TODO: GetFillPath
-    // TODO: CountGlyphs
-    // TODO: GetGlyphs
-    // TODO: ContainsGlyphs
-    // TODO: GetGlyphWidhts
-    // TODO: GetTextIntercepts
-    // TODO: GetPositionedTextIntercepts
-    // TODO: GetHorizontalTextIntercepts
-    
+
+    //sk_paint_get_color4f
+    //sk_paint_get_fill_path
+    //sk_paint_set_color4f
+
 }
