@@ -11,6 +11,7 @@ let sharedSources = [
 	"./Shared/SkiaKit/MathTypes.swift",
 	"./Shared/SkiaKit/Surface.swift",
 	"./Shared/SkiaKit/FontStyle.swift",
+	"./Shared/SkiaKit/Font.swift",
 	"./Shared/SkiaKit/SurfaceProperties.swift",
 	"./Shared/SkiaKit/Pixmap.swift",
 	"./Shared/SkiaKit/Data.swift",
