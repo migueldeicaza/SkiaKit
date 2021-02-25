@@ -32,6 +32,7 @@ struct SampleChooserView : View {
                 Display<samplePathBounds>()
                 Display<sampleText>()
                 Display<sampleXamagon>()
+                Display<animationSample>()
             }
         }
     }

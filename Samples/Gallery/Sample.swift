@@ -13,8 +13,15 @@ protocol Sample {
     init ()
     
     static var title: String { get }
+  
+    var isLoop: Bool { get }
+  
     //var category: String { get } =
     func draw (canvas: Canvas, width: Int32, height: Int32)
+}
+
+extension Sample {
+    var isLoop: Bool { return false }
 }
 
 struct SampleRender : UIViewRepresentable {
@@ -31,6 +38,7 @@ struct SampleRender : UIViewRepresentable {
     func makeUIView (context: Context) -> SkiaView
     {
         let sv = SkiaView ()
+        sv.loop = sample.isLoop
         sv.drawingCallback = draw
 
         return sv

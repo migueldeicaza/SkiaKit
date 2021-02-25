@@ -21,6 +21,30 @@ public class SkiaView: UIView {
     /// This property when set points to the method to invoke when drawing.   The  method
     /// receives a surface and the ImageInfo where it should draw its contents.
     public var drawingCallback: (_ surface: Surface, _ imageInfo: ImageInfo) -> () = emptyCallback(surface:imageInfo:)
+  
+  private lazy var displayLink: CADisplayLink =
+  {
+        let link = CADisplayLink(target: self, selector: #selector(onDisplayLink(_:)))
+        link.isPaused = true
+        return link
+  }()
+  
+  private func commonInit()
+  {
+        displayLink.add(to: .main, forMode: .common)
+  }
+    
+  public var loop: Bool = false
+  {
+    didSet {
+      displayLink.isPaused = !loop
+    }
+  }
+  
+  @objc private func onDisplayLink(_ sender: CADisplayLink)
+  {
+        setNeedsDisplay()
+  }
     
     static func emptyCallback (surface: Surface, imageInfo: ImageInfo)
     {
@@ -37,16 +61,18 @@ public class SkiaView: UIView {
     override init(frame: CGRect)
     {
         super.init(frame: frame)
+        commonInit()
     }
     
     required init? (coder: NSCoder)
     {
         super.init (coder: coder)
+        commonInit()
     }
     
     override public func draw(_ rect: CGRect) {
         super.draw (rect)
-        
+              
         // Create the Skia Context
         let scale = ignorePixelScaling ? 1 : contentScaleFactor
         let info = ImageInfo(width: Int32 (bounds.width * scale), height: Int32 (bounds.height * scale), colorType: .bgra8888, alphaType: .premul)

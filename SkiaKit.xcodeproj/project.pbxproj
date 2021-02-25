@@ -252,6 +252,7 @@
 		49E975A72367ACAD00042FE7 /* Pixmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975A62367ACAD00042FE7 /* Pixmap.swift */; };
 		49E975A82367ACAD00042FE7 /* Pixmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975A62367ACAD00042FE7 /* Pixmap.swift */; };
 		49E975A92367ACAD00042FE7 /* Pixmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E975A62367ACAD00042FE7 /* Pixmap.swift */; };
+		5C8058C62586C5E300B8D052 /* AnimationSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8058C52586C5E300B8D052 /* AnimationSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -432,6 +433,7 @@
 		49E9756F2366821800042FE7 /* TextSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSample.swift; sourceTree = "<group>"; };
 		49E97571236683E900042FE7 /* XamagonSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XamagonSample.swift; sourceTree = "<group>"; };
 		49E975A62367ACAD00042FE7 /* Pixmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixmap.swift; sourceTree = "<group>"; };
+		5C8058C52586C5E300B8D052 /* AnimationSample.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AnimationSample.swift; sourceTree = "<group>"; tabWidth = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -757,6 +759,7 @@
 				4902C78E23765A6300FD5CE3 /* FilledHeptagramSample.swift */,
 				4902C7902376644300FD5CE3 /* 2DPathSample.swift */,
 				4902C7922376647F00FD5CE3 /* SimplePathTest.swift */,
+				5C8058C52586C5E300B8D052 /* AnimationSample.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -1308,6 +1311,7 @@
 				4902C78D23765A3B00FD5CE3 /* FractalPerlinNoiseShaderSample.swift in Sources */,
 				49E9752E2365360D00042FE7 /* ContentView.swift in Sources */,
 				49E97572236683E900042FE7 /* XamagonSample.swift in Sources */,
+				5C8058C62586C5E300B8D052 /* AnimationSample.swift in Sources */,
 				4902C78F23765A6300FD5CE3 /* FilledHeptagramSample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
