@@ -1,36 +1,40 @@
 # SkiaKit
 
-SkiaKit is a 2D Graphics Library for use with Swift.   It is powered by Google's
-[Skia](https://skia.org) graphics library, the same library that powers Google Chrome 
-and Android graphics.
+SkiaKit is a 2D Graphics Library for use with Swift. It is powered by Google's
+[Skia](https://skia.org) graphics library, the same library that powers Google Chrome and Android graphics.
 
 You can review the [API Documentation](https://migueldeicaza.github.io/SkiaKit/)
 
-The Swift bindings are intended to be cross-platform, both to Apple platforms, and
-new platforms where Skia and Swift run.
+The Swift bindings are intended to be cross-platform, both to Apple platforms, Linux, and new platforms where Skia and Swift run.
 
-This work uses extensive code from Microsoft's SkiaSharp bindings authoered by 
-Matthew Leibowitz and dozens of contributors.   SkiaSharp just happens to have
+This work uses extensive code from Microsoft's SkiaSharp bindings authored by 
+Matthew Leibowitz and dozens of contributors. SkiaSharp just happens to have
 a very advanced set of bridge APIs to the underlying Skia engine that does not 
-existin in the upstream Google Skia project.
+existing in the upstream Google Skia project.
 
-## Getting this to work locally
+## Getting this to work
 
-You can either download and install the SkiaSharp.nuget package, or
-build your own local copy of Mono's Skia fork
-(https://github.com/mono/skia/tree/77049b872966dc300ed233fc6e3930eb21bac5e3
-from https://github.com/mono/skiasharp).
+### macOS / iOS / tvOS
 
-The `download-payload.sh` script automates the download, but relies on Mono
-to be installed for extracting the payload from the DLLs (the iOS/tvOS frameworks
-live inside a Zip file called libSkiaSharp.framework inside a resource in the
-SkiaSharp.dll)
+Supports:
 
 ```
-SkiaKit/iOS:
-	Copy the iOS directory libSkiaSharp.framework here
-SkiaKit/macOS:
-	Copy the file libSkiaSharp.dylib here
-SkiaKit/tvOS:
-	Copy the tvOS directory libSkiaSharp.framework here
+x86_64 Mac — anything from 2008 MacBook to M1 (using x86 emulation)
+arm64 iPhone - anything past iPhone 5S
+iPhone Simulator
+arm64 iPad - anything past iPad Air / iPad mini 2 (post-2013)
+iPad Simulator
+tvOS
 ```
+
+You can add SkiaKit to your project by putting this dependency in your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/bloomos/swift-wayland.git", .branch("generated"))
+```
+
+The `generated` branch includes the `XCFramework` needed for SkiaSharp's Skia bindings.
+
+### Linux
+
+Linux support is being worked on (TODO).
