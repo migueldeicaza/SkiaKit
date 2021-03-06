@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SkiaKit",
+        "repositoryURL": "/Users/plumbus/Projects/SkiaKit",
+        "state": {
+          "branch": "master",
+          "revision": "87b967577b2436c257f0a9a7c8ef8d2cdf1c33b6",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

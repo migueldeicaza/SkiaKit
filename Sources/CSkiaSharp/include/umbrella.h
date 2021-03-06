@@ -44,15 +44,5 @@
 #include "sk_vertices.h"
 #include "sk_xml.h"
 
-#if TARGET_OS_OSX
-#include "SkiaKit_macOS.h"
-#endif
-#if TARGET_OS_IOS
-#include "SkiaKit_iOS.h"
-#endif
-#if TARGET_OS_TV
-#include "SkiaKit_tvOS.h"
-#endif
-
 
 #endif /* SkiaKit_h */
