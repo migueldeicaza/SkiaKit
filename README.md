@@ -18,14 +18,12 @@ existing in the upstream Google Skia project.
 
 Supports:
 
-```
-x86_64 Mac — anything from 2008 MacBook to M1 (using x86 emulation)
-arm64 iPhone - anything past iPhone 5S
-iPhone Simulator
-arm64 iPad - anything past iPad Air / iPad mini 2 (post-2013)
-iPad Simulator
-tvOS
-```
+- `x86_64` Mac: anything from 2008 MacBook to M1 (using x86 emulation)
+- `arm64` iPhone: anything past iPhone 5S
+- `arm64` iPad: anything past iPad Air / iPad mini 2 (post-2013)
+- iPhone Simulator
+- iPad Simulator
+- tvOS
 
 You can add SkiaKit to your project by putting this dependency in your `Package.swift`:
 
