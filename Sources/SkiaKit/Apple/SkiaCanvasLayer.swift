@@ -5,6 +5,8 @@
 //  Created by Miguel de Icaza on 10/26/19.
 //
 
+#if canImport(QuartzCore)
+
 import Foundation
 import CoreGraphics
 import QuartzCore
@@ -82,3 +84,5 @@ public class SkiaLayer : CALayer {
         }
     }
 }
+
+#endif

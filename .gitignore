@@ -1,5 +1,9 @@
-skiasharp*
 .build
 DerivedData
 xcuserdata
 .DS_Store
+
+skiasharp*
+build
+SkiaSharpMacFramework/libSkiaSharp.dylib
+SkiaSharpMacFramework/SkiaSharpMacFramework.framework*

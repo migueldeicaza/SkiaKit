@@ -26,7 +26,13 @@ class SKCanvasTest : XCTestCase {
         let bmp = try! Bitmap(ImageInfo (300, 300))
         let canvas = Canvas(bmp)
         let paint = Paint()
-        canvas.drawText (text: "text", x: 150, y: 175, paint: paint)
+  
+        let fontSet = FontManager.system.getFontStyles(familyName: "Arial")
+        let fontStyle = fontSet.getStyle(index: 0)
+        let typeface = fontSet.createTypeface(style: fontStyle)!
+        let font = Font(typeface: typeface, size: 16.0, scaleX: 1.0, skewX: 0.0)
+    
+        canvas.draw (text: "text", x: 150, y: 175, font: font, paint: paint)
     }
 }
 

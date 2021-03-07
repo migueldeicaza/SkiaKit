@@ -5,6 +5,8 @@
 //  Created by Miguel de Icaza on 10/26/19.
 //
 
+#if canImport(UIKit)
+
 import Foundation
 import UIKit
 
@@ -114,3 +116,5 @@ public class SkiaView: UIView {
         }
     }
 }
+
+#endif
