@@ -10,7 +10,6 @@ var target: [Target] = []
 target = [
 	.target (
 		name: "CSkiaSharp",
-		dependencies: ["CSkiaSharpBinary"],
 		cSettings: [
 		.headerSearchPath("include"),
 		],
