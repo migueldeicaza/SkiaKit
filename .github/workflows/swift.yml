@@ -1,4 +1,4 @@
-name: Swift
+name: SkiaKit
 
 on: [push]
 
@@ -6,8 +6,19 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build with Swift command line
-      run: swift build -v
-#    - name: Run tests
-#      run: swift test -v
+      - name: Checkout SkiaKit
+        uses: actions/checkout@v2
+      - name: Download payload (.xcframework)
+        run: make download-payload
+      - name: Download payload (Linux)
+        run: make download-payload-linux
+      - name: Build with Swift command line
+        run: swift build -v
+      - name: Test Swift
+        run: swift test
+      - name: Deploy to 'generated' branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # GITHUB_TOKEN is automatically added by GitHub Actions
+          publish_dir: ./
+          publish_branch: generated
