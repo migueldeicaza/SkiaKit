@@ -1,4 +1,4 @@
-name: SkiaKit
+name: macOS
 
 on: [push, workflow_dispatch]
 

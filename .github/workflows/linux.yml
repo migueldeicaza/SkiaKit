@@ -1,0 +1,16 @@
+name: Linux
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout SkiaKit
+        uses: actions/checkout@v2
+      - name: Download payload (Linux)
+        run: make download-payload-linux
+      - name: Build with Swift command line
+        run: swift build -v
+      - name: Test Swift
+        run: swift test
