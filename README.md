@@ -7,9 +7,9 @@ You can review the [API Documentation](https://migueldeicaza.github.io/SkiaKit/)
 
 The Swift bindings are intended to be cross-platform, both to Apple platforms, Linux, and new platforms where Skia and Swift run.
 
-This work uses extensive code from Microsoft's SkiaSharp bindings authored by 
+This work uses extensive code from Microsoft's SkiaSharp bindings authored by
 Matthew Leibowitz and dozens of contributors. SkiaSharp just happens to have
-a very advanced set of bridge APIs to the underlying Skia engine that does not 
+a very advanced set of bridge APIs to the underlying Skia engine that does not
 existing in the upstream Google Skia project.
 
 ## Getting this to work
@@ -28,7 +28,7 @@ Supports:
 You can add SkiaKit to your project by putting this dependency in your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/bloomos/swift-wayland.git", .branch("generated"))
+.package(url: "https://github.com/bloomos/SkiaKit.git", .branch("generated"))
 ```
 
 The `generated` branch includes the `XCFramework` needed for SkiaSharp's Skia bindings.
