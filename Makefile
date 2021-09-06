@@ -3,3 +3,6 @@ make-docs:
 
 download-payload:
 	bash ./download-payload.sh
+
+download-payload-linux:
+	bash ./download-payload-linux.sh

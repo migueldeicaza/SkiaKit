@@ -41,6 +41,7 @@ let package = Package(
 	.macOS(.v10_15),
 	.iOS(.v13),
 	.tvOS(.v13),
+	.linux()
     ],    
     products: [
         .library(name: "SkiaKit", targets: ["SkiaKit"])
