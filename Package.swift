@@ -16,7 +16,14 @@ target = [
 		linkerSettings: [
 		.unsafeFlags(["-L" + dir])
 		]
-	)
+	),
+	.testTarget (
+		name: "SkiaKitTests",
+		dependencies: ["SkiaKit"],
+		linkerSettings: [
+		.unsafeFlags(["-L" + dir])
+		]
+	),
 ]
 #else
 target = [
@@ -30,7 +37,11 @@ target = [
 	.binaryTarget (
 		name: "CSkiaSharpBinary",
 		path: "SkiaSharp.xcframework"
-	)
+	),
+	.testTarget (
+		name: "SkiaKitTests",
+		dependencies: ["SkiaKit"]
+	),
 ]
 #endif
 
@@ -45,10 +56,6 @@ let package = Package(
         .library(name: "SkiaKit", targets: ["SkiaKit"])
     ],
     targets: [
-	.testTarget (
-		name: "SkiaKitTests",
-		dependencies: ["SkiaKit"]
-	),
     .target (
 		name: "SkiaKit", 
 		dependencies: ["CSkiaSharp"],
