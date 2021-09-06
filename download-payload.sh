@@ -12,7 +12,7 @@ URL=https://www.nuget.org/api/v2/package/SkiaSharp/$V
 
 download_nuget() {
     if test ! -e $FILE; then
-        curl -L -o skiasharp-$V.zip https://www.nuget.org/api/v2/package/SkiaSharp/$V
+        curl -L -o skiasharp-$V.zip $URL
     fi
     unzip -d skiasharp-$V $FILE
 }

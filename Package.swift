@@ -3,6 +3,38 @@
 import Foundation
 import PackageDescription
 
+let dir = URL(fileURLWithPath: #file).deletingLastPathComponent().path
+var target: [Target] = []
+
+#if os(Linux)
+target = [
+	.target (
+		name: "CSkiaSharp",
+		dependencies: ["CSkiaSharpBinary"],
+		cSettings: [
+		.headerSearchPath("include"),
+		],
+		linkerSettings: [
+		.unsafeFlags(["-L" + dir])
+		]
+	)
+]
+#else
+target = [
+	.target (
+		name: "CSkiaSharp",
+		dependencies: ["CSkiaSharpBinary"],
+		cSettings: [
+		.headerSearchPath("include")
+		]
+	),
+	.binaryTarget (
+		name: "CSkiaSharpBinary",
+		path: "SkiaSharp.xcframework"
+	)
+]
+#endif
+
 let package = Package(
     name: "SkiaKit",
     platforms: [
@@ -24,18 +56,7 @@ let package = Package(
 		cSettings: [
 		.headerSearchPath("include")
 		]
-	),
-	.target (
-		name: "CSkiaSharp",
-		dependencies: ["CSkiaSharpBinary"],
-		cSettings: [
-		.headerSearchPath("include")
-		]
-	),
-	.binaryTarget (
-		name: "CSkiaSharpBinary",
-		path: "SkiaSharp.xcframework"
 	)
-    ]
+    ] + target
 )
 

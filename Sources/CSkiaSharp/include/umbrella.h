@@ -7,7 +7,7 @@
 
 #ifndef SkiaKit_h
 #define SkiaKit_h
-#import <Foundation/Foundation.h>
+
 #include "sk_types.h"
 #include "gr_context.h"
 #include "sk_bitmap.h"
@@ -43,6 +43,5 @@
 
 #include "sk_vertices.h"
 #include "sk_xml.h"
-
 
 #endif /* SkiaKit_h */
