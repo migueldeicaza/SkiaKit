@@ -1,5 +1,7 @@
 # SkiaKit
 
+> [Go to macOS / iOS / tvOS](#apple) | [Go to Linux](#linux)
+
 SkiaKit is a 2D Graphics Library for use with Swift. It is powered by Google's
 [Skia](https://skia.org) graphics library, the same library that powers Google Chrome and Android graphics.
 
@@ -14,7 +16,7 @@ existing in the upstream Google Skia project.
 
 ## Getting this to work
 
-### macOS / iOS / tvOS
+### Apple
 
 Supports:
 
