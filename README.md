@@ -25,14 +25,54 @@ Supports:
 - iPad Simulator
 - tvOS
 
+Not currently supported:
+
+- Mac Catalyst
+
+#### Recommended usage
+
 You can add SkiaKit to your project by putting this dependency in your `Package.swift`:
 
 ```swift
 .package(url: "https://github.com/bloomos/SkiaKit.git", .branch("generated"))
 ```
 
-The `generated` branch includes the `XCFramework` needed for SkiaSharp's Skia bindings.
+#### Using manually
+
+If using manually, you'll need to download and assemble the `SkiaSharp.xcframework` required.
+
+This must be ran on macOS with the [Command Line Tools for XCode](https://developer.apple.com/downloads/) installed.
+
+```sh
+git clone https://github.com/bloomos/SkiaKit.git
+cd SkiaKit
+make download-payload
+```
 
 ### Linux
 
-Linux support is being worked on (TODO).
+SkiaKit is platform agnostic and makes a best-effort support for Linux. An `.so` for the SkiaSharp library is included and supports [the following Linux distributions](https://github.com/mono/SkiaSharp/issues/453).
+
+The `libSkiaSharp.so` file will need to be distributed alongside your project.
+
+If the following
+
+#### Recommended usage
+
+You can add SkiaKit to your project by putting this dependency in your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/bloomos/SkiaKit.git", .branch("generated"))
+```
+
+#### Using manually
+
+If using manually, you'll need to provide `libSkiaSharp.so` in the root of the `SkiaKit` folder. For [certain Linux distros](https://github.com/mono/SkiaSharp/issues/453), a convenience script is provided.
+
+This script requires `curl` and `unzip`.
+
+```sh
+git clone https://github.com/bloomos/SkiaKit.git
+cd SkiaKit
+make download-payload-linux
+```
