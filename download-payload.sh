@@ -5,7 +5,7 @@
 # Cleanup from last time.
 rm -rf SkiaSharp.xcframework
 
-V=2.80.3-preview.40
+V=2.80.3
 DIR=skiasharp-$V
 FILE=skiasharp-$V.zip
 URL=https://www.nuget.org/api/v2/package/SkiaSharp/$V
