@@ -36,7 +36,8 @@ target = [
 	),
 	.binaryTarget (
 		name: "CSkiaSharpBinary",
-		path: "SkiaSharp.xcframework"
+		url: "https://github.com/migueldeicaza/SkiaKit/releases/download/0.9/SkiaSharp.xcframework.zip",
+		checksum: "be3a2ce1f2587841f643ef2bbc676f33c55dd691b0074ee74c93b4c62e41b506"
 	),
 	.testTarget (
 		name: "SkiaKitTests",
