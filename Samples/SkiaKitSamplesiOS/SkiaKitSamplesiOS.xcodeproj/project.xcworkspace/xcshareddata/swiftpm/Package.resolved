@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "skiakit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/migueldeicaza/SkiaKit",
+      "state" : {
+        "revision" : "04509392c8dc72f36159ddd44b6f58277cae8496",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
