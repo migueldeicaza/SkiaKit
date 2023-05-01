@@ -2,17 +2,20 @@
 
 > [Go to macOS / iOS / tvOS](#apple) | [Go to Linux](#linux)
 
-SkiaKit is a 2D Graphics Library for use with Swift. It is powered by Google's
-[Skia](https://skia.org) graphics library, the same library that powers Google Chrome and Android graphics.
+SkiaKit is a 2D Graphics Library for use with Swift. It is powered by
+Google's [Skia](https://skia.org) graphics library, the same library
+that powers Google Chrome and Android graphics.
 
 You can review the [API Documentation](https://migueldeicaza.github.io/SkiaKit/)
 
-The Swift bindings are intended to be cross-platform, both to Apple platforms, Linux, and new platforms where Skia and Swift run.
+The Swift bindings are intended to be cross-platform, both to Apple
+platforms, Linux, and new platforms where Skia and Swift run.
 
-This work uses extensive code from Microsoft's SkiaSharp bindings authored by
-Matthew Leibowitz and dozens of contributors. SkiaSharp just happens to have
-a very advanced set of bridge APIs to the underlying Skia engine that does not
-existing in the upstream Google Skia project.
+This work uses extensive code from Microsoft's SkiaSharp bindings
+authored by Matthew Leibowitz and dozens of contributors. SkiaSharp
+just happens to have a very advanced set of bridge APIs to the
+underlying Skia engine that does not existing in the upstream Google
+Skia project.
 
 ## Getting this to work
 
@@ -36,8 +39,8 @@ Not currently supported:
 You can add SkiaKit to your project by putting this dependency in your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/migueldeicaza/SkiaKit.git", .branch("generated"))
-```
+.package(url: "https://github.com/migueldeicaza/SkiaKit.git", from: "1.0.0")
+ ```
 
 #### Using manually
 
@@ -53,7 +56,9 @@ make download-payload
 
 ### Linux
 
-SkiaKit is platform agnostic and makes a best-effort support for Linux. An `.so` for the SkiaSharp library is included and supports [the following Linux distributions](https://github.com/mono/SkiaSharp/issues/453).
+SkiaKit is platform agnostic and makes a best-effort support for
+Linux. An `.so` for the SkiaSharp library is included and supports
+[the following Linux distributions](https://github.com/mono/SkiaSharp/issues/453).
 
 The `libSkiaSharp.so` file will need to be distributed alongside your project.
 
@@ -69,7 +74,9 @@ You can add SkiaKit to your project by putting this dependency in your `Package.
 
 #### Using manually
 
-If using manually, you'll need to provide `libSkiaSharp.so` in the root of the `SkiaKit` folder. For [certain Linux distros](https://github.com/mono/SkiaSharp/issues/453), a convenience script is provided.
+If using manually, you'll need to provide `libSkiaSharp.so` in the
+root of the `SkiaKit` folder. For [certain Linux distros](https://github.com/mono/SkiaSharp/issues/453),
+a convenience script is provided.
 
 This script requires `curl` and `unzip`.
 
