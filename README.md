@@ -36,7 +36,7 @@ Not currently supported:
 You can add SkiaKit to your project by putting this dependency in your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/bloomos/SkiaKit.git", .branch("generated"))
+.package(url: "https://github.com/migueldeicaza/SkiaKit.git", .branch("generated"))
 ```
 
 #### Using manually
@@ -46,7 +46,7 @@ If using manually, you'll need to download and assemble the `SkiaSharp.xcframewo
 This must be ran on macOS with the [Command Line Tools for XCode](https://developer.apple.com/downloads/) installed.
 
 ```sh
-git clone https://github.com/bloomos/SkiaKit.git
+git clone https://github.com/migueldeicaza/SkiaKit.git
 cd SkiaKit
 make download-payload
 ```
@@ -64,7 +64,7 @@ If the following
 You can add SkiaKit to your project by putting this dependency in your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/bloomos/SkiaKit.git", .branch("generated"))
+.package(url: "https://github.com/migueldeicaza/SkiaKit.git", .branch("generated"))
 ```
 
 #### Using manually
@@ -74,7 +74,7 @@ If using manually, you'll need to provide `libSkiaSharp.so` in the root of the `
 This script requires `curl` and `unzip`.
 
 ```sh
-git clone https://github.com/bloomos/SkiaKit.git
+git clone https://github.com/migueldeicaza/SkiaKit.git
 cd SkiaKit
 make download-payload-linux
 ```
