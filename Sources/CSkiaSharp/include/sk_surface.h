@@ -32,6 +32,7 @@ SK_C_API void sk_surface_draw(sk_surface_t* surface, sk_canvas_t* canvas, float 
 SK_C_API bool sk_surface_peek_pixels(sk_surface_t* surface, sk_pixmap_t* pixmap);
 SK_C_API bool sk_surface_read_pixels(sk_surface_t* surface, sk_imageinfo_t* dstInfo, void* dstPixels, size_t dstRowBytes, int srcX, int srcY);
 SK_C_API const sk_surfaceprops_t* sk_surface_get_props(sk_surface_t* surface);
+SK_C_API void sk_surface_flush(sk_surface_t* surface);
 
 // surface props
 

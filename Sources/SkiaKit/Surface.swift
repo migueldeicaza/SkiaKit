@@ -214,6 +214,14 @@ public final class Surface {
         return nil
     }
     
+    /**
+     * Issues pending SkSurface commands to the GPU-backed API objects and resolves any SkSurface multi-sample aliasing (MSAA).
+     * A call to ``submit`` is always required to ensure work is actually sent to the gpu.
+     */
+    public func flush () {
+        sk_surface_flush(handle)
+    }
+    
     //sk_surface_new_backend_texture
     //sk_surface_new_backend_texture_as_render_target
     //sk_surface_new_render_target
