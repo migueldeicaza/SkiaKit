@@ -16,9 +16,9 @@ jobs:
         run: swift build -v
       - name: Test Swift
         run: swift test
-      - name: Deploy to 'generated' branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # GITHUB_TOKEN is automatically added by GitHub Actions
-          publish_dir: ./
-          publish_branch: generated
+#      - name: Deploy to 'generated' branch
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }} # GITHUB_TOKEN is automatically added by GitHub Actions
+#          publish_dir: ./
+#          publish_branch: generated
