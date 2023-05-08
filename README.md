@@ -62,8 +62,6 @@ Linux. An `.so` for the SkiaSharp library is included and supports
 
 The `libSkiaSharp.so` file will need to be distributed alongside your project.
 
-If the following
-
 #### Recommended usage
 
 You can add SkiaKit to your project by putting this dependency in your `Package.swift`:
