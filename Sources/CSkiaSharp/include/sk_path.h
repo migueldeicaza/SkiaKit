@@ -58,8 +58,6 @@ SK_C_API int sk_path_count_verbs (const sk_path_t* cpath);
 SK_C_API void sk_path_get_point (const sk_path_t* cpath, int index, sk_point_t* point);
 SK_C_API int sk_path_get_points (const sk_path_t* cpath, sk_point_t* points, int max);
 SK_C_API bool sk_path_contains (const sk_path_t* cpath, float x, float y);
-SK_C_API sk_path_convexity_t sk_path_get_convexity (const sk_path_t* cpath);
-SK_C_API void sk_path_set_convexity (sk_path_t* cpath, sk_path_convexity_t convexity);
 SK_C_API bool sk_path_parse_svg_string (sk_path_t* cpath, const char* str);
 SK_C_API void sk_path_to_svg_string (const sk_path_t* cpath, sk_string_t* str);
 SK_C_API bool sk_path_get_last_point (const sk_path_t* cpath, sk_point_t* point);
@@ -70,6 +68,7 @@ SK_C_API bool sk_path_is_oval(sk_path_t* cpath, sk_rect_t* bounds);
 SK_C_API bool sk_path_is_rrect(sk_path_t* cpath, sk_rrect_t* bounds);
 SK_C_API bool sk_path_is_line(sk_path_t* cpath, sk_point_t line [2]);
 SK_C_API bool sk_path_is_rect(sk_path_t* cpath, sk_rect_t* rect, bool* isClosed, sk_path_direction_t* direction);
+SK_C_API bool sk_path_is_convex(const sk_path_t* cpath);
 
 /* Iterators */
 SK_C_API sk_path_iterator_t* sk_path_create_iter (sk_path_t *cpath, int forceClose);

@@ -647,53 +647,6 @@ public final class Canvas {
     }
     
     // TODO drawDrawable
-    
-    public func drawBitmap (_ bitmap: Bitmap, _ point: Point, _ paint: Paint? = nil)
-    {
-        drawBitmap(bitmap, point.x, point.y, paint)
-    }
-    
-    public func drawBitmap (_ bitmap: Bitmap, _ left: Float, _ top: Float, _ paint: Paint? = nil )
-    {
-        sk_canvas_draw_bitmap(handle, bitmap.handle, left, top, paint == nil ? nil : paint!.handle)
-    }
-
-    public func drawBitmap (_ bitmap: Bitmap, _ dest: Rect, _ paint: Paint? = nil )
-    {
-        withUnsafePointer(to: dest) { rectPtr in
-            sk_canvas_draw_bitmap_rect(handle, bitmap.handle, nil, rectPtr, paint == nil ? nil : paint!.handle)
-        }
-    }
-
-    /**
-     * Draws `Rect` src of `Bitmap` bitmap, scaled and translated to fill `Rect` dst.
-     * Additionally transform draw using clip, `Matrix`, and optional `Paint` paint.
-     *
-     * If `Paint` paint is supplied, apply `ColorFilter`, alpha, `ImageFilter`,
-     * `BlendMode`, and `DrawLooper`. If bitmap is `.alpha8`, apply `Shader`.
-     *
-     * If paint contains `MaskFilter`, generate mask from bitmap bounds.
-     *
-     * If generated mask extends beyond bitmap bounds, replicate bitmap edge colors,
-     * just as `Shader` made from `Shader`::MakeBitmapShader with
-     * `Shader`::kClamp_TileMode set replicates the bitmap edge color when it samples
-     * outside of its bounds.
-     *
-     * - Parameter bitmap: `Bitmap` containing pixels, dimensions, and format
-     * - Parameter source: source `Rect` of image to draw from
-     * - Parameter dest: destination `Rect` of image to draw to
-     * - Parameter paint: `Paint` containing `BlendMode`, `ColorFilter`, `ImageFilter`,
-     * and so on; or nullptr
-
-     */
-    public func drawBitmap (_ bitmap: Bitmap, source: Rect, dest: Rect, _ paint: Paint? = nil )
-    {
-        withUnsafePointer(to: dest) { destPtr in
-            withUnsafePointer(to: source) { srcPtr in
-                sk_canvas_draw_bitmap_rect(handle, bitmap.handle, srcPtr, destPtr, paint == nil ? nil : paint!.handle)
-            }
-        }
-    }
 
     /**
      * Draws a surface on the canvas.

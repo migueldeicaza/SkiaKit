@@ -58,20 +58,14 @@ public final class Path {
         }
     }
     
-    public var convexity: Convexity {
+    public var isConvex: Bool {
         get {
-            return Convexity.fromNative(sk_path_get_convexity(handle))
-        }
-        set {
-            sk_path_set_convexity(handle, newValue.toNative ())
+            sk_path_is_convex(handle)
         }
     }
     
     /// Returns the number of elements on the verb array containing the draw operations
     public var verbCount: Int32 { sk_path_count_verbs(handle) }
-    
-    public var isConvex:  Bool { convexity == .convex }
-    public var isConcave: Bool { convexity == .concave }
     
     /**
      * Returns if `Path` is empty.
@@ -804,38 +798,6 @@ public final class Path {
         internal static func fromNative (_ x: sk_path_filltype_t) -> FillType
         {
            return FillType.init(rawValue: x.rawValue)!
-        }
-    }
-
-    ///
-    /// `Path` is convex if it contains one contour and contour loops no more than
-    /// 360 degrees, and contour angles all have same Direction. Convex `Path`
-    /// may have better performance and require fewer resources on GPU surface.
-    ///
-    /// `Path` is concave when either at least one Direction change is clockwise and
-    /// another is counterclockwise, or the sum of the changes in Direction is not 360
-    /// degrees.
-    ///
-    /// Initially `Path` Convexity is kUnknown_Convexity. `Path` Convexity is computed
-    /// f needed by destination `Surface`.
-    ///
-    ///
-    public enum Convexity : UInt32 {
-        /// Indicates Convexity has not been determined.
-        case unknown = 0
-        /// Path has one contour made of a simple geometry without indentations.
-        case convex = 1
-        /// Path has more than one contour, or a geometry with indentations.
-        case concave = 2
-        
-        internal func toNative () -> sk_path_convexity_t
-        {
-           return sk_path_convexity_t.init(rawValue)
-        }
-
-        internal static func fromNative (_ x: sk_path_convexity_t) -> Convexity
-        {
-           return Convexity.init(rawValue: x.rawValue)!
         }
     }
 
