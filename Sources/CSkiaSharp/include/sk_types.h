@@ -60,6 +60,15 @@
     #define VKAPI_PTR
 #endif
 
+#if !defined(SK_TO_STRING)
+    #define SK_TO_STRING(X) SK_TO_STRING_IMPL(X)
+    #define SK_TO_STRING_IMPL(X) #X
+#endif
+
+#ifndef SK_C_INCREMENT
+#define SK_C_INCREMENT 1
+#endif
+
 ///////////////////////////////////////////////////////////////////////////////////////
 
 SK_C_PLUS_PLUS_BEGIN_GUARD
@@ -93,7 +102,9 @@ typedef enum {
     RGB_888X_SK_COLORTYPE,
     BGRA_8888_SK_COLORTYPE,
     RGBA_1010102_SK_COLORTYPE,
+    BGRA_1010102_SK_COLORTYPE,
     RGB_101010X_SK_COLORTYPE,
+    BGR_101010X_SK_COLORTYPE,
     GRAY_8_SK_COLORTYPE,
     RGBA_F16_NORM_SK_COLORTYPE,
     RGBA_F16_SK_COLORTYPE,
@@ -420,23 +431,11 @@ typedef enum {
 } sk_crop_rect_flags_t;
 
 typedef enum {
-    DRAW_SHADOW_AND_FOREGROUND_SK_DROP_SHADOW_IMAGE_FILTER_SHADOW_MODE,
-    DRAW_SHADOW_ONLY_SK_DROP_SHADOW_IMAGE_FILTER_SHADOW_MODE,
-} sk_drop_shadow_image_filter_shadow_mode_t;
-
-typedef enum {
-    UNKNOWN_SK_DISPLACEMENT_MAP_EFFECT_CHANNEL_SELECTOR_TYPE,
-    R_SK_DISPLACEMENT_MAP_EFFECT_CHANNEL_SELECTOR_TYPE,
-    G_SK_DISPLACEMENT_MAP_EFFECT_CHANNEL_SELECTOR_TYPE,
-    B_SK_DISPLACEMENT_MAP_EFFECT_CHANNEL_SELECTOR_TYPE,
-    A_SK_DISPLACEMENT_MAP_EFFECT_CHANNEL_SELECTOR_TYPE,
-} sk_displacement_map_effect_channel_selector_type_t;
-
-typedef enum {
-    CLAMP_SK_MATRIX_CONVOLUTION_TILEMODE,
-    REPEAT_SK_MATRIX_CONVOLUTION_TILEMODE,
-    CLAMP_TO_BLACK_SK_MATRIX_CONVOLUTION_TILEMODE,
-} sk_matrix_convolution_tilemode_t;
+    R_SK_COLOR_CHANNEL,
+    G_SK_COLOR_CHANNEL,
+    B_SK_COLOR_CHANNEL,
+    A_SK_COLOR_CHANNEL,
+} sk_color_channel_t;
 
 /**
     The logical operations that can be performed when combining two regions.
@@ -471,6 +470,7 @@ typedef enum {
     ASTC_SK_ENCODED_FORMAT,
     DNG_SK_ENCODED_FORMAT,
     HEIF_SK_ENCODED_FORMAT,
+    AVIF_SK_ENCODED_FORMAT,
 } sk_encoded_image_format_t;
 
 typedef enum {
@@ -634,18 +634,29 @@ typedef struct {
     sk_mask_format_t  fFormat;
 } sk_mask_t;
 
+typedef struct {
+    bool      fAvoidStencilBuffers;
+    int       fRuntimeProgramCacheSize;
+    size_t    fGlyphCacheTextureMaximumBytes;
+    bool      fAllowPathMaskCaching;
+    bool      fDoManualMipmapping;
+    int       fBufferMapThreshold;
+} gr_context_options_t;
+
 typedef intptr_t gr_backendobject_t;
 
 typedef struct gr_backendrendertarget_t gr_backendrendertarget_t;
 typedef struct gr_backendtexture_t gr_backendtexture_t;
 
-typedef struct gr_context_t gr_context_t;
+typedef struct gr_direct_context_t gr_direct_context_t;
+typedef struct gr_recording_context_t gr_recording_context_t;
 
 typedef enum {
-    METAL_GR_BACKEND,
-    DAWN_GR_BACKEND,
     OPENGL_GR_BACKEND,
     VULKAN_GR_BACKEND,
+    METAL_GR_BACKEND,
+    DIRECT3D_GR_BACKEND,
+    DAWN_GR_BACKEND,
 } gr_backend_t;
 
 typedef intptr_t gr_backendcontext_t;
@@ -730,16 +741,25 @@ typedef struct {
     uint32_t                        fImageTiling;
     uint32_t                        fImageLayout;
     uint32_t                        fFormat;
+    uint32_t                        fImageUsageFlags;
+    uint32_t                        fSampleCount;
     uint32_t                        fLevelCount;
     uint32_t                        fCurrentQueueFamily;
     bool                            fProtected;
     gr_vk_ycbcrconversioninfo_t     fYcbcrConversionInfo;
+    uint32_t                        fSharingMode;
 } gr_vk_imageinfo_t;
 
 typedef struct vk_instance_t vk_instance_t;
 typedef struct vk_physical_device_t vk_physical_device_t;
 typedef struct vk_device_t vk_device_t;
 typedef struct vk_queue_t vk_queue_t;
+
+#define gr_mtl_handle_t const void*
+
+typedef struct {
+    const void* fTexture;
+} gr_mtl_textureinfo_t;
 
 typedef enum {
     DIFFERENCE_SK_PATHOP,
@@ -750,12 +770,6 @@ typedef enum {
 } sk_pathop_t;
 
 typedef struct sk_opbuilder_t sk_opbuilder_t;
-
-typedef enum {
-    UNKNOWN_SK_PATH_CONVEXITY,
-    CONVEX_SK_PATH_CONVEXITY,
-    CONCAVE_SK_PATH_CONVEXITY,
-} sk_path_convexity_t;
 
 typedef enum {
     DEFAULT_SK_LATTICE_RECT_TYPE,
@@ -992,6 +1006,28 @@ typedef struct {
     float fTX;
     float fTY;
 } sk_rsxform_t;
+
+typedef struct sk_tracememorydump_t sk_tracememorydump_t;
+
+typedef struct sk_runtimeeffect_t sk_runtimeeffect_t;
+typedef struct sk_runtimeeffect_uniform_t sk_runtimeeffect_uniform_t;
+
+/*
+ * Skottie Animation
+ */
+typedef struct skottie_animation_t skottie_animation_t;
+typedef struct skottie_animation_builder_t skottie_animation_builder_t;
+typedef struct skottie_resource_provider_t skottie_resource_provider_t;
+typedef struct skottie_property_observer_t skottie_property_observer_t;
+typedef struct skottie_logger_t skottie_logger_t;
+typedef struct skottie_marker_observer_t skottie_marker_observer_t;
+
+typedef struct sksg_invalidation_controller_t sksg_invalidation_controller_t;
+
+typedef enum {
+    SKIP_TOP_LEVEL_ISOLATION = 0x01,
+    DISABLE_TOP_LEVEL_CLIPPING = 0x02,
+} skottie_animation_renderflags_t;
 
 SK_C_PLUS_PLUS_END_GUARD
 

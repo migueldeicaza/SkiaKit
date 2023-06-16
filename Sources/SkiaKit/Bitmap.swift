@@ -354,16 +354,6 @@ public final class Bitmap {
         }
     }
     
-    ///  Returns true if the bitmap is volatile (i.e. should not be cached by devices.)
-    public var isVolatile: Bool {
-        get {
-            sk_bitmap_is_volatile(handle)
-        }
-        set {
-            sk_bitmap_set_volatile(handle, newValue)
-        }
-    }
-    
     /// Call this to be sure that the bitmap is valid enough to be drawn (i.e.
     /// it has non-null pixels, and if required by its config, it has a
     /// non-null colortable. Returns true if all of the above are met.

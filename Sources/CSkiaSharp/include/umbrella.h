@@ -43,5 +43,9 @@
 
 #include "sk_vertices.h"
 #include "sk_xml.h"
+#include "sk_graphics.h"
+#include "sk_runtimeeffect.h"
+#include "skottie_animation.h"
+#include "sksg_invalidation_controller.h"
 
 #endif /* SkiaKit_h */

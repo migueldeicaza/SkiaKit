@@ -128,22 +128,12 @@ public final class Image {
      * - Parameter subset: optional, the bounds of the pixels within the decoded image to return. may be null.
      * - Returns: created `Image`, or `nil`
      */
-    public init? (data: SKData, subset: IRect? = nil)
+    public init? (data: SKData)
     {
-        if let sb = subset {
-            var sub = sb
-            
-            if let x = sk_image_new_from_encoded(data.handle, &sub) {
-                handle = x
-            } else {
-                return nil
-            }
+        if let x = sk_image_new_from_encoded(data.handle) {
+            handle = x
         } else {
-            if let x = sk_image_new_from_encoded(data.handle, nil) {
-                handle = x
-            } else {
-                return nil
-            }
+            return nil
         }
     }
     deinit {
